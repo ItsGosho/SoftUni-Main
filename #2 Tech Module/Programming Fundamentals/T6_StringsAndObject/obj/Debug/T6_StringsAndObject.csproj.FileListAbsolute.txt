@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_StringsAndObject\bin\Debug\T6_StringsAndObject.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_StringsAndObject\bin\Debug\T6_StringsAndObject.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_StringsAndObject\bin\Debug\T6_StringsAndObject.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_StringsAndObject\obj\Debug\T6_StringsAndObject.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_StringsAndObject\obj\Debug\T6_StringsAndObject.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_StringsAndObject\obj\Debug\T6_StringsAndObject.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_StringsAndObject\obj\Debug\T6_StringsAndObject.pdb

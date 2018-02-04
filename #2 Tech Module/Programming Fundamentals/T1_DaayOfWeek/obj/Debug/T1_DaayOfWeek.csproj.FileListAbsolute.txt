@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_DaayOfWeek\bin\Debug\T1_DaayOfWeek.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_DaayOfWeek\bin\Debug\T1_DaayOfWeek.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_DaayOfWeek\bin\Debug\T1_DaayOfWeek.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_DaayOfWeek\obj\Debug\T1_DaayOfWeek.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_DaayOfWeek\obj\Debug\T1_DaayOfWeek.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_DaayOfWeek\obj\Debug\T1_DaayOfWeek.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_DaayOfWeek\obj\Debug\T1_DaayOfWeek.pdb

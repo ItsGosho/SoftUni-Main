@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_CondenseArrayToNumber\bin\Debug\T8_CondenseArrayToNumber.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_CondenseArrayToNumber\bin\Debug\T8_CondenseArrayToNumber.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_CondenseArrayToNumber\bin\Debug\T8_CondenseArrayToNumber.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_CondenseArrayToNumber\obj\Debug\T8_CondenseArrayToNumber.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_CondenseArrayToNumber\obj\Debug\T8_CondenseArrayToNumber.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_CondenseArrayToNumber\obj\Debug\T8_CondenseArrayToNumber.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_CondenseArrayToNumber\obj\Debug\T8_CondenseArrayToNumber.pdb

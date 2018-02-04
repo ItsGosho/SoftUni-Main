@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_CenturiesToNanoSeconds\bin\Debug\T10_CenturiesToNanoSeconds.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_CenturiesToNanoSeconds\bin\Debug\T10_CenturiesToNanoSeconds.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_CenturiesToNanoSeconds\bin\Debug\T10_CenturiesToNanoSeconds.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_CenturiesToNanoSeconds\obj\Debug\T10_CenturiesToNanoSeconds.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_CenturiesToNanoSeconds\obj\Debug\T10_CenturiesToNanoSeconds.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_CenturiesToNanoSeconds\obj\Debug\T10_CenturiesToNanoSeconds.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_CenturiesToNanoSeconds\obj\Debug\T10_CenturiesToNanoSeconds.pdb

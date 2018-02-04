@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_LastKNumbersSums\bin\Debug\T3_LastKNumbersSums.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_LastKNumbersSums\bin\Debug\T3_LastKNumbersSums.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_LastKNumbersSums\bin\Debug\T3_LastKNumbersSums.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_LastKNumbersSums\obj\Debug\T3_LastKNumbersSums.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_LastKNumbersSums\obj\Debug\T3_LastKNumbersSums.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_LastKNumbersSums\obj\Debug\T3_LastKNumbersSums.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_LastKNumbersSums\obj\Debug\T3_LastKNumbersSums.pdb

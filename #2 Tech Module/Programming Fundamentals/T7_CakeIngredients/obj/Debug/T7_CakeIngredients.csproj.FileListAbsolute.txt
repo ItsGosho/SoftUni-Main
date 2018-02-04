@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_CakeIngredients\bin\Debug\T7_CakeIngredients.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_CakeIngredients\bin\Debug\T7_CakeIngredients.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_CakeIngredients\bin\Debug\T7_CakeIngredients.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_CakeIngredients\obj\Debug\T7_CakeIngredients.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_CakeIngredients\obj\Debug\T7_CakeIngredients.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_CakeIngredients\obj\Debug\T7_CakeIngredients.pdb

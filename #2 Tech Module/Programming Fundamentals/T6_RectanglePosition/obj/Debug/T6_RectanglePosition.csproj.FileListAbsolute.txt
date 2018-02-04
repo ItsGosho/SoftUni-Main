@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_RectanglePosition\bin\Debug\T6_RectanglePosition.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_RectanglePosition\bin\Debug\T6_RectanglePosition.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_RectanglePosition\bin\Debug\T6_RectanglePosition.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_RectanglePosition\obj\Debug\T6_RectanglePosition.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_RectanglePosition\obj\Debug\T6_RectanglePosition.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_RectanglePosition\obj\Debug\T6_RectanglePosition.pdb

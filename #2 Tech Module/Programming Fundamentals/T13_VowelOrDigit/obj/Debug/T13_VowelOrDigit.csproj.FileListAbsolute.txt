@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T13_VowelOrDigit\bin\Debug\T13_VowelOrDigit.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T13_VowelOrDigit\bin\Debug\T13_VowelOrDigit.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T13_VowelOrDigit\bin\Debug\T13_VowelOrDigit.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T13_VowelOrDigit\obj\Debug\T13_VowelOrDigit.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T13_VowelOrDigit\obj\Debug\T13_VowelOrDigit.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T13_VowelOrDigit\obj\Debug\T13_VowelOrDigit.pdb

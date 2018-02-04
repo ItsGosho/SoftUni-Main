@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_OddLines\bin\Debug\T1_OddLines.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_OddLines\bin\Debug\T1_OddLines.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_OddLines\bin\Debug\T1_OddLines.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_OddLines\obj\Debug\T1_OddLines.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_OddLines\obj\Debug\T1_OddLines.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_OddLines\obj\Debug\T1_OddLines.pdb

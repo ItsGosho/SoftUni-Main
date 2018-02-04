@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_ShortWordsSorter\bin\Debug\T5_ShortWordsSorter.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_ShortWordsSorter\bin\Debug\T5_ShortWordsSorter.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_ShortWordsSorter\bin\Debug\T5_ShortWordsSorter.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_ShortWordsSorter\obj\Debug\T5_ShortWordsSorter.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_ShortWordsSorter\obj\Debug\T5_ShortWordsSorter.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_ShortWordsSorter\obj\Debug\T5_ShortWordsSorter.pdb

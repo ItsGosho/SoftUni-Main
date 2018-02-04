@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_FibonacciNumbers\bin\Debug\T5_FibonacciNumbers.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_FibonacciNumbers\bin\Debug\T5_FibonacciNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_FibonacciNumbers\bin\Debug\T5_FibonacciNumbers.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_FibonacciNumbers\obj\Debug\T5_FibonacciNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_FibonacciNumbers\obj\Debug\T5_FibonacciNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_FibonacciNumbers\obj\Debug\T5_FibonacciNumbers.pdb

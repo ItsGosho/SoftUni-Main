@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_SumOfOddNumbers\bin\Debug\T8_SumOfOddNumbers.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_SumOfOddNumbers\bin\Debug\T8_SumOfOddNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_SumOfOddNumbers\bin\Debug\T8_SumOfOddNumbers.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_SumOfOddNumbers\obj\Debug\T8_SumOfOddNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_SumOfOddNumbers\obj\Debug\T8_SumOfOddNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_SumOfOddNumbers\obj\Debug\T8_SumOfOddNumbers.pdb

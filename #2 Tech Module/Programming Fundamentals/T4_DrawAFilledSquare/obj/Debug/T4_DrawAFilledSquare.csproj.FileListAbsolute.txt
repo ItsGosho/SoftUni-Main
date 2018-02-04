@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_DrawAFilledSquare\bin\Debug\T4_DrawAFilledSquare.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_DrawAFilledSquare\bin\Debug\T4_DrawAFilledSquare.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_DrawAFilledSquare\bin\Debug\T4_DrawAFilledSquare.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_DrawAFilledSquare\obj\Debug\T4_DrawAFilledSquare.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_DrawAFilledSquare\obj\Debug\T4_DrawAFilledSquare.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_DrawAFilledSquare\obj\Debug\T4_DrawAFilledSquare.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_DrawAFilledSquare\obj\Debug\T4_DrawAFilledSquare.pdb

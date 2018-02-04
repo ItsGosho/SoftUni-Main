@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T15_FastPrimeChecker\bin\Debug\T15_FastPrimeChecker.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T15_FastPrimeChecker\bin\Debug\T15_FastPrimeChecker.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T15_FastPrimeChecker\bin\Debug\T15_FastPrimeChecker.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T15_FastPrimeChecker\obj\Debug\T15_FastPrimeChecker.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T15_FastPrimeChecker\obj\Debug\T15_FastPrimeChecker.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T15_FastPrimeChecker\obj\Debug\T15_FastPrimeChecker.pdb

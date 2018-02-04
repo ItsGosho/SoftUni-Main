@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_SquareNumbers\bin\Debug\T6_SquareNumbers.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_SquareNumbers\bin\Debug\T6_SquareNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_SquareNumbers\bin\Debug\T6_SquareNumbers.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_SquareNumbers\obj\Debug\T6_SquareNumbers.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_SquareNumbers\obj\Debug\T6_SquareNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_SquareNumbers\obj\Debug\T6_SquareNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_SquareNumbers\obj\Debug\T6_SquareNumbers.pdb

@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_TriangleOfNumbers\bin\Debug\T10_TriangleOfNumbers.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_TriangleOfNumbers\bin\Debug\T10_TriangleOfNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_TriangleOfNumbers\bin\Debug\T10_TriangleOfNumbers.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_TriangleOfNumbers\obj\Debug\T10_TriangleOfNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_TriangleOfNumbers\obj\Debug\T10_TriangleOfNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_TriangleOfNumbers\obj\Debug\T10_TriangleOfNumbers.pdb

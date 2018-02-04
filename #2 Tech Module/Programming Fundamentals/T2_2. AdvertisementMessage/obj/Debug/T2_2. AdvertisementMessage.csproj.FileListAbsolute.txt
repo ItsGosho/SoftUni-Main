@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_2. AdvertisementMessage\bin\Debug\T2_2.AdvertisementMessage.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_2. AdvertisementMessage\bin\Debug\T2_2.AdvertisementMessage.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_2. AdvertisementMessage\bin\Debug\T2_2.AdvertisementMessage.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_2. AdvertisementMessage\obj\Debug\T2_2. AdvertisementMessage.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_2. AdvertisementMessage\obj\Debug\T2_2. AdvertisementMessage.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_2. AdvertisementMessage\obj\Debug\T2_2.AdvertisementMessage.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_2. AdvertisementMessage\obj\Debug\T2_2.AdvertisementMessage.pdb

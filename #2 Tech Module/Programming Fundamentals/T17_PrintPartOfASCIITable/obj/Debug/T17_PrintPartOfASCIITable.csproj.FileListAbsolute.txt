@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T17_PrintPartOfASCIITable\bin\Debug\T17_PrintPartOfASCIITable.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T17_PrintPartOfASCIITable\bin\Debug\T17_PrintPartOfASCIITable.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T17_PrintPartOfASCIITable\bin\Debug\T17_PrintPartOfASCIITable.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T17_PrintPartOfASCIITable\obj\Debug\T17_PrintPartOfASCIITable.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T17_PrintPartOfASCIITable\obj\Debug\T17_PrintPartOfASCIITable.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T17_PrintPartOfASCIITable\obj\Debug\T17_PrintPartOfASCIITable.pdb

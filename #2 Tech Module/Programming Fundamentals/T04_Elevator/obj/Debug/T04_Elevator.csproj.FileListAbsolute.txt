@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T04_Elevator\bin\Debug\T04_Elevator.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T04_Elevator\bin\Debug\T04_Elevator.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T04_Elevator\bin\Debug\T04_Elevator.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T04_Elevator\obj\Debug\T04_Elevator.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T04_Elevator\obj\Debug\T04_Elevator.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T04_Elevator\obj\Debug\T04_Elevator.pdb

@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_EnglishNameOfLastDigit\bin\Debug\T3_EnglishNameOfLastDigit.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_EnglishNameOfLastDigit\bin\Debug\T3_EnglishNameOfLastDigit.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_EnglishNameOfLastDigit\bin\Debug\T3_EnglishNameOfLastDigit.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_EnglishNameOfLastDigit\obj\Debug\T3_EnglishNameOfLastDigit.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_EnglishNameOfLastDigit\obj\Debug\T3_EnglishNameOfLastDigit.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_EnglishNameOfLastDigit\obj\Debug\T3_EnglishNameOfLastDigit.pdb

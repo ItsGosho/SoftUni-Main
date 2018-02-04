@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T05_SpecialNumbers\bin\Debug\T05_SpecialNumbers.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T05_SpecialNumbers\bin\Debug\T05_SpecialNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T05_SpecialNumbers\bin\Debug\T05_SpecialNumbers.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T05_SpecialNumbers\obj\Debug\T05_SpecialNumbers.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T05_SpecialNumbers\obj\Debug\T05_SpecialNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T05_SpecialNumbers\obj\Debug\T05_SpecialNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T05_SpecialNumbers\obj\Debug\T05_SpecialNumbers.pdb

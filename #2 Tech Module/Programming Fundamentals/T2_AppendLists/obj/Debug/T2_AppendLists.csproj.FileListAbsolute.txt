@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_AppendLists\bin\Debug\T2_AppendLists.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_AppendLists\bin\Debug\T2_AppendLists.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_AppendLists\bin\Debug\T2_AppendLists.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_AppendLists\obj\Debug\T2_AppendLists.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_AppendLists\obj\Debug\T2_AppendLists.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_AppendLists\obj\Debug\T2_AppendLists.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_AppendLists\obj\Debug\T2_AppendLists.pdb

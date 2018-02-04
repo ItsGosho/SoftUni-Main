@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_SignOfIntegerNumber\bin\Debug\T2_SignOfIntegerNumber.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_SignOfIntegerNumber\bin\Debug\T2_SignOfIntegerNumber.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_SignOfIntegerNumber\bin\Debug\T2_SignOfIntegerNumber.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_SignOfIntegerNumber\obj\Debug\T2_SignOfIntegerNumber.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_SignOfIntegerNumber\obj\Debug\T2_SignOfIntegerNumber.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_SignOfIntegerNumber\obj\Debug\T2_SignOfIntegerNumber.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_SignOfIntegerNumber\obj\Debug\T2_SignOfIntegerNumber.pdb

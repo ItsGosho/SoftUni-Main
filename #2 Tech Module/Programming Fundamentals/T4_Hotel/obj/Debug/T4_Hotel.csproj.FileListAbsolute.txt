@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_Hotel\bin\Debug\T4_Hotel.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_Hotel\bin\Debug\T4_Hotel.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_Hotel\bin\Debug\T4_Hotel.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_Hotel\obj\Debug\T4_Hotel.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_Hotel\obj\Debug\T4_Hotel.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_Hotel\obj\Debug\T4_Hotel.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_Hotel\obj\Debug\T4_Hotel.pdb

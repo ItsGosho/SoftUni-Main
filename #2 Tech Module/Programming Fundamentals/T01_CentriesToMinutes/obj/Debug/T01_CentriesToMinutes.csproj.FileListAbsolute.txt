@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T01_CentriesToMinutes\bin\Debug\T01_CentriesToMinutes.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T01_CentriesToMinutes\bin\Debug\T01_CentriesToMinutes.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T01_CentriesToMinutes\bin\Debug\T01_CentriesToMinutes.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T01_CentriesToMinutes\obj\Debug\T01_CentriesToMinutes.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T01_CentriesToMinutes\obj\Debug\T01_CentriesToMinutes.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T01_CentriesToMinutes\obj\Debug\T01_CentriesToMinutes.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T01_CentriesToMinutes\obj\Debug\T01_CentriesToMinutes.pdb

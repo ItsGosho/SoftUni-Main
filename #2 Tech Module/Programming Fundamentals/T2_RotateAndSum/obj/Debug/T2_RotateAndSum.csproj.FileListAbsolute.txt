@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_RotateAndSum\bin\Debug\T2_RotateAndSum.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_RotateAndSum\bin\Debug\T2_RotateAndSum.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_RotateAndSum\bin\Debug\T2_RotateAndSum.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_RotateAndSum\obj\Debug\T2_RotateAndSum.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_RotateAndSum\obj\Debug\T2_RotateAndSum.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_RotateAndSum\obj\Debug\T2_RotateAndSum.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_RotateAndSum\obj\Debug\T2_RotateAndSum.pdb

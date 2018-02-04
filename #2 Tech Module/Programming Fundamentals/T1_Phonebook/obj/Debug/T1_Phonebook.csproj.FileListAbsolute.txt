@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_Phonebook\bin\Debug\T1_Phonebook.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_Phonebook\bin\Debug\T1_Phonebook.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_Phonebook\bin\Debug\T1_Phonebook.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_Phonebook\obj\Debug\T1_Phonebook.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_Phonebook\obj\Debug\T1_Phonebook.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_Phonebook\obj\Debug\T1_Phonebook.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_Phonebook\obj\Debug\T1_Phonebook.pdb

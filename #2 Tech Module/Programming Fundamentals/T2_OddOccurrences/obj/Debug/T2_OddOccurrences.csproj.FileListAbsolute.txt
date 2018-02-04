@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_OddOccurrences\bin\Debug\T2_OddOccurrences.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_OddOccurrences\bin\Debug\T2_OddOccurrences.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_OddOccurrences\bin\Debug\T2_OddOccurrences.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_OddOccurrences\obj\Debug\T2_OddOccurrences.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_OddOccurrences\obj\Debug\T2_OddOccurrences.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_OddOccurrences\obj\Debug\T2_OddOccurrences.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_OddOccurrences\obj\Debug\T2_OddOccurrences.pdb

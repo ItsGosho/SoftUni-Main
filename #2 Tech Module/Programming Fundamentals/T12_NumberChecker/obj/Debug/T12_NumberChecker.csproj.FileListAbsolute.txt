@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T12_NumberChecker\bin\Debug\T12_NumberChecker.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T12_NumberChecker\bin\Debug\T12_NumberChecker.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T12_NumberChecker\bin\Debug\T12_NumberChecker.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T12_NumberChecker\obj\Debug\T12_NumberChecker.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T12_NumberChecker\obj\Debug\T12_NumberChecker.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T12_NumberChecker\obj\Debug\T12_NumberChecker.pdb

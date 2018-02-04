@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_WordInPlural\bin\Debug\T5_WordInPlural.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_WordInPlural\bin\Debug\T5_WordInPlural.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_WordInPlural\bin\Debug\T5_WordInPlural.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_WordInPlural\obj\Debug\T5_WordInPlural.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_WordInPlural\obj\Debug\T5_WordInPlural.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_WordInPlural\obj\Debug\T5_WordInPlural.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_WordInPlural\obj\Debug\T5_WordInPlural.pdb

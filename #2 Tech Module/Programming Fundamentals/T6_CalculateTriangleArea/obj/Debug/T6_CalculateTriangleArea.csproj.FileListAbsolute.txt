@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_CalculateTriangleArea\bin\Debug\T6_CalculateTriangleArea.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_CalculateTriangleArea\bin\Debug\T6_CalculateTriangleArea.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_CalculateTriangleArea\bin\Debug\T6_CalculateTriangleArea.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_CalculateTriangleArea\obj\Debug\T6_CalculateTriangleArea.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_CalculateTriangleArea\obj\Debug\T6_CalculateTriangleArea.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_CalculateTriangleArea\obj\Debug\T6_CalculateTriangleArea.pdb

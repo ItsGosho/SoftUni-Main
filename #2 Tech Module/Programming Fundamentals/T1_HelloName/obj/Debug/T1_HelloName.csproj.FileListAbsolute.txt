@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_HelloName\bin\Debug\T1_HelloName.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_HelloName\bin\Debug\T1_HelloName.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_HelloName\bin\Debug\T1_HelloName.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_HelloName\obj\Debug\T1_HelloName.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_HelloName\obj\Debug\T1_HelloName.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_HelloName\obj\Debug\T1_HelloName.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_HelloName\obj\Debug\T1_HelloName.pdb

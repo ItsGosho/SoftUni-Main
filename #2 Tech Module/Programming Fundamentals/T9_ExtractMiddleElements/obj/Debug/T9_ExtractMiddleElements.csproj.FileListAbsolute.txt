@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_ExtractMiddleElements\bin\Debug\T9_ExtractMiddleElements.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_ExtractMiddleElements\bin\Debug\T9_ExtractMiddleElements.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_ExtractMiddleElements\bin\Debug\T9_ExtractMiddleElements.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_ExtractMiddleElements\obj\Debug\T9_ExtractMiddleElements.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_ExtractMiddleElements\obj\Debug\T9_ExtractMiddleElements.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_ExtractMiddleElements\obj\Debug\T9_ExtractMiddleElements.pdb

@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_MathPower\bin\Debug\T7_MathPower.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_MathPower\bin\Debug\T7_MathPower.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_MathPower\bin\Debug\T7_MathPower.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_MathPower\obj\Debug\T7_MathPower.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_MathPower\obj\Debug\T7_MathPower.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_MathPower\obj\Debug\T7_MathPower.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_MathPower\obj\Debug\T7_MathPower.pdb

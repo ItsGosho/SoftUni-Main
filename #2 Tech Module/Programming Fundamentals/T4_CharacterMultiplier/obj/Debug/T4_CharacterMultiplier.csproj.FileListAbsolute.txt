@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_CharacterMultiplier\bin\Debug\T4_CharacterMultiplier.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_CharacterMultiplier\bin\Debug\T4_CharacterMultiplier.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_CharacterMultiplier\bin\Debug\T4_CharacterMultiplier.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_CharacterMultiplier\obj\Debug\T4_CharacterMultiplier.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_CharacterMultiplier\obj\Debug\T4_CharacterMultiplier.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_CharacterMultiplier\obj\Debug\T4_CharacterMultiplier.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_CharacterMultiplier\obj\Debug\T4_CharacterMultiplier.pdb

@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SumAdjectEqualNumbers\bin\Debug\T3_SumAdjectEqualNumbers.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SumAdjectEqualNumbers\bin\Debug\T3_SumAdjectEqualNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SumAdjectEqualNumbers\bin\Debug\T3_SumAdjectEqualNumbers.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SumAdjectEqualNumbers\obj\Debug\T3_SumAdjectEqualNumbers.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SumAdjectEqualNumbers\obj\Debug\T3_SumAdjectEqualNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SumAdjectEqualNumbers\obj\Debug\T3_SumAdjectEqualNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SumAdjectEqualNumbers\obj\Debug\T3_SumAdjectEqualNumbers.pdb

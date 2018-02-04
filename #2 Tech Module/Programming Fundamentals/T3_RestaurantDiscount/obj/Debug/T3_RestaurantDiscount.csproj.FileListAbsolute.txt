@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_RestaurantDiscount\bin\Debug\T3_RestaurantDiscount.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_RestaurantDiscount\bin\Debug\T3_RestaurantDiscount.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_RestaurantDiscount\bin\Debug\T3_RestaurantDiscount.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_RestaurantDiscount\obj\Debug\T3_RestaurantDiscount.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_RestaurantDiscount\obj\Debug\T3_RestaurantDiscount.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_RestaurantDiscount\obj\Debug\T3_RestaurantDiscount.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_RestaurantDiscount\obj\Debug\T3_RestaurantDiscount.pdb

@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T06_TripleOfLaticLetters\bin\Debug\T06_TripleOfLaticLetters.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T06_TripleOfLaticLetters\bin\Debug\T06_TripleOfLaticLetters.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T06_TripleOfLaticLetters\bin\Debug\T06_TripleOfLaticLetters.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T06_TripleOfLaticLetters\obj\Debug\T06_TripleOfLaticLetters.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T06_TripleOfLaticLetters\obj\Debug\T06_TripleOfLaticLetters.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T06_TripleOfLaticLetters\obj\Debug\T06_TripleOfLaticLetters.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T06_TripleOfLaticLetters\obj\Debug\T06_TripleOfLaticLetters.pdb

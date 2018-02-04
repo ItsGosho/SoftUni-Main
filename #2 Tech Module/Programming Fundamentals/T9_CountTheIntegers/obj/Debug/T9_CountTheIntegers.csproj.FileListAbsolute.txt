@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_CountTheIntegers\bin\Debug\T9_CountTheIntegers.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_CountTheIntegers\bin\Debug\T9_CountTheIntegers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_CountTheIntegers\bin\Debug\T9_CountTheIntegers.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_CountTheIntegers\obj\Debug\T9_CountTheIntegers.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_CountTheIntegers\obj\Debug\T9_CountTheIntegers.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_CountTheIntegers\obj\Debug\T9_CountTheIntegers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_CountTheIntegers\obj\Debug\T9_CountTheIntegers.pdb

@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_OddNumber\bin\Debug\T11_OddNumber.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_OddNumber\bin\Debug\T11_OddNumber.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_OddNumber\bin\Debug\T11_OddNumber.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_OddNumber\obj\Debug\T11_OddNumber.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_OddNumber\obj\Debug\T11_OddNumber.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_OddNumber\obj\Debug\T11_OddNumber.pdb

@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_HolidaysBetweenTwoDates\bin\Debug\T10_HolidaysBetweenTwoDates.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_HolidaysBetweenTwoDates\bin\Debug\T10_HolidaysBetweenTwoDates.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_HolidaysBetweenTwoDates\bin\Debug\T10_HolidaysBetweenTwoDates.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_HolidaysBetweenTwoDates\obj\Debug\T10_HolidaysBetweenTwoDates.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_HolidaysBetweenTwoDates\obj\Debug\T10_HolidaysBetweenTwoDates.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_HolidaysBetweenTwoDates\obj\Debug\T10_HolidaysBetweenTwoDates.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_HolidaysBetweenTwoDates\obj\Debug\T10_HolidaysBetweenTwoDates.pdb

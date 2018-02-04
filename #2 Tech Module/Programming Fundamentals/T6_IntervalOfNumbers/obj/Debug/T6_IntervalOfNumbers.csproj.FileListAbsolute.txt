@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_IntervalOfNumbers\bin\Debug\T6_IntervalOfNumbers.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_IntervalOfNumbers\bin\Debug\T6_IntervalOfNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_IntervalOfNumbers\bin\Debug\T6_IntervalOfNumbers.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_IntervalOfNumbers\obj\Debug\T6_IntervalOfNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_IntervalOfNumbers\obj\Debug\T6_IntervalOfNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_IntervalOfNumbers\obj\Debug\T6_IntervalOfNumbers.pdb

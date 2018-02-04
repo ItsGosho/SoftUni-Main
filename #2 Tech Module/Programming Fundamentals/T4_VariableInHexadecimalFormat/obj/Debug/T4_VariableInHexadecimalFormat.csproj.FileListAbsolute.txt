@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_VariableInHexadecimalFormat\bin\Debug\T4_VariableInHexadecimalFormat.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_VariableInHexadecimalFormat\bin\Debug\T4_VariableInHexadecimalFormat.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_VariableInHexadecimalFormat\bin\Debug\T4_VariableInHexadecimalFormat.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_VariableInHexadecimalFormat\obj\Debug\T4_VariableInHexadecimalFormat.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_VariableInHexadecimalFormat\obj\Debug\T4_VariableInHexadecimalFormat.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_VariableInHexadecimalFormat\obj\Debug\T4_VariableInHexadecimalFormat.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_VariableInHexadecimalFormat\obj\Debug\T4_VariableInHexadecimalFormat.pdb

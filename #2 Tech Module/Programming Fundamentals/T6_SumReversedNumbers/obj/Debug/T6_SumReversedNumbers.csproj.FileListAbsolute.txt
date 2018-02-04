@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_SumReversedNumbers\bin\Debug\T6_SumReversedNumbers.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_SumReversedNumbers\bin\Debug\T6_SumReversedNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_SumReversedNumbers\bin\Debug\T6_SumReversedNumbers.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_SumReversedNumbers\obj\Debug\T6_SumReversedNumbers.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_SumReversedNumbers\obj\Debug\T6_SumReversedNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_SumReversedNumbers\obj\Debug\T6_SumReversedNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_SumReversedNumbers\obj\Debug\T6_SumReversedNumbers.pdb

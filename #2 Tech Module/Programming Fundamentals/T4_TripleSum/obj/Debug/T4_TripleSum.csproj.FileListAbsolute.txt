@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_TripleSum\bin\Debug\T4_TripleSum.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_TripleSum\bin\Debug\T4_TripleSum.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_TripleSum\bin\Debug\T4_TripleSum.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_TripleSum\obj\Debug\T4_TripleSum.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_TripleSum\obj\Debug\T4_TripleSum.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_TripleSum\obj\Debug\T4_TripleSum.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_TripleSum\obj\Debug\T4_TripleSum.pdb

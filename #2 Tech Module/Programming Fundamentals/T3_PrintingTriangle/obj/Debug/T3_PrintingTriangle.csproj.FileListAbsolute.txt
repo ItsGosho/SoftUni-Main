@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_PrintingTriangle\obj\Debug\T3_PrintingTriangle.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_PrintingTriangle\obj\Debug\T3_PrintingTriangle.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_PrintingTriangle\bin\Debug\T3_PrintingTriangle.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_PrintingTriangle\bin\Debug\T3_PrintingTriangle.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_PrintingTriangle\bin\Debug\T3_PrintingTriangle.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_PrintingTriangle\obj\Debug\T3_PrintingTriangle.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_PrintingTriangle\obj\Debug\T3_PrintingTriangle.pdb

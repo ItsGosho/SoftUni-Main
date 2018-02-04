@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T03_ExactSumOfRealNumbers\bin\Debug\T03_ExactSumOfRealNumbers.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T03_ExactSumOfRealNumbers\bin\Debug\T03_ExactSumOfRealNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T03_ExactSumOfRealNumbers\bin\Debug\T03_ExactSumOfRealNumbers.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T03_ExactSumOfRealNumbers\obj\Debug\T03_ExactSumOfRealNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T03_ExactSumOfRealNumbers\obj\Debug\T03_ExactSumOfRealNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T03_ExactSumOfRealNumbers\obj\Debug\T03_ExactSumOfRealNumbers.pdb

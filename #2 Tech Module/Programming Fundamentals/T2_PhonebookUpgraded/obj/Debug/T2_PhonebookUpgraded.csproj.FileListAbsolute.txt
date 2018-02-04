@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_PhonebookUpgraded\bin\Debug\T2_PhonebookUpgraded.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_PhonebookUpgraded\bin\Debug\T2_PhonebookUpgraded.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_PhonebookUpgraded\bin\Debug\T2_PhonebookUpgraded.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_PhonebookUpgraded\obj\Debug\T2_PhonebookUpgraded.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_PhonebookUpgraded\obj\Debug\T2_PhonebookUpgraded.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_PhonebookUpgraded\obj\Debug\T2_PhonebookUpgraded.pdb

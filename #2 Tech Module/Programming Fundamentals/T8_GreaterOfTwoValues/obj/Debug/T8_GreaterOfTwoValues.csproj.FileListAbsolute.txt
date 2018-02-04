@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_GreaterOfTwoValues\bin\Debug\T8_GreaterOfTwoValues.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_GreaterOfTwoValues\bin\Debug\T8_GreaterOfTwoValues.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_GreaterOfTwoValues\bin\Debug\T8_GreaterOfTwoValues.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_GreaterOfTwoValues\obj\Debug\T8_GreaterOfTwoValues.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_GreaterOfTwoValues\obj\Debug\T8_GreaterOfTwoValues.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_GreaterOfTwoValues\obj\Debug\T8_GreaterOfTwoValues.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_GreaterOfTwoValues\obj\Debug\T8_GreaterOfTwoValues.pdb

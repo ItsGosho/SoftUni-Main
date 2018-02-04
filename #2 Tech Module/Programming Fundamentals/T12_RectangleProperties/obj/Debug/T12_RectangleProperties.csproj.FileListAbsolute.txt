@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T12_RectangleProperties\bin\Debug\T12_RectangleProperties.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T12_RectangleProperties\bin\Debug\T12_RectangleProperties.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T12_RectangleProperties\bin\Debug\T12_RectangleProperties.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T12_RectangleProperties\obj\Debug\T12_RectangleProperties.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T12_RectangleProperties\obj\Debug\T12_RectangleProperties.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T12_RectangleProperties\obj\Debug\T12_RectangleProperties.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T12_RectangleProperties\obj\Debug\T12_RectangleProperties.pdb

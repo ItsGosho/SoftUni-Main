@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_ConvertSpeedUnits\bin\Debug\T11_ConvertSpeedUnits.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_ConvertSpeedUnits\bin\Debug\T11_ConvertSpeedUnits.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_ConvertSpeedUnits\bin\Debug\T11_ConvertSpeedUnits.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_ConvertSpeedUnits\obj\Debug\T11_ConvertSpeedUnits.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_ConvertSpeedUnits\obj\Debug\T11_ConvertSpeedUnits.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_ConvertSpeedUnits\obj\Debug\T11_ConvertSpeedUnits.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_ConvertSpeedUnits\obj\Debug\T11_ConvertSpeedUnits.pdb

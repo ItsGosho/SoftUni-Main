@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_SumArrrays\bin\Debug\T7_SumArrrays.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_SumArrrays\bin\Debug\T7_SumArrrays.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_SumArrrays\bin\Debug\T7_SumArrrays.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_SumArrrays\obj\Debug\T7_SumArrrays.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_SumArrrays\obj\Debug\T7_SumArrrays.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_SumArrrays\obj\Debug\T7_SumArrrays.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_SumArrrays\obj\Debug\T7_SumArrrays.pdb

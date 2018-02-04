@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_MultiplicationTable\bin\Debug\T9_MultiplicationTable.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_MultiplicationTable\bin\Debug\T9_MultiplicationTable.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_MultiplicationTable\bin\Debug\T9_MultiplicationTable.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_MultiplicationTable\obj\Debug\T9_MultiplicationTable.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_MultiplicationTable\obj\Debug\T9_MultiplicationTable.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_MultiplicationTable\obj\Debug\T9_MultiplicationTable.pdb

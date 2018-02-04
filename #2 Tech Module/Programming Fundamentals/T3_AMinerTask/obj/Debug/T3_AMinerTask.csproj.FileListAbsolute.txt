@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_AMinerTask\bin\Debug\T3_AMinerTask.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_AMinerTask\bin\Debug\T3_AMinerTask.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_AMinerTask\bin\Debug\T3_AMinerTask.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_AMinerTask\obj\Debug\T3_AMinerTask.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_AMinerTask\obj\Debug\T3_AMinerTask.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_AMinerTask\obj\Debug\T3_AMinerTask.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_AMinerTask\obj\Debug\T3_AMinerTask.pdb

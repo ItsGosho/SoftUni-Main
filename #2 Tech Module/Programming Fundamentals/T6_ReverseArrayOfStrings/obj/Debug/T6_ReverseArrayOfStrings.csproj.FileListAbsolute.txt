@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_ReverseArrayOfStrings\bin\Debug\T6_ReverseArrayOfStrings.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_ReverseArrayOfStrings\bin\Debug\T6_ReverseArrayOfStrings.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_ReverseArrayOfStrings\bin\Debug\T6_ReverseArrayOfStrings.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_ReverseArrayOfStrings\obj\Debug\T6_ReverseArrayOfStrings.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_ReverseArrayOfStrings\obj\Debug\T6_ReverseArrayOfStrings.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_ReverseArrayOfStrings\obj\Debug\T6_ReverseArrayOfStrings.pdb

@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_MaxSequenceOfEqualElements\bin\Debug\T6_MaxSequenceOfEqualElements.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_MaxSequenceOfEqualElements\bin\Debug\T6_MaxSequenceOfEqualElements.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_MaxSequenceOfEqualElements\bin\Debug\T6_MaxSequenceOfEqualElements.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_MaxSequenceOfEqualElements\obj\Debug\T6_MaxSequenceOfEqualElements.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_MaxSequenceOfEqualElements\obj\Debug\T6_MaxSequenceOfEqualElements.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_MaxSequenceOfEqualElements\obj\Debug\T6_MaxSequenceOfEqualElements.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_MaxSequenceOfEqualElements\obj\Debug\T6_MaxSequenceOfEqualElements.pdb

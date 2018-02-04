@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_LineNumbers\bin\Debug\T2_LineNumbers.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_LineNumbers\bin\Debug\T2_LineNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_LineNumbers\bin\Debug\T2_LineNumbers.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_LineNumbers\obj\Debug\T2_LineNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_LineNumbers\obj\Debug\T2_LineNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_LineNumbers\obj\Debug\T2_LineNumbers.pdb

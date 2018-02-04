@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_AddTwoNumbers\bin\Debug\T2_AddTwoNumbers.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_AddTwoNumbers\bin\Debug\T2_AddTwoNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_AddTwoNumbers\bin\Debug\T2_AddTwoNumbers.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_AddTwoNumbers\obj\Debug\T2_AddTwoNumbers.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_AddTwoNumbers\obj\Debug\T2_AddTwoNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_AddTwoNumbers\obj\Debug\T2_AddTwoNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_AddTwoNumbers\obj\Debug\T2_AddTwoNumbers.pdb

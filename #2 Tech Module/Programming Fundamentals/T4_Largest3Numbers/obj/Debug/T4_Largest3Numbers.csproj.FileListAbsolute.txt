@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_Largest3Numbers\bin\Debug\T4_Largest3Numbers.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_Largest3Numbers\bin\Debug\T4_Largest3Numbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_Largest3Numbers\bin\Debug\T4_Largest3Numbers.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_Largest3Numbers\obj\Debug\T4_Largest3Numbers.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_Largest3Numbers\obj\Debug\T4_Largest3Numbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_Largest3Numbers\obj\Debug\T4_Largest3Numbers.pdb

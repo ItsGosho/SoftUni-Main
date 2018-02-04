@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_FixMails\bin\Debug\T4_FixMails.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_FixMails\bin\Debug\T4_FixMails.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_FixMails\bin\Debug\T4_FixMails.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_FixMails\obj\Debug\T4_FixMails.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_FixMails\obj\Debug\T4_FixMails.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_FixMails\obj\Debug\T4_FixMails.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_FixMails\obj\Debug\T4_FixMails.pdb

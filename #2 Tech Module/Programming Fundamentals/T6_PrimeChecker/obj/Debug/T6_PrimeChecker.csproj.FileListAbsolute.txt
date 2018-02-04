@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_PrimeChecker\bin\Debug\T6_PrimeChecker.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_PrimeChecker\bin\Debug\T6_PrimeChecker.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_PrimeChecker\bin\Debug\T6_PrimeChecker.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_PrimeChecker\obj\Debug\T6_PrimeChecker.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_PrimeChecker\obj\Debug\T6_PrimeChecker.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_PrimeChecker\obj\Debug\T6_PrimeChecker.pdb

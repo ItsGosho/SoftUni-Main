@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T02_CircleAreaPrecision12\bin\Debug\T02_CircleAreaPrecision12.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T02_CircleAreaPrecision12\bin\Debug\T02_CircleAreaPrecision12.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T02_CircleAreaPrecision12\bin\Debug\T02_CircleAreaPrecision12.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T02_CircleAreaPrecision12\obj\Debug\T02_CircleAreaPrecision12.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T02_CircleAreaPrecision12\obj\Debug\T02_CircleAreaPrecision12.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T02_CircleAreaPrecision12\obj\Debug\T02_CircleAreaPrecision12.pdb

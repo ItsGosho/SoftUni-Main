@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_CaloriesCounter\bin\Debug\T8_CaloriesCounter.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_CaloriesCounter\bin\Debug\T8_CaloriesCounter.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_CaloriesCounter\bin\Debug\T8_CaloriesCounter.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_CaloriesCounter\obj\Debug\T8_CaloriesCounter.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_CaloriesCounter\obj\Debug\T8_CaloriesCounter.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_CaloriesCounter\obj\Debug\T8_CaloriesCounter.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_CaloriesCounter\obj\Debug\T8_CaloriesCounter.pdb

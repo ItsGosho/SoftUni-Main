@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_BooleanVariable\obj\Debug\T5_BooleanVariable.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_BooleanVariable\bin\Debug\T5_BooleanVariable.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_BooleanVariable\bin\Debug\T5_BooleanVariable.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_BooleanVariable\bin\Debug\T5_BooleanVariable.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_BooleanVariable\obj\Debug\T5_BooleanVariable.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T5_BooleanVariable\obj\Debug\T5_BooleanVariable.pdb

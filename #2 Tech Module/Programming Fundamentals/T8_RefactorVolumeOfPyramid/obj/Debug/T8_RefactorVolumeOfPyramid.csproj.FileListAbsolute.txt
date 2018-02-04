@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_RefactorVolumeOfPyramid\bin\Debug\T8_RefactorVolumeOfPyramid.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_RefactorVolumeOfPyramid\bin\Debug\T8_RefactorVolumeOfPyramid.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_RefactorVolumeOfPyramid\bin\Debug\T8_RefactorVolumeOfPyramid.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_RefactorVolumeOfPyramid\obj\Debug\T8_RefactorVolumeOfPyramid.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_RefactorVolumeOfPyramid\obj\Debug\T8_RefactorVolumeOfPyramid.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_RefactorVolumeOfPyramid\obj\Debug\T8_RefactorVolumeOfPyramid.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_RefactorVolumeOfPyramid\obj\Debug\T8_RefactorVolumeOfPyramid.pdb

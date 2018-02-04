@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_5DifferentNumbers\obj\Debug\T11_5DifferentNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_5DifferentNumbers\bin\Debug\T11_5DifferentNumbers.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_5DifferentNumbers\bin\Debug\T11_5DifferentNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_5DifferentNumbers\bin\Debug\T11_5DifferentNumbers.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_5DifferentNumbers\obj\Debug\T11_5DifferentNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T11_5DifferentNumbers\obj\Debug\T11_5DifferentNumbers.pdb

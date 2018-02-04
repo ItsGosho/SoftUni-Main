@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SearchForANumbers\bin\Debug\T3_SearchForANumbers.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SearchForANumbers\bin\Debug\T3_SearchForANumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SearchForANumbers\bin\Debug\T3_SearchForANumbers.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SearchForANumbers\obj\Debug\T3_SearchForANumbers.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SearchForANumbers\obj\Debug\T3_SearchForANumbers.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SearchForANumbers\obj\Debug\T3_SearchForANumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SearchForANumbers\obj\Debug\T3_SearchForANumbers.pdb

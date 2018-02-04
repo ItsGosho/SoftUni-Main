@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_DivisibleBy3\bin\Debug\T7_DivisibleBy3.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_DivisibleBy3\bin\Debug\T7_DivisibleBy3.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_DivisibleBy3\bin\Debug\T7_DivisibleBy3.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_DivisibleBy3\obj\Debug\T7_DivisibleBy3.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_DivisibleBy3\obj\Debug\T7_DivisibleBy3.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_DivisibleBy3\obj\Debug\T7_DivisibleBy3.pdb

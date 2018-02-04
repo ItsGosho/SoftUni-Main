@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_BombNumbers\bin\Debug\T7_BombNumbers.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_BombNumbers\bin\Debug\T7_BombNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_BombNumbers\bin\Debug\T7_BombNumbers.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_BombNumbers\obj\Debug\T7_BombNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_BombNumbers\obj\Debug\T7_BombNumbers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_BombNumbers\obj\Debug\T7_BombNumbers.pdb

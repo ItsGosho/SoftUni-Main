@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_ExchangeVariableValues\bin\Debug\T7_ExchangeVariableValues.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_ExchangeVariableValues\bin\Debug\T7_ExchangeVariableValues.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_ExchangeVariableValues\bin\Debug\T7_ExchangeVariableValues.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_ExchangeVariableValues\obj\Debug\T7_ExchangeVariableValues.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_ExchangeVariableValues\obj\Debug\T7_ExchangeVariableValues.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_ExchangeVariableValues\obj\Debug\T7_ExchangeVariableValues.pdb

@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_EmployeeData\bin\Debug\T8_EmployeeData.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_EmployeeData\bin\Debug\T8_EmployeeData.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_EmployeeData\bin\Debug\T8_EmployeeData.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_EmployeeData\obj\Debug\T8_EmployeeData.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_EmployeeData\obj\Debug\T8_EmployeeData.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T8_EmployeeData\obj\Debug\T8_EmployeeData.pdb

@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_3. IntersectionofCircles\bin\Debug\T3_3.IntersectionofCircles.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_3. IntersectionofCircles\bin\Debug\T3_3.IntersectionofCircles.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_3. IntersectionofCircles\bin\Debug\T3_3.IntersectionofCircles.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_3. IntersectionofCircles\obj\Debug\T3_3. IntersectionofCircles.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_3. IntersectionofCircles\obj\Debug\T3_3. IntersectionofCircles.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_3. IntersectionofCircles\obj\Debug\T3_3.IntersectionofCircles.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_3. IntersectionofCircles\obj\Debug\T3_3.IntersectionofCircles.pdb

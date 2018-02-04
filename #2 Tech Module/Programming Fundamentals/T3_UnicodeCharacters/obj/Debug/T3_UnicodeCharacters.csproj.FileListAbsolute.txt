@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_UnicodeCharacters\bin\Debug\T3_UnicodeCharacters.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_UnicodeCharacters\bin\Debug\T3_UnicodeCharacters.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_UnicodeCharacters\bin\Debug\T3_UnicodeCharacters.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_UnicodeCharacters\obj\Debug\T3_UnicodeCharacters.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_UnicodeCharacters\obj\Debug\T3_UnicodeCharacters.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_UnicodeCharacters\obj\Debug\T3_UnicodeCharacters.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_UnicodeCharacters\obj\Debug\T3_UnicodeCharacters.pdb

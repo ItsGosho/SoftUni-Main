@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_MaxMethod\bin\Debug\T2_MaxMethod.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_MaxMethod\bin\Debug\T2_MaxMethod.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_MaxMethod\bin\Debug\T2_MaxMethod.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_MaxMethod\obj\Debug\T2_MaxMethod.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_MaxMethod\obj\Debug\T2_MaxMethod.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_MaxMethod\obj\Debug\T2_MaxMethod.pdb

@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_MultiplyEvensOdd\bin\Debug\T9_MultiplyEvensOdd.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_MultiplyEvensOdd\bin\Debug\T9_MultiplyEvensOdd.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_MultiplyEvensOdd\bin\Debug\T9_MultiplyEvensOdd.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_MultiplyEvensOdd\obj\Debug\T9_MultiplyEvensOdd.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_MultiplyEvensOdd\obj\Debug\T9_MultiplyEvensOdd.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_MultiplyEvensOdd\obj\Debug\T9_MultiplyEvensOdd.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T9_MultiplyEvensOdd\obj\Debug\T9_MultiplyEvensOdd.pdb

@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_RemoveNegativeAndReverse\bin\Debug\T1_RemoveNegativeAndReverse.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_RemoveNegativeAndReverse\bin\Debug\T1_RemoveNegativeAndReverse.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_RemoveNegativeAndReverse\bin\Debug\T1_RemoveNegativeAndReverse.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_RemoveNegativeAndReverse\obj\Debug\T1_RemoveNegativeAndReverse.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_RemoveNegativeAndReverse\obj\Debug\T1_RemoveNegativeAndReverse.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_RemoveNegativeAndReverse\obj\Debug\T1_RemoveNegativeAndReverse.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_RemoveNegativeAndReverse\obj\Debug\T1_RemoveNegativeAndReverse.pdb

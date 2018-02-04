@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_MultiplicationTable2.0\bin\Debug\T10_MultiplicationTable2.0.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_MultiplicationTable2.0\bin\Debug\T10_MultiplicationTable2.0.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_MultiplicationTable2.0\bin\Debug\T10_MultiplicationTable2.0.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_MultiplicationTable2.0\obj\Debug\T10_MultiplicationTable2.0.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_MultiplicationTable2.0\obj\Debug\T10_MultiplicationTable2.0.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_MultiplicationTable2.0\obj\Debug\T10_MultiplicationTable2.0.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T10_MultiplicationTable2.0\obj\Debug\T10_MultiplicationTable2.0.pdb

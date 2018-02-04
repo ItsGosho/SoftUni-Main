@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_AndreyAndBilliard\bin\Debug\T7_AndreyAndBilliard.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_AndreyAndBilliard\bin\Debug\T7_AndreyAndBilliard.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_AndreyAndBilliard\bin\Debug\T7_AndreyAndBilliard.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_AndreyAndBilliard\obj\Debug\T7_AndreyAndBilliard.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_AndreyAndBilliard\obj\Debug\T7_AndreyAndBilliard.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_AndreyAndBilliard\obj\Debug\T7_AndreyAndBilliard.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T7_AndreyAndBilliard\obj\Debug\T7_AndreyAndBilliard.pdb

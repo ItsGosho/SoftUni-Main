@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T14_IntegerToHexBinary\bin\Debug\T14_IntegerToHexBinary.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T14_IntegerToHexBinary\bin\Debug\T14_IntegerToHexBinary.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T14_IntegerToHexBinary\bin\Debug\T14_IntegerToHexBinary.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T14_IntegerToHexBinary\obj\Debug\T14_IntegerToHexBinary.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T14_IntegerToHexBinary\obj\Debug\T14_IntegerToHexBinary.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T14_IntegerToHexBinary\obj\Debug\T14_IntegerToHexBinary.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T14_IntegerToHexBinary\obj\Debug\T14_IntegerToHexBinary.pdb

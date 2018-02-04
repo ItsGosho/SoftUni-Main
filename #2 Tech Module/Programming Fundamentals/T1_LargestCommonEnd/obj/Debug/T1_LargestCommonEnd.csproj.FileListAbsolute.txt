@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_LargestCommonEnd\bin\Debug\T1_LargestCommonEnd.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_LargestCommonEnd\bin\Debug\T1_LargestCommonEnd.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_LargestCommonEnd\bin\Debug\T1_LargestCommonEnd.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_LargestCommonEnd\obj\Debug\T1_LargestCommonEnd.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_LargestCommonEnd\obj\Debug\T1_LargestCommonEnd.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_LargestCommonEnd\obj\Debug\T1_LargestCommonEnd.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_LargestCommonEnd\obj\Debug\T1_LargestCommonEnd.pdb

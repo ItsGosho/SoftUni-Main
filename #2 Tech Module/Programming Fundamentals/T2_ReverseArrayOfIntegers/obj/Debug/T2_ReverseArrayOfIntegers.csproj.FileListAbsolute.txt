@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_ReverseArrayOfIntegers\bin\Debug\T2_ReverseArrayOfIntegers.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_ReverseArrayOfIntegers\bin\Debug\T2_ReverseArrayOfIntegers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_ReverseArrayOfIntegers\bin\Debug\T2_ReverseArrayOfIntegers.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_ReverseArrayOfIntegers\obj\Debug\T2_ReverseArrayOfIntegers.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_ReverseArrayOfIntegers\obj\Debug\T2_ReverseArrayOfIntegers.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T2_ReverseArrayOfIntegers\obj\Debug\T2_ReverseArrayOfIntegers.pdb

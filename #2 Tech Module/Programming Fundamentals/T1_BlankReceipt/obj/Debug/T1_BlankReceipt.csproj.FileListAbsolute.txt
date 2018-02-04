@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_BlankReceipt\bin\Debug\T1_BlankReceipt.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_BlankReceipt\bin\Debug\T1_BlankReceipt.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_BlankReceipt\bin\Debug\T1_BlankReceipt.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_BlankReceipt\obj\Debug\T1_BlankReceipt.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_BlankReceipt\obj\Debug\T1_BlankReceipt.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_BlankReceipt\obj\Debug\T1_BlankReceipt.pdb

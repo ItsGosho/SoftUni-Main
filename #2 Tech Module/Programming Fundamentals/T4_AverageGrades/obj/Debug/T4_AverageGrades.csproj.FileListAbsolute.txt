@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_AverageGrades\bin\Debug\T4_AverageGrades.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_AverageGrades\bin\Debug\T4_AverageGrades.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_AverageGrades\bin\Debug\T4_AverageGrades.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_AverageGrades\obj\Debug\T4_AverageGrades.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_AverageGrades\obj\Debug\T4_AverageGrades.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_AverageGrades\obj\Debug\T4_AverageGrades.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_AverageGrades\obj\Debug\T4_AverageGrades.pdb

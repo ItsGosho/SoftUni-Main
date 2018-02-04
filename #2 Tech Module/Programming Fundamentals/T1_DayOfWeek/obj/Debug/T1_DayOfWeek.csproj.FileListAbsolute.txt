@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_DayOfWeek\bin\Debug\T1_DayOfWeek.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_DayOfWeek\bin\Debug\T1_DayOfWeek.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_DayOfWeek\bin\Debug\T1_DayOfWeek.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_DayOfWeek\obj\Debug\T1_DayOfWeek.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_DayOfWeek\obj\Debug\T1_DayOfWeek.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_DayOfWeek\obj\Debug\T1_DayOfWeek.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T1_DayOfWeek\obj\Debug\T1_DayOfWeek.pdb

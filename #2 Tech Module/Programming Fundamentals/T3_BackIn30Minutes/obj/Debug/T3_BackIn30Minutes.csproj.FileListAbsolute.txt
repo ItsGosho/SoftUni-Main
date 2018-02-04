@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_BackIn30Minutes\bin\Debug\T3_BackIn30Minutes.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_BackIn30Minutes\bin\Debug\T3_BackIn30Minutes.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_BackIn30Minutes\bin\Debug\T3_BackIn30Minutes.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_BackIn30Minutes\obj\Debug\T3_BackIn30Minutes.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_BackIn30Minutes\obj\Debug\T3_BackIn30Minutes.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_BackIn30Minutes\obj\Debug\T3_BackIn30Minutes.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_BackIn30Minutes\obj\Debug\T3_BackIn30Minutes.pdb

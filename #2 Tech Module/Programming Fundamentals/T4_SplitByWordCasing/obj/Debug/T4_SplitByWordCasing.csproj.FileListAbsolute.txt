@@ -1,0 +1,6 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_SplitByWordCasing\bin\Debug\T4_SplitByWordCasing.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_SplitByWordCasing\bin\Debug\T4_SplitByWordCasing.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_SplitByWordCasing\bin\Debug\T4_SplitByWordCasing.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_SplitByWordCasing\obj\Debug\T4_SplitByWordCasing.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_SplitByWordCasing\obj\Debug\T4_SplitByWordCasing.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_SplitByWordCasing\obj\Debug\T4_SplitByWordCasing.pdb

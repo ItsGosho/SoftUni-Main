@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_WordCount\bin\Debug\T3_WordCount.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_WordCount\bin\Debug\T3_WordCount.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_WordCount\bin\Debug\T3_WordCount.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_WordCount\obj\Debug\T3_WordCount.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_WordCount\obj\Debug\T3_WordCount.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_WordCount\obj\Debug\T3_WordCount.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_WordCount\obj\Debug\T3_WordCount.pdb

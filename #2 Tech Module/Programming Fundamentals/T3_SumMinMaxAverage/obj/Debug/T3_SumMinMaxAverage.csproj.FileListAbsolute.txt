@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SumMinMaxAverage\bin\Debug\T3_SumMinMaxAverage.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SumMinMaxAverage\bin\Debug\T3_SumMinMaxAverage.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SumMinMaxAverage\bin\Debug\T3_SumMinMaxAverage.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SumMinMaxAverage\obj\Debug\T3_SumMinMaxAverage.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SumMinMaxAverage\obj\Debug\T3_SumMinMaxAverage.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SumMinMaxAverage\obj\Debug\T3_SumMinMaxAverage.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T3_SumMinMaxAverage\obj\Debug\T3_SumMinMaxAverage.pdb

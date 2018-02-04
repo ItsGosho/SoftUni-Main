@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_NumbersInReversedOrder\bin\Debug\T4_NumbersInReversedOrder.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_NumbersInReversedOrder\bin\Debug\T4_NumbersInReversedOrder.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_NumbersInReversedOrder\bin\Debug\T4_NumbersInReversedOrder.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_NumbersInReversedOrder\obj\Debug\T4_NumbersInReversedOrder.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_NumbersInReversedOrder\obj\Debug\T4_NumbersInReversedOrder.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_NumbersInReversedOrder\obj\Debug\T4_NumbersInReversedOrder.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T4_NumbersInReversedOrder\obj\Debug\T4_NumbersInReversedOrder.pdb

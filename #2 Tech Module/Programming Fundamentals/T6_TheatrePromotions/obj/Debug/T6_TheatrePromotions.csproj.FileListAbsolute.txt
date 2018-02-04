@@ -1,0 +1,7 @@
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_TheatrePromotions\bin\Debug\T6_TheatrePromotions.exe.config
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_TheatrePromotions\bin\Debug\T6_TheatrePromotions.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_TheatrePromotions\bin\Debug\T6_TheatrePromotions.pdb
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_TheatrePromotions\obj\Debug\T6_TheatrePromotions.csprojResolveAssemblyReference.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_TheatrePromotions\obj\Debug\T6_TheatrePromotions.csproj.CoreCompileInputs.cache
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_TheatrePromotions\obj\Debug\T6_TheatrePromotions.exe
+C:\Users\Gosho\source\repos\ProgrammingFundamentals\T6_TheatrePromotions\obj\Debug\T6_TheatrePromotions.pdb
