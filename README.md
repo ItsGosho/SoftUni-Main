@@ -1,7 +1,7 @@
 <p align="center"> <strong>Software University</strong><p>
 
 
-My education and solution in the Software University.Started in 9 September 2017 years with the language Java.
+My education and solutions in the Software University.Started in 9 September 2017 years with the language Java.
 
 
 ## My courses:
