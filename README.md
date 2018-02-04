@@ -1,12 +1,10 @@
-*<p align="center"> Software University<p>
-<a href="https://softuni.bg/trainings/1747/databases-basics-mssql-server-september-2017">  ![SoftUni logo][logo] <a/>
+<p align="center"> <strong>Software University</strong><p>
 
 
-                                                 My solutions from
-												   the education
+My education and solution in the Software University.Started in 9 September 2017 years with the language Java.
 
 
-## Courses:
+## My courses:
 1. <a href="https://github.com/ItsGosho/SoftUni/tree/master/%231%20Programming%20Basics%20Java"> Programming Basics with Java </a> 
 2. <a href="https://github.com/ItsGosho/SoftUni/tree/master/%232%20Tech%20Module/%231.Programming%20Fundamentals"> Programming Fundamentals</a> 
 3. <a href="https://github.com/ItsGosho/SoftUni/tree/master/%232%20Tech%20Module/%232.Software%20Technologies"> Technology Fundamentals </a> 
