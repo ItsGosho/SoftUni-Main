@@ -1,0 +1,18 @@
+package T05_sayHelloExtended;
+
+public abstract class BasePerson implements Person{
+    private String name;
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public BasePerson(String name) {
+        this.name = name;
+    }
+}
