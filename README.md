@@ -14,7 +14,6 @@ I.<a href="https://github.com/ItsGosho/SoftUni/tree/master/%231%20Programming%20
 </table>
 </details>
 <hr />
-<hr />
 <details>
 <summary> Programming Fundamentals  
 </summary>
