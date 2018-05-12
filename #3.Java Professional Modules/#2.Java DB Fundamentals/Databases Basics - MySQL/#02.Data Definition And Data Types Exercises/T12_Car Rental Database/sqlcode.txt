@@ -1,0 +1,104 @@
+create table categories(
+   id INT primary key AUTO_INCREMENT NOT NULL,
+   category varchar(30) not null,
+   daily_rate double,
+   weekly_rate double,
+   monthly_rate double,
+   weekend_rate double
+);
+
+create table cars(
+   id INT primary key AUTO_INCREMENT NOT NULL,
+   plate_number int not null,
+   make varchar(30),
+   model varchar(30) not null,
+   car_year date,
+   category_id int not null,
+   doors int not null,
+   picture blob,
+   car_condition varchar(50),
+   available bool not null
+);
+alter table cars
+add foreign key (category_id) references categories(id);
+
+create table employees(
+   id int primary key auto_increment not null,
+   first_name varchar(30) not null,
+   last_name varchar(30) not null,
+   title varchar(50) not null,
+   notes text
+);
+
+create table customers(
+   id int primary key auto_increment not null,
+   driver_licence_number int not null,
+   full_name varchar(30) not null,
+   address varchar(50),
+   city varchar(50) not null,
+   zip_code int,
+   notes text 
+);
+
+create table rental_orders(
+   id int primary key auto_increment not null,
+   employee_id int not null,
+   customer_id int not null,
+   car_id int not null,
+   car_condition varchar(50) not null,
+   tank_level int,
+   kilometrage_start int,
+   kilometrage_end int,
+   total_kilometrage int not null,
+   start_date date,
+   end_date date,
+   total_days int,
+   rate_applied bool not null,
+   tax_rate double not null,
+   order_status varchar(30) not null,
+   notes text
+);
+
+
+alter table rental_orders
+add foreign key (employee_id) references employees(id),
+add foreign key (customer_id) references customers(id),
+add foreign key (car_id) references cars(id);
+
+insert into categories(id,category)
+values
+(1,'fast'),
+(2,'good'),
+(3,'slow');
+
+insert into cars(id,plate_number,model,category_id,doors,available)
+values
+(1,0007,'BMW',1,4,true),
+(2,0007,'AUDI',2,4,true),
+(3,0007,'MERCEDESS',3,4,true);
+
+insert into employees(id,first_name,last_name,title)
+values
+(1,'Gosho','Bosho','AAA'),
+(2,'Rosho','AAB','QQQ'),
+(3,'Sosho','AAC','CCC');   
+
+insert into customers(id,driver_licence_number,full_name,city)
+values
+(1,001,'Gosho','Vraca'),
+(2,006,'Rosho','Vraca'),
+(3,003,'Bosho','Vraca');
+
+insert into rental_orders(id,
+employee_id,
+customer_id,
+car_id,
+car_condition,
+total_kilometrage,
+rate_applied,
+tax_rate,
+order_status)
+values
+(1,1,1,1,'good',10000,true,5.50,'delivering'),
+(2,2,2,2,'low',5555,false,5.34,'in process'),
+(3,3,3,3,'aaa',33333,true,5.50,'comiiing');
