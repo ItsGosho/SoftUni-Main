@@ -1,0 +1,3 @@
+select country_name,population
+from countries
+order by population desc,country_name;
