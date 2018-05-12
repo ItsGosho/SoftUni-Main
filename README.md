@@ -1,4 +1,4 @@
 <img src="%233.Java Professional Modules/sulogo.png" align="right" />
 
-# Software University
-> ItsGosho`s SoftUni Tasks Repository \n test
+# My Software University Tasks Repository
+> Started at 09.September.2017
