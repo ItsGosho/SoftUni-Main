@@ -1,0 +1,3 @@
+update employees set salary=salary*1.10
+where job_title='Therapist';
+select salary from employees order by salary asc;
