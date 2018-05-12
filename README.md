@@ -9,6 +9,7 @@
 </summary>
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
+<br></br>
 <a href="https://github.com/ItsGosho/SoftUni/tree/master/%231%20Programming%20Basics%20Java"> Programming Basics with Java </a> 
 </tbody>
 </table>
