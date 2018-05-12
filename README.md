@@ -31,4 +31,13 @@ I. <a href="https://github.com/ItsGosho/SoftUni/tree/master/%233.Java%20Professi
 </tbody>
 </table>
 </details>
+<details>
+<summary> Java DB Fundamentals
+</summary>
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+I.<a href="https://github.com/ItsGosho/SoftUni/tree/master/%233.Java%20Professional%20Modules/%232.Java%20DB%20Fundamentals/Databases%20Basics%20-%20MySQL"> Databases Basics - MySQL</a><br>II. <a href="SOON"> Databases Advanced - Hibernate </a></br> 
+</tbody>
+</table>
+</details>
 <hr />
