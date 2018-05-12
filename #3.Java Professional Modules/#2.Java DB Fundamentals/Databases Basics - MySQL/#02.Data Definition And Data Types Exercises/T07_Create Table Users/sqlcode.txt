@@ -1,0 +1,19 @@
+CREATE TABLE users(
+	id BIGINT UNIQUE AUTO_INCREMENT,
+	username VARCHAR(30) UNIQUE  NOT NULL,
+	password  VARCHAR(26) NOT NULL,
+	profile_picture  BLOB,
+	last_login_time DATE,
+	is_deleted BOOL
+);
+
+ALTER TABLE users
+ADD CONSTRAINT pk_users PRIMARY KEY(id);   
+
+INSERT users (id,username,password) 
+VALUES
+(1,'Gosho','123'),
+(2,'Losho','124'),
+(3,'Mosho','125'),
+(4,'Bosho','126'),
+(5,'Rosho','127');
