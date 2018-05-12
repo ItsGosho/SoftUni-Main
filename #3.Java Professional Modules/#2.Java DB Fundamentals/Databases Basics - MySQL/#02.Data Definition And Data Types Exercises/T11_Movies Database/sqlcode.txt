@@ -1,0 +1,63 @@
+CREATE TABLE directors(
+  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  director_name VARCHAR(50) NOT NULL,
+  notes VARCHAR(200)
+);
+
+CREATE TABLE genres(
+   id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  genre_name VARCHAR(50) NOT NULL,
+  notes VARCHAR(200)
+);
+
+CREATE TABLE categories(
+   id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  category_name VARCHAR(50) NOT NULL,
+  notes VARCHAR(200)
+); 
+
+CREATE TABLE movies(
+  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  title VARCHAR(30) NOT NULL,
+  copyright_year DATE NOT NULL,
+  length DATETIME NOT NULL,
+  genre_id INT NOT NULL,
+  category_id INT NOT NULL,  
+  rating VARCHAR(30),
+  notes VARCHAR(200)
+); 
+ALTER TABLE movies
+ADD FOREIGN KEY (genre_id) REFERENCES genres(id),
+ADD FOREIGN KEY (category_id) REFERENCES categories(id);    
+
+INSERT INTO categories(id,category_name,notes)
+VALUES
+(1,'Western','bum bum'),
+(2,'Europeon','ay ay'),
+(3,'Chinee','debaa'),
+(4,'BG','debaa'),
+(5,'EN','debaa');
+
+INSERT INTO directors(id,director_name,notes)
+VALUES
+(1,'Joni','pechen'),
+(2,'BOni','mn div'),
+(3,'Coni','losh'),
+(4,'Coni','losh'),
+(5,'Coni','losh');
+
+INSERT INTO genres(id,genre_name,notes)
+VALUES
+(1,'Action','bum bum'),
+(2,'Horror','ay ay'),
+(3,'Drama','debaa'), 
+(4,'Nz','Nz'),
+(5,'Nz','Nz');
+
+INSERT INTO movies(id,title,copyright_year,length,genre_id,category_id)
+VALUES
+(1,'AAA','2016-10-10','2016-10-10 00:00:00',1,5),
+(2,'AAA','2016-10-10','2016-10-10 00:00:00',2,3),
+(3,'AAA','2016-10-10','2016-10-10 00:00:00',3,4), 
+(4,'AAA','2016-10-10','2016-10-10 00:00:00',5,1),
+(5,'AAA','2016-10-10','2016-10-10 00:00:00',4,2);
