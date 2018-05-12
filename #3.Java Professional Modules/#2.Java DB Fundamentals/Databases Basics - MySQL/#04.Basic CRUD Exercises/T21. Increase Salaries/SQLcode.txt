@@ -1,0 +1,5 @@
+update employees
+set salary=salary*1.12
+where manager_id=12 OR manager_id=4 OR manager_id=46 OR manager_id=42;
+
+select salary from employees;
