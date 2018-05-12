@@ -1,0 +1,17 @@
+create table towns(
+   id int primary key not null auto_increment,
+   name varchar(50) not null
+);
+
+create table addresses(
+    id int primary key not null auto_increment,
+    adress_text varchar(50) not null,
+    town_id int not null
+);
+alter table addresses
+add foreign key (town_id) references towns(id);
+
+create table departments(
+   id int primary key not null auto_increment,
+   name varchar(50) not null
+);
