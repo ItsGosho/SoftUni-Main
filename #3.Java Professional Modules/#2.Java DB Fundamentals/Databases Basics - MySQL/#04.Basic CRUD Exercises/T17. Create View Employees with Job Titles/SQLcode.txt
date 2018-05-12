@@ -1,0 +1,6 @@
+create view v_employees_job_titles 
+as
+select concat(first_name,' ',ifnull(middle_name, ''),' ',last_name) as full_name,job_title
+from employees;
+
+select * from v_employees_job_titles;
