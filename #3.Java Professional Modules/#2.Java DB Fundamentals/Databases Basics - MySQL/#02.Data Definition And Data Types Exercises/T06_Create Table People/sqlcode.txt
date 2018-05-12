@@ -1,0 +1,17 @@
+CREATE TABLE people(
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(200) NOT NULL,
+  picture TEXT,
+  height FLOAT(6,2),
+  weight FLOAT(6,2),
+  gender ENUM ('M','F') NOT NULL,
+  birthday DATETIME NOT NULL,
+  biography TEXT 
+); 
+
+INSERT INTO people(id,name,gender,birthday,biography)
+VALUES (1,'Gosho','M','2008-11-11','pich'),
+(2,'Pesho','F','2008-11-11','asd'),
+(3,'Misho','M','2008-11-11','pich1'),
+(4,'Drisho','F','2008-11-11','pich2'),
+(5,'Pisho','F','2008-11-11','pich3');
