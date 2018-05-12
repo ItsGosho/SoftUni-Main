@@ -1,0 +1,3 @@
+SELECT id,name FROM towns;
+SELECT id,name FROM departments;
+SELECT id,first_name, last_name, job_title, salary FROM employees; 
