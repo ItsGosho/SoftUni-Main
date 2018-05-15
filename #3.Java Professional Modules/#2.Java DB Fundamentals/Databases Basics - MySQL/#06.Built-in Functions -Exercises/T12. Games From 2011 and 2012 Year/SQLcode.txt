@@ -1,0 +1,5 @@
+select name,date_format(start,"%Y-%m-%d") as start
+from games
+where start>'2011' AND start<'2013'
+order by start
+limit 50;
