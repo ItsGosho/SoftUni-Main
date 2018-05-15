@@ -1,0 +1,2 @@
+select concat(first_name,' ',last_name),datediff(died,born)
+from authors;
