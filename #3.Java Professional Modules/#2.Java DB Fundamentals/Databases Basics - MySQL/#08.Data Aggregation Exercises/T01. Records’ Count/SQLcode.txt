@@ -1,0 +1,2 @@
+select count(id)
+from wizzard_deposits;
