@@ -1,0 +1,4 @@
+select department_id,count(department_id) as 'Number of empl'
+from employees
+group by department_id
+order by department_id,'Number of empl';
