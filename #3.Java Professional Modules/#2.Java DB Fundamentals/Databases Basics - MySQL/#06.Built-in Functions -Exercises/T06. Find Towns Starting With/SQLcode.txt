@@ -1,0 +1,4 @@
+select town_id,name
+from towns
+where name like 'M%' OR name like 'K%' OR name like 'B%' OR name like 'E%'
+order by name;
