@@ -1,0 +1,4 @@
+select town_id,name
+from towns
+where name not like 'R%' AND name not like 'B%' AND name not like 'D%'
+order by name;
