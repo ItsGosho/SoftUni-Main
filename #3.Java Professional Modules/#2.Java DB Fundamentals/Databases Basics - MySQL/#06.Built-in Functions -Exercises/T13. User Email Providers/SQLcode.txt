@@ -1,0 +1,3 @@
+select user_name,substring(email,position('@' in email)+1) as email
+from users
+order by email,user_name;
