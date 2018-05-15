@@ -1,0 +1,3 @@
+select count(employee_id)
+from employees
+where manager_id is null;  
