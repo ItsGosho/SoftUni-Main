@@ -1,0 +1,4 @@
+select country_name,iso_code
+from countries
+where (char_length(country_name)-char_length(replace(country_name,'A',''))+char_length(country_name)-char_length(replace(country_name,'a','')))>=3
+order by iso_code;
