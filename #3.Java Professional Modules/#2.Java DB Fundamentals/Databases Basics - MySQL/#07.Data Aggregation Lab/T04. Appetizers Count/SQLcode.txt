@@ -1,0 +1,4 @@
+select category_id
+from products
+where price>8 and category_id=2
+group by category_id;
