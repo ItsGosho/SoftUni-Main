@@ -1,0 +1,3 @@
+select replace(title,substring(title,1,3),'***')
+from books
+where substring(title,1,3)='The';
