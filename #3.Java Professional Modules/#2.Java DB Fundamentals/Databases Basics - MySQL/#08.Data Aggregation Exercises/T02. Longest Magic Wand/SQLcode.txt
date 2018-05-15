@@ -1,0 +1,2 @@
+select max(magic_wand_size) as magic_wand_size
+from wizzard_deposits;
