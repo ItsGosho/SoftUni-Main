@@ -1,0 +1,4 @@
+select department_id,round(min(salary),2) as min_salary
+from employees
+group by department_id
+having min_salary>800;
