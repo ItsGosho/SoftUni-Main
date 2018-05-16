@@ -1,0 +1,5 @@
+select m.mountain_range,p.peak_name,p.elevation as peak_elevation
+from peaks as p
+join mountains as m on p.mountain_id=17
+where m.mountain_range='Rila'
+order by peak_elevation desc;
