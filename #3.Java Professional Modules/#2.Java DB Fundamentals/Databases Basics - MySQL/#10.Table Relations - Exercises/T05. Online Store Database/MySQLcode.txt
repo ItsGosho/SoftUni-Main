@@ -1,0 +1,47 @@
+create table items(
+   item_id int(11) primary key auto_increment not null,
+   name varchar(50) not null,
+   item_type_id int(11) not null
+);
+
+create table item_types(
+    item_type_id int(11) primary key auto_increment not null,
+    name varchar(50) not null
+);
+
+create table customers(
+   customer_id int(11) primary key auto_increment not null,
+   name varchar(50) not null,
+   birthday date not null,
+   city_id int(11)
+);
+
+create table order_items(
+   order_id int(11),
+   item_id int(11)
+);
+
+create table cities(
+   city_id int(11) primary key auto_increment not null,
+   name varchar(50) not null
+);
+
+create table orders(
+   order_id int(11) primary key auto_increment not null,
+   customer_id int(11)
+);
+
+alter table items
+add foreign key (item_type_id) references item_types(item_type_id);
+
+alter table customers
+add foreign key (city_id) references cities(city_id);
+
+alter table order_items
+add foreign key (order_id) references orders(order_id);
+
+alter table order_items
+add foreign key (item_id) references items(item_id);
+
+alter table orders
+add foreign key (customer_id) references customers(customer_id);
