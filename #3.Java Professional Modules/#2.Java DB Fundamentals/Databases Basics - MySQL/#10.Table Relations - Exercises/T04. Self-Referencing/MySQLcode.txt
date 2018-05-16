@@ -1,0 +1,18 @@
+create table teachers(
+   teacher_id int primary key auto_increment not null,   
+   name varchar(50) not null,
+   manager_id int
+); 
+
+insert into teachers(teacher_id,name,manager_id) 
+values
+(101,'John',null),
+(102,'Maya',106),
+(103,'Silvia',106),
+(104,'Ted',105),
+(105,'Mark',101),
+(106,'Greta',101);
+
+alter table teachers
+add constraint fk_manager_id
+foreign key (manager_id) references teachers(teacher_id);
