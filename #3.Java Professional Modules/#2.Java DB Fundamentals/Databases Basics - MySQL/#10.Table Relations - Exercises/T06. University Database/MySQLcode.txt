@@ -1,0 +1,40 @@
+create table subjects(
+   subject_id int(11) primary key auto_increment not null,
+   subject_name varchar(50) not null
+);
+
+create table majors(
+    major_id int(11) primary key auto_increment not null,
+    name varchar(50) not null
+);
+
+create table payments(
+    payment_id int(11) primary key auto_increment not null, 
+    payment_date date not null,
+    payment_amount decimal(8,2) not null,
+    student_id int(11)
+);
+
+create table agenda(
+    student_id int(11),
+    subject_id int(11)
+); 
+
+create table students(
+    student_id int(11) primary key auto_increment not null,
+    student_number varchar(12) not null,
+    student_name varchar(50) not null,
+    major_id int(11)
+);
+
+alter table payments
+add foreign key (student_id) references students(student_id);
+
+alter table agenda
+add foreign key (student_id) references students(student_id);
+
+alter table agenda
+add foreign key (subject_id) references subjects(subject_id);
+
+alter table students
+add foreign key (major_id) references majors(major_id);
