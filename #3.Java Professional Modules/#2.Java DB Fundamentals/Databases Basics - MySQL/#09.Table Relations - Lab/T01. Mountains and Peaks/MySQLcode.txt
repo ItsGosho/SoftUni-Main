@@ -1,0 +1,11 @@
+create table mountains(
+   id int primary key auto_increment not null,
+   name varchar(20)
+);
+
+create table peaks(
+   id int primary key auto_increment not null,
+   name varchar(20),
+   mountain_id int,
+   foreign key(mountain_id) references mountains(id)
+); 
