@@ -1,0 +1,30 @@
+create table clients(
+   id int(11) primary key auto_increment not null,
+   client_name varchar(100) not null, 
+   project_id int(11)
+);
+
+create table projects(
+   id int(11) primary key auto_increment not null,
+   client_id int(11),
+   project_lead_id int(11)
+);
+
+create table employees(
+   id int(11) primary key auto_increment not null,
+   first_name varchar(30) not null,
+   last_name varchar(30) not null,
+   project_id int(11)
+); 
+
+alter table clients
+add foreign key(project_id) references projects(id);  
+
+alter table projects
+add foreign key(client_id) references clients(id);
+
+alter table projects
+add foreign key(project_lead_id) references employees(id);
+
+alter table employees
+add foreign key(project_id) references projects(id);
