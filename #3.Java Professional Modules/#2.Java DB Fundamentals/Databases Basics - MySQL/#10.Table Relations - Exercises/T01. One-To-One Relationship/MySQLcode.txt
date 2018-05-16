@@ -1,0 +1,21 @@
+create table persons(
+   person_id int primary key not null auto_increment,
+   first_name varchar(20),
+   salary double(50,2),
+   passport_id int
+);
+
+create table passports( 
+   passport_id int primary key not null auto_increment,
+   passport_number varchar(50) unique
+);
+
+insert into passports(passport_id,passport_number) 
+values (101,'N34FG21B'),
+(102,'K65LO4R7'),
+(103,'ZE657QP2');
+
+insert into persons(person_id,first_name,salary,passport_id)
+values (1,'Roberto',43300.00,102),
+(2,'Tom',56100.00,103),
+(3,'Yana',60200.00,101);
