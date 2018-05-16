@@ -1,0 +1,5 @@
+select r.starting_point as route_starting_point,
+r.end_point as route_ending_point,
+r.leader_id,concat(c.first_name,' ',c.last_name) as last_name
+from campers as c
+join routes as r on r.leader_id=c.id; 
