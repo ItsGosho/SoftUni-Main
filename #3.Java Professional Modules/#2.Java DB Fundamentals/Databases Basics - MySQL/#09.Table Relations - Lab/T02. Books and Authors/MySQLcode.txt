@@ -1,0 +1,12 @@
+create table authors(
+   id int primary key auto_increment not null,
+   name varchar(20)
+);
+
+create table books(
+   id int primary key auto_increment not null,
+   name varchar(20),
+   author_id int,
+   foreign key(author_id) references authors(id)
+   on delete cascade
+);
