@@ -1,0 +1,3 @@
+update flights
+set airline_id=1
+where status='Arrived';
