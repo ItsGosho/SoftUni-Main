@@ -1,0 +1,5 @@
+select distinct e.employee_id,e.first_name
+from employees as e
+join employees_projects as ep on ep.employee_id<>e.employee_id 
+order by e.employee_id desc
+limit 3; 
