@@ -1,0 +1,7 @@
+select distinct c.customer_id,concat(c.first_name,' ',c.last_name) as full_name,
+date_format(from_days(datediff("2016-01-01",c.date_of_birth)),"%Y")+1 as age
+from customers as c
+join tickets as tick on tick.customer_id=c.customer_id
+join flights as f on f.flight_id=tick.flight_id
+where f.`status`='Departing'
+order by age asc,c.customer_id asc;
