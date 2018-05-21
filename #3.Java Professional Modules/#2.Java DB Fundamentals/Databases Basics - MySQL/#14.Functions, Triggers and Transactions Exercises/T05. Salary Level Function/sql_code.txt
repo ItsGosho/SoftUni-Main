@@ -1,0 +1,9 @@
+delimiter $$
+create function ufn_get_salary_level  (empl_salary double)
+returns varchar(20)
+begin
+     declare ret_result varchar(20);
+     set ret_result=(select if(empl_salary<30000,'Low'
+	  ,if(empl_salary>=30000 and @empl_salary<=50000,'Average','High')) as salary_level);
+	  return ret_result;
+end $$ 
