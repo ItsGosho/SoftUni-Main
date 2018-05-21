@@ -1,0 +1,10 @@
+delimiter $$
+create procedure usp_get_employees_from_town (town_name varchar(50))
+begin
+    select e.first_name,e.last_name
+    from employees as e
+    join addresses as a on e.address_id=a.address_id
+	 join towns as t on a.town_id=t.town_id
+	 where t.name=town_name
+	 order by e.first_name,e.last_name,e.employee_id asc; 
+end $$
