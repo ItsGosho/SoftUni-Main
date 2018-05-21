@@ -1,0 +1,12 @@
+delimiter $$
+create function ufn_count_employees_by_town (town_name varchar(50))
+returns int
+BEGIN
+   declare return_result int;
+   set return_result=(select count(e.first_name)
+   from employees as e
+   join addresses as a on a.address_id=e.address_id
+   join towns as t on a.town_id=t.town_id
+   where t.name=town_name);
+   return return_result;
+END $$
