@@ -1,0 +1,7 @@
+select t.town_id,t.name,d.address_text
+from addresses as d
+join towns as t on d.town_id=t.town_id
+where t.name='San Francisco' or
+t.name='Sofia' or
+t.name='Carnation'
+order by t.town_id,d.address_id;
