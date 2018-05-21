@@ -1,0 +1,8 @@
+delimiter $$
+create procedure usp_get_towns_starting_with (starting_symbol varchar(50))
+begin
+    select name
+    from towns 
+    where starting_symbol=substring(name,1,character_length(starting_symbol))
+    order by name;
+end $$
