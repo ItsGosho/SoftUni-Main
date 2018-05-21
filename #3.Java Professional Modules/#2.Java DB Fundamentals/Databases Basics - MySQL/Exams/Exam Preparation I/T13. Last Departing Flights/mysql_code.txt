@@ -1,0 +1,12 @@
+select f.flight_id,f.departure_time,f.arrival_time,
+(select Ja.airport_name
+from airports as Ja
+where f.origin_airport_id=Ja.airport_id),
+(select Ja.airport_name
+from airports as Ja
+where f.destination_airport_id=Ja.airport_id)
+from towns as t
+join flights as f
+where f.`status`='Departing'
+group by f.flight_id
+limit 5; 
