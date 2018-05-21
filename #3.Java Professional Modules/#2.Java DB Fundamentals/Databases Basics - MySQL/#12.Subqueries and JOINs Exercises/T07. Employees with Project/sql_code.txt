@@ -1,0 +1,7 @@
+select e.employee_id,e.first_name,p.name
+from employees as e
+join employees_projects as ep on ep.employee_id=e.employee_id
+join projects as p on p.project_id=ep.project_id
+where p.start_date>'2002-08-13' and p.end_date is null
+order by e.first_name asc,p.name asc
+limit 5;
