@@ -1,0 +1,30 @@
+create table deleted_employees(
+    employee_id int primary key auto_increment not null,
+    first_name varchar(150) not null,
+    last_name varchar(150) not null,
+    middle_name varchar(150) not null,
+    job_title varchar(150) not null,
+    department_id int,
+    salary double
+);
+
+delimiter $$
+create trigger trigger_after_delete_employee
+after delete
+on employees
+for each row
+begin 
+   insert into deleted_employees(employee_id,first_name,last_name,
+    middle_name,
+    job_title,
+    department_id,
+    salary)
+    values
+    (OLD.employee_id,
+	 OLD.first_name,
+	 OLD.last_name,
+	 OLD.middle_name,
+	 OLD.job_title,
+	 OLD.department_id,
+	 OLD.salary);
+end $$
