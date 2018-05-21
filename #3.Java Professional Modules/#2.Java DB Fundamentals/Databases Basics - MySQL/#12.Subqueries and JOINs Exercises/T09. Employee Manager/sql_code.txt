@@ -1,0 +1,8 @@
+select e.employee_id,e.first_name,e.manager_id,
+(select a.first_name 
+from employees as a
+where a.employee_id=e.manager_id 
+and (a.employee_id=3 or a.employee_id=7)) as manager_name
+from employees as e
+where e.manager_id=3 or e.manager_id=7
+order by e.first_name asc;
