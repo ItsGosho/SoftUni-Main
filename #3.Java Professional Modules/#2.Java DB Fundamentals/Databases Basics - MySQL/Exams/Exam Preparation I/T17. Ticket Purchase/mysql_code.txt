@@ -1,0 +1,9 @@
+create procedure udp_purchase_ticket(customer_id INT,flight_id INT,ticket_price DECIMAL,class VARCHAR(6),seat VARCHAR(5))
+begin
+insert into tickets(price,class,seat,customer_id,flight_id)
+values (ticket_price,class,seat,customer_id,flight_id);    
+
+update customer_bank_accounts
+set balance=balance-ticket_price
+where customer_id=customer_id;
+end 
