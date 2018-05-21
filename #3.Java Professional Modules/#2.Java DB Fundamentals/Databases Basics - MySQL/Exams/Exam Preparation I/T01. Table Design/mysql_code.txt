@@ -1,0 +1,66 @@
+create table towns(
+   town_id int primary key auto_increment not null,
+   town_name varchar(30) not null
+);
+
+create table airports(
+   airport_id int primary key auto_increment not null,
+   airport_name varchar(50) not null,
+   town_id int
+);
+
+create table airlines(
+   airline_id int primary key auto_increment not null,
+   airline_name varchar(30) not null,
+   nationality varchar(30) not null,
+   rating int default 0
+);
+
+create table customers(
+   customer_id int primary key auto_increment not null,
+   first_name varchar(20) not null,
+   last_name varchar(20) not null,
+   date_of_birth date not null,
+   gender varchar(1),
+   home_town_id int 
+);
+
+create table flights(
+   flight_id int primary key auto_increment not null,
+   departure_time datetime not null,
+   arrival_time datetime not null,
+   status varchar(9),
+   origin_airport_id int,
+   destination_airport_id int,
+   airline_id int
+);
+
+create table tickets(
+  ticket_id int primary key auto_increment not null,
+  price decimal(8,2) not null,
+  class varchar(6),
+  seat varchar(5) not null,
+  customer_id int,
+  flight_id int 
+);
+
+alter table flights
+add foreign key (origin_airport_id) references airports(airport_id);
+
+alter table flights
+add foreign key (destination_airport_id) references airports(airport_id);
+
+alter table flights
+add foreign key (airline_id) references airlines(airline_id);
+
+alter table tickets
+add foreign key (customer_id) references customers(customer_id);
+
+alter table tickets
+add foreign key (flight_id) references flights(flight_id);
+
+alter table customers
+add foreign key (home_town_id) references towns(town_id); 
+
+alter table airports
+add foreign key (town_id) references towns(town_id);
