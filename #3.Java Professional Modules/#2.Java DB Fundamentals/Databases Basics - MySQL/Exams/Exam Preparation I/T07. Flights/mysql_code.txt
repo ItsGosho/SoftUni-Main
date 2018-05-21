@@ -1,0 +1,4 @@
+select f.flight_id,f.departure_time,f.arrival_time
+from flights as f
+where f.status='Delayed'
+order by f.flight_id asc;
