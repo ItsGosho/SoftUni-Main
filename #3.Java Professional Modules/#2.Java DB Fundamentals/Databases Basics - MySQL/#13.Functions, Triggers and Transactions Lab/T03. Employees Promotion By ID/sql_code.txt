@@ -1,0 +1,7 @@
+delimiter $$
+create procedure usp_raise_salary_by_id(id int) 
+begin  
+    update employees as e
+    set e.salary=e.salary*1.05
+    where e.employee_id=id;
+end $$
