@@ -1,0 +1,12 @@
+select e.employee_id,
+concat(e.first_name,' ',e.last_name) as employee_name,
+(select concat(a.first_name,' ',a.last_name)
+from employees as a
+where a.employee_id=e.manager_id) as manager_name,
+(select dep.name
+from departments as dep
+where e.department_id=dep.department_id) as department_name
+from employees as e
+where e.manager_id is not null
+order by e.employee_id
+limit 5;
