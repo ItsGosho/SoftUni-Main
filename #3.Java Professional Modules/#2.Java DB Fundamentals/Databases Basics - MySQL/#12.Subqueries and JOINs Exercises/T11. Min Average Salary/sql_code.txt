@@ -1,0 +1,7 @@
+select (select avg(salary) as sal 
+from employees
+group by department_id
+order by sal asc
+limit 1) as min_average_salary
+from employees
+limit 1;
