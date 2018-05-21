@@ -1,0 +1,7 @@
+create table grouped as (
+select c.customer_id,concat(c.first_name,' ',c.last_name) as full_name,tick.price,
+a.airport_name
+from customers as c
+join tickets as tick on tick.customer_id=c.customer_id
+join flights as f on f.flight_id=tick.flight_id
+join airports as a on f.destination_airport_id=a.airport_id); 
