@@ -1,0 +1,5 @@
+update tickets as t
+inner join flights as f on f.flight_id=t.flight_id
+inner join airlines as a on f.airline_id=a.airline_id
+set t.price=t.price*1.50
+where a.rating=(select max(Ja.rating) from airlines as Ja);
