@@ -1,0 +1,8 @@
+delimiter $$
+create procedure usp_get_employees_salary_above(search_above int)
+begin
+    select first_name,last_name
+    from employees 
+    where salary>=search_above
+    order by first_name,last_name,employee_id asc;
+end $$
