@@ -1,0 +1,13 @@
+select air.airport_id,air.airport_name,
+(select count(f.flight_id)
+from flights as f
+join customers as Jc 
+join tickets as Jt on Jt.customer_id=Jc.customer_id
+where f.origin_airport_id=air.airport_id and f.`status`='Departing' and Jt.flight_id=f.flight_id) as passegers
+from airports as air
+where 0<(select count(f.flight_id)
+from flights as f
+join customers as Jc 
+join tickets as Jt on Jt.customer_id=Jc.customer_id
+where f.origin_airport_id=air.airport_id and f.`status`='Departing' and Jt.flight_id=f.flight_id)
+order by air.airport_id asc;
