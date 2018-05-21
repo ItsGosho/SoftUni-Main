@@ -1,0 +1,4 @@
+select a.airline_id,a.airline_name,a.nationality,a.rating
+from airlines as a
+order by a.rating desc,a.airline_id asc
+limit 5;
