@@ -1,0 +1,9 @@
+delimiter $$
+create procedure usp_raise_salaries(department_name varchar(50))
+begin 
+    update employees as e
+    set e.salary=e.salary*1.05
+    where department_name=(select Jd.name 
+    from departments as Jd 
+    where Jd.department_id=e.department_id);
+end $$
