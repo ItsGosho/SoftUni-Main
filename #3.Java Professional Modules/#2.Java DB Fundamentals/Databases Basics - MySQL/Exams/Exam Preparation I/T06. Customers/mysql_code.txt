@@ -1,0 +1,3 @@
+select c.customer_id,concat(c.first_name,' ',c.last_name) as full_name,c.gender
+from customers as c
+order by full_name,c.customer_id asc;
