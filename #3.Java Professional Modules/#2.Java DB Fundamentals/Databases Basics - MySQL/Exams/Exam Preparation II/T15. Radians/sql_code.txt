@@ -1,0 +1,7 @@
+create function udf_get_radians(deg float)
+returns float
+begin
+   declare ret float;
+   set ret=(select (deg*pi())/180);
+   return ret;
+end 
