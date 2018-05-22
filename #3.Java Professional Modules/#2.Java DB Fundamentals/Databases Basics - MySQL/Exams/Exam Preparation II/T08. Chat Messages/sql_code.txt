@@ -1,0 +1,5 @@
+select ch.id,ch.title,msg.id
+from chats as ch 
+join messages as msg on msg.chat_id=ch.id
+where msg.sent_on<'2012-03-26' and substring(ch.title,char_length(ch.title),1)='x'
+order by ch.id ,msg.id asc;
