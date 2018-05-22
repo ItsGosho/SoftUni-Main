@@ -1,0 +1,6 @@
+create procedure udp_change_password(emal varchar(30),pass varchar(20))
+begin
+   update credentials
+	set password=pass
+	where email=emal;
+end 
