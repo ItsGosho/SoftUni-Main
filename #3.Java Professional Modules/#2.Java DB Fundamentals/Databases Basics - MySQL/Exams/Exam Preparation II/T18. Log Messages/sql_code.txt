@@ -1,0 +1,8 @@
+create trigger log_message
+after delete
+on messages
+for each row
+begin
+    insert messages_log(id,content,sent_on,chat_id,user_id)
+  values(OLD.id,OLD.content,OLD.sent_on,OLD.chat_id,OLD.user_id); 
+end
