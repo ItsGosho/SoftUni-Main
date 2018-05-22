@@ -1,0 +1,3 @@
+delete loc from locations as loc
+join users as us
+where loc.id!=us.location_id;
