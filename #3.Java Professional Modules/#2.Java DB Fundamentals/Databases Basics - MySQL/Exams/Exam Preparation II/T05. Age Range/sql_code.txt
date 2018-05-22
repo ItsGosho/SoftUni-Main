@@ -1,0 +1,4 @@
+select nickname,gender,age
+from users
+where age>=22 and age<=37
+order by id asc;
