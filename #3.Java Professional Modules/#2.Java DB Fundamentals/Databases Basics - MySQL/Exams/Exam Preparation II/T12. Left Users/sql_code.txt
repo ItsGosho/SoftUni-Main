@@ -1,0 +1,6 @@
+select msg.id,msg.chat_id,msg.user_id
+from messages as msg 
+join users_chats as uc on uc.user_id=msg.user_id
+where uc.user_id=msg.user_id and uc.chat_id!=msg.chat_id and msg.chat_id=17
+group by msg.id
+order by msg.id desc;
