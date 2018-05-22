@@ -1,0 +1,4 @@
+update chats as ch
+join messages as mesg on ch.id=mesg.chat_id
+set start_date=mesg.sent_on
+where mesg.sent_on<ch.start_date;
