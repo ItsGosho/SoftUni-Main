@@ -1,0 +1,8 @@
+select ch.title,msg.content
+from chats as ch
+left join messages as msg on msg.chat_id=ch.id and msg.sent_on=(
+select max(sent_on)
+from messages as Jmsg
+where Jmsg.chat_id=ch.id)
+order by msg.id asc
+limit 1; 
