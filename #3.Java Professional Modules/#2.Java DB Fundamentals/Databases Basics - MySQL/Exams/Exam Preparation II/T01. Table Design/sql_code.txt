@@ -1,0 +1,58 @@
+reate table users (
+   id int primary key auto_increment not null,
+   nickname varchar(25) not null,
+   gender char(1) not null,
+   age int not null,
+   location_id int,
+   credential_id int unique
+);
+
+create table locations (
+   id int primary key auto_increment not null,
+   latitude float not null,
+   longitude float not null
+);
+
+create table credentials (
+   id int primary key auto_increment not null,
+   email varchar(30) not null,
+   password varchar(20) not null
+);
+
+create table chats (
+   id int primary key auto_increment not null,
+   title varchar(32) not null,
+   start_date date not null,
+   is_active bit(1) not null
+);
+
+create table messages (
+   id int primary key auto_increment not null,
+   content varchar(200) not null,
+   sent_on date not null,
+   chat_id int,
+   user_id int
+);
+
+create table users_chats (
+   user_id int unique,
+   chat_id int unique
+);
+
+alter table users
+add foreign key (location_id) references locations(id);
+
+alter table users
+add foreign key (credential_id) references credentials(id);
+
+alter table messages
+add foreign key (chat_id) references chats(id);
+
+alter table messages
+add foreign key (user_id) references users(id);
+
+alter table users_chats
+add foreign key (user_id) references users(id);
+
+alter table users_chats
+add foreign key (chat_id) references chats(id);
