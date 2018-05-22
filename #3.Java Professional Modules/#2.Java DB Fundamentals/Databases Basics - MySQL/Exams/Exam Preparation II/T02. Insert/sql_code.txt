@@ -1,0 +1,6 @@
+insert into messages(content,sent_on,chat_id,user_id)
+select concat(us.age,'-',us.gender,'-',loc.latitude,'-',loc.longitude),
+'2016-12-15',if(us.gender='F',ceil(sqrt(us.age*2)),pow((us.age/18),3)),us.id
+from users as us
+join locations as loc on loc.id=us.location_id
+where us.id>=10 and us.id<=20;
