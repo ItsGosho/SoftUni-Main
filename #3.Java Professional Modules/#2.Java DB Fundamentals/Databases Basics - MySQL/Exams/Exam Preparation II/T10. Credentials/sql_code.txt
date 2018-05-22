@@ -1,0 +1,5 @@
+select us.nickname,cred.email,cred.password
+from users as us
+join credentials as cred on us.credential_id=cred.id
+where substring(cred.email,char_length(cred.email)-4,5)='co.uk'
+order by cred.email asc;
