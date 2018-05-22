@@ -1,0 +1,5 @@
+select ch.id,(select count(Jmsg.content)
+from messages as Jmsg where Jmsg.chat_id=ch.id and Jmsg.id<90) total_messages
+from chats as ch
+order by total_messages desc,ch.id asc
+limit 5;
