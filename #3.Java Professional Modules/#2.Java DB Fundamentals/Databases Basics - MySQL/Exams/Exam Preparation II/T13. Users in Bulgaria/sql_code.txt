@@ -1,0 +1,7 @@
+select us.nickname,c.title,loc.latitude,loc.longitude
+from users as us
+join locations as loc on us.location_id=loc.id
+join users_chats as uc on uc.user_id=us.id
+join chats as c on c.id=uc.chat_id
+where (loc.latitude between 41.139999 and 44.129999) and (loc.longitude between 22.209999 and 28.359999)
+order by c.title asc; 
