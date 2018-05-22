@@ -1,0 +1,4 @@
+select us.id,us.nickname,us.age
+from users as us
+where us.location_id is null
+order by us.id asc;
