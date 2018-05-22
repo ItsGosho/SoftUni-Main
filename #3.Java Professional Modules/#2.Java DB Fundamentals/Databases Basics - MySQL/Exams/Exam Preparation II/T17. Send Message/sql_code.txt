@@ -1,0 +1,5 @@
+create procedure udp_send_message(Puser_id int,Pchat_id int,Pcontent varchar(200))
+begin
+   insert into messages(content,sent_on,chat_id,user_id)
+	select Pcontent,'2016-12-15',Pchat_id,Puser_id;
+end
