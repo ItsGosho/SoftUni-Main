@@ -1,0 +1,61 @@
+create database MinionsDB;
+use MinionsDB;
+
+create table minion(
+    id integer primary key not null auto_increment,
+    name varchar(50) not null,
+    age integer not null,
+    town integer
+);
+
+create table town(
+    id integer primary key not null auto_increment,
+    name varchar(50) not null,
+    information varchar(50) not null
+);
+
+create table villian(
+    id integer primary key not null auto_increment,
+    name varchar(50) not null,
+    evilness varchar(50) not null
+);
+
+create table minion_villian(
+    minion_id integer not null,
+    villian_id integer
+);
+
+create table villian_minion(
+    villian_id integer not null,
+    minion_id integer
+);
+
+alter table minion
+add foreign key (town) references town(id);
+
+alter table minion_villian
+add foreign key (villian_id) references villian(id);
+
+alter table minion_villian
+add foreign key (minion_id) references minion(id);
+
+alter table villian_minion
+add foreign key (minion_id) references minion(id);
+
+alter table villian_minion
+add foreign key (villian_id) references villian(id);
+
+insert into town(name,information) values ("BSL","div grad"),("Vraca","got grad"),("Ruse","losh grad")
+,("sofiq","golqm grad"),("Varna","mutrenski grad");
+
+insert into minion(name,age,town) values ("Gru",6,3),("Djodji",1,1),("ROki",21,2)
+,("Bobi",15,5),("Tobi",13,4);
+
+insert into villian(name,evilness) values ("Roj","bad"),("Feq","good"),("Mn losh","evil"),
+("Ultra losh","super evil"),("Kocho","good");
+
+insert into minion_villian(minion_id,villian_id) values (1,3),(2,1),(3,2),
+(4,5),(5,4);
+
+insert into villian_minion(villian_id,minion_id) values (3,3),(2,1),(5,2),
+(4,5),(1,4); 
