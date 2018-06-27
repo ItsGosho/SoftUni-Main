@@ -1,0 +1,47 @@
+//insert authors
+      /*   while(true){
+             String line=skener.nextLine();
+             if(line.equals("END")){
+                 break;
+             }
+             String[] splitted=line.split(" ");
+             Author author=new Author();
+             author.setFirst_name(splitted[0]);
+             author.setLast_name(splitted[1]);
+             author.setBooks(new LinkedList<Book>());
+             authorSer.registerAuthor(author);
+         }*/
+
+
+        //insrt categories
+       /*while(true){
+            String line=skener.nextLine();
+            if(line.equals("END")){
+                break;
+            }
+            Category category=new Category();
+            category.setName(line);
+            categorySer.registerCategory(category);
+        }*/
+
+        /*while (true) {
+            String line = skener.nextLine();
+            if (line.equals("END")) {
+                break;
+            }
+            String[] splitted = line.split("\\s+");
+            Book book = new Book();
+            book.setEdition_type(String.valueOf(EditionTypeEnum.values()[Integer.parseInt(splitted[0])]));
+            book.setRealese_date(new Date(splitted[1]));
+            book.setCopies(Integer.parseInt(splitted[2]));
+            book.setPrice(new BigDecimal(splitted[3]));
+            book.setAge_restriction(String.valueOf(AgeRestrictionEnum.values()[Integer.parseInt(splitted[4])]));
+            StringBuilder titleBuilder = new StringBuilder();
+            for (int i = 5; i < splitted.length; i++) {
+                titleBuilder.append(splitted[i]).append(" ");
+            }
+            titleBuilder.delete(titleBuilder.lastIndexOf(" "), titleBuilder.lastIndexOf(" "));
+            String title = titleBuilder.toString();
+            book.setTitle(title);
+            bookSer.saveBook(book);
+        }*/
