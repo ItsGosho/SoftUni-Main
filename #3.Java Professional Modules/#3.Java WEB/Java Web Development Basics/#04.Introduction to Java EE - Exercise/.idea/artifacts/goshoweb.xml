@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="goshoweb">
+    <output-path>$PROJECT_DIR$/../../TomCat/webapps</output-path>
+    <root id="archive" name="goshoweb.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="#04.Introduction to Java EE - Exercise" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="#04.Introduction to Java EE - Exercise/web/Web" />
+    </root>
+  </artifact>
+</component>

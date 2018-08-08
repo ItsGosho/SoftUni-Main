@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="goshoweb">
+    <output-path>$PROJECT_DIR$/out/artifacts/goshoweb</output-path>
+    <root id="archive" name="goshoweb.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="#05.Servlets &amp; JSP - Exercise" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="#05.Servlets &amp; JSP - Exercise/web/Web" />
+    </root>
+  </artifact>
+</component>
