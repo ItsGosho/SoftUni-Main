@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="webapps">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/target/classes/webapps" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../app/src" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/target/classes/webapps" recursive="false" />
+  </library>
+</component>
