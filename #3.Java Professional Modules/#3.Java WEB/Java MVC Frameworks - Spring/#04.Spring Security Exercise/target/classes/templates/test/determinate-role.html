@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<body>
+<head>
+    <meta charset="UTF-8">
+    <title>ROLEEE</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div sec:authorize="hasAuthority('Admin')">
+    This content is only shown to administrators.
+</div>
+<div sec:authorize="hasAuthority('User')">
+    This content is only shown to users.
+</div>
+</body>
+</body>
