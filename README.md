@@ -40,4 +40,12 @@ I.<a href="https://github.com/ItsGosho/SoftUni/tree/master/%233.Java%20Professio
 </tbody>
 </table>
 </details>
+<summary> Java Web
+</summary>
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+I.<a href="https://github.com/ItsGosho/SoftUni/tree/master/%233.Java Professional Modules/%233.Java WEB/Java Web Development Basics"> Java Web Development Basics</a><br>II. <a href="https://github.com/ItsGosho/SoftUni/tree/master/%233.Java%20Professional%20Modules/%233.Java%20WEB/Java%20MVC%20Frameworks%20-%20Spring"> Java MVC Frameworks - Spring </a></br> 
+</tbody>
+</table>
+</details>
 <hr />
