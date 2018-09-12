@@ -49,4 +49,12 @@ I.<a href="https://github.com/ItsGosho/SoftUni/tree/master/%233.Java Professiona
 </tbody>
 </table>
 </details>
+<summary> JScript Core
+</summary>
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+I.<a href="https://github.com/ItsGosho/SoftUni/tree/master/%233.Java%20Professional%20Modules/%234.JScript%20Core"> JScipt Fundamentals</a><br>
+</tbody>
+</table>
+</details>
 <hr />
