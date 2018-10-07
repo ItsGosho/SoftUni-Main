@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Focus</title>
+    <style>.error { border: 2px solid red; }</style>
+</head>
+<body onload="validate()">
+<label for="email">Enter email:</label>
+<input id="email" type="text"/>
+<script>
+    function validate() {
+        let text = document.getElementById("email");
+        text.addEventListener("change",over);
+        function over() {
+            let regex = new RegExp("([a-z]+)([@]{1})([a-z]+)([.]{1})([a-z]+)");
+            let match = regex.exec(text.value);
+            if(!match){
+                text.classList.add("error");
+            }else{
+                text.classList.remove("error");
+            }
+        }
+    }
+</script>
+</body>
+</html>
+</body>
+</html>
