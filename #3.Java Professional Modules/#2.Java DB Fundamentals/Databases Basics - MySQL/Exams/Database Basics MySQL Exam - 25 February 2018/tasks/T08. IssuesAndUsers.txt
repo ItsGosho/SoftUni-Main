@@ -1,0 +1,5 @@
+SELECT i.id,CONCAT(
+(SELECT u.username FROM users AS u WHERE u.id = i.assignee_id)
+," : ",i.title)
+FROM issues AS i
+ORDER BY i.id desc;

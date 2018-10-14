@@ -1,0 +1,13 @@
+SELECT r.id,r.NAME,(
+SELECT COUNT(c.id)
+FROM commits AS c 
+WHERE c.repository_id=r.id
+) AS commits,
+(
+SELECT COUNT(rc.repository_id)
+FROM repositories_contributors AS rc
+WHERE rc.repository_id=r.id
+) AS contributors
+FROM repositories AS r
+ORDER BY CONTRIBUTORS DESC,r.id asc
+LIMIT 1

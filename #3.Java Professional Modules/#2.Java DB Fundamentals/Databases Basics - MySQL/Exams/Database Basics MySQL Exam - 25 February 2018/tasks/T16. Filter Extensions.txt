@@ -1,0 +1,9 @@
+CREATE PROCEDURE udp_findbyextension
+    (extension VARCHAR(30))
+BEGIN
+    START TRANSACTION;
+    SELECT f.id,f.NAME,CONCAT(f.size,'KB') AS user
+    FROM files AS f
+	 WHERE f.NAME LIKE CONCAT('%',extension)
+	 ORDER BY f.id asc;
+END

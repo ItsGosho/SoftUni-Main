@@ -1,0 +1,9 @@
+SELECT u.id,u.username,(
+SELECT COUNT(c.id)
+FROM commits AS c
+JOIN issues AS i ON c.issue_id=i.id
+WHERE i.assignee_id = c.contributor_id AND 
+c.contributor_id = u.id
+) AS commits
+FROM users AS u
+ORDER BY commits DESC,u.id asc;

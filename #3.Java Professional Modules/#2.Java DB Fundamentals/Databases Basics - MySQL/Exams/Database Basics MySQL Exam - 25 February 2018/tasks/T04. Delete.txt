@@ -1,0 +1,4 @@
+delete r
+from repositories as r
+left join issues as i on r.id=i.repository_id
+where i.repository_id is null;

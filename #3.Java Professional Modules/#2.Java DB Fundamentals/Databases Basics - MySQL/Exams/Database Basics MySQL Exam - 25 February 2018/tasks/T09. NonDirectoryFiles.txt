@@ -1,0 +1,5 @@
+select f.id,f.name,concat(f.size,'KB')
+from files as f
+LEFT join files as p on f.id=p.parent_id
+where p.id is null
+order by id ASC;

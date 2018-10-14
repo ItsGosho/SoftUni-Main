@@ -1,0 +1,7 @@
+SELECT r.id,r.NAME,(
+SELECT COUNT(DISTINCT(c.contributor_id))
+FROM commits AS c
+WHERE c.repository_id=r.id
+) AS users
+FROM repositories AS r
+ORDER BY users DESC,r.id asc
