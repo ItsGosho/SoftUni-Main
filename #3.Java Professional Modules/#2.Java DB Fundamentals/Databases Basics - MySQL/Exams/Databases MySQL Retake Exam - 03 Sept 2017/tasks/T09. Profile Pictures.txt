@@ -1,0 +1,5 @@
+SELECT distinct u.id,u.username,(SELECT CONCAT(p.size,'KB') FROM pictures AS p WHERE p.id=u.profile_picture_id) AS size
+FROM users AS u
+WHERE (SELECT COUNT(Ju.profile_picture_id) FROM users AS Ju WHERE Ju.profile_picture_id=u.profile_picture_id)<> 1 AND
+u.profile_picture_id IS not null
+ORDER BY u.id asc

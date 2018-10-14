@@ -1,0 +1,4 @@
+DELETE f
+FROM users AS f
+left JOIN users_followers AS Uf ON f.id=Uf.user_id
+WHERE Uf.user_id IS NULL;

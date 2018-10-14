@@ -1,0 +1,8 @@
+SELECT p.id,p.caption,(
+SELECT COUNT(c.id)
+FROM comments AS c
+WHERE c.post_id=p.id
+) AS comments
+FROM posts AS p
+ORDER BY comments DESC,p.id asc
+LIMIT 5

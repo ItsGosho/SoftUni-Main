@@ -1,0 +1,12 @@
+SELECT u.id,u.username,(
+SELECT COUNT(p.id)
+FROM posts AS p
+WHERE p.user_id=u.id
+) AS posts,(
+SELECT COUNT(uf.user_id)
+FROM users_followers AS uf
+WHERE uf.user_id=u.id
+) AS followers
+FROM users AS u
+ORDER BY followers DESC
+LIMIT 1

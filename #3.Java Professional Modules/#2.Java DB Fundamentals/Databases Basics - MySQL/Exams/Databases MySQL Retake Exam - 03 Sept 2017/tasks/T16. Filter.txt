@@ -1,0 +1,10 @@
+CREATE PROCEDURE udp_filter
+    (hashtag VARCHAR(255))
+BEGIN
+    START TRANSACTION;
+ 
+    SELECT p.id,p.caption,(SELECT u.username FROM users AS u WHERE p.user_id = u.id )
+    FROM posts AS p
+    WHERE p.caption LIKE CONCAT('%',hashtag,'%');
+    COMMIT;
+END

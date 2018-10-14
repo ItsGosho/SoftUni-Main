@@ -1,0 +1,8 @@
+SELECT u.id,u.username,(
+SELECT COUNT(c.id)
+FROM comments AS c
+JOIN posts AS p ON c.post_id=p.id
+WHERE c.user_id=u.id AND p.user_id=u.id
+) AS comments
+FROM users AS u
+ORDER BY comments DESC,u.id asc

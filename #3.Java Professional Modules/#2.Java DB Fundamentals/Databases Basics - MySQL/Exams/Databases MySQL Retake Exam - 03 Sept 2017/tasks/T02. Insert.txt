@@ -1,0 +1,6 @@
+INSERT INTO comments (content,user_id,post_id)
+SELECT CONCAT("Omg!",(SELECT u.username FROM users AS u WHERE u.id=p.user_id),"!This is so cool!") AS content,
+CEIL((p.id*3)/2) AS user_id,
+p.id AS post_id
+FROM posts AS p
+WHERE p.id >=1 AND p.id<=10

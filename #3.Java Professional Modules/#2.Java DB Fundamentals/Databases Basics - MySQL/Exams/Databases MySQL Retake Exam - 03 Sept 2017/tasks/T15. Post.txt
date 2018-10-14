@@ -1,0 +1,21 @@
+CREATE PROCEDURE udp_post
+    (username VARCHAR(30), password VARCHAR(30), caption VARCHAR(255), path VARCHAR(255))
+BEGIN
+    START TRANSACTION;
+    
+    IF ((SELECT u.password FROM users AS u WHERE u.username = username) <> password) THEN
+        SIGNAL SQLSTATE '45000' 
+        SET MESSAGE_TEXT = 'Password is incorrect!';
+        ROLLBACK;
+    ELSEIF ((SELECT COUNT(p.id) FROM pictures AS p WHERE p.path = path) = 0) THEN
+        SIGNAL SQLSTATE '45000' 
+        SET MESSAGE_TEXT = 'The picture does not exist!';
+        ROLLBACK;
+    ELSE
+        INSERT INTO posts (caption,user_id,picture_id)
+        SELECT caption,(SELECT u.id FROM users AS u WHERE u.username=username),
+		  (SELECT p.id FROM pictures AS p WHERE p.path = path);
+		  
+        COMMIT;
+    END IF;
+END

@@ -1,0 +1,5 @@
+SELECT u.id,u.username 
+FROM users AS u
+JOIN users_followers AS Uf ON Uf.user_id=u.id
+WHERE Uf.user_id=Uf.follower_id
+ORDER BY u.id asc

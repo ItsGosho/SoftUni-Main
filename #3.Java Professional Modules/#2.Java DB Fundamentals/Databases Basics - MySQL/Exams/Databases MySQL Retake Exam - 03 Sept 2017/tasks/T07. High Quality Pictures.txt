@@ -1,0 +1,4 @@
+SELECT p.id,p.path,p.size
+FROM pictures AS p
+WHERE (p.size >50000) AND (p.path LIKE '%.png' OR p.path like '%.jpeg')
+ORDER BY p.size desc

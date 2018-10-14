@@ -1,0 +1,3 @@
+SELECT c.id,CONCAT((SELECT u.username FROM users AS u WHERE u.id=c.user_id)," : ",c.content)
+FROM comments AS c
+ORDER BY c.id desc

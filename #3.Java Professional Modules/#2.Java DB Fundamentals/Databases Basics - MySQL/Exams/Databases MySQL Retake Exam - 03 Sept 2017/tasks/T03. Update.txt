@@ -1,0 +1,7 @@
+UPDATE users AS u
+SET u.profile_picture_id= (
+SELECT case when COUNT(uf.user_id) = 0 then u.id ELSE COUNT(uf.user_id) end
+FROM users_followers AS uf
+WHERE uf.user_id=u.id
+)
+WHERE u.profile_picture_id IS NULL;
