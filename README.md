@@ -1,7 +1,7 @@
 <img src="%233.Java Professional Modules/sulogo.png" align="right" />
 
-# My Software University Tasks Repository
-> Started at 09.September.2017
+# Tasks Repository
+> Started on 09.September.2017
 
 <hr />
 <details>
