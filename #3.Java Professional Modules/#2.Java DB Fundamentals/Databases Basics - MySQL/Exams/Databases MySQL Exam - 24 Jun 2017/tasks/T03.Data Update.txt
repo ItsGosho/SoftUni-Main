@@ -1,0 +1,5 @@
+update problems as p
+set p.tests=if((p.id % 3) = 0,length((select c.name from categories as c join contests as co on co.category_id=c.id where p.contest_id=co.id)),
+if((p.id % 3) = 1,(select sum(s.id) from submissions as s where s.problem_id=p.id),
+if((p.id % 3) = 2,(select length(Jcon.name) from contests as Jcon where Jcon.id=p.contest_id),0)))
+where p.tests=0

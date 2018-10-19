@@ -1,0 +1,10 @@
+SELECT *
+FROM (SELECT c.id,c.NAME,(
+SELECT COUNT(Uc.user_id)
+FROM users_contests AS Uc
+WHERE Uc.contest_id=c.id
+) AS cc
+FROM contests AS c
+ORDER BY cc desc,c.id desc 
+LIMIT 5) AS res
+ORDER BY res.cc ASC,res.id asc

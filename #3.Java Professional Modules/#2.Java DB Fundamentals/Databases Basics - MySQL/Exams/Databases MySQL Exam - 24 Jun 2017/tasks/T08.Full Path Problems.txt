@@ -1,0 +1,5 @@
+SELECT distinct p.id,CONCAT(ca.NAME,' - ',c.NAME,' - ',p.NAME) AS full_path
+FROM problems AS p
+JOIN contests AS c ON p.contest_id=c.id
+JOIN categories AS ca ON ca.id=c.category_id
+ORDER BY p.id asc

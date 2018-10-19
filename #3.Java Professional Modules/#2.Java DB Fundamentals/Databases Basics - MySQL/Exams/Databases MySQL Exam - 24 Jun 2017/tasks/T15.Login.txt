@@ -1,0 +1,26 @@
+CREATE PROCEDURE udp_login
+    (username VARCHAR(30), PASSWORD VARCHAR(30))
+BEGIN
+    START TRANSACTION;
+    
+    IF ((SELECT COUNT(u.username) FROM `users` AS u WHERE u.username = username) = 0) THEN
+        SIGNAL SQLSTATE '45000' 
+        SET MESSAGE_TEXT = 'Username does not exist!';  
+        ROLLBACK;
+    ELSEIF ((SELECT u.password FROM `users` AS u WHERE u.username = username) <> password) THEN
+        SIGNAL SQLSTATE '45000' 
+        SET MESSAGE_TEXT = 'Password is incorrect!';
+        ROLLBACK;
+    ELSEIF ((SELECT COUNT(u.username) FROM `logged_in_users` AS u WHERE u.username = username) >= 1) THEN
+        SIGNAL SQLSTATE '45000' 
+        SET MESSAGE_TEXT = 'User is already logged in!';
+        ROLLBACK;
+    ELSE
+        INSERT INTO logged_in_users (id,username,PASSWORD,email)
+        SELECT u.id,u.username,u.PASSWORD,u.email
+        FROM users AS u
+        WHERE u.username=username;
+        
+        COMMIT;
+    END IF;
+END

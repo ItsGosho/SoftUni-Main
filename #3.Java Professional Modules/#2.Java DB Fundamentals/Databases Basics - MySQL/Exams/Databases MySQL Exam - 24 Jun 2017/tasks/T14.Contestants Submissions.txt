@@ -1,0 +1,16 @@
+SELECT c.id,c.NAME,(
+select COUNT(Jp.id)
+FROM problems AS Jp 
+JOIN submissions AS Js ON Jp.id=Js.problem_id
+JOIN users_contests AS Juc
+WHERE Jp.contest_id=c.id AND Juc.contest_id=c.id AND Juc.user_id=Js.user_id
+) AS subs
+FROM contests AS c
+WHERE 1<= (
+select COUNT(Jp.id)
+FROM problems AS Jp 
+JOIN submissions AS Js ON Jp.id=Js.problem_id
+JOIN users_contests AS Juc
+WHERE Jp.contest_id=c.id AND Juc.contest_id=c.id AND Juc.user_id=Js.user_id
+)
+ORDER BY subs DESC,c.id asc

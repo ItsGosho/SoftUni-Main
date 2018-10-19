@@ -1,0 +1,4 @@
+SELECT p.id,p.NAME,p.tests
+FROM problems AS p
+WHERE p.tests>p.points AND 1 = (SELECT COUNT(Jp.id) FROM problems AS Jp WHERE Jp.id = p.id AND Jp.name LIKE("% %"))
+ORDER BY p.id desc

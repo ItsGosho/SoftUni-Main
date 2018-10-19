@@ -1,0 +1,46 @@
+create table users(
+   id int primary key auto_increment,
+   username varchar(30) not null unique,
+   password varchar(30) not null,
+   email varchar(50)
+);
+
+create table categories(
+   id int primary key auto_increment,
+   name varchar(50) not null,
+   parent_id int,
+   foreign key (parent_id) references categories(id)
+);
+
+create table contests(
+   id int primary key auto_increment,
+   name varchar(50) not null,
+   category_id int,
+   foreign key (category_id) references categories(id)
+);
+
+create table problems(
+   id int primary key auto_increment,
+   name varchar(100) not null,
+   points int not null,
+   tests int default 0,
+   contest_id int,
+   foreign key (contest_id) references contests(id)
+);
+
+create table submissions(
+   id int primary key auto_increment,
+   passed_tests int not null,
+   problem_id int,
+   user_id int,
+   foreign key (problem_id) references problems(id),
+   foreign key (user_id) references users(id)
+);
+
+create table users_contests(
+   user_id int,
+   contest_id int,
+   PRIMARY KEY (user_id, contest_id),
+   foreign key (user_id) references users(id),
+   foreign key (contest_id) references contests(id)
+);

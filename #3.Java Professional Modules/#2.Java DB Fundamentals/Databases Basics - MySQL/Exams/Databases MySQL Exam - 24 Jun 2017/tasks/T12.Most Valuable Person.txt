@@ -1,0 +1,11 @@
+SELECT s.id,(SELECT Ju.username FROM users AS Ju WHERE Ju.id=s.user_id),
+(SELECT Jp.NAME FROM problems AS Jp WHERE Jp.id=s.problem_id) AS NAME,
+CONCAT(s.passed_tests,' / ',(SELECT Prom.tests FROM problems AS Prom WHERE Prom.id=s.problem_id)) AS result
+FROM submissions AS s
+WHERE s.user_id = (SELECT vsichko.user
+FROM (SELECT (SELECT Ju.id FROM users AS Ju WHERE Ju.id=uc.user_id) AS USER,
+(SELECT COUNT(Juc.user_id) FROM users_contests AS Juc WHERE Juc.user_id=uc.user_id) AS most
+FROM users_contests AS uc
+ORDER BY most desc
+LIMIT 1) AS vsichko)
+ORDER BY s.id desc

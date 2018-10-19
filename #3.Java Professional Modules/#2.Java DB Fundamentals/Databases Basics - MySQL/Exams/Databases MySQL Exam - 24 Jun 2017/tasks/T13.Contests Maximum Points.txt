@@ -1,0 +1,4 @@
+SELECT c.id,c.NAME, (SELECT SUM(Jp.points) FROM problems AS Jp WHERE Jp.contest_id=c.id) AS maxPoints
+FROM contests AS c
+WHERE (SELECT SUM(Jp.points) FROM problems AS Jp WHERE Jp.contest_id=c.id) <> 0
+ORDER BY maxPoints DESC,c.id asc

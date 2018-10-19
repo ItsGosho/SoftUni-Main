@@ -1,0 +1,4 @@
+delete u
+from users as u
+left join users_contests as uc on uc.user_id = u.id
+where uc.user_id is null

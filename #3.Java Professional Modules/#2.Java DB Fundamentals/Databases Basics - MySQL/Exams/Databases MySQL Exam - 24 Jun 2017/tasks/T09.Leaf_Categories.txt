@@ -1,0 +1,4 @@
+SELECT c.id,c.NAME
+FROM categories AS c
+WHERE 0 = (SELECT COUNT(Jc.id) FROM categories AS Jc WHERE Jc.parent_id = c.id)
+ORDER BY c.NAME,c.id asc

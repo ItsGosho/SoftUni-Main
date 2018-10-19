@@ -1,0 +1,22 @@
+CREATE PROCEDURE udp_evaluate
+    (id INT)
+BEGIN
+    START TRANSACTION;
+   
+    IF ((SELECT COUNT(s.id) FROM submissions AS s WHERE s.id = id) = 0) THEN
+        SIGNAL SQLSTATE '45000' 
+        SET MESSAGE_TEXT = 'Submission does not exist!';
+        ROLLBACK;
+    ELSE
+        INSERT INTO evaluated_submissions (problem,user,result)
+        SELECT 
+		  (SELECT Jp.NAME FROM problems AS Jp WHERE Jp.id=s.problem_id),
+	     (SELECT Ju.username FROM users AS Ju WHERE Ju.id= s.user_id),
+	     CEIL(((SELECT Jp.points FROM problems AS Jp WHERE Jp.id=s.problem_id)/
+		  (SELECT Jp.tests FROM problems AS Jp WHERE Jp.id=s.problem_id))*s.passed_tests)
+        FROM submissions AS s
+		  WHERE s.id=id;
+        
+        COMMIT;
+    END IF;
+END
