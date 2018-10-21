@@ -1,0 +1,5 @@
+SELECT got.job_during_journey
+FROM (SELECT Jj.id,FLOOR(DATEDIFF(Jj.journey_start,Jj.journey_end)) AS te,Jj.destination_spaceport_id,Jj.purpose
+FROM journeys AS Jj
+ORDER BY te asc LIMIT 1) AS res
+JOIN (SELECT tc.id,tc.journey_id,tc.job_during_journey FROM travel_cards AS tc GROUP BY tc.job_during_journey) AS got ON got.journey_id=res.id

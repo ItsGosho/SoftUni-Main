@@ -1,0 +1,2 @@
+UPDATE journeys AS j
+SET j.purpose = if(j.id % 2 = 0,'Medical',if(j.id % 3 = 0,'Technical',if(j.id % 5 = 0,'Educational',if(j.id %7 = 0 , 'Military',j.purpose))))

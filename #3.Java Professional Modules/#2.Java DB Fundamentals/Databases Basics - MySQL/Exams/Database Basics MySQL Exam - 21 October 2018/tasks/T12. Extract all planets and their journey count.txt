@@ -1,0 +1,14 @@
+SELECT p.NAME,(
+SELECT COUNT(*)
+FROM journeys AS Jj
+JOIN spaceports AS Js ON Js.id=Jj.destination_spaceport_id
+WHERE Js.planet_id=p.id
+) AS Jcount
+FROM planets AS p
+WHERE (
+SELECT COUNT(*)
+FROM journeys AS Jj
+JOIN spaceports AS Js ON Js.id=Jj.destination_spaceport_id
+WHERE Js.planet_id=p.id
+) >=1
+ORDER BY Jcount DESC,p.NAME asc

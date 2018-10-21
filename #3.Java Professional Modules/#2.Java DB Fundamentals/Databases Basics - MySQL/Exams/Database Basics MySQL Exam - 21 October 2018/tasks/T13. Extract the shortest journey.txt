@@ -1,0 +1,6 @@
+SELECT res.id,p.name,s.NAME,res.purpose
+FROM (SELECT Jj.id,FLOOR(DATEDIFF(Jj.journey_start,Jj.journey_end)) AS te,Jj.destination_spaceport_id,Jj.purpose
+FROM journeys AS Jj
+ORDER BY te DESC LIMIT 1) AS res
+JOIN spaceports AS s ON s.id=res.destination_spaceport_id
+JOIN planets AS p ON p.id = s.planet_id

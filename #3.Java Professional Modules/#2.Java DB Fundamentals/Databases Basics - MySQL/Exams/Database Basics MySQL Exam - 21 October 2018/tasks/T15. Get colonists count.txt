@@ -1,0 +1,20 @@
+CREATE FUNCTION  udf_count_colonists_by_destination_planet (planet_name VARCHAR (30))
+
+RETURNS INT(111)
+BEGIN 
+    DECLARE res  INT;
+
+      SELECT (
+SELECT COUNT(Jp.id) AS res
+FROM planets AS Jp
+JOIN spaceports AS Js ON Js.planet_id=Jp.id
+JOIN journeys AS Jj ON Jj.destination_spaceport_id=Js.id
+JOIN travel_cards AS Jtc ON Jtc.journey_id=Jj.id
+JOIN colonists AS Jc ON Jc.id=Jtc.colonist_id
+WHERE Jp.NAME=planet_name
+) into res
+FROM planets AS p
+WHERE p.NAME=planet_name;
+      
+    RETURN res;
+END

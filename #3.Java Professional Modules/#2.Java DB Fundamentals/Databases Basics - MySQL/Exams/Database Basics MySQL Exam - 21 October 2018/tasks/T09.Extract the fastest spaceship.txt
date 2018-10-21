@@ -1,0 +1,4 @@
+SELECT distinct (SELECT Js.NAME FROM spaceships AS Js ORDER BY Js.light_speed_rate DESC LIMIT 1),spa.name
+FROM spaceships  AS s
+JOIN journeys AS j ON j.spaceship_id=(SELECT Js.id from spaceships AS Js ORDER BY Js.light_speed_rate DESC LIMIT 1)
+JOIN spaceports AS spa ON spa.id=j.destination_spaceport_id

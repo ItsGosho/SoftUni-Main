@@ -1,0 +1,10 @@
+INSERT INTO travel_cards (card_number,job_during_journey,colonist_id,journey_id)
+SELECT (
+SELECT if(Jc.birth_date>'1980-01-01',CONCAT(SUBSTRING(Jc.birth_date,1,4),'',if(SUBSTRING(c.birth_date,9,1)='0',SUBSTRING(c.birth_date,10,1),SUBSTRING(c.birth_date,9,19)),'',SUBSTRING(Jc.ucn,1,4)),CONCAT(SUBSTRING(Jc.birth_date,1,4),'',if(SUBSTRING(c.birth_date,6,1)='0',SUBSTRING(c.birth_date,7,1),SUBSTRING(c.birth_date,6,2)),'',SUBSTRING(Jc.ucn,LENGTH(Jc.ucn)-3,8)))
+FROM colonists AS Jc WHERE Jc.id = c.id
+),
+if(c.id % 2 = 0,'Pilot',if(c.id % 3 = 0,'Cook','Engineer')),
+c.id,
+SUBSTRING(c.ucn,1,1)
+FROM colonists AS c
+WHERE c.id>=96 AND c.id<=100

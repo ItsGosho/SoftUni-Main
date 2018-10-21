@@ -1,0 +1,7 @@
+SELECT distinct s.NAME,s.manufacturer
+FROM spaceships AS s
+JOIN journeys AS j ON j.spaceship_id=s.id
+JOIN travel_cards AS tc ON tc.journey_id=j.id
+JOIN colonists AS c ON tc.colonist_id = c.id
+WHERE FLOOR(DATEDIFF('2017/08/25', c.birth_date)/365)<30 AND tc.job_during_journey = 'Pilot'
+ORDER BY s.NAME 
