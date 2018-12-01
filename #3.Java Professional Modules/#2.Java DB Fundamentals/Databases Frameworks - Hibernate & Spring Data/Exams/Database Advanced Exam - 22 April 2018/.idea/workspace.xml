@@ -1,0 +1,1183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="29fd3721-ac8d-4ac4-843b-4831a85e31f2" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>javax.el</find>
+      <find>Bat</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\Users\Gosho\Desktop\DB Exams\Database Advanced Exam - 22 April 2018\target\classes\org\softuni\mostwanted</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/entities/Car.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/entities/District.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/entities/Race.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/entities/Racer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/entities/Town.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/interfaces/DistrictServices.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/config/Beans.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/json/TownImportJSONDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/json/DistrictImportJSONDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/json/RacerImportJSONDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/json/CarImportJSONDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/interfaces/RaceEntryServices.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/xml/RaceEntryWrapperXMLDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/xml/RaceEntryImportWrapperXMLDto.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/files/xml/input/race-entries.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/parser/implementations/XMLParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/xml/RaceEntryImportXMLDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/repositories/RaceRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/repositories/TownRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/interfaces/RaceServices.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/xml/RaceImportWrapperXMLDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/xml/EntryImportWrapperXMLDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/xml/EntryImportXMLDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/xml/RaceImportXMLDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/repositories/DistrictRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/implementations/DistrictServicesImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/exports/xml/MostWantedWrapperExportXMLDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/exports/xml/MostWantedRacerExportXMLDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/exports/xml/MostWantedEntryWrapperExportXMLDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/exports/xml/MostWantedEntryExportXMLDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/repositories/RaceEntryRepository.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/MostWantedApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/implementations/RaceEntryServicesImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/implementations/RaceServicesImp.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org.softuni.mostwanted/util/ReflectionUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/entities/RaceEntry.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/exports/json/RacingTownsExportJSONDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/interfaces/TownServices.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/repositories/RacerRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/implementations/TownServicesImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/implementations/CarServicesImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/interfaces/CarServices.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/terminal/Terminal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/interfaces/RacerServices.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/repositories/CarRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/files/json/output/racingCars.json" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/parser/implementations/JSONParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/implementations/RacerServicesImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/exports/json/RacingCarsExportJSONDto.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-12" />
+    <option name="width" value="1386" />
+    <option name="height" value="788" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="mostwanted" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="mostwanted" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="mostwanted" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="mostwanted" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="dtos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="mostwanted" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="dtos" type="462c0819:PsiDirectoryNode" />
+              <item name="exports" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="mostwanted" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="dtos" type="462c0819:PsiDirectoryNode" />
+              <item name="exports" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="mostwanted" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="mostwanted" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
+              <item name="implementations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="mostwanted" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="mostwanted" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="mostwanted" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="implementations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="mostwanted" type="462c0819:PsiDirectoryNode" />
+              <item name="terminal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
+              <item name="output" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="xml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="xml" type="462c0819:PsiDirectoryNode" />
+              <item name="input" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="mostwanted" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="mostwanted" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDBA_Exam_Test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Database Advanced Exam - 22 April 2018" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="softuni" type="462c0819:PsiDirectoryNode" />
+              <item name="mostwanted" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="dtos" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543682679543" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.softuni.mostwanted.services.interfaces" />
+      <recent name="org.softuni.mostwanted.repositories" />
+      <recent name="org.softuni.mostwanted.domain.entities" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MostWantedApplication">
+    <configuration name="ParserTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JDBA_Exam_Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.softuni.mostwanted.structural.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.softuni.mostwanted.structural" />
+      <option name="MAIN_CLASS_NAME" value="org.softuni.mostwanted.structural.ParserTests" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RepositoryTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JDBA_Exam_Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.softuni.mostwanted.structural.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.softuni.mostwanted.structural" />
+      <option name="MAIN_CLASS_NAME" value="org.softuni.mostwanted.structural.RepositoryTests" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JDBA_Exam_Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.softuni.mostwanted.structural.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.softuni.mostwanted.structural" />
+      <option name="MAIN_CLASS_NAME" value="org.softuni.mostwanted.structural.ServiceTests" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.softuni.mostwanted.structural in JDBA_Exam_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JDBA_Exam_Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.softuni.mostwanted.structural.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.softuni.mostwanted.structural" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MostWantedApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="JDBA_Exam_Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.softuni.mostwanted.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.softuni.mostwanted.MostWantedApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.MostWantedApplication" />
+        <item itemvalue="JUnit.org.softuni.mostwanted.structural in JDBA_Exam_Test" />
+        <item itemvalue="JUnit.ServiceTests" />
+        <item itemvalue="JUnit.RepositoryTests" />
+        <item itemvalue="JUnit.ParserTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29fd3721-ac8d-4ac4-843b-4831a85e31f2" name="Default Changelist" comment="" />
+      <created>1543596767003</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543596767003</updated>
+      <workItem from="1543596769961" duration="5842000" />
+      <workItem from="1543655737444" duration="16242000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TownEntityTests - 2018.12.01 at 17h 24m 34s.xml">
+      <configuration name="TownEntityTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DistrictEntityTests - 2018.12.01 at 17h 24m 46s.xml">
+      <configuration name="DistrictEntityTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="org_softuni_mostwanted_entity_in_JDBA_Exam_Test - 2018.12.01 at 17h 25m 28s.xml">
+      <configuration name="org.softuni.mostwanted.entity in JDBA_Exam_Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConstantsTests - 2018.12.01 at 17h 25m 49s.xml">
+      <configuration name="ConstantsTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ControllerTests - 2018.12.01 at 17h 26m 09s.xml">
+      <configuration name="ControllerTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ModelParserTests - 2018.12.01 at 17h 26m 31s.xml">
+      <configuration name="ModelParserTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ParserTests - 2018.12.01 at 17h 26m 37s.xml">
+      <configuration name="ParserTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RepositoryTests - 2018.12.01 at 17h 26m 41s.xml">
+      <configuration name="RepositoryTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ServiceTests - 2018.12.01 at 17h 26m 46s.xml">
+      <configuration name="ServiceTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="org_softuni_mostwanted_structural_in_JDBA_Exam_Test - 2018.12.01 at 17h 26m 57s.xml">
+      <configuration name="org.softuni.mostwanted.structural in JDBA_Exam_Test" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="22084000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44927537" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993559" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32850242" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32850242" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32850242" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32850242" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org.softuni.mostwanted/util/ReflectionUtil.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/exports/xml/MostWantedWrapperExportXMLDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#583#584#0" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/exports/xml/MostWantedEntryWrapperExportXMLDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#635#636#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/exports/xml/MostWantedRacerExportXMLDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/entities/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/repositories/RaceEntryRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/stream/Stream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="404" column="14" selection-start-line="404" selection-start-column="14" selection-end-line="404" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/concurrent/atomic/AtomicLong.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org.softuni.mostwanted/entity/CarEntityTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/implementations/RaceServicesImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="69" column="92" selection-start-line="69" selection-start-column="92" selection-end-line="69" selection-end-column="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org.softuni.mostwanted/MostWantedApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.12.RELEASE/spring-core-4.3.12.RELEASE.jar!/org/springframework/util/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.1.11/logback-classic-1.1.11.jar!/ch/qos/logback/classic/Logger.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="480" selection-start-line="480" selection-end-line="480" />
+          <folding>
+            <element signature="e#17726#17727#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25.jar!/org/apache/commons/logging/impl/SLF4JLocationAwareLog.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#891#892#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.3.12.RELEASE/spring-test-4.3.12.RELEASE.jar!/org/springframework/test/context/TestContextManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="148" selection-start-line="148" selection-end-line="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org.softuni.mostwanted/entity/TownEntityTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#694#695#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="1205" column="18" selection-start-line="1205" selection-start-column="18" selection-end-line="1205" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.3.12.RELEASE/spring-test-4.3.12.RELEASE.jar!/org/springframework/test/context/junit4/statements/RunAfterTestMethodCallbacks.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/org/softuni/mostwanted/domain/dtos/exports/xml/MostWantedEntryExportXMLDto.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#978#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org.softuni.mostwanted/structural/ConstantsTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa1392.8633/BankAccountRepository.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa1392.9410/BankAccountServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa1392.9352/BankAccountService.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org.softuni.mostwanted/structural/ControllerTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org.softuni.mostwanted/util/ReflectionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org.softuni.mostwanted/structural/RepositoryTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/implementations/RaceEntryServicesImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="61" column="65" selection-start-line="61" selection-start-column="65" selection-end-line="61" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/exports/xml/MostWantedEntryExportXMLDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#555#556#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#707#708#0" expanded="true" />
+            <element signature="e#745#746#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/entities/RaceEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+          <folding>
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#797#798#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
+            <element signature="e#877#878#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#959#960#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="e#1030#1031#0" expanded="true" />
+            <element signature="e#1056#1057#0" expanded="true" />
+            <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#1121#1122#0" expanded="true" />
+            <element signature="e#1152#1153#0" expanded="true" />
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1221#1222#0" expanded="true" />
+            <element signature="e#1255#1256#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/files/xml/output/most-wanted.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/interfaces/TownServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/repositories/RacerRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/config/Beans.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/parser/implementations/ModelParserImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/MostWantedApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#378#379#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/interfaces/CarServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/repositories/CarRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="579" column="22" selection-start-line="579" selection-start-column="22" selection-end-line="579" selection-end-column="22" />
+          <folding>
+            <element signature="e#26957#26958#0" expanded="true" />
+            <element signature="e#27022#27023#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/implementations/TownServicesImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="78" column="36" lean-forward="true" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#save#0;class#TownServicesImp#0" />
+            <element signature="method#seedDatabase#0;class#TownServicesImp#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/files/json/output/racingTowns.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-48" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/interfaces/RacerServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/terminal/Terminal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/exports/json/RacingTownsExportJSONDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="e#204#205#0" expanded="true" />
+            <element signature="e#244#245#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#306#307#0" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#376#377#0" expanded="true" />
+            <element signature="e#412#413#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.7/gson-2.7.jar!/com/google/gson/GsonBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="129" column="23" selection-start-line="129" selection-start-column="23" selection-end-line="129" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/parser/implementations/JSONParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/entities/Racer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+          <folding>
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#731#732#0" expanded="true" />
+            <element signature="e#1010#1011#0" expanded="true" />
+            <element signature="e#1040#1041#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/domain/dtos/exports/json/RacingCarsExportJSONDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding>
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/implementations/RacerServicesImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="132" column="44" selection-start-line="132" selection-start-column="44" selection-end-line="132" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#save#0;class#RacerServicesImp#0" />
+            <element signature="method#seedDatabase#0;class#RacerServicesImp#0" />
+            <element signature="method#exportMostWanted#0;class#RacerServicesImp#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/files/json/output/racingCars.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/softuni/mostwanted/services/implementations/CarServicesImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#save#0;class#CarServicesImp#0" />
+            <element signature="method#seedDatabase#0;class#CarServicesImp#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>JDBA_Exam_Test</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20189703" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
