@@ -9,10 +9,10 @@
     <town name="Delhi" population="12398421" town_clients="10312"/>
     <town name="Sidney" population="4283102" town_clients="10000"/>
     <town name="Moscow" population="4523120" town_clients="0"/>
+    <town name="Kuala Lumpur" population="1000482" town_clients="0"/>
     <town name="Rome" population="3021333" town_clients="0"/>
     <town name="Madrid" population="7403213" town_clients="0"/>
     <town name="Paris" population="8900043" town_clients="0"/>
     <town name="Rio de Janeiro" population="6345231" town_clients="0"/>
     <town name="Washington DC" population="3204506" town_clients="0"/>
-    <town name="Kuala Lumpur" population="1000482" town_clients="0"/>
 </towns>

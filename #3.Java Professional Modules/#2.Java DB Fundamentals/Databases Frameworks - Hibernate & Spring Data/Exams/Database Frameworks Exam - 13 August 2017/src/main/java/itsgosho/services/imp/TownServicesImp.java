@@ -75,10 +75,10 @@ public class TownServicesImp implements TownServices {
         TownsExportWrapperXMLDto townsExportWrapperXMLDto = new TownsExportWrapperXMLDto();
         List<TownExportXMLDto> townExportXMLDtoList = new ArrayList<>();
 
-        this.townRepository.findAll().stream().forEach(x->{
-            TownExportXMLDto town = this.modelParser.convert(x,TownExportXMLDto.class);
-            long totalClients = this.productRepository.findAll().stream().filter(z -> z.getBranch().getTown().getId() == x.getId()).mapToLong(Product::getClients).sum();
-            town.setClients(totalClients);
+        this.townRepository.exportTowns().stream().forEach(x->{
+            Object[] objects = (Object[]) x;
+            TownExportXMLDto town = this.modelParser.convert(objects[0],TownExportXMLDto.class);
+            town.setClients((Long) objects[1]);
             townExportXMLDtoList.add(town);
         });
         townsExportWrapperXMLDto.setTownExportXMLDtos(townExportXMLDtoList.stream().sorted((x1,x2)->Long.compare(x2.getClients(),x1.getClients())).collect(Collectors.toList()));

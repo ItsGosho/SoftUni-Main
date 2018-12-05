@@ -12,7 +12,7 @@ public class BranchExportXMLDto {
     @XmlAttribute(name = "name")
     private String name;
     @XmlAttribute(name = "town")
-    private String town;
+    private String townName;
     @XmlAttribute(name = "total_clients")
     private long totalClients;
 
@@ -24,12 +24,12 @@ public class BranchExportXMLDto {
         this.name = name;
     }
 
-    public String getTown() {
-        return town;
+    public String getTownName() {
+        return townName;
     }
 
-    public void setTown(String town) {
-        this.town = town;
+    public void setTownName(String townName) {
+        this.townName = townName;
     }
 
     public long getTotalClients() {

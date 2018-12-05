@@ -84,12 +84,10 @@ public class BranchServicesImp implements BranchServices {
         BranchesExportWrapperXMLDto branchesExportWrapperXMLDto = new BranchesExportWrapperXMLDto();
         List<BranchExportXMLDto> branchExportXMLDtoList = new ArrayList<>();
 
-        this.branchRepository.findAll().stream().forEach(x->{
-            BranchExportXMLDto branch = new BranchExportXMLDto();
-            long totalClients = this.productRepository.findAll().stream().filter(z -> z.getBranch().getId() == x.getId()).mapToLong(Product::getClients).sum();
-            branch.setName(x.getName());
-            branch.setTown(x.getTown().getName());
-            branch.setTotalClients(totalClients);
+        this.branchRepository.exportTopBranches().stream().forEach(x->{
+            Object[] objects = (Object[]) x;
+            BranchExportXMLDto branch = this.modelParser.convert(objects[0],BranchExportXMLDto.class);
+            branch.setTotalClients((Long) objects[1]);
             branchExportXMLDtoList.add(branch);
         });
         branchesExportWrapperXMLDto.setBranchExportXMLDtoList(branchExportXMLDtoList.stream().sorted((x1,x2)->Long.compare(x2.getTotalClients(),x1.getTotalClients())).collect(Collectors.toList()));

@@ -86,33 +86,19 @@ public class EmployeeServicesImp implements EmployeeServices {
 
     @Override
     public void exportProductiveEmployee() {
-        List<Employee> employees = this.employeeRepository.findAll().stream().filter(x->{
-            List<Product> products = this.productRepository.findAll().stream().filter(z->z.getBranch().getId()==x.getBranch().getId()).collect(Collectors.toList());
-            if(products.size()>=1){
-                return true;
-            }
-            return false;
-        }).collect(Collectors.toList());
         List<ProductiveEmployeeExportJSONDto> productiveEmployeeExportJSONDtos = new ArrayList<>();
 
-        employees.stream().forEach(x->{
+        this.employeeRepository.exportProductiveEmployees().stream().forEach(x->{
+            Object[] objects = (Object[]) x;
             ProductiveEmployeeExportJSONDto productiveEmployeeExportJSONDto = this.modelParser.convert(x,ProductiveEmployeeExportJSONDto.class);
-            productiveEmployeeExportJSONDto.setFullName(x.getFirstName()+" "+x.getLastName());
-            productiveEmployeeExportJSONDto.setNumber(x.getCard().getNumber());
+            productiveEmployeeExportJSONDto.setFullName((String) objects[1]);
+            productiveEmployeeExportJSONDto.setNumber((String) objects[3]);
+            productiveEmployeeExportJSONDto.setPosition((String) objects[2]);
             productiveEmployeeExportJSONDtos.add(productiveEmployeeExportJSONDto);
         });
 
-        List<ProductiveEmployeeExportJSONDto> ordered = productiveEmployeeExportJSONDtos.stream().sorted((x1,x2)->{
-            if(!x1.getFullName().equals(x2.getFullName())){
-                return x1.getFullName().compareTo(x2.getFullName());
-            }else{
-                return Integer.compare(x2.getPosition().length(),x1.getPosition().length());
-            }
-        }).collect(Collectors.toList());
-        ProductiveEmployeeExportJSONDto[] productiveEmployeeExportJSONDtos1 = new ProductiveEmployeeExportJSONDto[productiveEmployeeExportJSONDtos.size()];
-        productiveEmployeeExportJSONDtos1 = ordered.toArray(productiveEmployeeExportJSONDtos1);
         try {
-            String res = this.jsonParser.write(productiveEmployeeExportJSONDtos1);
+            String res = this.jsonParser.write(productiveEmployeeExportJSONDtos);
             this.fileIO.write(res,"json\\output\\productive-employees.json");
         } catch (IOException | JAXBException e) {
             e.printStackTrace();

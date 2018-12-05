@@ -69,9 +69,7 @@ public class EmployeeCardServicesImp implements EmployeeCardServices {
 
     @Override
     public void exportFreeCards() {
-       List<FreeCardsExportJSONDto> employeeCards = this.employeeCardRepository.findAll().stream()
-               .filter(x->x.getEmployee()==null)
-               .sorted((x1,x2)->Long.compare(x1.getId(),x2.getId()))
+       List<FreeCardsExportJSONDto> employeeCards = this.employeeCardRepository.exportFreeCards().stream()
                .map(x->this.modelParser.convert(x,FreeCardsExportJSONDto.class))
                .collect(Collectors.toList());
        FreeCardsExportJSONDto[] freeCardsExportJSONDto = new FreeCardsExportJSONDto[employeeCards.size()];
