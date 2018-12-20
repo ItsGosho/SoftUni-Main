@@ -1,0 +1,21 @@
+{{> authenticatedMenu}}
+<div class="container">
+    <header>&#9993; Contact Book</header>
+    <div id="contacts" class="box-large">
+        <div id="list">
+            <h1>Contacts</h1>
+            <div class="content">
+                {{#each contacts}}
+                    <div class="contact" data-id={{_id}}>
+                        <span class="avatar small">&#9787;</span>
+                        <span class="title">{{firstName}} {{lastName}}</span>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        <div id="details">
+
+        </div>
+    </div>
+    <footer>Contact Book SPA &copy; 2017</footer>
+</div>

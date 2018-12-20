@@ -1,0 +1,25 @@
+{{> authenticatedMenu}}
+<div class="container">
+    <header>&#9993; Contact Book</header>
+    <div class="box-large">
+        <h1>My Profile</h1>
+        <div class="content">
+            <div class="info">
+                <div class="col centered">
+                    <span class="avatar">&#9787;</span>
+                    <button>Change</button>
+                </div>
+                <div class="col">
+                    <form class="profile-editor" action="#/profile" method="post">
+                        <label>First name:</label><input type="text" value="{{firstName}}" name="firstName"><br>
+                        <label>Last name:</label><input type="text" value="{{lastName}}" name="lastName"><br>
+                        <label>Phone:</label><input type="text" value="{{telephone}}" name="telephone"><br>
+                        <label>E-mail:</label><input type="text" value="{{email}}" name="email"><br>
+                        <input type="submit" value="Save changes">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>Contact Book SPA &copy; 2017</footer>
+</div>
