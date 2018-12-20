@@ -54,7 +54,7 @@ I.<a href="https://github.com/ItsGosho/SoftUni/tree/master/%233.Java Professiona
 </summary>
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
 <tbody>
-I.<a href="https://github.com/ItsGosho/SoftUni/tree/master/%233.Java%20Professional%20Modules/%234.JScript%20Core/%231.JS%20Fundamentals"> JS Fundamentals</a><br>II.<a href="https://github.com/ItsGosho/SoftUni/tree/master/%233.Java%20Professional%20Modules/%234.JScript%20Core/%232.JS%20Advanced"> JS Advanced</a><br><br>III.<a href="https://github.com/ItsGosho/SoftUni/tree/master/%233.Java%20Professional%20Modules/%234.JScript%20Core/%233.JS%20Applications"> JS Applications</a><br>
+I.<a href="https://github.com/ItsGosho/SoftUni/tree/master/%233.Java%20Professional%20Modules/%234.JScript%20Core/%231.JS%20Fundamentals"> JS Fundamentals</a><br>II.<a href="https://github.com/ItsGosho/SoftUni/tree/master/%233.Java%20Professional%20Modules/%234.JScript%20Core/%232.JS%20Advanced"> JS Advanced</a><br>III.<a href="https://github.com/ItsGosho/SoftUni/tree/master/%233.Java%20Professional%20Modules/%234.JScript%20Core/%233.JS%20Applications"> JS Applications</a><br>
 </tbody>
 </table>
 </details>
