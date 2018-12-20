@@ -1,0 +1,46 @@
+[
+  {
+    "status": "100",
+    "meesage": "Continue"
+  },
+  {
+    "status": "200",
+    "message": "Ok"
+  },
+  {
+    "status": "204",
+    "meesage": "No content"
+  },
+  {
+    "status": "301",
+    "meesage": "Moved permanently"
+  },
+  {
+    "status": "304",
+    "meesage": "Not modified"
+  },
+  {
+    "status": "400",
+    "meesage": "Bad request"
+  },
+  {
+    "status": "404",
+    "meesage": "Not Found"
+  },
+  {
+    "status": "406",
+    "meesage": "Not Acceptable"
+  },
+  {
+    "status": "410",
+    "meesage": "Gone"
+  },
+  {
+    "status": "500",
+    "meesage": "Internal Server Error"
+  },
+  {
+    "status": "511",
+    "meesage": "Network Authentication Required"
+  }
+]
