@@ -1,0 +1,18 @@
+<script th:src="@{/js/user/userLoginForm.js}"></script>
+<div align="center">
+    <form method="post">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input style="width: 250px" type="text" class="form-control" id="username" name="username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input style="width: 250px" type="password" class="form-control" id="password" name="password">
+        </div>
+        <small id="errorLogin" style="display: none" class="form-text text-muted">Something went really wrong :/</small>
+        <button type="submit" class="btn btn-primary" id="loginUserSubmitButton">Login</button>
+    </form>
+</div>
+<script>
+  runUserLoginFormScript();
+</script>

@@ -1,0 +1,116 @@
+<script th:src="@{/js/viruses/crudVirusForm.js}"></script>
+<div align="center">
+    <form method="post">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input style="width: 450px" type="text" class="form-control" id="name" name="name">
+            <small id="errorName" style="display: none" class="form-text text-muted">Invalid Name</small>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea style="width: 450px;height: 150px" type="text" class="form-control"
+                      id="description" name="description"></textarea>
+            <small id="errorDescription" style="display: none" class="form-text text-muted">Invalid Description</small>
+        </div>
+
+        <div class="form-group">
+            <label for="sideEffects">Side Effect</label>
+            <input style="width: 450px" type="text" class="form-control" id="sideEffects" name="sideEffects">
+            <small id="errorSideEffects" style="display: none" class="form-text text-muted">Invalid Side Effect</small>
+        </div>
+
+        <div class="form-group">
+            <label for="creator">Creator</label>
+            <input style="width: 450px" type="text" class="form-control" id="creator" name="creator">
+            <small id="errorCreator" style="display: none" class="form-text text-muted">Invalid Side Effects</small>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="deadly" name="deadly">
+            <label class="form-check-label" for="deadly">
+                Is Deadly?
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="curable" name="curable">
+            <label class="form-check-label" for="curable">
+                Is Curable?
+            </label>
+        </div>
+
+        <div class="dropdown-divider"></div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="mutation" id="zombieRadio" value="ZOMBIE">
+            <label class="form-check-label" for="zombieRadio">
+                ZOMBIE
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="mutation" id="tyrantRadio" value="T_078_TYRANT">
+            <label class="form-check-label" for="tyrantRadio">
+                T_078_TYRANT
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="mutation" id="giantSpiderRadio" value="GIANT_SPIDER">
+            <label class="form-check-label" for="giantSpiderRadio">
+                GIANT_SPIDER
+            </label>
+        </div>
+
+        <small id="errorMutation" style="display: none" class="form-text text-muted">Mutation cannot be null</small>
+
+
+        <div class="dropdown-divider"></div>
+
+        <div class="form-group">
+            <label for="name">Turnover Rate</label>
+            <input style="width: 450px" type="number" class="form-control" id="turnoverRate" name="turnoverRate"
+                   value="0">
+            <small id="errorTurnoverRate" style="display: none" class="form-text text-muted">Invalid Turnover Rate</small>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Hours Until Turn</label>
+            <input style="width: 450px" type="number" class="form-control" id="hoursUntilTurn" name="hoursUntilTurn"
+                   value="0">
+            <small id="errorHoursUntilTurn" style="display: none" class="form-text text-muted">Invalid turnover rate</small>
+        </div>
+
+        <div class="form-group">
+            <label for="sel1">Magnitude:</label>
+            <select class="form-control" id="sel1" style="width: 450px" name="magnitude">
+                <option name="low">Low</option>
+                <option name="medium">Medium</option>
+                <option name="high">High</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Realese Date</label>
+            <input style="width: 450px" type="date" class="form-control" id="realeseDate" name="realeseDate">
+            <small id="errorRealeseDate" style="display: none" class="form-text text-muted">Invalid Realese Date</small>
+        </div>
+
+        <div class="form-group">
+            <label for="affectedCapitals">Affected Capitals:</label>
+            <select multiple class="form-control" id="affectedCapitals" style="width: 450px" name="affectedCapitals">
+                <th:block th:each="capital : ${avaliableCapitals}">
+                    <option th:text="${capital.getName()}"></option>
+                </th:block>
+            </select>
+        </div>
+        <small id="errorAffectedCapitals" class="form-text text-muted">You must select at least one capital</small>
+
+
+        <button type="submit" class="btn btn-primary" id="submitVirusButton">Submit</button>
+    </form>
+</div>
+<script>
+     runAddVirusFormScript();
+</script>

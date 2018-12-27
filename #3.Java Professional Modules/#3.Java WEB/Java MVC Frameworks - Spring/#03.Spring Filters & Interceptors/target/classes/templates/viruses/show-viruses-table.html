@@ -1,0 +1,44 @@
+<div align="center" th:if="${not #lists.isEmpty(viruses)}">
+    <h1>All Viruses</h1>
+    <table class="table" style="text-align: center;width: 50%">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Magnitude</th>
+            <th scope="col">Realese Date</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <th:block th:each="virus : ${viruses}">
+            <tr>
+                <th th:text="${virus.getName()}"></th>
+                <th th:text="${#strings.toUpperCase(virus.getMagnitude())}"></th>
+                <th th:text="${#temporals.format(virus.getRealeseDate(),'dd-MMM-yyyy')}"></th>
+                <td>
+                    <a th:href="@{/viruses/edit/{id}(id=${virus.getId()})}">
+                        <button type="button" class="btn btn-success">Edit</button>
+                    </a>
+                    <a th:href="@{/viruses/delete/{id}(id=${virus.getId()})}">
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </a>
+                </td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+</div>
+<div align="center" th:if="${#lists.isEmpty(viruses)}">
+    <table class="table" style="text-align: center;width: 50%">
+        <thead>
+        <tr>
+            <th scope="col">There are no viruses yet!</th>
+        </tr>
+        <tbody>
+        <tr>
+            <th><a th:href="@{/viruses/add}"><button type="button" class="btn btn-success">Add Virus</button></a></th>
+        </tr>
+        </tbody>
+        </thead>
+    </table>
+</div>

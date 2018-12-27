@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Customer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/form-size.css">
+</head>
+<body>
+<th:block th:insert="~{navigation}"></th:block>
+<center>
+    <p1 style = "font-size: 20px;"><b>Add Customer:</b></p1><br><br>
+    <form method="post">
+        <p1 style = "font-size: 18px;"><b>Name:</b></p1><br>
+        <input type="text" class="center,form-control input-lg" placeholder="name" name="name"><br><br>
+        <p1 style = "font-size: 18px;"><b>Birthdate:</b></p1><br>
+        <input class = "center,form-control input-lg" type="date" placeholder="birthdate" name="birthdate"><br><br>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+    <br>
+</center>
+</body>
+</html>
