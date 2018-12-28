@@ -1,0 +1,32 @@
+<script th:src="@{/js/user/userRegisterForm.js}"></script>
+<div align="center">
+    <form id="registerForm" method="post">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input style="width: 250px" type="text" class="form-control" id="username" name="username">
+            <small id="errorUsername" style="display: none" class="form-text text-muted">Invalid Username</small>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input style="width: 250px" type="password" class="form-control" id="password" name="password">
+            <small id="errorPassword" style="display: none" class="form-text text-muted">Invalid Password</small>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input style="width: 250px" type="password" class="form-control" id="confirmPassword"
+                   name="confirmPassword">
+            <small id="errorConfirmPassword" style="display: none" class="form-text text-muted">Invalid Confirm
+                Password
+            </small>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input style="width: 250px" type="email" class="form-control" id="email" name="email">
+            <small id="errorEmail" style="display: none" class="form-text text-muted">Invalid Email</small>
+        </div>
+        <button type="submit" class="btn btn-primary" id="registerUserSubmitButton">Register</button>
+    </form>
+</div>
+<script>
+    runUserRegisterFormScript();
+</script>

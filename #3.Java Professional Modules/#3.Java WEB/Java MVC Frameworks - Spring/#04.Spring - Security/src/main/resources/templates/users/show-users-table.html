@@ -1,0 +1,54 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<div align="center">
+    <h1>All Users</h1>
+    <table class="table" style="text-align: center;width: 75%">
+        <thead>
+        <tr>
+            <th scope="col">Role</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Registration Date</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Promote To</th>
+            <th scope="col">Demote To</th>
+        </tr>
+        </thead>
+        <tbody>
+        <th:block th:each="user : ${users}">
+            <tr>
+                <th th:text="${user.getRole()}"></th>
+                <th th:text="${user.getUsername()}"></th>
+                <th th:text="${user.getEmail()}"></th>
+                <th th:text="${#temporals.format(user.getRegistrationDate(),'dd-MMM-yyyy HH:mm')}"></th>
+                <th:block th:if="${user.getRole()!='ROOT_ADMIN'}">
+                    <td>
+                        <form th:action="@{/users/delete/{id}(id=${user.getId()})}" method="post">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
+                    <td>
+
+                        <th:block th:if="${user.hasNextRole()}">
+                            <form th:action="@{/users/promote/{id}(id=${user.getId()})}" method="post">
+                                <button type="submit" class="btn btn-success" th:text="${user.getNextRole()}"></button>
+                            </form>
+                        </th:block>
+
+                    </td>
+                    <td>
+
+                        <th:block th:if="${user.hasLowerRole()}">
+                            <form th:action="@{/users/demote/{id}(id=${user.getId()})}" method="post">
+                                <button type="submit" class="btn btn-success" th:text="${user.getLowerRole()}"></button>
+                            </form>
+                        </th:block>
+
+                    </td>
+                </th:block>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+</div>
