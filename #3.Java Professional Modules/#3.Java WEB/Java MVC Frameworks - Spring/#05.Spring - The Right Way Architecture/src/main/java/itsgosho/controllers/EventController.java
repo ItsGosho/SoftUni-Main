@@ -2,8 +2,8 @@ package itsgosho.controllers;
 
 import itsgosho.domain.entities.User;
 import itsgosho.domain.models.dtos.EventCreateDto;
-import itsgosho.services.EventServices;
-import itsgosho.services.UserServices;
+import itsgosho.services.event.EventServices;
+import itsgosho.services.user.UserServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;

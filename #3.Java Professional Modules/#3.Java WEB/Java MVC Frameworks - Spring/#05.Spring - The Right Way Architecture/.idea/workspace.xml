@@ -10,76 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/services/EventServicesImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-160">
-              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/controllers/OrderController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/orders/all-orders.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/domain/models/view/AllOrdersViewDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-              <folding>
-                <element signature="e#238#239#0" expanded="true" />
-                <element signature="e#270#271#0" expanded="true" />
-                <element signature="e#320#321#0" expanded="true" />
-                <element signature="e#362#363#0" expanded="true" />
-                <element signature="e#401#402#0" expanded="true" />
-                <element signature="e#436#437#0" expanded="true" />
-                <element signature="e#492#493#0" expanded="true" />
-                <element signature="e#540#541#0" expanded="true" />
-                <element signature="e#583#584#0" expanded="true" />
-                <element signature="e#615#616#0" expanded="true" />
-                <element signature="e#672#673#0" expanded="true" />
-                <element signature="e#714#715#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/services/OrderServicesImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="68" column="21" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -105,10 +36,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/itsgosho/services/validations/UserRegisterDtoValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/itsgosho/services/UserServicesImp.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/main-page.html" />
-        <option value="$PROJECT_DIR$/src/main/java/itsgosho/config/AuthorityConfirguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/itsgosho/config/AuthorityConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/itsgosho/config/CustomMethodSecurityConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/itsgosho/config/CustomMethodSecurityExpressionRoot.java" />
@@ -132,7 +59,6 @@
         <option value="$PROJECT_DIR$/src/main/java/itsgosho/domain/models/dtos/OrderMakeDto.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/pages/events/all-events.html" />
         <option value="$PROJECT_DIR$/src/main/java/itsgosho/domain/entities/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/itsgosho/services/UserRoleServicesImp.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/itsgosho/config/BeansConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/itsgosho/config/ApacheConfiguration.java" />
@@ -142,8 +68,6 @@
         <option value="$PROJECT_DIR$/src/main/java/itsgosho/test/JMSMessageListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/itsgosho/domain/models/view/MyEventsViewDto.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/pages/events/my-events.html" />
-        <option value="$PROJECT_DIR$/src/main/java/itsgosho/services/EventServices.java" />
-        <option value="$PROJECT_DIR$/src/main/java/itsgosho/services/EventServicesImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/itsgosho/controllers/EventController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/heads/head.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/navbars/navbar-user.html" />
@@ -153,9 +77,16 @@
         <option value="$PROJECT_DIR$/src/main/java/itsgosho/domain/models/view/AllOrdersViewDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/itsgosho/services/OrderServices.java" />
         <option value="$PROJECT_DIR$/src/main/java/itsgosho/repositories/EventRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/itsgosho/services/OrderServicesImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/itsgosho/controllers/OrderController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/pages/orders/all-orders.html" />
+        <option value="$PROJECT_DIR$/src/main/java/itsgosho/controllers/OrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/itsgosho/services/OrderServicesImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/itsgosho/services/EventServices.java" />
+        <option value="$PROJECT_DIR$/src/main/java/itsgosho/services/EventServicesImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/itsgosho/services/UserRoleServicesImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/itsgosho/services/UserServicesImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/itsgosho/services/UserServices.java" />
+        <option value="$PROJECT_DIR$/src/main/java/itsgosho/services/event/EventServicesImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/itsgosho/services/role/UserRoleServicesImp.java" />
       </list>
     </option>
   </component>
@@ -177,7 +108,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -210,15 +141,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="itsgosho" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="itsgosho" type="b2602c69:ProjectViewProjectNode" />
-              <item name="#05.Spring - The Right Way Architecture" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="itsgosho" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="itsgosho" type="b2602c69:ProjectViewProjectNode" />
@@ -297,16 +219,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="itsgosho" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="itsgosho" type="b2602c69:ProjectViewProjectNode" />
-              <item name="#05.Spring - The Right Way Architecture" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="itsgosho" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="validations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="itsgosho" type="b2602c69:ProjectViewProjectNode" />
@@ -419,7 +331,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -430,7 +342,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546432100124" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546439456149" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -499,16 +411,17 @@
       <workItem from="1546357523254" duration="10740000" />
       <workItem from="1546374747837" duration="1000" />
       <workItem from="1546424361586" duration="6713000" />
+      <workItem from="1546438985010" duration="473000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66382000" />
+    <option name="totallyTimeSpent" value="66855000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30786687" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31240544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -559,49 +472,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/domain/entities/UserRole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/services/UserRoleServicesImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="41" column="52" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/config/BeansConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jms/5.1.2.RELEASE/spring-jms-5.1.2.RELEASE.jar!/org/springframework/jms/core/JmsTemplate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="348" column="16" selection-start-line="348" selection-start-column="16" selection-end-line="348" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa8088.18129/NuggetRepository.java" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa8088.18787/RegisterUserSubscriber.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa8088.21945/ApplicationBeanConfiguration.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/config/SecurityConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -634,45 +504,13 @@
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa14124.47338/NuggetsApplication.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa14124.48084/NuggetViewModel.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa14124.48847/RegisterUserSubscriber.java" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa7392.5480/RegisterUserSubscriber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa7392.7064/NuggetRepository.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa7392.7010/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa7392.7838/AccountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-541" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa7392.18904/RegisterUserSubscriber.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/test/JMSMessageListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/test/JSMListenerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="23" column="68" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa7392.5480/RegisterUserSubscriber.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa7392.7064/NuggetRepository.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa7392.7010/UserRepository.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa7392.7838/AccountController.java" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa7392.18904/RegisterUserSubscriber.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/test/JMSMessageListener.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/test/JSMListenerTest.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-messaging/5.1.2.RELEASE/spring-messaging-5.1.2.RELEASE.jar!/org/springframework/messaging/Message.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -736,13 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/services/EventServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/heads/head.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -803,50 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/repositories/OrderRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/controllers/EventController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/services/OrderServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/repositories/EventRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/services/OrderServicesImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="68" column="21" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/events/all-events.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -863,6 +650,13 @@
             <element signature="e#377#378#0" expanded="true" />
             <element signature="e#402#403#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/orders/all-orders.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -887,10 +681,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/services/EventServicesImp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/controllers/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-160">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="96">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/controllers/EventController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -899,18 +700,106 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/controllers/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        <state relative-caret-position="419">
+          <caret line="36" column="63" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pages/orders/all-orders.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/repositories/EventRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+        <state relative-caret-position="272">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/repositories/OrderRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/repositories/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/repositories/UserRoleRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/services/event/EventServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/services/event/EventServicesImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/services/order/OrderServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/services/order/OrderServicesImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/services/role/UserRoleServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/services/role/UserRoleServicesImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/services/user/UserServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/itsgosho/services/user/UserServicesImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
         </state>
       </provider>
     </entry>
