@@ -1,0 +1,29 @@
+<div class="form-group">
+    <h1 align="center"><b>Create Event</b></h1>
+    <hr class="style18" style="background-color: #AFEEEE">
+    <div align="center">
+        <form method="post">
+            <div class="form-group">
+                <label for="nameCreateEventForm">Name</label>
+                <input style="width: 350px;background-color: wheat" type="text" class="form-control" id="nameCreateEventForm" name="name" placeholder="Name..">
+                <label for="placeCreateEventForm">Place</label>
+                <input style="width: 350px;background-color: wheat" type="text" class="form-control" id="placeCreateEventForm" name="place" placeholder="Place..">
+            <hr  width="50%" class="style18" style="background-color: #AFEEEE">
+                <label for="startCreateEventForm">Start</label>
+                <input style="width: 350px;background-color: wheat" type="datetime-local" class="form-control" id="startCreateEventForm" name="start">
+                <label for="endCreateEventForm">End</label>
+                <input style="width: 350px;background-color: wheat" type="datetime-local" class="form-control" id="endCreateEventForm" name="end">
+                <hr  width="50%" class="style18" style="background-color: #AFEEEE">
+
+                <label for="totalTicketsCreateEventForm">Total Tickets</label>
+                <input style="width: 350px;background-color: wheat" type="number" value="0" class="form-control" id="totalTicketsCreateEventForm" name="totalTickets">
+
+                <label for="pricePerTicketCreateEventForm">Price per ticket</label>
+                <input style="width: 350px;background-color: wheat" type="number" step=".01" value="0.00" class="form-control" id="pricePerTicketCreateEventForm" name="pricePerTicket">
+
+                <hr  width="50%" class="style18" style="background-color: #AFEEEE">
+            </div>
+            <button type="submit" class="btn" id="createEventButtonCreateForm" style="background-color: #AFEEEE">Create Event</button>
+        </form>
+    </div>
+</div>

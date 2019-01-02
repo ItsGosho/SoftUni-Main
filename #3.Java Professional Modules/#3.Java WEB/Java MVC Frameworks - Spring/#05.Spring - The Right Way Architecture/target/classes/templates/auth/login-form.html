@@ -1,0 +1,27 @@
+<div class="form-group">
+    <h1 align="center"><b>Login</b></h1>
+    <hr class="style18" style="background-color: #AFEEEE">
+    <div align="center">
+        <form method="post">
+            <div class="form-group">
+                <label for="usernameOrEmailLoginForm">Username or Email</label>
+                <input style="width: 350px;background-color: wheat" type="text" class="form-control" id="usernameOrEmailLoginForm" name="usernameOrEmail">
+            </div>
+            <div class="form-group">
+                <label for="passwordLoginForm">Password</label>
+                <input style="width: 350px;background-color: wheat" type="password" class="form-control" id="passwordLoginForm" name="password">
+            </div>
+            <small id="errorLogin" style="display: none" class="form-text text-muted">Something went really wrong :/</small>
+            <hr  width="50%" class="style18" style="background-color: #AFEEEE">
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="rememberMe" id="rememberMe">
+                <label class="form-check-label" for="rememberMe">Remember Me</label>
+            </div>
+            <!--<div class="csrf">-->
+                <!--<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">-->
+            <!--</div>-->
+            <hr  width="50%" class="style18" style="background-color: #AFEEEE">
+            <button type="submit" class="btn" id="loginButtonLoginForm" style="background-color: #AFEEEE">Login</button>
+        </form>
+    </div>
+</div>
