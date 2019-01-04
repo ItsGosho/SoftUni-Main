@@ -1,0 +1,50 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<div class="form-group">
+    <h1 align="center"><b>All Orders</b></h1>
+    <hr class="style18" style="background-color: #AFEEEE">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Event</th>
+            <th scope="col">Customer</th>
+            <th scope="col">Ordered On</th>
+        </tr>
+        </thead>
+        <tbody>
+            <th:block th:each="order : ${orders}">
+        <tr>
+            <td th:text="${order.getEventName()}"></td>
+            <td th:text="${order.getCustomerName()}"></td>
+            <td th:text="${#temporals.format(order.getOrderedOn(),'dd/MM/yyyy - HH:mm')}"></td>
+        </tr>
+        </th:block>
+        </tbody>
+    </table>
+    <div align="center">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <th:block th:if="${(#conversions.convert(#request.getParameter('page'), 'Integer')) - 1} >= 1">
+                    <li class="page-item"><a class="page-link" th:href="@{/orders/all(page=${(#conversions.convert(#request.getParameter('page'), 'Integer')) - 1})}">Previous</a></li>
+                </th:block>
+                <th:block th:if="${(#conversions.convert(#request.getParameter('page'), 'Integer')) - 1} <=0">
+                    <li class="page-item"><a class="page-link" disabled>Previous</a></li>
+                </th:block>
+
+
+                <th:block th:each="i: ${#numbers.sequence(1,totalPages-1)}">
+                    <li class="page-item"><a class="page-link" th:text="${i}" th:href="@{/orders/all?page={pId}(pId=${i})}"></a></li>
+                </th:block>
+
+                <th:block th:if="${(#conversions.convert(#request.getParameter('page'), 'Integer')) + 1 <= totalPages-1}">
+                    <li class="page-item"><a class="page-link" th:href="@{/orders/all(page=${(#conversions.convert(#request.getParameter('page'), 'Integer')) + 1})}">Next</a></li>
+                </th:block>
+                <th:block th:if="${(#conversions.convert(#request.getParameter('page'), 'Integer')) + 1 > totalPages-1}">
+                    <li class="page-item"><a class="page-link" disabled>Next</a></li>
+                </th:block>
+
+            </ul>
+        </nav>
+    </div>
+</div>

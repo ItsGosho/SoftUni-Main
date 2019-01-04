@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <title>Whoops?!</title>
+    <th:block th:insert="heads/head"></th:block>
+</head>
+<th:block th:insert="navbars/navbar"></th:block>
+<body>
+
+<div class="text-center">
+    <img th:src="@{/img/errors/404.png}" class="rounded" alt="404">
+</div>
+
+</body>
+</html>

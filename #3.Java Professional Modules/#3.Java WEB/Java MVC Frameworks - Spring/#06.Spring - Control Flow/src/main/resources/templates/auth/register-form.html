@@ -1,0 +1,57 @@
+<div class="form-group">
+    <h1 align="center"><b>Register</b></h1>
+    <hr class="style18" style="background-color: #AFEEEE">
+    <div align="center">
+        <form method="post" action="/register">
+            <div class="form-group">
+                <label for="usernameRegisterForm">Username</label>
+                <input style="width: 350px;background-color: wheat" type="text" class="form-control"
+                       id="usernameRegisterForm" name="username" placeholder="Username..">
+                <small>Must be at least 3 characters long!</small>
+            </div>
+            <div class="form-group">
+                <label for="emailRegisterForm">Email</label>
+                <input style="width: 350px;background-color: wheat;" type="email" class="form-control"
+                       id="emailRegisterForm" name="email" placeholder="Email..">
+            </div>
+            <div class="form-group">
+                <label for="passwordRegisterForm">Password</label>
+                <input style="width: 350px;background-color: wheat;" type="password" class="form-control"
+                       id="passwordRegisterForm" name="password" placeholder="Password..">
+            </div>
+            <div class="form-group">
+                <label for="confirmPasswordRegisterForm">Confirm Password</label>
+                <input style="width: 350px;background-color: wheat;" type="password" class="form-control"
+                       id="confirmPasswordRegisterForm" name="confirmPassword" placeholder="Confirm Password..">
+                <small>Password must consists of:</small>
+                <br>
+                <small>-At least one uppercase character:</small>
+                <br>
+                <small>-At least one lowercase character:</small>
+                <br>
+                <small>-At least one number:</small>
+            </div>
+            <hr width="50%" class="style18" style="background-color: #AFEEEE">
+
+            <div class="form-group">
+                <label for="firstNameRegisterForm">First Name</label>
+                <input style="width: 350px;background-color: wheat" type="text" class="form-control"
+                       id="firstNameRegisterForm" name="firstName" placeholder="First Name..">
+            </div>
+            <div class="form-group">
+                <label for="lastNameRegisterForm">Last Name</label>
+                <input style="width: 350px;background-color: wheat" type="text" class="form-control"
+                       id="lastNameRegisterForm" name="lastName" placeholder="Last Name..">
+            </div>
+            <div class="form-group">
+                <label for="uniqueCitizenNumberRegisterForm">UCN</label>
+                <input style="width: 350px;background-color: wheat" type="text" class="form-control"
+                       id="uniqueCitizenNumberRegisterForm" name="uniqueCitizenNumber"
+                       placeholder="Unique Citizen Number..">
+            </div>
+            <button type="submit" class="btn" id="registerButtonRegisterForm" style="background-color: #AFEEEE">
+                Register
+            </button>
+        </form>
+    </div>
+</div>

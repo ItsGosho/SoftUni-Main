@@ -1,0 +1,27 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<div class="form-group">
+    <h1 align="center"><b>My Events</b></h1>
+    <hr class="style18" style="background-color: #AFEEEE">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Start</th>
+            <th scope="col">End</th>
+            <th scope="col">Tickets</th>
+        </tr>
+        </thead>
+        <tbody>
+        <th:block th:each="event : ${events}">
+            <tr>
+                <td th:text="${event.getName()}"></td>
+                <td th:text="${#temporals.format(event.getStart(),'dd/MM/yyyy - HH:mm')}"></td>
+                <td th:text="${#temporals.format(event.getEnd(),'dd/MM/yyyy - HH:mm')}"></td>
+                <td th:text="${event.getTotalTicketsBought()}"></td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+</div>
