@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>UniEnt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./styles/styles.css"/>
+
+    <!--18:45 to 19:25-->
+    <!--18:50 to 19:25-->
+</head>
+
+<body>
+
+<nav class="site-header sticky-top py-1">
+    <!--HEADER HERE-->
+</nav>
+
+<div id="notifications">
+    <!--NOTIFIATIONS HERE-->
+</div>
+
+<div id="main_container">
+    <!--The main content of the page-->
+</div>
+
+<footer class="container py-5">
+    <!--HERE GOES THE FOOTER-->
+</footer>
+
+</body>
+
+<script>
+    if (!window.location.href.includes("#/")) {
+        window.location.href = window.location.href + "#/";
+    }
+</script>
+
+<!-- Libraries -->
+<script src="./node_modules/jquery/dist/jquery.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="./node_modules/handlebars/dist/handlebars.js"></script>
+<script src="./node_modules/sammy/lib/sammy.js"></script>
+<script src="./node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+
+<!--Constants-->
+<script src="./scripts/constants/database.constants.js"></script>
+<script src="./scripts/constants/local.storage.constants.js"></script>
+<script src="./scripts/constants/messages.constants.js"></script>
+<script src="./scripts/constants/routings.url.constants.js"></script>
+<script src="./scripts/constants/view.contants.js"></script>
+<script src="./scripts/constants/field.names.constnats.js"></script>
+<script src="./scripts/constants/requester.constants.js"></script>
+
+<!--Tools-->
+<script src="./scripts/tools/handlebars.tools.js"></script>
+<script src="./scripts/tools/web.tools.js"></script>
+<script src="./scripts/tools/requester.js"></script>
+<script src="./scripts/tools/request.custom.js"></script>
+
+<!--Requests-->
+<script src="./scripts/requests/authentication.requests.js"></script>
+<script src="./scripts/requests/event.requests.js"></script>
+
+<!--View Resolvers-->
+<script src="./scripts/resolvers/view/core.view.resolver.js"></script>
+<script src="./scripts/resolvers/view/authentication.view.resolver.js"></script>
+<script src="./scripts/resolvers/view/notification.view.resolver.js"></script>
+<script src="./scripts/resolvers/view/event.view.resolver.js"></script>
+<script src="./scripts/resolvers/view/user.view.resolver.js"></script>
+
+<!--Services-->
+<script src="./scripts/services/services.authentication.js"></script>
+<script src="./scripts/services/services.event.js"></script>
+<script src="./scripts/services/services.user.js"></script>
+
+<!--Routings-->
+<script src="./scripts/routing/routings.default.js"></script>
+
+<script src="./scripts/routing/authentication/routings.authentication.before.js"></script>
+<script src="./scripts/routing/authentication/routings.authentication.get.js"></script>
+<script src="./scripts/routing/authentication/routings.authentication.post.js"></script>
+
+
+<script src="scripts/routing/event/routings.event.get.js"></script>
+<script src="scripts/routing/event/routings.event.post.js"></script>
+
+<script src="scripts/routing/user/routings.user.get.js"></script>
+
+
+<script src="./scripts/routing/routings.js"></script>
+<script src="./scripts/test.js"></script>
+
+</html>
