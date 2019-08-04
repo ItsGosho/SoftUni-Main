@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./styles/styles.css"/>
+
+    <title>CookUni</title>
+</head>
+
+<body>
+
+<div id="rooter" class="cover-container w-100 d-flex h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <!--The desired header-->
+    </header>
+
+    <div id="notifications">
+        <!--The desired notification-->
+    </div>
+
+    <div id="main_container">
+        <!--The main content of the page-->
+    </div>
+
+    <footer class="mastfoot mt-5 text-center text-light">
+        <!--The desired footer-->
+    </footer>
+</div>
+
+</body>
+
+
+<script>
+    if (!window.location.href.includes("#/")) {
+        window.location.href = window.location.href + "#/";
+    }
+</script>
+
+<!-- Libraries -->
+<script src="./node_modules/jquery/dist/jquery.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="./node_modules/handlebars/dist/handlebars.js"></script>
+<script src="./node_modules/sammy/lib/sammy.js"></script>
+<script src="./node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+
+<!--My Scripts-->
+
+<!--Constants-->
+<script src="./scripts/constants/database.constants.js"></script>
+<script src="./scripts/constants/local.storage.constants.js"></script>
+<script src="./scripts/constants/messages.constants.js"></script>
+<script src="./scripts/constants/routings.url.constants.js"></script>
+<script src="./scripts/constants/view.contants.js"></script>
+<script src="./scripts/constants/field.names.constnats.js"></script>
+
+<!--Tools-->
+<script src="./scripts/tools/requester.js"></script>
+<script src="./scripts/tools/handlebars.tools.js"></script>
+<script src="./scripts/tools/web.tools.js"></script>
+
+<!--View Resolvers-->
+<script src="./scripts/resolvers/view/core.view.resolver.js"></script>
+<script src="./scripts/resolvers/view/notification.view.resolver.js"></script>
+
+<!--Services-->
+<script src="./scripts/services/services.authentication.js"></script>
+<script src="./scripts/services/services.recipe.js"></script>
+
+<!--Routings-->
+<script src="./scripts/routing/routings.default.js"></script>
+
+<script src="./scripts/routing/authentication/routings.authentication.before.js"></script>
+<script src="./scripts/routing/authentication/routings.authentication.get.js"></script>
+<script src="./scripts/routing/authentication/routings.authentication.post.js"></script>
+
+<script src="./scripts/routing/recipe/routings.recipe.before.js"></script>
+<script src="./scripts/routing/recipe/routings.recipe.get.js"></script>
+<script src="./scripts/routing/recipe/routings.recipe.post.js"></script>
+
+<script src="./scripts/routing/routings.js"></script>
+
+<!--Test-->
+<script src="./scripts/config/configuration.js"></script>
+<script src="./test.js"></script>
+
+</html>
