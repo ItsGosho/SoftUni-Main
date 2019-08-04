@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SoftBay</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+
+    <section id="navbar">
+
+    </section>
+
+    <section id="notifications">
+
+    </section>
+
+    <section id="main_container">
+
+    </section>
+
+    <footer class="page-footer font-small blue">
+
+    </footer>
+
+    <script>
+        if (!window.location.href.includes("#/")) {
+            window.location.href = window.location.href + "#/";
+        }
+    </script>
+
+    <!-- Libraries -->
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/handlebars/dist/handlebars.js"></script>
+    <script src="./node_modules/sammy/lib/sammy.js"></script>
+    <script src="./node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+    <script src="./node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!--Constants-->
+    <script src="./scripts/constants/database.constants.js"></script>
+    <script src="./scripts/constants/local.storage.constants.js"></script>
+    <script src="./scripts/constants/messages.constants.js"></script>
+    <script src="./scripts/constants/routings.url.constants.js"></script>
+    <script src="./scripts/constants/view.contants.js"></script>
+    <script src="./scripts/constants/field.names.constnats.js"></script>
+    <script src="./scripts/constants/requester.constants.js"></script>
+
+    <!--Tools-->
+    <script src="./scripts/tools/handlebars.tools.js"></script>
+    <script src="./scripts/tools/web.tools.js"></script>
+    <script src="./scripts/tools/requester.js"></script>
+    <script src="./scripts/tools/request.custom.js"></script>
+
+    <!--Requests-->
+    <script src="./scripts/requests/authentication.requests.js"></script>
+    <script src="scripts/requests/offer.requests.js"></script>
+
+    <!--View Resolvers-->
+    <script src="./scripts/resolvers/view/core.view.resolver.js"></script>
+    <script src="./scripts/resolvers/view/authentication.view.resolver.js"></script>
+    <script src="./scripts/resolvers/view/notification.view.resolver.js"></script>
+    <script src="scripts/resolvers/view/offer.view.resolver.js"></script>
+
+    <!--Services-->
+    <script src="./scripts/services/services.authentication.js"></script>
+    <script src="scripts/services/services.offer.js"></script>
+
+    <!--Routings-->
+    <script src="./scripts/routing/routings.default.js"></script>
+
+    <script src="./scripts/routing/authentication/routings.authentication.before.js"></script>
+    <script src="./scripts/routing/authentication/routings.authentication.get.js"></script>
+    <script src="./scripts/routing/authentication/routings.authentication.post.js"></script>
+
+    <script src="scripts/routing/offer/routings.offer.before.js"></script>
+    <script src="scripts/routing/offer/routings.offer.get.js"></script>
+    <script src="scripts/routing/offer/routings.offer.post.js"></script>
+
+
+    <script src="./scripts/routing/routings.js"></script>
+</body>
+
+</html>
