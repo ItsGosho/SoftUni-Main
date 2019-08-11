@@ -1,0 +1,23 @@
+{
+  "name": "intro_to_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "itsgosho",
+  "license": "ISC",
+  "dependencies": {
+    "base64-img": "^1.0.4",
+    "busboy": "^0.3.1",
+    "gulp": "4.0.2",
+    "gulp-clean-css": "4.2.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-rename": "1.4.0",
+    "handlebars": "^4.1.2",
+    "multiparty": "^4.2.1",
+    "shortid": "^2.2.14"
+  }
+}
