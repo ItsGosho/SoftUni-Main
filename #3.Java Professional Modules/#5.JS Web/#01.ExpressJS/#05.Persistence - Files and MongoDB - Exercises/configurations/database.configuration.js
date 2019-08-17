@@ -15,6 +15,7 @@ const config = (configuration) => {
     });
 
     require('../models/product');
+    require('../models/category');
 };
 
 module.exports = config;
