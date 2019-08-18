@@ -27,8 +27,21 @@ let viewAll = (request, response) => {
     FileSystem.readFile(TemplatePaths.VIEW_ALL, ((err, data) => {
         let html = data.toString();
 
-        response.write(html);
-        response.end();
+        MemeServices.findAll((memes) => {
+
+            let result = [];
+            for (let meme of memes) {
+                result.push(`<div class="meme">
+                               <a href="/getDetails?id=${meme.id}">
+                               <img class="memePoster" src="${meme.imageSrc}"/>          
+                             </div>`);
+            }
+
+            html = html.replace('{{replaceMe}}', result.toString())
+            response.write(html);
+            response.end();
+        });
+
     }))
 };
 
@@ -49,11 +62,16 @@ let addMeme = (request, response) => {
         meme.description = fields.memeDescription[0];
         meme.privacy = fields.status !== undefined ? fields.status[0] : 'off';
         meme.publishDate = Date.now();
-        meme.imageSrc = `${FolderPaths.MEME_STORAGE}/${ShortID.generate()}.${extension}`;
+        let imgName = ShortID.generate();
+        meme.imageSrc = `/public/memeStorage/${imgName}.${extension}`;
 
-        FileSystem.writeFileSync(meme.imageSrc,FileSystem.readFileSync(img.path));
+        let p = `${FolderPaths.MEME_STORAGE}\\${imgName}.${extension}`;
+        FileSystem.writeFileSync(
+            p,
+            FileSystem.readFileSync(img.path)
+        );
 
-        MemeServices.addMeme(meme);
+        MemeServices.add(meme);
 
         response.writeHead(301, {
             'Location': '/'
