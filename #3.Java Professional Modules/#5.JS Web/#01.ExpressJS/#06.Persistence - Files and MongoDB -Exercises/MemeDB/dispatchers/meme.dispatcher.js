@@ -1,9 +1,11 @@
 const FileSystem = require('fs');
+const URLs = require('../constants/url.constants');
 const TemplatePaths = require('../constants/templates.path.constants');
 const FolderPaths = require('../constants/folder.path.constants');
 const MemeServices = require('../services/meme.services');
 const MultiParty = require('multiparty');
 const ShortID = require('shortid');
+const URL = require('url');
 
 
 /**
@@ -32,12 +34,12 @@ let viewAll = (request, response) => {
             let result = [];
             for (let meme of memes) {
                 result.push(`<div class="meme">
-                               <a href="/getDetails?id=${meme.id}">
+                               <a href="/meme/details?id=${meme.id}">
                                <img class="memePoster" src="${meme.imageSrc}"/>          
                              </div>`);
             }
 
-            html = html.replace('{{replaceMe}}', result.toString())
+            html = html.replace('{{replaceMe}}', result.toString());
             response.write(html);
             response.end();
         });
@@ -74,7 +76,7 @@ let addMeme = (request, response) => {
         MemeServices.add(meme);
 
         response.writeHead(301, {
-            'Location': '/'
+            'Location': URLs.BASE.HOME
         });
         response.end();
     });
@@ -85,7 +87,25 @@ let addMeme = (request, response) => {
  * @param {module:http.OutgoingMessage} response
  * */
 let getDetails = (request, response) => {
-    console.log('Get details has been invoked');
+    let id = new URLSearchParams(request.url).get('/meme/details?id');
+
+    MemeServices.findById(id, (error, meme) => {
+        if (meme !== undefined) {
+            let template = `<div class="content">
+                                <img src="${meme.imageSrc}" alt=""/>
+                                <h3>Title ${meme.title}</h3>
+                                <p> ${meme.description}</p>
+                              </div>`;
+
+            let html = FileSystem.readFileSync(TemplatePaths.DETAILS).toString().replace('{{replaceMe}}', template);
+            response.write(html);
+            response.end();
+
+        } else {
+            response.write('<h1 style="color: red">Meme not found!</h1>');
+            response.end();
+        }
+    })
 };
 
 

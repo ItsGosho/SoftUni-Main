@@ -15,9 +15,13 @@ let add = (meme) => {
 };
 
 let findAll = (callback) => {
-   MemeModel.find().then((memes)=>{
-       callback(memes);
-   })
+    MemeModel.find().then((memes) => {
+        callback(memes);
+    })
 };
 
-module.exports = {add, findAll};
+let findById = (id, callback) => {
+    MemeModel.findById(id).exec(callback);
+};
+
+module.exports = {add, findAll,findById};
