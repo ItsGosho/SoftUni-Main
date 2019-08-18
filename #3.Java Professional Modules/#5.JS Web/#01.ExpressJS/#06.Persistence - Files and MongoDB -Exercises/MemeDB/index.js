@@ -1,22 +1,24 @@
 const http = require('http');
 const url = require('url');
 const handlers = require('./handlers/handlers');
-const db = require('./config/database');
+
+const Database = require('./configurations/database.configuration');
+const Configuration = require('./configurations/configuration');
+Database(Configuration.development);
+
 const port = 8000;
 
-db.load().then(() => {
-    http
-        .createServer((req, res) => {
-            for (let handler of handlers) {
-                req.pathname = url.parse(req.url).pathname;
-                let task = handler(req, res);
-                if (task !== true) {
-                    break
-                }
+
+http
+    .createServer((req, res) => {
+        for (let handler of handlers) {
+            req.pathname = url.parse(req.url).pathname;
+            let task = handler(req, res);
+            if (task !== true) {
+                break
             }
-        })
-        .listen(port)
-    console.log('Im listening on ' + port)
-}).catch(() => {
-    console.log('Failed to load DB')
-});
+        }
+    })
+    .listen(port);
+console.log('Im listening on ' + port);
+
