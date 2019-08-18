@@ -1,5 +1,5 @@
 let QueryString = require('querystring');
-let TagServices = require('../services/TagServices');
+let TagServices = require('../services/tag.services');
 
 /**
  * @param {module:http.IncomingMessage} req

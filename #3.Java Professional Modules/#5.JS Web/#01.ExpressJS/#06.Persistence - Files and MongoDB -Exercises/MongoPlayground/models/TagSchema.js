@@ -7,17 +7,16 @@ const tagSchema = new Schema({
         require: true,
         lowercase: true
     },
-    images: {
-        type: Schema.Types.Array,
-        ref: 'Image',
-        require: true
-    },
+    images: [{
+        type: Schema.Types.ObjectID,
+        ref: 'Image'
+    }],
     creationDate: {
         type: Schema.Types.Date,
         require: true
     }
 });
 
-let Tag = mongoose.model('Meme',tagSchema);
+let Tag = mongoose.model('Tag',tagSchema);
 
 module.exports = Tag;

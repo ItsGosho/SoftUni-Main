@@ -1,12 +1,12 @@
-let Tag = require('../models/TagSchema')
-let Image = require('./../models/ImageSchema')
-const fs = require('fs')
+let Tag = require('../models/TagSchema');
+let Image = require('./../models/ImageSchema');
+const fs = require('fs');
 
 module.exports = (req, res) => {
   if (req.pathname === '/' && req.method === 'GET') {
     fs.readFile('./views/index.html', (err, data) => {
       if (err) {
-        console.log(err)
+        console.log(err);
         return
       }
       res.writeHead(200, {
@@ -14,9 +14,9 @@ module.exports = (req, res) => {
       });
       let dispalyTags = '';
 
-      Tag.find({}).then(tags => {
+      Tag.find().then((tags) => {
         for (let tag of tags) {
-          dispalyTags += `<div class='tag' id="${tag._id}">${tag.tagName}</div>`;
+          dispalyTags += `<div class='tag' id="${tag._doc._id}">${tag._doc.name}</div>`;
         }
 
         data = data
@@ -29,4 +29,4 @@ module.exports = (req, res) => {
   } else {
     return true
   }
-}
+};

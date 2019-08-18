@@ -5,11 +5,15 @@ let TagSchema = require('../models/TagSchema');
 
 let add = (tag) => {
     new TagSchema(tag).save((error) => {
-        if(error){
+        if (error) {
             return;
         }
         console.log('Tag Saved!');
     })
 };
 
-module.exports = {add};
+let findById = (id, callback) => {
+    TagSchema.findById(id).exec(callback);
+};
+
+module.exports = {add, findById};

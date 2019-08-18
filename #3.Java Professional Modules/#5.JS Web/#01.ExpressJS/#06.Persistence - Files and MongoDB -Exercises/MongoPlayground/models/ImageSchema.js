@@ -14,11 +14,10 @@ const imageSchema = new Schema({
         type: Schema.Types.String,
         require: true
     },
-    tags: {
-        type: Schema.Types.Array,
-        ref: 'Tag',
-        require: true
-    },
+    tags: [{
+        type: Schema.Types.ObjectID,
+        ref: 'Tag'
+    }],
     creationDate: {
         type: Schema.Types.Date,
         require: true
