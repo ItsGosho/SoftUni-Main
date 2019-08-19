@@ -58,6 +58,7 @@ I.<a href="https://github.com/ItsGosho/SoftUni/tree/master/%233.Java%20Professio
 </tbody>
 </table>
 </details>
+<details>
 <summary> JS Web
 </summary>
 <table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
