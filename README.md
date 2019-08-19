@@ -58,4 +58,12 @@ I.<a href="https://github.com/ItsGosho/SoftUni/tree/master/%233.Java%20Professio
 </tbody>
 </table>
 </details>
+<summary> JS Web
+</summary>
+<table border="0" width="100%" cellspacing="1" cellpadding="3" align="center">
+<tbody>
+I.<a href="https://github.com/ItsGosho/SoftUni/tree/master/%233.Java%20Professional%20Modules/%235.JS%20Web/%2301.ExpressJS"> ExpressJS</a><br>
+</tbody>
+</table>
+</details>
 <hr />
