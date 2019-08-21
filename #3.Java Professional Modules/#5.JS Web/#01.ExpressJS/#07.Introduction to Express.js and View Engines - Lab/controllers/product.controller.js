@@ -1,11 +1,9 @@
 const Router = require('express').Router();
 const RoutingURLs = require('../constants/routing.urls');
 
-const URL = require('url');
 const FileSystem = require('fs');
 const Path = require('path');
 const MultiParty = require('multiparty');
-const QueryString = require('querystring');
 const ShortID = require('shortid');
 const Category = require('../models/category');
 const Product = require('../models/product');
@@ -13,22 +11,12 @@ const Product = require('../models/product');
 Router.route(RoutingURLs.PRODUCT_ADD)
     .get((request, response) => {
 
-        FileSystem.readFile(Path.join(__dirname, '../views/product/create-product.html'), (error, data) => {
+        response.render('product/create-product',{});
 
-            let replacement = '<select class="input-field" name="category">';
+        /*TODO:*/
+        /*Category.find().then((categories) => {
 
-            Category.find().then((categories) => {
-                for (let category of categories) {
-                    replacement += `<option value="${category._id}">${category.name}</option>`;
-                }
-
-                replacement += '</select>';
-                data = data.toString().replace('{categories}', replacement);
-
-                response.write(data);
-                response.end();
-            });
-        });
+        });*/
     })
     .post((request, response) => {
 

@@ -10,9 +10,3 @@ DatabaseConfiguration({connectionString: DatabaseConstants.CONNECTION_STRING});
 App.listen(ServerConstants.PORT, () => {
     console.log(ServerConstants.SERVER_STARTED);
 });
-
-/*
-const Database = require('./configurations/database.configuration');
-const Configuration = require('./configurations/configuration');
-Database(Configuration.development);
-*/
