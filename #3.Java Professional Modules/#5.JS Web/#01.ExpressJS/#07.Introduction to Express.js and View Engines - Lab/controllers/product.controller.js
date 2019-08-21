@@ -1,12 +1,71 @@
 const Router = require('express').Router();
 const RoutingURLs = require('../constants/routing.urls');
 
+const URL = require('url');
+const FileSystem = require('fs');
+const Path = require('path');
+const MultiParty = require('multiparty');
+const QueryString = require('querystring');
+const ShortID = require('shortid');
+const Category = require('../models/category');
+const Product = require('../models/product');
+
 Router.route(RoutingURLs.PRODUCT_ADD)
     .get((request, response) => {
-        response.send('Create product GET!');
+
+        FileSystem.readFile(Path.join(__dirname, '../views/product/create-product.html'), (error, data) => {
+
+            let replacement = '<select class="input-field" name="category">';
+
+            Category.find().then((categories) => {
+                for (let category of categories) {
+                    replacement += `<option value="${category._id}">${category.name}</option>`;
+                }
+
+                replacement += '</select>';
+                data = data.toString().replace('{categories}', replacement);
+
+                response.write(data);
+                response.end();
+            });
+        });
     })
     .post((request, response) => {
-        response.send('Create product POST!');
+
+        let form = new MultiParty.Form();
+        let product = {};
+
+        form.parse(request, function (err, fields, files) {
+
+                let image = files.image[0];
+                let extension = image.originalFilename.substr(image.originalFilename.lastIndexOf('.') + 1);
+                FileSystem.readFile(image.path, (error, data) => {
+
+                    product.image = Path.join(__dirname, `../content/images/${ShortID.generate()}.${extension}`);
+
+                    FileSystem.writeFile(product.image, data, () => {
+                    });
+
+                    for (let [key, value] of Object.entries(fields)) {
+                        product[key] = value[0];
+                    }
+
+                    Product.create(product).then((result) => {
+                        console.log('Product saved!');
+
+                        Categories.findById(result.category).then((category)=>{
+                            console.log('Category updated!!');
+                            category.products.push(result._id);
+                            category.save();
+                        });
+
+                        response.writeHead(301, {'Location': '/'});
+                        response.end();
+                    });
+                });
+            }
+        );
+
     });
 
 module.exports = Router;

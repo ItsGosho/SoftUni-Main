@@ -7,7 +7,6 @@ const DatabaseConfiguration = require('./configurations/database.configuration')
 ExpressConfiguration(App);
 DatabaseConfiguration({connectionString: DatabaseConstants.CONNECTION_STRING});
 
-
 App.listen(ServerConstants.PORT, () => {
     console.log(ServerConstants.SERVER_STARTED);
 });
