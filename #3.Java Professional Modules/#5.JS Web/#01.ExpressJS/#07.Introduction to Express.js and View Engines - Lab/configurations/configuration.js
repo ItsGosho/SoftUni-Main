@@ -1,7 +1,7 @@
 let DatabaseConstants = require('../constants/database.constants');
 
 let databaseConfiguration = {
-    connectionString: 'mongodb://localhost:27017/ShopStop'
+    connectionString: DatabaseConstants.CONNECTION_STRING
 };
 
 module.exports = databaseConfiguration;

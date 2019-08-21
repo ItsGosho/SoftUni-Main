@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const DatabaseConstants = require('../constants/database.constants');
 mongoose.Promise = global.Promise;
 
 const config = (configuration) => {
@@ -6,16 +7,18 @@ const config = (configuration) => {
 
     let database = mongoose.connection;
 
-    database.once('open', (error) => {
-        if (error) {
-            console.log(error);
-            return;
-        }
-        console.log('Connection established to the database!');
-    });
+    database.once('open', onOpen);
 
     require('../models/product');
     require('../models/category');
+};
+
+const onOpen = (error) => {
+    if (error) {
+        console.log(error);
+        return;
+    }
+    console.log(DatabaseConstants.DBMessageConstants.DATABASE_CONNECTION_SUCCESSFUL);
 };
 
 module.exports = config;

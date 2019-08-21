@@ -1,9 +1,13 @@
-const DatabaseConstants = {
+const DBCoreConstants = {
     DATABASE_NAME: 'ShopStop',
     DATABASE_DOMAIN: 'localhost',
     DATABASE_PORT: '27017'
 };
 
-let CONNECTION_STRING = `mongodb://${DatabaseConstants.DATABASE_DOMAIN}:${DatabaseConstants.DATABASE_PORT}/${DatabaseConstants.DATABASE_NAME}`;
+const DBMessageConstants = {
+    DATABASE_CONNECTION_SUCCESSFUL: 'Connection established to the database!'
+};
 
-module.exports = {CONNECTION_STRING};
+let CONNECTION_STRING = `mongodb://${DBCoreConstants.DATABASE_DOMAIN}:${DBCoreConstants.DATABASE_PORT}/${DBCoreConstants.DATABASE_NAME}`;
+
+module.exports = {DBCoreConstants,CONNECTION_STRING,DBMessageConstants};

@@ -1,15 +1,10 @@
 const App = require('express')();
-const Port = 8000;
-const BodyParser = require('body-parser');
+const ServerConstants = require('./constants/server.constants');
+const ExpressConfiguration = require('./configurations/express.configuration');
 
-App.use(BodyParser.urlencoded({extend: true}));
-
-App.use(require('./controllers/home.controller'));
-App.use(require('./controllers/category.controller'));
-App.use(require('./controllers/product.controller'));
-
-App.listen(Port, () => {
-    console.log(`Server started on ${Port}`);
+ExpressConfiguration(App);
+App.listen(ServerConstants.PORT, () => {
+    console.log(ServerConstants.SERVER_STARTED);
 });
 
 /*
