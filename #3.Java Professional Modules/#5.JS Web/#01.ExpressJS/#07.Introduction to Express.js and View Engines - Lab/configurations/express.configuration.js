@@ -1,6 +1,6 @@
 const BodyParser = require('body-parser');
 
-module.exports = (app)=>{
+module.exports = (app) => {
     app.use(BodyParser.urlencoded({extend: true}));
 
     app.use(require('../controllers/home.controller'));
