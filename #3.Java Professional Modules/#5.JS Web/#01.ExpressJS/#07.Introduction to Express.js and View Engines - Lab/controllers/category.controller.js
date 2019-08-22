@@ -1,30 +1,19 @@
 const Router = require('express').Router();
 const RoutingURLs = require('../constants/routing.urls');
-
-const MultiParty = require('multiparty');
-const QueryString = require('querystring');
-const ShortID = require('shortid');
-const Category = require('../models/category');
+const CategoryServices = require('../services/category.services');
 
 Router.route(RoutingURLs.CREATE_CATEGORY)
     .get((request, response) => {
-        response.render('category/create-category',{});
+        response.render('category/create-category', {});
     })
     .post((request, response) => {
 
-        let dataString = '';
-        request.on('data', (data) => {
-            dataString += data;
-        });
+        let category = {
+            name: request.body.name
+        };
 
-        request.on('end', () => {
-            let category = QueryString.parse(dataString);
-            Category.create(category).then(()=>{
-                console.log('Category created!');
-            });
-
-            response.redirect('/')
-        });
+        CategoryServices.save(category,(error,category)=>{});
+        response.redirect(RoutingURLs.HOME);
     });
 
 module.exports = Router;

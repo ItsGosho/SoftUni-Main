@@ -1,4 +1,5 @@
 const App = require('express')();
+
 const ServerConstants = require('./constants/server.constants');
 const DatabaseConstants = require('./constants/database.constants');
 const ExpressConfiguration = require('./configurations/express.configuration');

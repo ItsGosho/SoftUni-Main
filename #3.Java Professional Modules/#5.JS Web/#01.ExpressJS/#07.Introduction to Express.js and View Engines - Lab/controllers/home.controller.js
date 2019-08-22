@@ -1,7 +1,7 @@
 const Router = require('express').Router();
 const RoutingURLs = require('../constants/routing.urls');
 
-const Product = require('../models/product');
+const Product = require('../schemas/product');
 
 Router.route(RoutingURLs.HOME)
     .get((request, response) => {

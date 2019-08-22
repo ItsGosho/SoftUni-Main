@@ -5,8 +5,8 @@ const FileSystem = require('fs');
 const Path = require('path');
 const MultiParty = require('multiparty');
 const ShortID = require('shortid');
-const Category = require('../models/category');
-const Product = require('../models/product');
+const Category = require('../schemas/category');
+const Product = require('../schemas/product');
 
 Router.route(RoutingURLs.PRODUCT_ADD)
     .get((request, response) => {

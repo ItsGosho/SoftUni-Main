@@ -17,6 +17,6 @@ module.exports = (configuration) => {
 
     database.once('open', onOpen);
 
-    require('../models/product');
-    require('../models/category');
+    require('../schemas/product');
+    require('../schemas/category');
 };
