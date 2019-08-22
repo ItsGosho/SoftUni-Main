@@ -1,26 +1,17 @@
 const Router = require('express').Router();
 const RoutingURLs = require('../constants/routing.urls');
-
-const FileSystem = require('fs');
-const Path = require('path');
-const MultiParty = require('multiparty');
-const ShortID = require('shortid');
-const Category = require('../schemas/category');
-const Product = require('../schemas/product');
+const CategoryServices = require('../services/category.services');
 
 Router.route(RoutingURLs.PRODUCT_ADD)
     .get((request, response) => {
 
-        response.render('product/create-product',{});
-
-        /*TODO:*/
-        /*Category.find().then((categories) => {
-
-        });*/
+        CategoryServices.findAll((error,categories)=>{
+            response.render('product/create-product',{categories});
+        });
     })
     .post((request, response) => {
 
-        let form = new MultiParty.Form();
+       /* let form = new MultiParty.Form();
         let product = {};
 
         form.parse(request, function (err, fields, files) {
@@ -53,7 +44,7 @@ Router.route(RoutingURLs.PRODUCT_ADD)
                 });
             }
         );
-
+*/
     });
 
 module.exports = Router;

@@ -5,8 +5,12 @@ let save = (category, callback) => {
         if (!error) {
             console.log(`Category [${savedCategory.name}] created!`);
         }
-        callback(error,savedCategory);
+        callback(error, savedCategory);
     })
 };
+let findAll = (callback) => {
+    let query = CategorySchema.find();
+    query.exec(callback);
+};
 
-module.exports = {save};
+module.exports = {save,findAll};
