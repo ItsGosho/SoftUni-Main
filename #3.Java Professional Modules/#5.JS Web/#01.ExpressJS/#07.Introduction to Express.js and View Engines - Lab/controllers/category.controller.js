@@ -2,6 +2,7 @@ const Router = require('express').Router();
 const RoutingURLs = require('../constants/routing.urls');
 const CategoryServices = require('../services/category.services');
 
+
 Router.route(RoutingURLs.CREATE_CATEGORY)
     .get((request, response) => {
         response.render('category/create-category', {});

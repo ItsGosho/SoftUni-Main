@@ -1,5 +1,6 @@
 const Router = require('express').Router();
 const RoutingURLs = require('../constants/routing.urls');
+const ProductServices = require('../services/product.services');
 const CategoryServices = require('../services/category.services');
 
 Router.route(RoutingURLs.PRODUCT_ADD)
@@ -11,11 +12,21 @@ Router.route(RoutingURLs.PRODUCT_ADD)
     })
     .post((request, response) => {
 
-        console.log(request.body);
-        /*let form = new MultiParty.Form();
-        let product = {};
+        let {name, description, price, category} = request.body;
 
-        form.parse(request, function (err, fields, files) {
+        let product = {
+            name: name,
+            description: description,
+            price: price,
+            category: category
+        };
+
+        ProductServices.save(product, (e, result) => {
+            CategoryServices.addProduct(result.category, result._id);
+            response.redirect(RoutingURLs.HOME);
+        });
+
+        /*form.parse(request, function (err, fields, files) {
 
                 let image = files.image[0];
                 let extension = image.originalFilename.substr(image.originalFilename.lastIndexOf('.') + 1);
@@ -45,6 +56,7 @@ Router.route(RoutingURLs.PRODUCT_ADD)
                 });
             }
         );*/
+
     });
 
 module.exports = Router;

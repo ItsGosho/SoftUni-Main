@@ -8,9 +8,14 @@ let save = (category, callback) => {
         callback(error, savedCategory);
     })
 };
+
 let findAll = (callback) => {
     let query = CategorySchema.find();
     query.exec(callback);
 };
 
-module.exports = {save,findAll};
+let findById = (id, callback) => {
+    CategorySchema.findOne({'_id':id}).exec(callback);
+};
+
+module.exports = {save, findAll, findById};
