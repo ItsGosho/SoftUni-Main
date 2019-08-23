@@ -1,17 +1,13 @@
 const Router = require('express').Router();
 const RoutingURLs = require('../constants/routing.urls');
-
-const Product = require('../schemas/product');
+const ProductServices = require('../services/product.services');
 
 Router.route(RoutingURLs.HOME)
     .get((request, response) => {
-
-        response.render('home/index',{});
-
-       /* Product.find().then((products) => {
-            //TODO:
-        });*/
-
+        
+        ProductServices.findAll((e, products) => {
+            response.render('home/index', {products});
+        })
     });
 
 module.exports = Router;

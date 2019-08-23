@@ -6,8 +6,13 @@ let save = (product, callback) => {
             console.log(`Category [${savedProduct.name}] created!`);
         }
 
-        callback(error,savedProduct);
+        callback(error, savedProduct);
     })
 };
 
-module.exports = {save};
+let findAll = (callback) => {
+    let query = ProductSchema.find();
+    query.exec(callback);
+};
+
+module.exports = {save,findAll};
