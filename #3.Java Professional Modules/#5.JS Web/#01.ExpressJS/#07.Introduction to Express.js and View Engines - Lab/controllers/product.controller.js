@@ -5,13 +5,14 @@ const CategoryServices = require('../services/category.services');
 Router.route(RoutingURLs.PRODUCT_ADD)
     .get((request, response) => {
 
-        CategoryServices.findAll((error,categories)=>{
-            response.render('product/create-product',{categories});
+        CategoryServices.findAll((error, categories) => {
+            response.render('product/create-product', {categories});
         });
     })
     .post((request, response) => {
 
-       /* let form = new MultiParty.Form();
+        console.log(request.body);
+        /*let form = new MultiParty.Form();
         let product = {};
 
         form.parse(request, function (err, fields, files) {
@@ -32,7 +33,7 @@ Router.route(RoutingURLs.PRODUCT_ADD)
                     Product.create(product).then((result) => {
                         console.log('Product saved!');
 
-                        Categories.findById(result.category).then((category)=>{
+                        Categories.findById(result.category).then((category) => {
                             console.log('Category updated!!');
                             category.products.push(result._id);
                             category.save();
@@ -43,8 +44,7 @@ Router.route(RoutingURLs.PRODUCT_ADD)
                     });
                 });
             }
-        );
-*/
+        );*/
     });
 
 module.exports = Router;
