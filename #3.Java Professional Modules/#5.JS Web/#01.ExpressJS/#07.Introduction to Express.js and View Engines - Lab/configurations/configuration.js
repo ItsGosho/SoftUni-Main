@@ -4,4 +4,5 @@ let databaseConfiguration = {
     connectionString: DatabaseConstants.CONNECTION_STRING
 };
 
+
 module.exports = databaseConfiguration;

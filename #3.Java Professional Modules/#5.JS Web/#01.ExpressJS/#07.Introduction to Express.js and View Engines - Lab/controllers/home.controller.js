@@ -4,7 +4,6 @@ const ProductServices = require('../services/product.services');
 
 Router.route(RoutingURLs.HOME)
     .get((request, response) => {
-        
         ProductServices.findAll((e, products) => {
             response.render('home/index', {products});
         })
