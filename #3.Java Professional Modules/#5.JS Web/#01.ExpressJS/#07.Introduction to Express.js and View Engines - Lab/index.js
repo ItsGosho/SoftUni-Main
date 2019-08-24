@@ -1,9 +1,9 @@
 const App = require('express')();
 
-const ServerConstants = require('./constants/server.constants');
-const DatabaseConstants = require('./constants/database.constants');
-const ExpressConfiguration = require('./configurations/express.configuration');
-const DatabaseConfiguration = require('./configurations/database.configuration');
+const ServerConstants = require('./src/server/constants/server.constants');
+const DatabaseConstants = require('./src/server/constants/database.constants');
+const ExpressConfiguration = require('./src/server/configurations/express.configuration');
+const DatabaseConfiguration = require('./src/server/configurations/database.configuration');
 
 ExpressConfiguration(App);
 DatabaseConfiguration({connectionString: DatabaseConstants.CONNECTION_STRING});

@@ -1,6 +1,6 @@
 const ProductRepository = require('../repositories/product.repository');
-const CategoryServices = require('../services/category.services');
-const DropboxServices = require('../services/dropbox.services');
+const CategoryServices = require('./category.services');
+const DropboxServices = require('./dropbox.services');
 
 const ShortId = require('shortid');
 const FileSystem = require('fs');
