@@ -1,4 +1,4 @@
-let fetch = require('isomorphic-fetch');
+let Fetch = require('isomorphic-fetch');
 let FileSystem = require('fs');
 let Dropbox = require('../singletons/dropbox');
 
@@ -13,11 +13,17 @@ let uploadFile = (file, dropboxFileName) => {
         });
 };
 
-/*
-* @param dropboxFilePath ex: /proba2.png
-* */
 let downloadFile = (dropboxFilePath) => {
     return Dropbox.filesDownload({path: '/' + dropboxFilePath});
 };
 
-module.exports = {uploadFile, downloadFile};
+let deleteFile = (dropboxFilePath) => {
+    Dropbox.filesDelete({path: '/' + dropboxFilePath})
+        .then(function (response) {
+            console.log(`File with path [/${dropboxFilePath}] has been deleted!`);
+        }).catch(function (error) {
+        console.log(`File with path [/${dropboxFilePath}] was NOT been deleted!!`);
+    });
+};
+
+module.exports = {uploadFile, downloadFile,deleteFile};

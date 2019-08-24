@@ -53,6 +53,12 @@ Router.get(RoutingURLs.DELETE_PRODUCT_GET, async (request, response) => {
     response.render(ViewPaths.PRODUCT.DELETE_PRODUCT, {product});
 });
 
+Router.post(RoutingURLs.DELETE_PRODUCT_POST, async (request, response) => {
+    let productId = request.params.id;
+    await ProductServices.removeById(productId);
+    response.redirect(RoutingURLs.HOME);
+});
+
 Router.get(RoutingURLs.BUY_PRODUCT_GET, async (request, response) => {
     let productId = request.params.id;
     let product = await ProductServices.findById(productId);

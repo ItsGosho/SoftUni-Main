@@ -53,4 +53,17 @@ let findById = async (id) => {
     return product;
 };
 
-module.exports = {save, findAll, uploadImage, findAllByCategory, findById};
+let removeById = async (id) => {
+    let product = await ProductRepository.findById(id);
+    DropboxServices.deleteFile(product.image);
+    return await ProductRepository.removeById(id);
+};
+
+module.exports = {
+    save,
+    findAll,
+    uploadImage,
+    findAllByCategory,
+    findById,
+    removeById,
+};

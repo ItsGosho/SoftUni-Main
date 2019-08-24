@@ -21,7 +21,17 @@ let findAllByCategoryId = (categoryId) => {
 };
 
 let findById = (id) => {
-    return ProductSchema.findOne({'_id':id}).exec();
+    return ProductSchema.findOne({'_id': id}).exec();
 };
 
-module.exports = {save, findAll, findAllByCategoryId,findById};
+let removeById = (id) => {
+    return ProductSchema.deleteOne({'_id': id}).exec();
+};
+
+module.exports = {
+    save,
+    findAll,
+    findAllByCategoryId,
+    findById,
+    removeById
+};
