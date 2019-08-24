@@ -14,8 +14,12 @@ let findAll = (callback) => {
     query.exec(callback);
 };
 
-let findById = (id, callback) => {
-    CategorySchema.findOne({'_id':id}).exec(callback);
+let findById = (id) => {
+    return CategorySchema.findOne({'_id':id}).exec();
 };
 
-module.exports = {save, findAll, findById};
+let findByName = (name) => {
+    return CategorySchema.findOne({'name':name}).exec();
+};
+
+module.exports = {save, findAll, findById,findByName};

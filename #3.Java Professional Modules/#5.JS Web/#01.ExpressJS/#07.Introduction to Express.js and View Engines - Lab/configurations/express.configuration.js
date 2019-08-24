@@ -16,7 +16,7 @@ module.exports = (app) => {
     app.set('views', FolderPaths.VIEW_FOLDER);
 
     app.engine('.hbs', HandleBars({
-        defaultLayout: '',
+        defaultLayout: 'index',
         extname: '.hbs',
         layoutsDir: `${FolderPaths.VIEW_FOLDER}\\layouts`,
         partialsDir: `${FolderPaths.VIEW_FOLDER}\\partials`,

@@ -1,19 +1,21 @@
 const Router = require('express').Router();
 const RoutingURLs = require('../constants/routing.urls');
 const ProductServices = require('../services/product.services');
-const DropboxServices = require('../services/dropbox.services');
+const CategoryServices = require('../services/category.services');
 
 Router.route(RoutingURLs.HOME)
-    .get((request, response) => {
-        ProductServices.findAll(async (e, products) => {
+    .get(async (request, response) => {
+        let products = await ProductServices.findAll();
 
-            for (const product of products) {
-                let data = await DropboxServices.downloadFile(product.image);
-                product.image = 'data:image/jpeg;base64, ' + Buffer.from(data.fileBinary).toString('base64')
-            }
+        response.render('layouts/home/home', {products});
+    });
 
-            response.render('layouts\\home\\index', {products});
-        })
+Router.route(RoutingURLs.CATEGORY_VIEW_ALL_PRODUCTS)
+    .get(async (request, response) => {
+        let category = await CategoryServices.findByName(request.params.category);
+        let products = await ProductServices.findAllByCategory(category.id);
+
+        response.render('layouts/category/category-products', {products,category});
     });
 
 module.exports = Router;

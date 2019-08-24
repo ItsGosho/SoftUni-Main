@@ -1,16 +1,30 @@
-const Repository = require('../repositories/product.repository');
+const ProductRepository = require('../repositories/product.repository');
+const CategoryServices = require('../services/category.services');
 const DropboxServices = require('../services/dropbox.services');
 
 const ShortId = require('shortid');
 const FileSystem = require('fs');
 
-//${ShortID.generate()}
 let save = (product, callback) => {
-    return Repository.save(product, (e, savedProduct) => {
+    return ProductRepository.save(product, (e, savedProduct) => {
         callback(e, savedProduct);
     });
 };
-let findAll = Repository.findAll;
+
+let findAll = async () => {
+    let products = await ProductRepository.findAll();
+    await proceedProductsParsing(products);
+
+
+    return products;
+};
+
+let findAllByCategory = async (categoryId) => {
+    let products = await ProductRepository.findAllByCategoryId(categoryId);
+    await proceedProductsParsing(products);
+
+    return products;
+};
 
 let uploadImage = (image, callback) => {
     let file = FileSystem.readFileSync(image.path);
@@ -21,4 +35,12 @@ let uploadImage = (image, callback) => {
     callback(path);
 };
 
-module.exports = {save, findAll, uploadImage};
+let proceedProductsParsing = async (products) => {
+    for (let product of products) {
+        let data = await DropboxServices.downloadFile(product.image);
+        product.image = 'data:image/jpeg;base64, ' + Buffer.from(data.fileBinary).toString('base64')
+        product.category = await CategoryServices.findById(product.category);
+    }
+};
+
+module.exports = {save, findAll, uploadImage,findAllByCategory};

@@ -10,9 +10,14 @@ let save = (product, callback) => {
     })
 };
 
-let findAll = (callback) => {
+let findAll = () => {
     let query = ProductSchema.find();
-    query.exec(callback);
+    return query.exec();
 };
 
-module.exports = {save,findAll};
+let findAllByCategoryId = (categoryId) => {
+    let query = ProductSchema.find({'category':categoryId});
+    return query.exec();
+};
+
+module.exports = {save,findAll,findAllByCategoryId};

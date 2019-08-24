@@ -5,7 +5,7 @@ const CategoryServices = require('../services/category.services');
 
 Router.route(RoutingURLs.CREATE_CATEGORY)
     .get((request, response) => {
-        response.render('category/create-category', {});
+        response.render('layouts/category/create-category', {});
     })
     .post((request, response) => {
 

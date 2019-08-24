@@ -7,7 +7,7 @@ Router.route(RoutingURLs.PRODUCT_ADD)
     .get((request, response) => {
 
         CategoryServices.findAll((error, categories) => {
-            response.render('product/create-product', {categories});
+            response.render('layouts/product/create-product', {categories});
         });
     })
     .post((request, response) => {

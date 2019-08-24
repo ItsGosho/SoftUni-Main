@@ -3,9 +3,9 @@
         <img class="product-img" src="{{image}}">
         <h2>{{name}}</h2>
         <p>{{description}}</p>
-        <a class="btn btn-sm btn-success" href="/product/buy/{{this._id}}">Buy</a>
-        <a class="btn btn-sm btn-warning" href="/product/edit/{{this._id}}">Edit</a>
-        <a class="btn btn-sm btn-danger" href="/product/delete/{{this._id}}">Delete</a>
-        <a class="btn btn-sm btn-primary" href="/category/{{this.category.name}}/products">More {{this.category.name}}</a>
+        <a class="btn btn-sm btn-success" href="/product/buy/{{_id}}">Buy</a>
+        <a class="btn btn-sm btn-warning" href="/product/edit/{{_id}}">Edit</a>
+        <a class="btn btn-sm btn-danger" href="/product/delete/{{_id}}">Delete</a>
+        <a class="btn btn-sm btn-primary" href="/category/{{category.name}}/products">More {{category.name}}</a>
     </div>
 {{/each}}
