@@ -3,14 +3,7 @@ let FileSystem = require('fs');
 let Dropbox = require('../singletons/dropbox');
 
 let uploadFile = (file, dropboxFileName) => {
-    Dropbox.filesUpload({path: '/' + dropboxFileName, contents: file})
-        .then(function (response) {
-            console.log(`File has been uploaded to Dropbox with path ${dropboxFileName}`);
-        })
-        .catch(function (error) {
-            console.error('There was a error:');
-            console.error(error);
-        });
+   return Dropbox.filesUpload({path: '/' + dropboxFileName, contents: file});
 };
 
 let downloadFile = (dropboxFilePath) => {

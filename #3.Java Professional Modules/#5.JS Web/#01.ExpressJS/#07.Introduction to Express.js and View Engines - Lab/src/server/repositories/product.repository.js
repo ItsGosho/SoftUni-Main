@@ -28,10 +28,15 @@ let removeById = (id) => {
     return ProductSchema.deleteOne({'_id': id}).exec();
 };
 
+let update = (id,product) => {
+    return ProductSchema.updateOne({'_id': id},product).exec();
+};
+
 module.exports = {
     save,
     findAll,
     findAllByCategoryId,
     findById,
-    removeById
+    removeById,
+    update
 };
