@@ -13,7 +13,7 @@ let save = (product, callback) => {
 
 let findAll = async () => {
     let products = await ProductRepository.findAll();
-    await proceedProductsParsing(products);
+    await parseProducts(products);
 
 
     return products;
@@ -21,7 +21,7 @@ let findAll = async () => {
 
 let findAllByCategory = async (categoryId) => {
     let products = await ProductRepository.findAllByCategoryId(categoryId);
-    await proceedProductsParsing(products);
+    await parseProducts(products);
 
     return products;
 };
@@ -35,12 +35,22 @@ let uploadImage = (image, callback) => {
     callback(path);
 };
 
-let proceedProductsParsing = async (products) => {
+let parseProducts = async (products) => {
     for (let product of products) {
-        let data = await DropboxServices.downloadFile(product.image);
-        product.image = 'data:image/jpeg;base64, ' + Buffer.from(data.fileBinary).toString('base64')
-        product.category = await CategoryServices.findById(product.category);
+        await parseProduct(product);
     }
 };
 
-module.exports = {save, findAll, uploadImage,findAllByCategory};
+let parseProduct = async (product) => {
+    let data = await DropboxServices.downloadFile(product.image);
+    product.image = 'data:image/jpeg;base64, ' + Buffer.from(data.fileBinary).toString('base64');
+    product.category = await CategoryServices.findById(product.category);
+};
+
+let findById = async (id) => {
+    let product = await ProductRepository.findById(id);
+    await parseProduct(product);
+    return product;
+};
+
+module.exports = {save, findAll, uploadImage, findAllByCategory, findById};

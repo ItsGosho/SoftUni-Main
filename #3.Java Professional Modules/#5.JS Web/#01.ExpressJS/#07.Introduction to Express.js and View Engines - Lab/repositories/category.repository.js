@@ -9,9 +9,8 @@ let save = (category, callback) => {
     })
 };
 
-let findAll = (callback) => {
-    let query = CategorySchema.find();
-    query.exec(callback);
+let findAll = () => {
+    return CategorySchema.find().exec();
 };
 
 let findById = (id) => {

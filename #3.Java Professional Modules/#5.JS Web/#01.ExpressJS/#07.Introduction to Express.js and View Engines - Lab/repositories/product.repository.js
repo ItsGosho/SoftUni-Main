@@ -16,8 +16,12 @@ let findAll = () => {
 };
 
 let findAllByCategoryId = (categoryId) => {
-    let query = ProductSchema.find({'category':categoryId});
+    let query = ProductSchema.find({'category': categoryId});
     return query.exec();
 };
 
-module.exports = {save,findAll,findAllByCategoryId};
+let findById = (id) => {
+    return ProductSchema.findOne({'_id':id}).exec();
+};
+
+module.exports = {save, findAll, findAllByCategoryId,findById};

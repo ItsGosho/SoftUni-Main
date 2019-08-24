@@ -1,3 +1,3 @@
-const ACCESS_TOKEN = '';
+const ACCESS_TOKEN = 'TOKEN';
 
 module.exports = {ACCESS_TOKEN};

@@ -1,11 +1,12 @@
 const Router = require('express').Router();
 const RoutingURLs = require('../constants/routing.urls');
 const CategoryServices = require('../services/category.services');
+const ViewPaths = require('../constants/view.path.constants');
 
 
-Router.route(RoutingURLs.CREATE_CATEGORY)
+Router.route(RoutingURLs.CATEGORY_CREATE)
     .get((request, response) => {
-        response.render('layouts/category/create-category', {});
+        response.render(ViewPaths.CATEGORY.CREATE_CATEGORY, {});
     })
     .post((request, response) => {
 

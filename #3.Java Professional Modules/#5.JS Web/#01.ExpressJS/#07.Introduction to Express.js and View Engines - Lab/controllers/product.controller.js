@@ -2,13 +2,13 @@ const Router = require('express').Router();
 const RoutingURLs = require('../constants/routing.urls');
 const ProductServices = require('../services/product.services');
 const CategoryServices = require('../services/category.services');
+const ViewPaths = require('../constants/view.path.constants');
 
-Router.route(RoutingURLs.PRODUCT_ADD)
-    .get((request, response) => {
+Router.route(RoutingURLs.CREATE_PRODUCT)
+    .get(async (request, response) => {
+        let categories = await CategoryServices.findAll();
 
-        CategoryServices.findAll((error, categories) => {
-            response.render('layouts/product/create-product', {categories});
-        });
+        response.render(ViewPaths.PRODUCT.CREATE_PRODUCT, {categories});
     })
     .post((request, response) => {
 
@@ -29,6 +29,39 @@ Router.route(RoutingURLs.PRODUCT_ADD)
             });
         });
 
+    });
+
+Router.route(RoutingURLs.ALL_PRODUCT_BY_CATEGORY)
+    .get(async (request, response) => {
+        let category = await CategoryServices.findByName(request.params.category);
+        let products = await ProductServices.findAllByCategory(category.id);
+
+        response.render(ViewPaths.CATEGORY.CATEGORY_PRODUCTS, {products, category});
+    });
+
+Router.route(RoutingURLs.EDIT_PRODUCT_GET)
+    .get(async (request, response) => {
+        let productId = request.params.id;
+        let product = await ProductServices.findById(productId);
+        let categories = await CategoryServices.findAll();
+
+        response.render(ViewPaths.PRODUCT.EDIT_PRODUCT, {product, categories});
+    });
+
+Router.route(RoutingURLs.DELETE_PRODUCT_GET)
+    .get(async (request, response) => {
+        let productId = request.params.id;
+        let product = await ProductServices.findById(productId);
+
+        response.render(ViewPaths.PRODUCT.DELETE_PRODUCT, {product});
+    });
+
+Router.route(RoutingURLs.BUY_PRODUCT_GET)
+    .get(async (request, response) => {
+        let productId = request.params.id;
+        let product = await ProductServices.findById(productId);
+
+        response.render(ViewPaths.PRODUCT.BUY_PRODUCT, {product});
     });
 
 module.exports = Router;
