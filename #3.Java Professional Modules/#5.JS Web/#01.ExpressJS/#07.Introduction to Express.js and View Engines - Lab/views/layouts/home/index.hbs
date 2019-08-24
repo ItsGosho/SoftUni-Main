@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ShopStop</title>
-    <link rel="shortcut icon" type="image/png" href="../../public/resources/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="../../../public/resources/favicon.ico"/>
     <link rel="stylesheet" href="/static/resources/site.min.css">
 </head>
 <body>
@@ -22,15 +22,7 @@
 <main>
     <h1 class="head-title">Welcome to ShopStop!</h1>
 
-    <div class="cards">
-        {{#each products}}
-            <div class="product-card">
-                <img class="product-img" src="{{image}}">
-                <h2>{{name}}</h2>
-                <p>{{description}}</p>
-            </div>
-        {{/each}}
-    </div>
+    {{> asd/all-products-partial}}
 </main>
 <footer>
     <p>&copy; ShopStop</p>

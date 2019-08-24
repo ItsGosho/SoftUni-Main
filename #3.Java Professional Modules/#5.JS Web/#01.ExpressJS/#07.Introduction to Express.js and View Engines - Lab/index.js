@@ -12,4 +12,3 @@ App.listen(ServerConstants.PORT, () => {
     console.log(ServerConstants.SERVER_STARTED);
 });
 
-

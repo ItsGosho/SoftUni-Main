@@ -1,7 +1,7 @@
 const BodyParser = require('body-parser');
 const HandleBars = require('express-handlebars');
-const FolderPaths = require('../constants/folder.path.constants');
 const MultiPart = require('connect-multiparty');
+const FolderPaths = require('../constants/folder.path.constants');
 
 module.exports = (app) => {
     app.use(MultiPart());
@@ -13,11 +13,15 @@ module.exports = (app) => {
 
     app.use('/static', require('express').static('public'));
 
+    app.set('views', FolderPaths.VIEW_FOLDER);
+
     app.engine('.hbs', HandleBars({
-        extname: '.hbs',
         defaultLayout: '',
-        layoutsDir: '',
+        extname: '.hbs',
+        layoutsDir: `${FolderPaths.VIEW_FOLDER}\\layouts`,
+        partialsDir: `${FolderPaths.VIEW_FOLDER}\\partials`,
     }));
 
-    app.set('view engine', '.hbs')
+    app.set('view engine', '.hbs');
+
 };

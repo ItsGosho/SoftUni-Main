@@ -12,7 +12,7 @@ Router.route(RoutingURLs.HOME)
                 product.image = 'data:image/jpeg;base64, ' + Buffer.from(data.fileBinary).toString('base64')
             }
 
-            response.render('home/index', {products});
+            response.render('layouts\\home\\index', {products});
         })
     });
 
