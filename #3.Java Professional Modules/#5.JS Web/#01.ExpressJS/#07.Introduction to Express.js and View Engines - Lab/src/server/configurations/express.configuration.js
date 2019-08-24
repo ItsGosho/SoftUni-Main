@@ -7,9 +7,9 @@ module.exports = (app) => {
     app.use(MultiPart());
     app.use(BodyParser.urlencoded({extended: true}));
 
-    app.use(require('../controllers/home.controller'));
-    app.use(require('../controllers/category.controller'));
-    app.use(require('../controllers/product.controller'));
+    app.use(require('../web/controllers/home.controller'));
+    app.use(require('../web/controllers/category.controller'));
+    app.use(require('../web/controllers/product.controller'));
 
     app.use('/static', require('express').static('src/resources/public'));
 

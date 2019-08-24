@@ -1,3 +1,3 @@
-const ACCESS_TOKEN = '';
+const ACCESS_TOKEN = 'k-aFCKNYmaAAAAAAAAAAT2r8iOw-YW0LQsSxip_elSAjMg5iIQrfGW-rHTPWa6AB';
 
 module.exports = {ACCESS_TOKEN};
