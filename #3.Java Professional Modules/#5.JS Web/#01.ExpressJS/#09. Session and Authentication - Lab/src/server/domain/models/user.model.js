@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const Mongoose = require('mongoose');
+const ModelName = require('../../constants/mongoose.models.names');
+const Schema = Mongoose.Schema;
 const Type = Schema.Types;
 
 const userModel = new Schema({
@@ -35,33 +36,33 @@ const userModel = new Schema({
     },
     jwtToken: {
         type: Type.ObjectID,
-        ref: 'JWT'
+        ref: ModelName.JWT
     },
     role: {
         type: Type.ObjectID,
-        ref: 'Role',
+        ref: ModelName.ROLE,
         required: [true, 'Role is not present!']
     },
     boughtProducts: [
         {
             type: Type.ObjectID,
-            ref: 'Product'
+            ref: ModelName.PRODUCT
         }
     ],
     createdProducts: [
         {
             type: Type.ObjectID,
-            ref: 'Product'
+            ref: ModelName.PRODUCT
         }
     ],
     createdCategories: [
         {
             type: Type.ObjectID,
-            ref: 'Category'
+            ref: ModelName.CATEGORY
         }
     ]
 });
 
-let UserModel = mongoose.model('User', userModel);
+let UserModel = Mongoose.model(ModelName.USER, userModel);
 
 module.exports = UserModel;

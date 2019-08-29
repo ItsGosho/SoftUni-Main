@@ -21,4 +21,5 @@ module.exports = (configuration) => {
     require('../domain/models/category.model');
     require('../domain/models/user.model');
     require('../domain/models/jwt.token.model');
+    require('../domain/models/role.model');
 };

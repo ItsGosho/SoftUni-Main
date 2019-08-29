@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const Mongoose = require('mongoose');
+const ModelName = require('../../constants/mongoose.models.names');
+const Schema = Mongoose.Schema;
 const Type = Schema.Types;
 
 const roleModel = new Schema({
@@ -10,11 +11,11 @@ const roleModel = new Schema({
     users: [
         {
             type: Type.ObjectID,
-            ref: 'User'
+            ref: ModelName.USER
         }
     ]
 });
 
-let RoleModel = mongoose.model('Product', roleModel);
+let RoleModel = Mongoose.model(ModelName.ROLE, roleModel);
 
 module.exports = RoleModel;

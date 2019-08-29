@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const Moongoose = require('mongoose');
+const ModelName = require('../../constants/mongoose.models.names');
+const Schema = Moongoose.Schema;
 const Type = Schema.Types;
 
 const categoryModel = new Schema({
@@ -10,15 +11,15 @@ const categoryModel = new Schema({
     },
     products: [{
         type: Type.ObjectID,
-        ref: 'Product'
+        ref: ModelName.PRODUCT
     }],
     creator: {
         type: Type.ObjectID,
-        ref: 'User',
+        ref: ModelName.USER,
         required: [true, 'Creator is not set!']
     }
 });
 
-let CategoryModel = mongoose.model('Category', categoryModel);
+let CategoryModel = Moongoose.model(ModelName.CATEGORY, categoryModel);
 
 module.exports = CategoryModel;

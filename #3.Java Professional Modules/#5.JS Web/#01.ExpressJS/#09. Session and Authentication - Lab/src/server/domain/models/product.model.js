@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const Mongoose = require('mongoose');
+const ModelName = require('../../constants/mongoose.models.names');
+const Schema = Mongoose.Schema;
 const Type = Schema.Types;
 
 const productModel = new Schema({
@@ -21,7 +22,7 @@ const productModel = new Schema({
     },
     category: {
         type: Type.ObjectId,
-        ref: 'Category'
+        ref: ModelName.CATEGORY
     },
     isBought: {
         type: Type.Boolean,
@@ -29,11 +30,11 @@ const productModel = new Schema({
     },
     creator: {
         type: Type.ObjectID,
-        ref: 'User',
+        ref: ModelName.USER,
         required: [true,'Creator is not set!']
     }
 });
 
-let ProductModel = mongoose.model('Product', productModel);
+let ProductModel = Mongoose.model(ModelName.PRODUCT, productModel);
 
 module.exports = ProductModel;
