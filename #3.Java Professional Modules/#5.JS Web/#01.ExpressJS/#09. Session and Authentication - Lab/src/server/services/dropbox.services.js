@@ -3,11 +3,12 @@ let FileSystem = require('fs');
 let Dropbox = require('../singletons/dropbox');
 
 let uploadFile = (file, dropboxFileName) => {
-   return Dropbox.filesUpload({path: '/' + dropboxFileName, contents: file});
+    return Dropbox.filesUpload({path: '/' + dropboxFileName, contents: file});
 };
 
 let downloadFile = (dropboxFilePath) => {
     return Dropbox.filesDownload({path: '/' + dropboxFilePath}).catch((reason => {
+        console.log('A error has occurred while download file from Dropbox!');
         console.log(reason);
     }));
 };
@@ -21,4 +22,8 @@ let deleteFile = (dropboxFilePath) => {
     });
 };
 
-module.exports = {uploadFile, downloadFile,deleteFile};
+module.exports = {
+    uploadFile,
+    downloadFile,
+    deleteFile
+};

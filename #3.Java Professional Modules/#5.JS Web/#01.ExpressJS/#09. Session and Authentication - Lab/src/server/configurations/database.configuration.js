@@ -17,6 +17,8 @@ module.exports = (configuration) => {
 
     database.once('open', onOpen);
 
-    require('../schemas/product');
-    require('../schemas/category');
+    require('../domain/models/product.model');
+    require('../domain/models/category.model');
+    require('../domain/models/user.model');
+    require('../domain/models/jwt.token.model');
 };

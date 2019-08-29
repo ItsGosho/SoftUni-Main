@@ -1,4 +1,4 @@
-const CategorySchema = require('../schemas/category.js');
+const CategorySchema = require('../domain/models/category.model');
 
 let save = (category, callback) => {
     CategorySchema.create(category, (error, savedCategory) => {
