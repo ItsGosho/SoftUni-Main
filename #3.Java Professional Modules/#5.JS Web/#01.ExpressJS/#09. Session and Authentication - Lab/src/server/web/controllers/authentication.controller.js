@@ -3,6 +3,7 @@ const RoutingURLs = require('../../constants/routing.urls');
 const UserServices = require('../../services/user.services');
 const JWTServices = require('../../services/jwt.token.services');
 const ViewPaths = require('../../constants/view.path.constants');
+const JWTHelper = require('../helpers/jwt.helper');
 
 Router.get(RoutingURLs.USER.LOGIN_GET, (request, response) => {
     response.render(ViewPaths.AUTHENTICATION.LOGIN);
@@ -47,13 +48,18 @@ Router.post(RoutingURLs.USER.REGISTER_POST, (request, response) => {
     response.redirect(RoutingURLs.BASE.HOME);
 });
 
-/*TODO: add check if logged in*/
 Router.get(RoutingURLs.USER.LOGOUT, async (request, response) => {
-    let decoded = JWTServices.decode(request.cookies.jwt);
-    let user = await UserServices.findByUsername(decoded.username);
-    await JWTServices.removeAllByUserId(user.id);
-    response.clearCookie('jwt');
-    response.redirect(RoutingURLs.BASE.HOME);
+    let user = await JWTHelper.getCurrentUser(request);
+
+    if (user !== null) {
+
+        await JWTServices.removeAllByUserId(user.id);
+        response.clearCookie('jwt');
+        response.redirect(RoutingURLs.BASE.HOME);
+        return;
+    }
+    
+    response.send('<h1>You aren\'t logged in!</h1>')
 });
 
 
