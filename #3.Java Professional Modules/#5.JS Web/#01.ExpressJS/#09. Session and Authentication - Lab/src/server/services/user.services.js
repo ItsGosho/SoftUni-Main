@@ -45,8 +45,13 @@ let proceedToken = async (username) => {
     return JWTServices.save(token);
 };
 
+let findByUsername = (username) => {
+    return UserRepository.findByUsername(username);
+};
+
 module.exports = {
     register,
     isCredentialsValid,
-    proceedToken
+    proceedToken,
+    findByUsername
 };

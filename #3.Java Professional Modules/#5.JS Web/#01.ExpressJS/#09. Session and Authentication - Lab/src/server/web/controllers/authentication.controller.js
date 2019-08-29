@@ -1,6 +1,7 @@
 const Router = require('express').Router();
 const RoutingURLs = require('../../constants/routing.urls');
 const UserServices = require('../../services/user.services');
+const JWTServices = require('../../services/jwt.token.services');
 const ViewPaths = require('../../constants/view.path.constants');
 
 Router.get(RoutingURLs.USER.LOGIN_GET, (request, response) => {
@@ -43,6 +44,15 @@ Router.post(RoutingURLs.USER.REGISTER_POST, (request, response) => {
     };
 
     UserServices.register(user);
+    response.redirect(RoutingURLs.BASE.HOME);
+});
+
+/*TODO: add check if logged in*/
+Router.get(RoutingURLs.USER.LOGOUT, async (request, response) => {
+    let decoded = JWTServices.decode(request.cookies.jwt);
+    let user = await UserServices.findByUsername(decoded.username);
+    await JWTServices.removeAllByUserId(user.id);
+    response.clearCookie('jwt');
     response.redirect(RoutingURLs.BASE.HOME);
 });
 

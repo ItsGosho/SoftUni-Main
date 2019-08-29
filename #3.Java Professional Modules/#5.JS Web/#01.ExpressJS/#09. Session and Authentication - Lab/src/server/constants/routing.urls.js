@@ -9,7 +9,7 @@ const USER = {
     REGISTER_GET: '/auth/register',
     REGISTER_POST: '/auth/register',
 
-    LOGOUT_POST: '/auth/logout',
+    LOGOUT: '/auth/logout',
 };
 
 const PRODUCT = {
