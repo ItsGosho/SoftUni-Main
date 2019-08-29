@@ -20,6 +20,11 @@ const categoryModel = new Schema({
     }
 });
 
+categoryModel.pre('save', function (next) {
+    console.log(`Category has been created with name: ${this.name}`);
+    next();
+});
+
 let CategoryModel = Moongoose.model(ModelName.CATEGORY, categoryModel);
 
 module.exports = CategoryModel;

@@ -3,6 +3,7 @@ const HandleBars = require('express-handlebars');
 const MultiPart = require('connect-multiparty');
 const FolderPaths = require('../constants/folder.path.constants');
 const Morgan = require('morgan');
+const Colors = require('colors');
 
 module.exports = (app) => {
     app.use(Morgan('dev'));

@@ -11,3 +11,9 @@ DatabaseConfiguration({connectionString: DatabaseConstants.CONNECTION_STRING});
 App.listen(ServerConstants.PORT, () => {
     console.log(ServerConstants.SERVER_STARTED);
 });
+
+const RoleRepository = require('./src/server/repositories/role.repository');
+const Roles = require('./src/server/domain/models/enums/role.enums');
+RoleRepository.add({name: Roles.ADMIN});
+//test
+

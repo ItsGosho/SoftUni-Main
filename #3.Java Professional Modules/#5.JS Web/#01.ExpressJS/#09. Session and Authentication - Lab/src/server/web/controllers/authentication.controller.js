@@ -11,4 +11,9 @@ Router.get(RoutingURLs.USER.REGISTER_GET, (request, response) => {
     response.render(ViewPaths.AUTHENTICATION.REGISTER);
 });
 
+Router.post(RoutingURLs.USER.REGISTER_POST, (request, response) => {
+    console.log(request.body);
+    response.redirect(RoutingURLs.BASE.HOME);
+});
+
 module.exports = Router;

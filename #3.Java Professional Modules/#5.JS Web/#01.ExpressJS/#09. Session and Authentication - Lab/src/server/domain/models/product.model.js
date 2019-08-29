@@ -39,6 +39,11 @@ const productModel = new Schema({
     }
 });
 
+productModel.pre('save', function (next) {
+    console.log(`Product has been created with name: ${this.name}`);
+    next();
+});
+
 let ProductModel = Mongoose.model(ModelName.PRODUCT, productModel);
 
 module.exports = ProductModel;

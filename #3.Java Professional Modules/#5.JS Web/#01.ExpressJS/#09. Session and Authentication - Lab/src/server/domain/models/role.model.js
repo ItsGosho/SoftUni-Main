@@ -16,6 +16,11 @@ const roleModel = new Schema({
     ]
 });
 
+roleModel.pre('save', function (next) {
+    console.log(`Role has been created with name: ${this.name}`.cyan);
+    next();
+});
+
 let RoleModel = Mongoose.model(ModelName.ROLE, roleModel);
 
 module.exports = RoleModel;
