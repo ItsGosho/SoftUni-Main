@@ -32,7 +32,34 @@ const userModel = new Schema({
             values: ['Male', 'Female']
         },
         message: 'Gender should be Male or Female!'
-    }
+    },
+    jwtToken: {
+        type: Type.ObjectID,
+        ref: 'JWT'
+    },
+    role: {
+        type: Type.ObjectID,
+        ref: 'Role',
+        required: [true, 'Role is not present!']
+    },
+    boughtProducts: [
+        {
+            type: Type.ObjectID,
+            ref: 'Product'
+        }
+    ],
+    createdProducts: [
+        {
+            type: Type.ObjectID,
+            ref: 'Product'
+        }
+    ],
+    createdCategories: [
+        {
+            type: Type.ObjectID,
+            ref: 'Category'
+        }
+    ]
 });
 
 let UserModel = mongoose.model('User', userModel);

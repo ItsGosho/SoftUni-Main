@@ -12,6 +12,11 @@ const categoryModel = new Schema({
         type: Type.ObjectID,
         ref: 'Product'
     }],
+    creator: {
+        type: Type.ObjectID,
+        ref: 'User',
+        required: [true, 'Creator is not set!']
+    }
 });
 
 let CategoryModel = mongoose.model('Category', categoryModel);

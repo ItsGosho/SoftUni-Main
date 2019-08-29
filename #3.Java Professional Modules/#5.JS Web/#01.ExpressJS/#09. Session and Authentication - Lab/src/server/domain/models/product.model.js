@@ -26,6 +26,11 @@ const productModel = new Schema({
     isBought: {
         type: Type.Boolean,
         default: false
+    },
+    creator: {
+        type: Type.ObjectID,
+        ref: 'User',
+        required: [true,'Creator is not set!']
     }
 });
 
