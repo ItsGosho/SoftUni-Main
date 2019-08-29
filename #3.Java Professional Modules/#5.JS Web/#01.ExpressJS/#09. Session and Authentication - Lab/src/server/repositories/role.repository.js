@@ -4,8 +4,12 @@ let findByName = (name) => {
     return RoleModel.findOne({name}).exec();
 };
 
-let add = (role) => {
-    return new RoleModel(role).save();
+let add = async (role) => {
+    let existingRole = await findByName(role.name);
+
+    if(existingRole === null){
+        return new RoleModel(role).save();
+    }
 };
 
 module.exports = {

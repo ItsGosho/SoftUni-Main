@@ -39,9 +39,8 @@ const productModel = new Schema({
     }
 });
 
-productModel.pre('save', function (next) {
-    console.log(`Product has been created with name: ${this.name}`);
-    next();
+productModel.post('save', function (product) {
+    console.log(`Product has been created with name: ${product.name}`.cyan);
 });
 
 let ProductModel = Mongoose.model(ModelName.PRODUCT, productModel);

@@ -63,9 +63,8 @@ const userModel = new Schema({
     ]
 });
 
-userModel.pre('save', function (next) {
-    console.log(`User has been created with username: ${this.username}`);
-    next();
+userModel.post('save', function (user) {
+    console.log(`User has been created with username: ${user.username}`.cyan);
 });
 
 let UserModel = Mongoose.model(ModelName.USER, userModel);
