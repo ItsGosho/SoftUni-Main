@@ -32,6 +32,10 @@ const productModel = new Schema({
         type: Type.ObjectID,
         ref: ModelName.USER,
         required: [true,'Creator is not set!']
+    },
+    buyer: {
+        type: Type.ObjectID,
+        ref: ModelName.USER
     }
 });
 

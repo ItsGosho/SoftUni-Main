@@ -14,4 +14,14 @@ const PRODUCT = {
     EDIT_PRODUCT: 'layouts/product/edit-product',
 };
 
-module.exports = {CATEGORY, OTHER, PRODUCT};
+const AUTHENTICATION = {
+    LOGIN: 'layouts/authentication/login',
+    REGISTER: 'layouts/authentication/register',
+};
+
+module.exports = {
+    CATEGORY,
+    OTHER,
+    PRODUCT,
+    AUTHENTICATION
+};

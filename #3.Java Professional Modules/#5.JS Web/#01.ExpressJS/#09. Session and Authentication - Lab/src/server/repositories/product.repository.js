@@ -1,4 +1,4 @@
-const ProductSchema = require('../domain/models/category.model');
+const ProductSchema = require('../domain/models/product.model');
 
 let save = (product, callback) => {
     ProductSchema.create(product, (error, savedProduct) => {

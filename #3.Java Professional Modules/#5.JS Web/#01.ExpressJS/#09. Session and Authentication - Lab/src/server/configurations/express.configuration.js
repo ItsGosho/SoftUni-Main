@@ -12,6 +12,7 @@ module.exports = (app) => {
     app.use(require('../web/controllers/home.controller'));
     app.use(require('../web/controllers/category.controller'));
     app.use(require('../web/controllers/product.controller'));
+    app.use(require('../web/controllers/authentication.controller'));
 
     app.use('/static', require('express').static('src/resources/public'));
 

@@ -5,13 +5,13 @@ const CategoryServices = require('../../services/category.services');
 const DropboxServices = require('../../services/dropbox.services');
 const ViewPaths = require('../../constants/view.path.constants');
 
-Router.get(RoutingURLs.CREATE_PRODUCT, async (request, response) => {
+Router.get(RoutingURLs.PRODUCT.ADD_GET, async (request, response) => {
     let categories = await CategoryServices.findAll();
 
     response.render(ViewPaths.PRODUCT.CREATE_PRODUCT, {categories});
 });
 
-Router.post(RoutingURLs.CREATE_PRODUCT, async (request, response) => {
+Router.post(RoutingURLs.PRODUCT.ADD_POST, async (request, response) => {
 
     let {name, description, price, category} = request.body;
     let image = request.files.image;
@@ -32,14 +32,14 @@ Router.post(RoutingURLs.CREATE_PRODUCT, async (request, response) => {
     });
 });
 
-Router.get(RoutingURLs.ALL_PRODUCT_BY_CATEGORY, async (request, response) => {
+Router.get(RoutingURLs.CATEGORY.ALL_PRODUCT_BY_CATEGORY, async (request, response) => {
     let category = await CategoryServices.findByName(request.params.category);
     let products = await ProductServices.findAllByCategory(category.id);
 
     response.render(ViewPaths.CATEGORY.CATEGORY_PRODUCTS, {products, category});
 });
 
-Router.get(RoutingURLs.EDIT_PRODUCT_GET, async (request, response) => {
+Router.get(RoutingURLs.PRODUCT.EDIT_GET, async (request, response) => {
     let productId = request.params.id;
     let product = await ProductServices.findById(productId);
     let categories = await CategoryServices.findAll();
@@ -47,7 +47,7 @@ Router.get(RoutingURLs.EDIT_PRODUCT_GET, async (request, response) => {
     response.render(ViewPaths.PRODUCT.EDIT_PRODUCT, {product, categories});
 });
 
-Router.post(RoutingURLs.EDIT_PRODUCT_POST, async (request, response) => {
+Router.post(RoutingURLs.PRODUCT.EDIT_POST, async (request, response) => {
     let id = request.params.id;
     let {name, description, price, category} = request.body;
     let image = request.files.image;
@@ -70,20 +70,20 @@ Router.post(RoutingURLs.EDIT_PRODUCT_POST, async (request, response) => {
     response.redirect(RoutingURLs.HOME);
 });
 
-Router.get(RoutingURLs.DELETE_PRODUCT_GET, async (request, response) => {
+Router.get(RoutingURLs.PRODUCT.DELETE_GET, async (request, response) => {
     let productId = request.params.id;
     let product = await ProductServices.findById(productId);
 
     response.render(ViewPaths.PRODUCT.DELETE_PRODUCT, {product});
 });
 
-Router.post(RoutingURLs.DELETE_PRODUCT_POST, async (request, response) => {
+Router.post(RoutingURLs.PRODUCT.DELETE_POST, async (request, response) => {
     let productId = request.params.id;
     await ProductServices.removeById(productId);
     response.redirect(RoutingURLs.HOME);
 });
 
-Router.get(RoutingURLs.BUY_PRODUCT_GET, async (request, response) => {
+Router.get(RoutingURLs.PRODUCT.BUY_GET, async (request, response) => {
     let productId = request.params.id;
     let product = await ProductServices.findById(productId);
 
