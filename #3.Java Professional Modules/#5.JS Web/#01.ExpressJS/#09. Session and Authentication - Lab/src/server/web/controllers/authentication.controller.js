@@ -4,7 +4,6 @@ const UserServices = require('../../services/user.services');
 const ViewPaths = require('../../constants/view.path.constants');
 
 Router.get(RoutingURLs.USER.LOGIN_GET, (request, response) => {
-    console.log(request.cookies);
     response.render(ViewPaths.AUTHENTICATION.LOGIN);
 });
 
@@ -13,7 +12,7 @@ Router.post(RoutingURLs.USER.LOGIN_GET, async (request, response) => {
 
     if (await UserServices.isCredentialsValid(username, password)) {
         let token = await UserServices.proceedToken(username);
-        
+
         response.cookie('jwt', token.token, {maxAge: 86_400_000, httpOnly: true});
         response.redirect(RoutingURLs.BASE.HOME);
         return;

@@ -1,5 +1,13 @@
+let JWTServices = require('../../services/jwt.token.services');
+
 module.exports = (request, response, next) => {
-    console.log('JWT Token validation middleware has been called!'.cyan);
-    next();
+    let token = request.cookies.jwt;
+
+    if (token !== undefined && JWTServices.isValid(token)) {
+        next();
+        return;
+    }
+
+    response.send('<center><h1 style="color:red">Invalid JWT Token!</h1></center>')
 };
 
