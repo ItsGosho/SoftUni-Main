@@ -21,7 +21,7 @@ const categoryModel = new Schema({
 });
 
 categoryModel.post('save', function (category) {
-    console.log(`Category has been created with name: ${category.name}`.cyan);
+    console.log(`-> `.red + `Category has been created/updated with name: ${category.name}`.cyan);
 });
 
 let CategoryModel = Moongoose.model(ModelName.CATEGORY, categoryModel);

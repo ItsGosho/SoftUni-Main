@@ -40,7 +40,7 @@ const productModel = new Schema({
 });
 
 productModel.post('save', function (product) {
-    console.log(`Product has been created with name: ${product.name}`.cyan);
+    console.log(`-> `.red + `Product has been created/updated with name: ${product.name}`.cyan);
 });
 
 let ProductModel = Mongoose.model(ModelName.PRODUCT, productModel);

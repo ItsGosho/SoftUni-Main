@@ -1,6 +1,11 @@
+const JWTRepository = require('../repositories/jwt.token.repository');
 const JWT = require('jsonwebtoken');
 const FileSystem = require('fs');
 const FilePaths = require('../constants/file.path.constants');
+
+let save = async (token) => {
+    return await JWTRepository.save(token);
+};
 
 let generateToken = (data) => {
     const secretKey = FileSystem.readFileSync(FilePaths.JWT_SECRET, 'utf8');
@@ -21,11 +26,17 @@ let isValid = (token) => {
 let decode = (token) => {
     const secretKey = FileSystem.readFileSync(FilePaths.JWT_SECRET, 'utf8');
 
-   return JWT.decode(token,secretKey);
+    return JWT.decode(token, secretKey);
+};
+
+let removeAllByUserId = async (userId) => {
+    return JWTRepository.deleteAllByUserId(userId);
 };
 
 module.exports = {
+    save,
     generateToken,
     isValid,
-    decode
+    decode,
+    removeAllByUserId
 };

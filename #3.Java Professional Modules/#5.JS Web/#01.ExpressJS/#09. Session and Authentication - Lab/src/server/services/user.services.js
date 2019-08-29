@@ -1,5 +1,6 @@
 const UserRepository = require('../repositories/user.repository');
 const RoleServices = require('../services/role.services');
+const JWTServices = require('../services/jwt.token.services');
 const Bcrypt = require('bcrypt-nodejs');
 const Mongoose = require('mongoose');
 const SaltRounds = 10;
@@ -16,17 +17,36 @@ let register = async (user) => {
     RoleServices.addUser(user.role.id, user.id);
 };
 
-let login = async (username,password) => {
+let isCredentialsValid = async (username, password) => {
     let user = await UserRepository.findByUsername(username);
 
-    if(user !== null){
+    if (user !== null) {
         return Bcrypt.compareSync(password, user.password);
     }
 
     return false;
 };
 
+let proceedToken = async (username) => {
+    let user = await UserRepository.findByUsername(username);
+    let role = await RoleServices.findRoleByUserId(user.id);
+
+    let tokenData = {
+        username: user.username,
+        role: role.name
+    };
+
+    let token = {
+        token: JWTServices.generateToken(tokenData),
+        user: user.id
+    };
+
+    await JWTServices.removeAllByUserId(user.id);
+    return JWTServices.save(token);
+};
+
 module.exports = {
     register,
-    login
+    isCredentialsValid,
+    proceedToken
 };

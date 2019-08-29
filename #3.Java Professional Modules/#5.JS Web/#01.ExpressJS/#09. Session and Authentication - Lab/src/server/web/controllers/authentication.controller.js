@@ -10,14 +10,13 @@ Router.get(RoutingURLs.USER.LOGIN_GET, (request, response) => {
 Router.post(RoutingURLs.USER.LOGIN_GET, async (request, response) => {
     let {username, password} = request.body;
 
-    let isValid = await UserServices.login(username, password);
-
-    if (isValid) {
-        response.send('Successful!');
+    if (await UserServices.isCredentialsValid(username, password)) {
+        let token = await UserServices.proceedToken(username);
+        response.send('Successful login!');
         return;
     }
 
-    response.send('Failed!');
+    response.send('The provided credentials are invalid!');
 });
 
 Router.get(RoutingURLs.USER.REGISTER_GET, (request, response) => {

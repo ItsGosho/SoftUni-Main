@@ -17,7 +17,7 @@ const roleModel = new Schema({
 });
 
 roleModel.post('save', function (role) {
-    console.log(`Role has been saved with name: ${role.name}`.cyan);
+    console.log(`-> `.red + `Role has been create/updated with name: ${role.name}`.cyan);
 });
 
 let RoleModel = Mongoose.model(ModelName.ROLE, roleModel);

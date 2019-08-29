@@ -9,6 +9,10 @@ let getInitialRole = () => {
     return RoleRepository.add(role);
 };
 
+let findRoleByUserId = (id) => {
+    return RoleRepository.findByUserId(id);
+};
+
 let addUser = async (roleId, userId) => {
     let role = await RoleRepository.findById(roleId);
     role.users.push(userId);
@@ -17,5 +21,6 @@ let addUser = async (roleId, userId) => {
 
 module.exports = {
     getInitialRole,
-    addUser
+    addUser,
+    findRoleByUserId
 };

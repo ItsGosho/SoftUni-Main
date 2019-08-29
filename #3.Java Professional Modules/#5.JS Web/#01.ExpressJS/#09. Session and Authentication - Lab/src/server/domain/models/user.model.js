@@ -34,10 +34,6 @@ const userModel = new Schema({
         },
         message: 'Gender should be Male or Female!'
     },
-    jwtToken: {
-        type: Type.ObjectID,
-        ref: ModelName.JWT
-    },
     role: {
         type: Type.ObjectID,
         ref: ModelName.ROLE,
@@ -64,7 +60,7 @@ const userModel = new Schema({
 });
 
 userModel.post('save', function (user) {
-    console.log(`User has been created with username: ${user.username}`.cyan);
+    console.log(`-> `.red + `User has been created/update with username: ${user.username}`.cyan);
 });
 
 let UserModel = Mongoose.model(ModelName.USER, userModel);

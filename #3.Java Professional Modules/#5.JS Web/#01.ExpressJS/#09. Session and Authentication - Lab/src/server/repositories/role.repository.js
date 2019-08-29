@@ -30,9 +30,14 @@ let removeUserById = async (userId) => {
     }
 };
 
+let findByUserId = (userId) => {
+    return RoleModel.findOne({'users': {'$in': [`${userId}`]}});
+};
+
 module.exports = {
     findByName,
     findById,
     add,
-    removeUserById
+    removeUserById,
+    findByUserId
 };
