@@ -13,9 +13,20 @@ let register = async (user) => {
     user.role = await RoleServices.getInitialRole();
 
     user = await UserRepository.save(user);
-    RoleServices.addUser(user.role.id,user.id);
+    RoleServices.addUser(user.role.id, user.id);
+};
+
+let login = async (username,password) => {
+    let user = await UserRepository.findByUsername(username);
+
+    if(user !== null){
+        return Bcrypt.compareSync(password, user.password);
+    }
+
+    return false;
 };
 
 module.exports = {
-    register
+    register,
+    login
 };

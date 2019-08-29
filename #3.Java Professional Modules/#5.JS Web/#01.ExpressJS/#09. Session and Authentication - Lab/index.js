@@ -15,15 +15,9 @@ App.listen(ServerConstants.PORT, () => {
 test();
 
 async function test() {
-    const RoleRepository = require('./src/server/repositories/role.repository');
-    const Roles = require('./src/server/domain/models/enums/role.enums');
-    //let savedRole = await RoleRepository.add({name: Roles.ADMIN});
-    /*savedRole.users.push('randomUserId');
-    savedRole.save();*/
-
-    //let role = await RoleRepository.findById('5d67a45b4684a32c88abb28a');
-
-    //await RoleRepository.removeUserById('randomUserId',role._id);
+    let JWTTokenServices = require('./src/server/services/jwt.token.services');
+    //let token = JWTTokenServices.generateToken({username: 'itsgosho',role: 'Admin'});
+    console.log(JWTTokenServices.decode('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iml0c2dvc2hvIiwicm9sZSI6IkFkbWluIiwiaWF0IjoxNTY3MDgzMzExLCJleHAiOjE1NjcxNjk3MTF9.1kEyiLFiKa8ctr2uWSATsfAae8pLhvnu6bDzQrStv-k'));
 }
 
 //test2323

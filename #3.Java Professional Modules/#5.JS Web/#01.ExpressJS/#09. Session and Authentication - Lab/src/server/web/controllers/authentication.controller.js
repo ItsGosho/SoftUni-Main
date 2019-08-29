@@ -7,6 +7,19 @@ Router.get(RoutingURLs.USER.LOGIN_GET, (request, response) => {
     response.render(ViewPaths.AUTHENTICATION.LOGIN);
 });
 
+Router.post(RoutingURLs.USER.LOGIN_GET, async (request, response) => {
+    let {username, password} = request.body;
+
+    let isValid = await UserServices.login(username, password);
+
+    if (isValid) {
+        response.send('Successful!');
+        return;
+    }
+
+    response.send('Failed!');
+});
+
 Router.get(RoutingURLs.USER.REGISTER_GET, (request, response) => {
     response.render(ViewPaths.AUTHENTICATION.REGISTER);
 });
