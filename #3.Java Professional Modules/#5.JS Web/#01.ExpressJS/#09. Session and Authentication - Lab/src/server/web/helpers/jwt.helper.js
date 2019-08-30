@@ -11,4 +11,11 @@ let getCurrentUser = async (request) => {
     return await UserServices.findByUsername(tokeData.username);
 };
 
-module.exports = {getCurrentUser};
+let attachToken = (token,response) => {
+    response.cookie('jwt', token, {maxAge: 86_400_000, httpOnly: true});
+};
+
+module.exports = {
+    getCurrentUser,
+    attachToken
+};

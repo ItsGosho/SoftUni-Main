@@ -15,7 +15,7 @@ Router.post(RoutingURLs.USER.LOGIN_GET, async (request, response) => {
     if (await UserServices.isCredentialsValid(username, password)) {
         let token = await UserServices.proceedToken(username);
 
-        response.cookie('jwt', token.token, {maxAge: 86_400_000, httpOnly: true});
+        JWTHelper.attachToken(token.token, response);
         response.redirect(RoutingURLs.BASE.HOME);
         return;
     }
@@ -58,7 +58,7 @@ Router.get(RoutingURLs.USER.LOGOUT, async (request, response) => {
         response.redirect(RoutingURLs.BASE.HOME);
         return;
     }
-    
+
     response.send('<h1>You aren\'t logged in!</h1>')
 });
 

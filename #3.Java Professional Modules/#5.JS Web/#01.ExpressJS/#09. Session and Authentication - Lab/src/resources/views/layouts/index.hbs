@@ -14,12 +14,15 @@
     <nav class="nav">
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/product/add">Add Product</a></li>
-            <li><a href="/category/add">Add Category</a></li>
 
-            <li class="align-right"><a href="/auth/logout">Logout</a></li>
-            <li class="align-right"><a href="/auth/register">Register</a></li>
-            <li class="align-right"><a href="/auth/login">Login</a></li>
+            {{#if user}}
+                <li><a href="/product/add">Add Product</a></li>
+                <li><a href="/category/add">Add Category</a></li>
+                <li class="align-right"><a href="/auth/logout">Logout</a></li>
+            {{else}}
+                <li class="align-right"><a href="/auth/register">Register</a></li>
+                <li class="align-right"><a href="/auth/login">Login</a></li>
+            {{/if}}
         </ul>
     </nav>
 </header>
