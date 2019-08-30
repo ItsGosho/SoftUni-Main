@@ -1,14 +1,16 @@
-let Fetch = require('isomorphic-fetch');
-let FileSystem = require('fs');
-let Dropbox = require('../singletons/dropbox');
+const Fetch = require('isomorphic-fetch');
+const FileSystem = require('fs');
+const Dropbox = require('../singletons/dropbox');
+const Logging = require('../constants/logging.constants').DROPBOX;
+const Format = require('sprintf-js').sprintf;
 
 let uploadFile = async (file, dropboxFileName) => {
     let result = Dropbox.filesUpload({path: '/' + dropboxFileName, contents: file});
 
     result.then((response) => {
-        console.log(`File with path [/${dropboxFilePath}] has been downloaded!`.cyan);
+        console.log(Format(Logging.UPLOAD_SUCCESSFUL, `'/' + ${dropboxFileName}`));
     }).catch((reason => {
-        console.log(`File with path [/${dropboxFilePath}] has NOT been downloaded!`.red);
+        console.log(Format(Logging.UPLOAD_FAILED, `'/' + ${dropboxFileName}`));
     }));
 
     return result;
@@ -18,9 +20,9 @@ let downloadFile = async (dropboxFilePath) => {
     let result = Dropbox.filesDownload({path: '/' + dropboxFilePath});
 
     result.then((response) => {
-        console.log(`File with path [/${dropboxFilePath}] has been downloaded!`.cyan);
+        console.log(Format(Logging.DOWNLOAD_SUCCESSFUL, dropboxFilePath));
     }).catch((reason => {
-        console.log(`File with path [/${dropboxFilePath}] has NOT been downloaded!`.red);
+        console.log(Format(Logging.DOWNLOAD_FAILED, dropboxFilePath));
     }));
 
     return result;
@@ -30,9 +32,9 @@ let deleteFile = async (dropboxFilePath) => {
     let result = Dropbox.filesDelete({path: '/' + dropboxFilePath});
 
     result.then((response) => {
-        console.log(`File with path [/${dropboxFilePath}] has been deleted!`.cyan);
+        console.log(Format(Logging.DELETE_SUCCESSFUL, dropboxFilePath));
     }).catch((error) => {
-        console.log(`File with path [/${dropboxFilePath}] was NOT been deleted!!`.red);
+        console.log(Format(Logging.DELETE_FAILED, dropboxFilePath));
     });
 
     return result;
