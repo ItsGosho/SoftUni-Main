@@ -1,35 +1,27 @@
-const ProductSchema = require('../domain/models/product.model');
+const ProductModel = require('../domain/models/product.model');
 
-let save = (product, callback) => {
-    ProductSchema.create(product, (error, savedProduct) => {
-        if (!error) {
-            console.log(`Category [${savedProduct.name}] created!`);
-        }
-
-        callback(error, savedProduct);
-    })
+let save = (product) => {
+    return new ProductModel(product).save();
 };
 
 let findAll = () => {
-    let query = ProductSchema.find();
-    return query.exec();
+    return ProductModel.find().exec();
 };
 
 let findAllByCategoryId = (categoryId) => {
-    let query = ProductSchema.find({'category': categoryId});
-    return query.exec();
+    return ProductModel.find({'category': categoryId}).exec();
 };
 
 let findById = (id) => {
-    return ProductSchema.findOne({'_id': id}).exec();
+    return ProductModel.findOne({'_id': id}).exec();
 };
 
 let removeById = (id) => {
-    return ProductSchema.deleteOne({'_id': id}).exec();
+    return ProductModel.deleteOne({'_id': id}).exec();
 };
 
-let update = (id,product) => {
-    return ProductSchema.updateOne({'_id': id},product).exec();
+let update = (id, product) => {
+    return ProductModel.updateOne({'_id': id}, product).exec();
 };
 
 module.exports = {

@@ -5,16 +5,11 @@ const DropboxServices = require('./dropbox.services');
 const ShortId = require('shortid');
 const FileSystem = require('fs');
 
-let save = (product, callback) => {
-    return ProductRepository.save(product, (e, savedProduct) => {
-        callback(e, savedProduct);
-    });
-};
+let save = ProductRepository.save();
 
 let findAll = async () => {
     let products = await ProductRepository.findAll();
     await parseProducts(products);
-
 
     return products;
 };
@@ -42,7 +37,7 @@ let parseProducts = async (products) => {
 };
 
 let parseProduct = async (product) => {
-    if(product.image !== null){
+    if (product.image !== null) {
         let data = await DropboxServices.downloadFile(product.image);
         product.image = 'data:image/jpeg;base64, ' + Buffer.from(data.fileBinary).toString('base64');
         product.category = await CategoryServices.findById(product.category);
@@ -61,12 +56,12 @@ let findByIdWIM = async (id) => {
 
 let removeById = async (id) => {
     let product = await ProductRepository.findById(id);
-    DropboxServices.deleteFile(product.image);
+    await DropboxServices.deleteFile(product.image);
     return await ProductRepository.removeById(id);
 };
 
-let updateById = async (id,product) =>{
-    return await ProductRepository.update(id,product);
+let updateById = async (id, product) => {
+    return await ProductRepository.update(id, product);
 };
 
 module.exports = {

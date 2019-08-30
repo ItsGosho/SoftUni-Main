@@ -8,6 +8,8 @@
     <title>ShopStop</title>
     <link rel="shortcut icon" type="image/png" href="/public/resources/favicon.ico"/>
     <link rel="stylesheet" href="/static/resources/site.css">
+    <script src="https://js.pusher.com/5.0/pusher.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 </head>
 <body>
 <header>
@@ -27,12 +29,6 @@
     </nav>
 </header>
 <main>
-    {{#if error}}
-        <h2 class="error-msg">{{error}}</h2>
-    {{else if success}}
-        <h2 class="success-msg">{{success}}</h2>
-    {{/if}}
-
     {{{body}}}
 </main>
 <footer>

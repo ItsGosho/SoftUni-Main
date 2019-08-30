@@ -26,10 +26,9 @@ Router.post(RoutingURLs.PRODUCT.ADD, async (request, response) => {
         image: path
     };
 
-    ProductServices.save(product, (e, result) => {
-        CategoryServices.addProduct(result.category, result._id);
-        response.redirect(RoutingURLs.HOME);
-    });
+    product = await ProductServices.save(product);
+    await CategoryServices.addProduct(product.category, product._id);
+    response.redirect(RoutingURLs.HOME);
 });
 
 Router.get(RoutingURLs.CATEGORY.ALL_PRODUCT_BY_CATEGORY, async (request, response) => {

@@ -5,7 +5,7 @@ const JWTServices = require('../../services/jwt.token.services');
 const ViewPaths = require('../../constants/view.path.constants');
 const JWTHelper = require('../helpers/jwt.helper');
 
-Router.get(RoutingURLs.USER.LOGIN, (request, response) => {
+Router.get(RoutingURLs.USER.LOGIN, async (request, response) => {
     response.render(ViewPaths.AUTHENTICATION.LOGIN);
 });
 
@@ -59,7 +59,7 @@ Router.get(RoutingURLs.USER.LOGOUT, async (request, response) => {
         return;
     }
 
-    response.send('<h1>You aren\'t logged in!</h1>')
+    response.send('<h1>You aren\'t logged in!</h1>');
 });
 
 

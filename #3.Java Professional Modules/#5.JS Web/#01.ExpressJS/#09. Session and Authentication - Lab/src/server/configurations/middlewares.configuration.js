@@ -11,7 +11,7 @@ const LoggedOut = require('../web/middlewares/logged.out.middleware');
 Router.all('*', UserAttacher);
 
 /*Category*/
-Router.all(RoutingURLs.CATEGORY.CREATE,JWTTokenValidator,Role(Roles.ADMIN));
+Router.all(RoutingURLs.CATEGORY.CREATE,JWTTokenValidator);
 Router.all(RoutingURLs.CATEGORY.ALL_PRODUCT_BY_CATEGORY, JWTTokenValidator);
 
 /*Product*/

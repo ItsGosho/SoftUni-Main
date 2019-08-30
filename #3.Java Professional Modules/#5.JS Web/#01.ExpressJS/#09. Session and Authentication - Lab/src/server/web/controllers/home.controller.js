@@ -8,7 +8,7 @@ const JWTHelper = require('../helpers/jwt.helper');
 Router.get(RoutingURLs.BASE.HOME, async (request, response) => {
     let products = await ProductServices.findAll();
 
-    response.render(ViewPaths.OTHER.HOME, {user: request.user,products});
+    response.render(ViewPaths.OTHER.HOME, {user: request.user, products});
 });
 
 module.exports = Router;

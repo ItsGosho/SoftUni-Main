@@ -10,13 +10,12 @@ Router.get(RoutingURLs.CATEGORY.CREATE, (request, response) => {
     response.render(ViewPaths.CATEGORY.CREATE_CATEGORY, {user: request.user});
 });
 
-Router.post(RoutingURLs.CATEGORY.CREATE, (request, response) => {
+Router.post(RoutingURLs.CATEGORY.CREATE,async (request, response) => {
     let category = {
         name: request.body.name
     };
 
-    CategoryServices.save(category, (error, category) => {
-    });
+    await CategoryServices.save(category);
     response.redirect(RoutingURLs.HOME);
 });
 
