@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const DatabaseConstants = require('../constants/database.constants');
+const DatabaseConstants = require('../constants/mongoose.constants');
 mongoose.Promise = global.Promise;
 
 const onOpen = (error) => {

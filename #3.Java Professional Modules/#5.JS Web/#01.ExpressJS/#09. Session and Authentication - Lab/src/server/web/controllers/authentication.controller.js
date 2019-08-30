@@ -2,7 +2,7 @@ const Router = require('express').Router();
 const RoutingURLs = require('../../constants/routing.urls');
 const UserServices = require('../../services/user.services');
 const JWTServices = require('../../services/jwt.token.services');
-const ViewPaths = require('../../constants/view.path.constants');
+const ViewPaths = require('../../constants/resource.paths.constants');
 const JWTHelper = require('../helpers/jwt.helper');
 
 Router.get(RoutingURLs.USER.LOGIN, async (request, response) => {

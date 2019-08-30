@@ -1,4 +1,4 @@
-let DatabaseConstants = require('../constants/database.constants');
+let DatabaseConstants = require('../constants/mongoose.constants');
 
 let databaseConfiguration = {
     connectionString: DatabaseConstants.CONNECTION_STRING

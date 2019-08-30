@@ -1,5 +1,5 @@
 const Mongoose = require('mongoose');
-const ModelName = require('../../constants/mongoose.models.names');
+const ModelName = require('../../constants/mongoose.constants').Models;
 const Schema = Mongoose.Schema;
 const Type = Schema.Types;
 

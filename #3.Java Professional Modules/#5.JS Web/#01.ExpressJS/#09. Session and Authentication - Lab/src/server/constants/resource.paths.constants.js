@@ -1,3 +1,6 @@
+const Path = require('path');
+const AppRoot = require('app-root-path');
+
 const CATEGORY = {
     CATEGORY_PRODUCTS: 'layouts/category/category-products',
     CREATE_CATEGORY: 'layouts/category/create-category',
@@ -19,9 +22,19 @@ const AUTHENTICATION = {
     REGISTER: 'layouts/authentication/register',
 };
 
+const FOLDERS = {
+    VIEW_FOLDER: Path.join(AppRoot.path, '/src/resources/views'),
+};
+
+const JWT = {
+    JWT_SECRET: Path.join(AppRoot.path, '/src/resources/jwt.secret.txt'),
+};
+
 module.exports = {
     CATEGORY,
     OTHER,
     PRODUCT,
-    AUTHENTICATION
+    AUTHENTICATION,
+    FOLDERS,
+    JWT
 };

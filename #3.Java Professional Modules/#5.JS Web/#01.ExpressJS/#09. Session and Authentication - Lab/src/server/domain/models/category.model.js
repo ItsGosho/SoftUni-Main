@@ -1,5 +1,5 @@
 const Moongoose = require('mongoose');
-const ModelName = require('../../constants/mongoose.models.names');
+const ModelName = require('../../constants/mongoose.constants').Models;
 const Schema = Moongoose.Schema;
 const Type = Schema.Types;
 

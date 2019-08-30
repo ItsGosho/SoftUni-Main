@@ -1,7 +1,7 @@
 const Router = require('express').Router();
 const RoutingURLs = require('../../constants/routing.urls');
 const CategoryServices = require('../../services/category.services');
-const ViewPaths = require('../../constants/view.path.constants');
+const ViewPaths = require('../../constants/resource.paths.constants');
 
 const Role = require('../middlewares/role.middleware');
 const JWTToken = require('../middlewares/jwt.token.middleware');

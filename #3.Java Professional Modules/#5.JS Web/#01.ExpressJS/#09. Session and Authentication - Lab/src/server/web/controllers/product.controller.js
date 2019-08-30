@@ -3,7 +3,7 @@ const RoutingURLs = require('../../constants/routing.urls');
 const ProductServices = require('../../services/product.services');
 const CategoryServices = require('../../services/category.services');
 const DropboxServices = require('../../services/dropbox.services');
-const ViewPaths = require('../../constants/view.path.constants');
+const ViewPaths = require('../../constants/resource.paths.constants');
 
 Router.get(RoutingURLs.PRODUCT.ADD, async (request, response) => {
     let categories = await CategoryServices.findAll();

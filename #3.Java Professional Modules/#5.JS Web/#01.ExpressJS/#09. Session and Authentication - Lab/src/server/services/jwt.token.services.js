@@ -1,19 +1,19 @@
 const JWTRepository = require('../repositories/jwt.token.repository');
 const JWT = require('jsonwebtoken');
 const FileSystem = require('fs');
-const FilePaths = require('../constants/file.path.constants');
+const JWTPaths = require('../constants/resource.paths.constants').JWT;
 
 let save = async (token) => {
     return await JWTRepository.save(token);
 };
 
 let generateToken = (data) => {
-    const secretKey = FileSystem.readFileSync(FilePaths.JWT_SECRET, 'utf8');
+    const secretKey = FileSystem.readFileSync(JWTPaths.JWT_SECRET, 'utf8');
     return JWT.sign(data, secretKey, {expiresIn: '24h'});
 };
 
 let isValid = (token) => {
-    const secretKey = FileSystem.readFileSync(FilePaths.JWT_SECRET, 'utf8');
+    const secretKey = FileSystem.readFileSync(JWTPaths.JWT_SECRET, 'utf8');
 
     try {
         JWT.verify(token, secretKey);
@@ -24,7 +24,7 @@ let isValid = (token) => {
 };
 
 let decode = (token) => {
-    const secretKey = FileSystem.readFileSync(FilePaths.JWT_SECRET, 'utf8');
+    const secretKey = FileSystem.readFileSync(JWTPaths.JWT_SECRET, 'utf8');
 
     return JWT.decode(token, secretKey);
 };

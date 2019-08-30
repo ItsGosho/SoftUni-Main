@@ -1,7 +1,7 @@
 const App = require('express')();
 
 const ServerConstants = require('./src/server/constants/server.constants');
-const DatabaseConstants = require('./src/server/constants/database.constants');
+const DatabaseConstants = require('./src/server/constants/mongoose.constants');
 const ExpressConfiguration = require('./src/server/configurations/express.configuration');
 const DatabaseConfiguration = require('./src/server/configurations/database.configuration');
 
