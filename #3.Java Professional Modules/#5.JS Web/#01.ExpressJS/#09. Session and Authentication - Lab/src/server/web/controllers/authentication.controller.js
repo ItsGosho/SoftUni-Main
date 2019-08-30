@@ -5,11 +5,11 @@ const JWTServices = require('../../services/jwt.token.services');
 const ViewPaths = require('../../constants/view.path.constants');
 const JWTHelper = require('../helpers/jwt.helper');
 
-Router.get(RoutingURLs.USER.LOGIN_GET, (request, response) => {
+Router.get(RoutingURLs.USER.LOGIN, (request, response) => {
     response.render(ViewPaths.AUTHENTICATION.LOGIN);
 });
 
-Router.post(RoutingURLs.USER.LOGIN_GET, async (request, response) => {
+Router.post(RoutingURLs.USER.LOGIN, async (request, response) => {
     let {username, password} = request.body;
 
     if (await UserServices.isCredentialsValid(username, password)) {
@@ -23,11 +23,11 @@ Router.post(RoutingURLs.USER.LOGIN_GET, async (request, response) => {
     response.send('The provided credentials are invalid!');
 });
 
-Router.get(RoutingURLs.USER.REGISTER_GET, (request, response) => {
+Router.get(RoutingURLs.USER.REGISTER, (request, response) => {
     response.render(ViewPaths.AUTHENTICATION.REGISTER);
 });
 
-Router.post(RoutingURLs.USER.REGISTER_POST, (request, response) => {
+Router.post(RoutingURLs.USER.REGISTER, (request, response) => {
     let {username, password, confirmedPassword, firstName, lastName, age, gender} = request.body;
 
     if (password !== confirmedPassword) {

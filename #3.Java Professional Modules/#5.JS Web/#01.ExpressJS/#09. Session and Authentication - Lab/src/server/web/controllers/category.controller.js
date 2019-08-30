@@ -3,11 +3,14 @@ const RoutingURLs = require('../../constants/routing.urls');
 const CategoryServices = require('../../services/category.services');
 const ViewPaths = require('../../constants/view.path.constants');
 
-Router.get(RoutingURLs.CATEGORY.CREATE_GET, (request, response) => {
-    response.render(ViewPaths.CATEGORY.CREATE_CATEGORY, {});
+const Role = require('../middlewares/role.middleware');
+const JWTToken = require('../middlewares/jwt.token.middleware');
+
+Router.get(RoutingURLs.CATEGORY.CREATE, (request, response) => {
+    response.render(ViewPaths.CATEGORY.CREATE_CATEGORY, {user: request.user});
 });
 
-Router.post(RoutingURLs.CATEGORY.CREATE_POST, (request, response) => {
+Router.post(RoutingURLs.CATEGORY.CREATE, (request, response) => {
     let category = {
         name: request.body.name
     };

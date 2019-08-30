@@ -6,7 +6,7 @@ const Morgan = require('morgan');
 const Colors = require('colors');
 const CookieParser = require('cookie-parser');
 const Session = require('express-session');
-const UserAttacher = require('../web/middlewares/user.attacher.middleware');
+const MiddlewaresConfiguration = require('../configurations/middlewares.configuration');
 
 module.exports = (app) => {
     app.use(Morgan('dev'));
@@ -16,7 +16,7 @@ module.exports = (app) => {
     app.use(CookieParser());
     app.use(Session({secret: 'JoretoSecret', saveUninitialized: false, resave: false}));
 
-    app.use(UserAttacher);
+    app.use(MiddlewaresConfiguration);
 
     app.use(require('../web/controllers/home.controller'));
     app.use(require('../web/controllers/category.controller'));

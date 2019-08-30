@@ -3,32 +3,20 @@ const BASE = {
 };
 
 const USER = {
-    LOGIN_GET: '/auth/login',
-    LOGIN_POST: '/auth/login',
-
-    REGISTER_GET: '/auth/register',
-    REGISTER_POST: '/auth/register',
-
+    LOGIN: '/auth/login',
+    REGISTER: '/auth/register',
     LOGOUT: '/auth/logout',
 };
 
 const PRODUCT = {
-    ADD_GET: '/product/add',
-    ADD_POST: '/product/add',
-
-    EDIT_GET: '/product/edit/:id',
-    EDIT_POST: '/product/edit/:id',
-
-    BUY_GET: '/product/buy/:id',
-    BUY_POST: '/product/buy/:id',
-
-    DELETE_GET: '/product/delete/:id',
-    DELETE_POST: '/product/delete/:id',
+    ADD: '/product/add',
+    EDIT: '/product/edit/:id',
+    BUY: '/product/buy/:id',
+    DELETE: '/product/delete/:id',
 };
 
 const CATEGORY = {
-    CREATE_GET: '/category/add',
-    CREATE_POST: '/category/add',
+    CREATE: '/category/add',
     ALL_PRODUCT_BY_CATEGORY: '/category/:category/products',
 };
 
