@@ -5,4 +5,4 @@ const RequestMethod = {
     DELETE: 'DELETE',
 };
 
-module.exports = RequestMethod;
+export default RequestMethod;

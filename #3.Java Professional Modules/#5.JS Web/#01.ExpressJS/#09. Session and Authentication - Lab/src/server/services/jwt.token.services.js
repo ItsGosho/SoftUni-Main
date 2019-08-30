@@ -1,7 +1,10 @@
-const JWTRepository = require('../repositories/jwt.token.repository');
-const JWT = require('jsonwebtoken');
-const FileSystem = require('fs');
-const JWTPaths = require('../constants/resource.paths.constants').JWT;
+import JWTRepository from '../repositories/jwt.token.repository';
+import JWT from 'jsonwebtoken';
+import FileSystem from 'fs';
+import ResourceConstants from '../constants/resource.paths.constants';
+
+
+const JWTPaths = ResourceConstants.JWT;
 
 let save = async (token) => {
     return await JWTRepository.save(token);
@@ -33,7 +36,7 @@ let removeAllByUserId = async (userId) => {
     return JWTRepository.deleteAllByUserId(userId);
 };
 
-module.exports = {
+export default {
     save,
     generateToken,
     isValid,

@@ -1,4 +1,5 @@
-const CategoryRepository = require('../repositories/category.repository');
+import CategoryRepository from '../repositories/category.repository';
+
 
 let save = CategoryRepository.save;
 let findAll = CategoryRepository.findAll;
@@ -17,4 +18,10 @@ let findByName = async (name) => {
     return CategoryRepository.findByName(name);
 };
 
-module.exports = {save, findAll, addProduct, findById, findByName};
+export default {
+    save,
+    findAll,
+    addProduct,
+    findById,
+    findByName
+};

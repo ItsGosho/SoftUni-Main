@@ -1,7 +1,11 @@
-const Mongoose = require('mongoose');
-const ModelName = require('../../constants/mongoose.constants').Models;
+import Mongoose from 'mongoose';
+import MongooseConstants from '../../constants/mongoose.constants';
+
+
 const Schema = Mongoose.Schema;
 const Type = Schema.Types;
+const {Models} = MongooseConstants;
+
 
 const roleModel = new Schema({
     name: {
@@ -11,7 +15,7 @@ const roleModel = new Schema({
     users: [
         {
             type: Type.ObjectID,
-            ref: ModelName.USER
+            ref: Models.USER
         }
     ]
 });
@@ -20,6 +24,6 @@ roleModel.post('save', function (role) {
     console.log(`-> `.red + `Role has been create/updated with name: ${role.name}`.cyan);
 });
 
-let RoleModel = Mongoose.model(ModelName.ROLE, roleModel);
+let RoleModel = Mongoose.model(Models.ROLE, roleModel);
 
-module.exports = RoleModel;
+export default RoleModel;

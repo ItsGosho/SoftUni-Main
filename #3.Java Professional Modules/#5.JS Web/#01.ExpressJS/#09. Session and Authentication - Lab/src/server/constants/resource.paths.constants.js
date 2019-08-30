@@ -1,5 +1,6 @@
-const Path = require('path');
-const AppRoot = require('app-root-path');
+import Path from 'path';
+import AppRoot from 'app-root-path';
+
 
 const CATEGORY = {
     CATEGORY_PRODUCTS: 'layouts/category/category-products',
@@ -30,7 +31,7 @@ const JWT = {
     JWT_SECRET: Path.join(AppRoot.path, '/src/resources/jwt.secret.txt'),
 };
 
-module.exports = {
+export default {
     CATEGORY,
     OTHER,
     PRODUCT,

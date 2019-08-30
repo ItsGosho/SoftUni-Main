@@ -1,16 +1,17 @@
-const Router = require('express').Router();
-const RoutingURLs = require('../../constants/routing.urls');
-const CategoryServices = require('../../services/category.services');
-const ViewPaths = require('../../constants/resource.paths.constants');
+import Express from 'express';
+import RoutingURLs from '../../constants/routing.urls';
+import CategoryServices from '../../services/category.services';
+import ViewPaths from '../../constants/resource.paths.constants';
 
-const Role = require('../middlewares/role.middleware');
-const JWTToken = require('../middlewares/jwt.token.middleware');
+
+const Router = Express.Router();
+
 
 Router.get(RoutingURLs.CATEGORY.CREATE, (request, response) => {
     response.render(ViewPaths.CATEGORY.CREATE_CATEGORY, {user: request.user});
 });
 
-Router.post(RoutingURLs.CATEGORY.CREATE,async (request, response) => {
+Router.post(RoutingURLs.CATEGORY.CREATE, async (request, response) => {
     let category = {
         name: request.body.name
     };
@@ -19,4 +20,4 @@ Router.post(RoutingURLs.CATEGORY.CREATE,async (request, response) => {
     response.redirect(RoutingURLs.HOME);
 });
 
-module.exports = Router;
+export default Router;

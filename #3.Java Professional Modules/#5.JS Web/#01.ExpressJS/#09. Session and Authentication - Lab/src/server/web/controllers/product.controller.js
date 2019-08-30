@@ -1,9 +1,13 @@
-const Router = require('express').Router();
-const RoutingURLs = require('../../constants/routing.urls');
-const ProductServices = require('../../services/product.services');
-const CategoryServices = require('../../services/category.services');
-const DropboxServices = require('../../services/dropbox.services');
-const ViewPaths = require('../../constants/resource.paths.constants');
+import Express from 'express';
+import RoutingURLs from '../../constants/routing.urls';
+import ProductServices from '../../services/product.services';
+import CategoryServices from '../../services/category.services';
+import DropboxServices from '../../services/dropbox.services';
+import ViewPaths from '../../constants/resource.paths.constants';
+
+
+const Router = Express.Router();
+
 
 Router.get(RoutingURLs.PRODUCT.ADD, async (request, response) => {
     let categories = await CategoryServices.findAll();
@@ -89,4 +93,4 @@ Router.get(RoutingURLs.PRODUCT.BUY, async (request, response) => {
     response.render(ViewPaths.PRODUCT.BUY_PRODUCT, {user: request.user,product});
 });
 
-module.exports = Router;
+export default Router;

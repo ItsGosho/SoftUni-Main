@@ -1,8 +1,9 @@
-let DatabaseConstants = require('../constants/mongoose.constants');
+import DatabaseConstants from '../constants/mongoose.constants';
+
 
 let databaseConfiguration = {
     connectionString: DatabaseConstants.CONNECTION_STRING
 };
 
 
-module.exports = databaseConfiguration;
+export default databaseConfiguration;

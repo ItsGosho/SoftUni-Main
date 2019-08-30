@@ -1,7 +1,11 @@
-const Mongoose = require('mongoose');
-const ModelName = require('../../constants/mongoose.constants').Models;
+import Mongoose from 'mongoose';
+import MongooseConstants from '../../constants/mongoose.constants';
+
+
 const Schema = Mongoose.Schema;
 const Type = Schema.Types;
+const {Models} = MongooseConstants;
+
 
 const productModel = new Schema({
     name: {
@@ -22,7 +26,7 @@ const productModel = new Schema({
     },
     category: {
         type: Type.ObjectId,
-        ref: ModelName.CATEGORY
+        ref: Models.CATEGORY
     },
     isBought: {
         type: Type.Boolean,
@@ -30,12 +34,12 @@ const productModel = new Schema({
     },
     creator: {
         type: Type.ObjectID,
-        ref: ModelName.USER,
+        ref: Models.USER,
         required: [true,'Creator is not set!']
     },
     buyer: {
         type: Type.ObjectID,
-        ref: ModelName.USER
+        ref: Models.USER
     }
 });
 
@@ -43,6 +47,6 @@ productModel.post('save', function (product) {
     console.log(`-> `.red + `Product has been created/updated with name: ${product.name}`.cyan);
 });
 
-let ProductModel = Mongoose.model(ModelName.PRODUCT, productModel);
+let ProductModel = Mongoose.model(Models.PRODUCT, productModel);
 
-module.exports = ProductModel;
+export default ProductModel;

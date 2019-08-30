@@ -18,7 +18,7 @@ const DBMessageConstants = {
 
 let CONNECTION_STRING = `mongodb://${DBCoreConstants.DATABASE_DOMAIN}:${DBCoreConstants.DATABASE_PORT}/${DBCoreConstants.DATABASE_NAME}`;
 
-module.exports = {
+export default {
     Models,
     DBCoreConstants,
     CONNECTION_STRING,

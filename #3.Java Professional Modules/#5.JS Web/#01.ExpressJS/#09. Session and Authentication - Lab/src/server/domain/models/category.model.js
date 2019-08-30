@@ -1,7 +1,10 @@
-const Moongoose = require('mongoose');
-const ModelName = require('../../constants/mongoose.constants').Models;
+import Moongoose from 'mongoose';
+import MongooseConstants from '../../constants/mongoose.constants';
+
+
 const Schema = Moongoose.Schema;
 const Type = Schema.Types;
+const {Models} = MongooseConstants;
 
 const categoryModel = new Schema({
     name: {
@@ -11,11 +14,11 @@ const categoryModel = new Schema({
     },
     products: [{
         type: Type.ObjectID,
-        ref: ModelName.PRODUCT
+        ref: Models.PRODUCT
     }],
     creator: {
         type: Type.ObjectID,
-        ref: ModelName.USER,
+        ref: Models.USER,
         required: [true, 'Creator is not set!']
     }
 });
@@ -24,6 +27,6 @@ categoryModel.post('save', function (category) {
     console.log(`-> `.red + `Category has been created/updated with name: ${category.name}`.cyan);
 });
 
-let CategoryModel = Moongoose.model(ModelName.CATEGORY, categoryModel);
+let CategoryModel = Moongoose.model(Models.CATEGORY, categoryModel);
 
-module.exports = CategoryModel;
+export default CategoryModel;

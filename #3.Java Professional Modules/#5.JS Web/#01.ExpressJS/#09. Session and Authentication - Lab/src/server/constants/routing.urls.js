@@ -20,7 +20,7 @@ const CATEGORY = {
     ALL_PRODUCT_BY_CATEGORY: '/category/:category/products',
 };
 
-module.exports = {
+export default {
     BASE,
     USER,
     PRODUCT,

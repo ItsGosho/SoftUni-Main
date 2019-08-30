@@ -1,3 +1,5 @@
+import 'colors';
+
 const DROPBOX = {
     UPLOAD_SUCCESSFUL: 'File with path [/%s] has been uploaded!'.cyan,
     UPLOAD_FAILED: 'File with path [/%s] has NOT been uploaded!'.red,
@@ -11,6 +13,6 @@ const DROPBOX = {
 
 /*TODO: models*/
 
-module.exports = {
+export default {
     DROPBOX
 };

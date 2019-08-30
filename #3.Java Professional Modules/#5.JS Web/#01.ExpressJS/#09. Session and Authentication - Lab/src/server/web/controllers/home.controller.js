@@ -1,9 +1,13 @@
-const Router = require('express').Router();
-const RoutingURLs = require('../../constants/routing.urls');
-const ProductServices = require('../../services/product.services');
-const ViewPaths = require('../../constants/resource.paths.constants');
-const Role = require('../middlewares/role.middleware');
-const JWTHelper = require('../helpers/jwt.helper');
+import Express from 'express';
+import RoutingURLs from '../../constants/routing.urls';
+import ProductServices from '../../services/product.services';
+import ViewPaths from '../../constants/resource.paths.constants';
+import Role from '../middlewares/role.middleware';
+import JWTHelper from '../helpers/jwt.helper';
+
+
+const Router = Express.Router();
+
 
 Router.get(RoutingURLs.BASE.HOME, async (request, response) => {
     let products = await ProductServices.findAll();
@@ -11,4 +15,4 @@ Router.get(RoutingURLs.BASE.HOME, async (request, response) => {
     response.render(ViewPaths.OTHER.HOME, {user: request.user, products});
 });
 
-module.exports = Router;
+export default Router;

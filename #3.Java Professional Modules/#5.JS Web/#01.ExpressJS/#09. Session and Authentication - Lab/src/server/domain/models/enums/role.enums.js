@@ -3,4 +3,4 @@ const ROLE = {
     ADMIN: 'ADMIN'
 };
 
-module.exports = ROLE;
+export default ROLE;

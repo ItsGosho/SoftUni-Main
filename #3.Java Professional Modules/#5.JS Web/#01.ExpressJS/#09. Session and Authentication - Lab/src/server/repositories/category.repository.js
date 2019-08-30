@@ -1,4 +1,5 @@
-const CategoryModel = require('../domain/models/category.model');
+import CategoryModel from '../domain/models/category.model';
+
 
 let save = (category) => {
     return new CategoryModel(category).save();
@@ -9,11 +10,16 @@ let findAll = () => {
 };
 
 let findById = (id) => {
-    return CategoryModel.findOne({'_id':id}).exec();
+    return CategoryModel.findOne({'_id': id}).exec();
 };
 
 let findByName = (name) => {
-    return CategoryModel.findOne({'name':name}).exec();
+    return CategoryModel.findOne({'name': name}).exec();
 };
 
-module.exports = {save, findAll, findById,findByName};
+export default {
+    save,
+    findAll,
+    findById,
+    findByName
+};

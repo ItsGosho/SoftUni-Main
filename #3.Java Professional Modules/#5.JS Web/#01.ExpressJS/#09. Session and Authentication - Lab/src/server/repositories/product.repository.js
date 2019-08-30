@@ -1,4 +1,5 @@
-const ProductModel = require('../domain/models/product.model');
+import ProductModel from '../domain/models/product.model';
+
 
 let save = (product) => {
     return new ProductModel(product).save();
@@ -24,7 +25,7 @@ let update = (id, product) => {
     return ProductModel.updateOne({'_id': id}, product).exec();
 };
 
-module.exports = {
+export default {
     save,
     findAll,
     findAllByCategoryId,

@@ -1,17 +1,16 @@
-const Router = require('express').Router();
-const RoutingURLs = require('../constants/routing.urls');
-const Roles = require('../domain/models/enums/role.enums');
+import Express from 'express';
+import RoutingURLs from '../constants/routing.urls';
+import JWTTokenValidator from '../web/middlewares/jwt.token.middleware';
+import UserAttacher from '../web/middlewares/user.attacher.middleware';
+import LoggedOut from '../web/middlewares/logged.out.middleware';
 
-const JWTTokenValidator = require('../web/middlewares/jwt.token.middleware');
-const Role = require('../web/middlewares/role.middleware');
-const UserAttacher = require('../web/middlewares/user.attacher.middleware');
-const LoggedOut = require('../web/middlewares/logged.out.middleware');
 
+const Router = Express.Router();
 
 Router.all('*', UserAttacher);
 
 /*Category*/
-Router.all(RoutingURLs.CATEGORY.CREATE,JWTTokenValidator);
+Router.all(RoutingURLs.CATEGORY.CREATE, JWTTokenValidator);
 Router.all(RoutingURLs.CATEGORY.ALL_PRODUCT_BY_CATEGORY, JWTTokenValidator);
 
 /*Product*/
@@ -21,7 +20,7 @@ Router.all(RoutingURLs.PRODUCT.BUY, JWTTokenValidator);
 Router.all(RoutingURLs.PRODUCT.DELETE, JWTTokenValidator);
 
 /*Authentication*/
-Router.all(RoutingURLs.USER.LOGIN,LoggedOut);
-Router.all(RoutingURLs.USER.REGISTER,LoggedOut);
+Router.all(RoutingURLs.USER.LOGIN, LoggedOut);
+Router.all(RoutingURLs.USER.REGISTER, LoggedOut);
 
-module.exports = Router;
+export default Router;

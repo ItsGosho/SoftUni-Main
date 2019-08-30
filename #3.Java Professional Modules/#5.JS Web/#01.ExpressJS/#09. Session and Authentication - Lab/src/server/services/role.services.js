@@ -1,5 +1,6 @@
-let RoleRepository = require('../repositories/role.repository');
-let Roles = require('../domain/models/enums/role.enums');
+import RoleRepository from '../repositories/role.repository';
+import Roles from '../domain/models/enums/role.enums';
+
 
 let getInitialRole = () => {
     let role = {
@@ -19,7 +20,7 @@ let addUser = async (roleId, userId) => {
     role.save();
 };
 
-module.exports = {
+export default {
     getInitialRole,
     addUser,
     findRoleByUserId

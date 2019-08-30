@@ -1,6 +1,7 @@
-let JWTServices = require('../../services/jwt.token.services');
+import JWTServices from '../../services/jwt.token.services';
 
-module.exports = (request, response, next) => {
+
+export default (request, response, next) => {
     let token = request.cookies.jwt;
 
     if (token !== undefined && JWTServices.isValid(token)) {

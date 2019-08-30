@@ -1,5 +1,7 @@
-const mongoose = require('mongoose');
-const DatabaseConstants = require('../constants/mongoose.constants');
+import mongoose from 'mongoose';
+import DatabaseConstants from '../constants/mongoose.constants';
+
+
 mongoose.Promise = global.Promise;
 
 const onOpen = (error) => {
@@ -10,7 +12,7 @@ const onOpen = (error) => {
     console.log(DatabaseConstants.DBMessageConstants.DATABASE_CONNECTION_SUCCESSFUL);
 };
 
-module.exports = (configuration) => {
+export default (configuration) => {
     mongoose.connect(configuration.connectionString);
 
     let database = mongoose.connection;

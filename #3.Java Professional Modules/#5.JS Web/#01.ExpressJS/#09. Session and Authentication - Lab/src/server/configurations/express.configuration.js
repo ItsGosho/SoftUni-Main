@@ -1,14 +1,19 @@
-const BodyParser = require('body-parser');
-const HandleBars = require('express-handlebars');
-const MultiPart = require('connect-multiparty');
-const ResourcePaths = require('../constants/resource.paths.constants');
-const Morgan = require('morgan');
-const Colors = require('colors');
-const CookieParser = require('cookie-parser');
-const Session = require('express-session');
-const MiddlewaresConfiguration = require('../configurations/middlewares.configuration');
+import BodyParser from 'body-parser';
+import HandleBars from 'express-handlebars';
+import MultiPart from 'connect-multiparty';
+import ResourcePaths from '../constants/resource.paths.constants';
+import Morgan from 'morgan';
+import CookieParser from 'cookie-parser';
+import Session from 'express-session';
+import MiddlewaresConfiguration from '../configurations/middlewares.configuration';
 
-module.exports = (app) => {
+import HomeController from '../web/controllers/home.controller';
+import CategoryController from '../web/controllers/category.controller';
+import ProductController from '../web/controllers/product.controller';
+import AuthenticationController from '../web/controllers/authentication.controller';
+
+
+export default (app) => {
     app.use(Morgan('dev'));
 
     app.use(MultiPart());
@@ -18,10 +23,10 @@ module.exports = (app) => {
 
     app.use(MiddlewaresConfiguration);
 
-    app.use(require('../web/controllers/home.controller'));
-    app.use(require('../web/controllers/category.controller'));
-    app.use(require('../web/controllers/product.controller'));
-    app.use(require('../web/controllers/authentication.controller'));
+    app.use(HomeController);
+    app.use(CategoryController);
+    app.use(ProductController);
+    app.use(AuthenticationController);
 
     app.use('/static', require('express').static('src/resources/public'));
 

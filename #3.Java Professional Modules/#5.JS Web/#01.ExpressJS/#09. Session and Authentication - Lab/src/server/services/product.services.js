@@ -1,9 +1,9 @@
-const ProductRepository = require('../repositories/product.repository');
-const CategoryServices = require('./category.services');
-const DropboxServices = require('./dropbox.services');
+import ProductRepository from '../repositories/product.repository';
+import CategoryServices from './category.services';
+import DropboxServices from './dropbox.services';
+import ShortId from 'shortid';
+import FileSystem from 'fs';
 
-const ShortId = require('shortid');
-const FileSystem = require('fs');
 
 let save = ProductRepository.save();
 
@@ -64,7 +64,7 @@ let updateById = async (id, product) => {
     return await ProductRepository.update(id, product);
 };
 
-module.exports = {
+export default {
     save,
     findAll,
     uploadImage,

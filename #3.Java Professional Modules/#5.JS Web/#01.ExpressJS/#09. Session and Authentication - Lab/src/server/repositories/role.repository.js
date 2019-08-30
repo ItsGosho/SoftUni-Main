@@ -1,5 +1,5 @@
-let RoleModel = require('../domain/models/role.model');
-let Mongoose = require('mongoose');
+import RoleModel from '../domain/models/role.model';
+
 
 let findByName = (name) => {
     return RoleModel.findOne({name}).exec();
@@ -34,7 +34,7 @@ let findByUserId = (userId) => {
     return RoleModel.findOne({'users': {'$in': [`${userId}`]}});
 };
 
-module.exports = {
+export default {
     findByName,
     findById,
     add,

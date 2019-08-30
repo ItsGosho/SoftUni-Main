@@ -1,7 +1,10 @@
-const Mongoose = require('mongoose');
-const ModelName = require('../../constants/mongoose.constants').Models;
+import Mongoose from 'mongoose';
+import MongooseConstants from '../../constants/mongoose.constants';
+
+
 const Schema = Mongoose.Schema;
 const Type = Schema.Types;
+const {Models} = MongooseConstants;
 
 const jwtTokenModel = new Schema({
     token: {
@@ -10,7 +13,7 @@ const jwtTokenModel = new Schema({
     },
     user: {
         type: Type.ObjectID,
-        ref: ModelName.USER
+        ref: Models.USER
     }
 });
 
@@ -22,6 +25,6 @@ jwtTokenModel.post('deleteMany', function (token) {
     console.log(`-> `.red + `${token.deletedCount} tokens have been deleted!`.cyan);
 });
 
-let JWTTokenModel = Mongoose.model(ModelName.JWT, jwtTokenModel);
+let JWTTokenModel = Mongoose.model(Models.JWT, jwtTokenModel);
 
-module.exports = JWTTokenModel;
+export default JWTTokenModel;

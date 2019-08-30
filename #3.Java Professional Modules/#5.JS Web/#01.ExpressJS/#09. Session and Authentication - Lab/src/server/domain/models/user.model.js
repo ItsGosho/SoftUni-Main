@@ -1,7 +1,11 @@
-const Mongoose = require('mongoose');
-const ModelName = require('../../constants/mongoose.constants').Models;
+import Mongoose from 'mongoose';
+import MongooseConstants from '../../constants/mongoose.constants';
+
+
 const Schema = Mongoose.Schema;
 const Type = Schema.Types;
+const {Models} = MongooseConstants;
+
 
 const userModel = new Schema({
     username: {
@@ -36,25 +40,25 @@ const userModel = new Schema({
     },
     role: {
         type: Type.ObjectID,
-        ref: ModelName.ROLE,
+        ref: Models.ROLE,
         required: [true, 'Role is not present!']
     },
     boughtProducts: [
         {
             type: Type.ObjectID,
-            ref: ModelName.PRODUCT
+            ref: Models.PRODUCT
         }
     ],
     createdProducts: [
         {
             type: Type.ObjectID,
-            ref: ModelName.PRODUCT
+            ref: Models.PRODUCT
         }
     ],
     createdCategories: [
         {
             type: Type.ObjectID,
-            ref: ModelName.CATEGORY
+            ref: Models.CATEGORY
         }
     ]
 });
@@ -63,6 +67,6 @@ userModel.post('save', function (user) {
     console.log(`-> `.red + `User has been created/update with username: ${user.username}`.cyan);
 });
 
-let UserModel = Mongoose.model(ModelName.USER, userModel);
+let UserModel = Mongoose.model(Models.USER, userModel);
 
-module.exports = UserModel;
+export default UserModel;

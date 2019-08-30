@@ -1,9 +1,13 @@
-const Router = require('express').Router();
-const RoutingURLs = require('../../constants/routing.urls');
-const UserServices = require('../../services/user.services');
-const JWTServices = require('../../services/jwt.token.services');
-const ViewPaths = require('../../constants/resource.paths.constants');
-const JWTHelper = require('../helpers/jwt.helper');
+import Express from 'express';
+import RoutingURLs from '../../constants/routing.urls';
+import UserServices from '../../services/user.services';
+import JWTServices from '../../services/jwt.token.services';
+import ViewPaths from '../../constants/resource.paths.constants';
+import JWTHelper from '../helpers/jwt.helper';
+
+
+const Router = Express.Router();
+
 
 Router.get(RoutingURLs.USER.LOGIN, async (request, response) => {
     response.render(ViewPaths.AUTHENTICATION.LOGIN);
@@ -63,4 +67,4 @@ Router.get(RoutingURLs.USER.LOGOUT, async (request, response) => {
 });
 
 
-module.exports = Router;
+export default Router;

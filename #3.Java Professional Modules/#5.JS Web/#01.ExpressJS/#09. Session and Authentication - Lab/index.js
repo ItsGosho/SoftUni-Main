@@ -1,9 +1,11 @@
-const App = require('express')();
+import Express from 'express';
+import ServerConstants from './src/server/constants/server.constants';
+import ExpressConfiguration from './src/server/configurations/express.configuration';
+import DatabaseConfiguration from './src/server/configurations/database.configuration';
+import DatabaseConstants from './src/server/constants/mongoose.constants';
 
-const ServerConstants = require('./src/server/constants/server.constants');
-const DatabaseConstants = require('./src/server/constants/mongoose.constants');
-const ExpressConfiguration = require('./src/server/configurations/express.configuration');
-const DatabaseConfiguration = require('./src/server/configurations/database.configuration');
+
+const App = Express();
 
 ExpressConfiguration(App);
 DatabaseConfiguration({connectionString: DatabaseConstants.CONNECTION_STRING});

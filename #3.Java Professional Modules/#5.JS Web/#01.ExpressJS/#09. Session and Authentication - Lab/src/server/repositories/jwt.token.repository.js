@@ -1,4 +1,5 @@
-const TokenModel = require('../domain/models/jwt.token.model');
+import TokenModel from '../domain/models/jwt.token.model';
+
 
 let save = (token) => {
     return new TokenModel(token).save();
@@ -28,7 +29,7 @@ let deleteByToken = (token) => {
     return TokenModel.deleteOne({token}).exec();
 };
 
-module.exports = {
+export default {
     save,
     findById,
     findByToken,

@@ -1,5 +1,6 @@
-let JWTServices = require('../../services/jwt.token.services');
-let UserServices = require('../../services/user.services');
+import JWTServices from '../../services/jwt.token.services';
+import UserServices from '../../services/user.services';
+
 
 let getCurrentUser = async (request) => {
 
@@ -11,11 +12,11 @@ let getCurrentUser = async (request) => {
     return await UserServices.findByUsername(tokeData.username);
 };
 
-let attachToken = (token,response) => {
+let attachToken = (token, response) => {
     response.cookie('jwt', token, {maxAge: 86_400_000, httpOnly: true});
 };
 
-module.exports = {
+export default {
     getCurrentUser,
     attachToken
 };

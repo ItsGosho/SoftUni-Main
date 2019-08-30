@@ -1,8 +1,9 @@
-const UserRepository = require('../repositories/user.repository');
-const RoleServices = require('../services/role.services');
-const JWTServices = require('../services/jwt.token.services');
-const Bcrypt = require('bcrypt-nodejs');
-const Mongoose = require('mongoose');
+import UserRepository from '../repositories/user.repository';
+import RoleServices from '../services/role.services';
+import JWTServices from '../services/jwt.token.services';
+import Bcrypt from 'bcrypt-nodejs';
+
+
 const SaltRounds = 10;
 
 let register = async (user) => {
@@ -49,7 +50,7 @@ let findByUsername = (username) => {
     return UserRepository.findByUsername(username);
 };
 
-module.exports = {
+export default {
     register,
     isCredentialsValid,
     proceedToken,
