@@ -1,35 +1,32 @@
 import ProductModel from '../domain/models/product.model';
 
 
-let save = (product) => {
-    return new ProductModel(product).save();
+const ProductRepository = {
+
+    async save(product) {
+        return new ProductModel(product).save();
+    },
+
+    async findAll() {
+        return ProductModel.find().exec();
+    },
+
+    async findAllByCategoryId(categoryId) {
+        return ProductModel.find({'category': categoryId}).exec();
+    },
+
+    async findById(id) {
+        return ProductModel.findOne({'_id': id}).exec();
+    },
+
+    async removeById(id) {
+        return ProductModel.deleteOne({'_id': id}).exec();
+    },
+
+    async update(id, product) {
+        return ProductModel.updateOne({'_id': id}, product).exec();
+    },
+
 };
 
-let findAll = () => {
-    return ProductModel.find().exec();
-};
-
-let findAllByCategoryId = (categoryId) => {
-    return ProductModel.find({'category': categoryId}).exec();
-};
-
-let findById = (id) => {
-    return ProductModel.findOne({'_id': id}).exec();
-};
-
-let removeById = (id) => {
-    return ProductModel.deleteOne({'_id': id}).exec();
-};
-
-let update = (id, product) => {
-    return ProductModel.updateOne({'_id': id}, product).exec();
-};
-
-export default {
-    save,
-    findAll,
-    findAllByCategoryId,
-    findById,
-    removeById,
-    update
-};
+export default ProductRepository;

@@ -19,7 +19,7 @@ Router.post(RoutingURLs.USER.LOGIN, async (request, response) => {
     if (await UserServices.isCredentialsValid(username, password)) {
         let token = await UserServices.proceedToken(username);
 
-        JWTHelper.attachToken(token.token, response);
+        await JWTHelper.attachToken(token.token, response);
         response.redirect(RoutingURLs.BASE.HOME);
         return;
     }
@@ -31,7 +31,7 @@ Router.get(RoutingURLs.USER.REGISTER, (request, response) => {
     response.render(ViewPaths.AUTHENTICATION.REGISTER);
 });
 
-Router.post(RoutingURLs.USER.REGISTER, (request, response) => {
+Router.post(RoutingURLs.USER.REGISTER,async (request, response) => {
     let {username, password, confirmedPassword, firstName, lastName, age, gender} = request.body;
 
     if (password !== confirmedPassword) {
@@ -48,7 +48,7 @@ Router.post(RoutingURLs.USER.REGISTER, (request, response) => {
         gender
     };
 
-    UserServices.register(user);
+    await UserServices.register(user);
     response.redirect(RoutingURLs.BASE.HOME);
 });
 

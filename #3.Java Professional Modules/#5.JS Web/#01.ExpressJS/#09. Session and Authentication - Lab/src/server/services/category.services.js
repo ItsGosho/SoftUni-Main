@@ -1,27 +1,36 @@
 import CategoryRepository from '../repositories/category.repository';
 
 
-let save = CategoryRepository.save;
-let findAll = CategoryRepository.findAll;
+const CategoryServices = {
 
-let addProduct = async (categoryId, productId) => {
-    let category = await CategoryRepository.findById(categoryId);
-    category.products.push(productId);
-    return category.save();
+    async save(category) {
+        return CategoryRepository.save;
+    },
+
+    async findAll() {
+        return CategoryRepository.findAll;
+    },
+
+    async addProduct(categoryId, productId) {
+        let category = await CategoryRepository.findById(categoryId);
+        category.products.push(productId);
+        return category.save();
+    },
+
+    async findById(id) {
+        return CategoryRepository.findById(id);
+    },
+
+    async findByName(name) {
+        return CategoryRepository.findByName(name);
+    },
+
+    async addCategory(creator, category) {
+        category.creator = creator.id;
+        category = await save(category);
+        creator.createdCategories.push(category);
+        creator.save();
+    },
 };
 
-let findById = async (id) => {
-    return CategoryRepository.findById(id);
-};
-
-let findByName = async (name) => {
-    return CategoryRepository.findByName(name);
-};
-
-export default {
-    save,
-    findAll,
-    addProduct,
-    findById,
-    findByName
-};
+export default CategoryServices;

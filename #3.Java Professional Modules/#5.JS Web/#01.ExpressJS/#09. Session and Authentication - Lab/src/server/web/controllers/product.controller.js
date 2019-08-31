@@ -3,6 +3,7 @@ import RoutingURLs from '../../constants/routing.urls';
 import ProductServices from '../../services/product.services';
 import CategoryServices from '../../services/category.services';
 import DropboxServices from '../../services/dropbox.services';
+import JWTHelper from '../helpers/jwt.helper';
 import ViewPaths from '../../constants/resource.paths.constants';
 
 
@@ -19,20 +20,17 @@ Router.post(RoutingURLs.PRODUCT.ADD, async (request, response) => {
 
     let {name, description, price, category} = request.body;
     let image = request.files.image;
-
-    let path = await ProductServices.uploadImage(image);
+    let user = await JWTHelper.getCurrentUser(request);
 
     let product = {
         name: name,
         description: description,
         price: price,
         category: category,
-        image: path
     };
 
-    product = await ProductServices.save(product);
-    await CategoryServices.addProduct(product.category, product._id);
-    response.redirect(RoutingURLs.HOME);
+    await ProductServices.createProduct(image,user,product);
+    response.redirect(RoutingURLs.BASE.HOME);
 });
 
 Router.get(RoutingURLs.CATEGORY.ALL_PRODUCT_BY_CATEGORY, async (request, response) => {
@@ -70,7 +68,7 @@ Router.post(RoutingURLs.PRODUCT.EDIT, async (request, response) => {
 
     await ProductServices.updateById(id,product);
 
-    response.redirect(RoutingURLs.HOME);
+    response.redirect(RoutingURLs.BASE.HOME);
 });
 
 Router.get(RoutingURLs.PRODUCT.DELETE, async (request, response) => {
@@ -83,7 +81,7 @@ Router.get(RoutingURLs.PRODUCT.DELETE, async (request, response) => {
 Router.post(RoutingURLs.PRODUCT.DELETE, async (request, response) => {
     let productId = request.params.id;
     await ProductServices.removeById(productId);
-    response.redirect(RoutingURLs.HOME);
+    response.redirect(RoutingURLs.BASE.HOME);
 });
 
 Router.get(RoutingURLs.PRODUCT.BUY, async (request, response) => {
@@ -91,6 +89,16 @@ Router.get(RoutingURLs.PRODUCT.BUY, async (request, response) => {
     let product = await ProductServices.findById(productId);
 
     response.render(ViewPaths.PRODUCT.BUY_PRODUCT, {user: request.user,product});
+});
+
+Router.post(RoutingURLs.PRODUCT.BUY, async (request, response) => {
+    let productId = request.params.id;
+    let product = await ProductServices.findByIdWIM(productId);
+    let user = await JWTHelper.getCurrentUser(request);
+
+    await ProductServices.buy(user,product);
+
+    response.redirect(RoutingURLs.BASE.HOME);
 });
 
 export default Router;

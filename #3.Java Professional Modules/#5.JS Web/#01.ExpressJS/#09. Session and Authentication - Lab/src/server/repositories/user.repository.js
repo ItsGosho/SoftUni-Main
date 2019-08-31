@@ -1,15 +1,16 @@
 import UserModel from '../domain/models/user.model';
 
 
-let save = (user) => {
-    return new UserModel(user).save();
+const UserRepository = {
+
+    async save(user) {
+        return new UserModel(user).save();
+    },
+
+    async findByUsername(username) {
+        return UserModel.findOne({username}).exec();
+    },
+
 };
 
-let findByUsername = (username) => {
-    return UserModel.findOne({username}).exec();
-};
-
-export default {
-    save,
-    findByUsername
-};
+export default UserRepository;

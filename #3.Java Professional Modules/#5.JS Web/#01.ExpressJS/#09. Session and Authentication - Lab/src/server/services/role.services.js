@@ -2,26 +2,25 @@ import RoleRepository from '../repositories/role.repository';
 import Roles from '../domain/models/enums/role.enums';
 
 
-let getInitialRole = () => {
-    let role = {
-        name: Roles.USER
-    };
+const RoleServices = {
 
-    return RoleRepository.add(role);
+    async getInitialRole() {
+        let role = {
+            name: Roles.USER
+        };
+        return RoleRepository.add(role);
+    },
+
+    async findRoleByUserId(id) {
+        return RoleRepository.findByUserId(id);
+    },
+
+    async addUser(roleId, userId) {
+        let role = await RoleRepository.findById(roleId);
+        role.users.push(userId);
+        role.save();
+    },
+
 };
 
-let findRoleByUserId = (id) => {
-    return RoleRepository.findByUserId(id);
-};
-
-let addUser = async (roleId, userId) => {
-    let role = await RoleRepository.findById(roleId);
-    role.users.push(userId);
-    role.save();
-};
-
-export default {
-    getInitialRole,
-    addUser,
-    findRoleByUserId
-};
+export default RoleServices;

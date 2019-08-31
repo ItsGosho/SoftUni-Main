@@ -1,14 +1,15 @@
 import JWTServices from '../../services/jwt.token.services';
+import RoutingUrls from '../../constants/routing.urls';
 
 
-export default (request, response, next) => {
+export default async (request, response, next) => {
     let token = request.cookies.jwt;
 
-    if (token !== undefined && JWTServices.isValid(token)) {
+    if (token !== undefined && await JWTServices.isValid(token)) {
         next();
         return;
     }
 
-    response.send('<center><h1 style="color:red">Invalid JWT Token!</h1></center>')
+    response.redirect(RoutingUrls.USER.LOGIN);
 };
 
