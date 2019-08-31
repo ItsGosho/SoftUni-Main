@@ -1,10 +1,14 @@
 import Moongoose from 'mongoose';
 import MongooseConstants from '../../constants/mongoose.constants';
+import LoggingConstants from '../../constants/logging.constants';
+import Format from 'sprintf-js';
 
 
 const Schema = Moongoose.Schema;
 const Type = Schema.Types;
 const {Models} = MongooseConstants;
+const LogModel = LoggingConstants.MONGOOSE.MODEL.CATEGORY;
+const ParseString = Format.sprintf;
 
 const categoryModel = new Schema({
     name: {
@@ -24,7 +28,7 @@ const categoryModel = new Schema({
 });
 
 categoryModel.post('save', function (category) {
-    console.log(`-> `.red + `Category has been created/updated with name: ${category.name}`.cyan);
+    console.log(ParseString(LogModel.SAVE,category.name));
 });
 
 let CategoryModel = Moongoose.model(Models.CATEGORY, categoryModel);

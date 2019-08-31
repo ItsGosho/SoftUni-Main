@@ -1,11 +1,14 @@
 import Mongoose from 'mongoose';
 import MongooseConstants from '../../constants/mongoose.constants';
+import LoggingConstants from '../../constants/logging.constants';
+import Format from "sprintf-js";
 
 
 const Schema = Mongoose.Schema;
 const Type = Schema.Types;
 const {Models} = MongooseConstants;
-
+const LogModel = LoggingConstants.MONGOOSE.MODEL.ROLE;
+const ParseString = Format.sprintf;
 
 const roleModel = new Schema({
     name: {
@@ -21,7 +24,7 @@ const roleModel = new Schema({
 });
 
 roleModel.post('save', function (role) {
-    console.log(`-> `.red + `Role has been create/updated with name: ${role.name}`.cyan);
+    console.log(ParseString(LogModel.SAVE,role.name));
 });
 
 let RoleModel = Mongoose.model(Models.ROLE, roleModel);

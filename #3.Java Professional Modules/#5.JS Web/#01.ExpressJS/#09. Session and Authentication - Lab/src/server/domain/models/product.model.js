@@ -1,11 +1,14 @@
 import Mongoose from 'mongoose';
 import MongooseConstants from '../../constants/mongoose.constants';
+import LoggingConstants from '../../constants/logging.constants';
+import Format from "sprintf-js";
 
 
 const Schema = Mongoose.Schema;
 const Type = Schema.Types;
 const {Models} = MongooseConstants;
-
+const LogModel = LoggingConstants.MONGOOSE.MODEL.PRODUCT;
+const ParseString = Format.sprintf;
 
 const productModel = new Schema({
     name: {
@@ -44,7 +47,7 @@ const productModel = new Schema({
 });
 
 productModel.post('save', function (product) {
-    console.log(`-> `.red + `Product has been created/updated with name: ${product.name}`.cyan);
+    console.log(ParseString(LogModel.SAVE,product.name));
 });
 
 let ProductModel = Mongoose.model(Models.PRODUCT, productModel);

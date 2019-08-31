@@ -1,11 +1,14 @@
 import Mongoose from 'mongoose';
 import MongooseConstants from '../../constants/mongoose.constants';
+import LoggingConstants from '../../constants/logging.constants';
+import Format from "sprintf-js";
 
 
 const Schema = Mongoose.Schema;
 const Type = Schema.Types;
 const {Models} = MongooseConstants;
-
+const LogModel = LoggingConstants.MONGOOSE.MODEL.USER;
+const ParseString = Format.sprintf;
 
 const userModel = new Schema({
     username: {
@@ -38,11 +41,6 @@ const userModel = new Schema({
         },
         message: 'Gender should be Male or Female!'
     },
-    role: {
-        type: Type.ObjectID,
-        ref: Models.ROLE,
-        required: [true, 'Role is not present!']
-    },
     boughtProducts: [
         {
             type: Type.ObjectID,
@@ -64,8 +62,9 @@ const userModel = new Schema({
 });
 
 userModel.post('save', function (user) {
-    console.log(`-> `.red + `User has been created/update with username: ${user.username}`.cyan);
+    console.log(ParseString(LogModel.SAVE, user.username));
 });
+
 
 let UserModel = Mongoose.model(Models.USER, userModel);
 

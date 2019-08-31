@@ -1,10 +1,14 @@
 import Mongoose from 'mongoose';
 import MongooseConstants from '../../constants/mongoose.constants';
+import LoggingConstants from '../../constants/logging.constants';
+import Format from "sprintf-js";
 
 
 const Schema = Mongoose.Schema;
 const Type = Schema.Types;
 const {Models} = MongooseConstants;
+const LogModel = LoggingConstants.MONGOOSE.MODEL.JWT_TOKEN;
+const ParseString = Format.sprintf;
 
 const jwtTokenModel = new Schema({
     token: {
@@ -18,11 +22,11 @@ const jwtTokenModel = new Schema({
 });
 
 jwtTokenModel.post('save', function (token) {
-    console.log(`-> `.red + `Token has been created/updated for user with id: ${token.user}`.cyan);
+    console.log(ParseString(LogModel.SAVE,token.user));
 });
 
 jwtTokenModel.post('deleteMany', function (token) {
-    console.log(`-> `.red + `${token.deletedCount} tokens have been deleted!`.cyan);
+    console.log(ParseString(LogModel.DELETE_MANY,token.deletedCount));
 });
 
 let JWTTokenModel = Mongoose.model(Models.JWT, jwtTokenModel);
