@@ -1,0 +1,9 @@
+{{#if user}}
+    {{#areEqual user.role "User"}}
+        {{> home/user-home}}
+    {{else}} {{#areEqual user.role "Admin"}}
+        {{> home/admin-home}}
+    {{/areEqual}} {{/areEqual}}
+{{else}}
+    {{> home/guest-home}}
+{{/if}}
