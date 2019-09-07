@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
-import Street from "./Street/Street";
-import House from "./House/House";
-import HouseDetails from "./HouseDetails/HouseDetails";
+import Street from "../Street/Street";
+import House from "../House/House";
+import HouseDetails from "../HouseDetails/HouseDetails";
+import StreetServices from "../../services/street.services";
 
 class App extends Component {
 
@@ -13,18 +14,19 @@ class App extends Component {
             selectedStreetIndex: 0,
             selectedHouseIndex: 0,
             hasFetched: false
-        }
+        };
+
+        this.onStreetHoverEvent = this.onStreetHoverEvent.bind(this);
+        this.onHouseHoverEvent = this.onHouseHoverEvent.bind(this);
     }
 
-    componentDidMount() {
-        fetch("http://localhost:9999/feed/street/all")
-            .then((data) => data.json())
-            .then((result) => {
-                this.setState({
-                    streets: result.streets,
-                    hasFetched: true
-                });
-            });
+    async componentDidMount() {
+        let streets = await StreetServices.getAllStreets();
+
+        this.setState((prevState) => ({
+            streets: streets,
+            hasFetched: true
+        }));
     }
 
     getSelectedStreet() {
@@ -36,15 +38,11 @@ class App extends Component {
     }
 
     onStreetHoverEvent(index) {
-        this.setState({
-            selectedStreetIndex: index
-        });
+        this.setState((prevState) => ({selectedStreetIndex: index}));
     }
 
     onHouseHoverEvent(index) {
-        this.setState({
-            selectedHouseIndex: index
-        });
+        this.setState((prevState) => ({selectedHouseIndex: index}));
     }
 
     render() {
@@ -60,7 +58,7 @@ class App extends Component {
                         return <Street street={street}
                                        key={index}
                                        id={index}
-                                       onHover={this.onStreetHoverEvent.bind(this)}/>
+                                       onHover={this.onStreetHoverEvent}/>
                     })}
                 </div>
                 <div className="houses">
@@ -71,7 +69,7 @@ class App extends Component {
                                 house={house}
                                 key={index}
                                 id={index}
-                                onHover={this.onHouseHoverEvent.bind(this)}/>
+                                onHover={this.onHouseHoverEvent}/>
                         }) : null}
                 </div>
                 <div className="houses">
