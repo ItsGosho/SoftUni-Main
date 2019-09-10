@@ -2,9 +2,9 @@ import React, {Component, Fragment} from 'react';
 import {Link} from 'react-router-dom';
 import RoutingURLs from "../../constants/routing.url.constants";
 
-import GuestNavigationComponent from "./GuestNavigationComponent";
-import AdminNavigationComponent from "./AdminNavigationComponent";
-import UserNavigationComponent from "./UserNavigationComponent";
+import GuestNavigation from "./GuestNavigation";
+import AdminNavigation from "./AdminNavigation";
+import UserNavigation from "./UserNavigation";
 
 class Navigation extends Component {
 
@@ -24,11 +24,11 @@ class Navigation extends Component {
                     {(() => {
                         switch (role) {
                             case 'Guest':
-                                return (<GuestNavigationComponent/>);
+                                return (<GuestNavigation/>);
                             case 'User':
-                                return (<UserNavigationComponent username={username}/>);
+                                return (<UserNavigation username={username}/>);
                             case 'Admin':
-                                return (<AdminNavigationComponent username={username}/>);
+                                return (<AdminNavigation username={username}/>);
                         }
                     })()}
 

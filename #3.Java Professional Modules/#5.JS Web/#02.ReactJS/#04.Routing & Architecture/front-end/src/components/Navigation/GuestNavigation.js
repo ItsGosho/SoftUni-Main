@@ -2,7 +2,7 @@ import React, {Component, Fragment} from 'react';
 import {Link} from "react-router-dom";
 import RoutingURLs from "../../constants/routing.url.constants";
 
-class GuestNavigationComponent extends Component {
+class GuestNavigation extends Component {
 
     constructor(props) {
         super(props);
@@ -22,4 +22,4 @@ class GuestNavigationComponent extends Component {
     }
 }
 
-export default GuestNavigationComponent;
+export default GuestNavigation;

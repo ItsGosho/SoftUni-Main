@@ -1,4 +1,4 @@
-import React, {Component,Fragment} from 'react';
+import React, {Component, Fragment} from 'react';
 import {Route, Router, Link, Switch, BrowserRouter} from 'react-router-dom';
 import RoutingURLs from "../constants/routing.url.constants";
 import './App.css';
@@ -16,12 +16,12 @@ class App extends Component {
             <div className="App">
                 <BrowserRouter>
                     <Fragment>
-                        <Navigation role="Guest" username="Joreto"/>
+                        <Navigation role="Admin" username="Joreto"/>
                         <Switch>
-                            <Route path={RoutingURLs.HOME} component={Home} exact/>
-                            <Route path={RoutingURLs.AUTHENTICATION.LOGIN} component={Login} exact/>
-                            <Route path={RoutingURLs.AUTHENTICATION.REGISTER} component={Register} exact/>
-                            <Route path={RoutingURLs.MOVIE.CREATE} component={Create} exact/>
+                            <Route exact path={RoutingURLs.HOME} component={() => <Home role="Admin"/>}/>
+                            <Route exact path={RoutingURLs.AUTHENTICATION.LOGIN} component={() => <Login/>}/>
+                            <Route exact path={RoutingURLs.AUTHENTICATION.REGISTER} component={() => <Register/>}/>
+                            <Route exact path={RoutingURLs.MOVIE.CREATE} component={() => <Create/>}/>
                         </Switch>
                     </Fragment>
                 </BrowserRouter>

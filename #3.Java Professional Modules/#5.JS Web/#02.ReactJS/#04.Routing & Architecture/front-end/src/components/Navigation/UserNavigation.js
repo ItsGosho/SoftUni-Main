@@ -1,8 +1,8 @@
 import React, {Component, Fragment} from 'react';
-import {Link} from "react-router-dom";
+import {Link} from 'react-router-dom';
 import RoutingURLs from "../../constants/routing.url.constants";
 
-class AdminNavigationComponent extends Component {
+class UserNavigation extends Component {
 
     constructor(props) {
         super(props);
@@ -15,14 +15,12 @@ class AdminNavigationComponent extends Component {
             <Fragment>
                 <span>
                     <Link to={RoutingURLs.HOME}>Welcome {username}!</Link>
-                    <span>
-                         <Link to={RoutingURLs.MOVIE.CREATE}>Create</Link>
-                    </span>
                     <Link to={RoutingURLs.AUTHENTICATION.LOGOUT}>Logout</Link>
                 </span>
             </Fragment>
+
         );
     }
 }
 
-export default AdminNavigationComponent;
+export default UserNavigation;
