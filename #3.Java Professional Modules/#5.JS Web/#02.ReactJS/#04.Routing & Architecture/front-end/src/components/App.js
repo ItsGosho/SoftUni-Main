@@ -16,9 +16,9 @@ class App extends Component {
             <div className="App">
                 <BrowserRouter>
                     <Fragment>
-                        <Navigation role="Admin" username="Joreto"/>
+                        <Navigation role="Guest" username="Joreto"/>
                         <Switch>
-                            <Route exact path={RoutingURLs.HOME} component={() => <Home role="Admin"/>}/>
+                            <Route exact path={RoutingURLs.HOME} component={() => <Home role="Guest"/>}/>
                             <Route exact path={RoutingURLs.AUTHENTICATION.LOGIN} component={() => <Login/>}/>
                             <Route exact path={RoutingURLs.AUTHENTICATION.REGISTER} component={() => <Register/>}/>
                             <Route exact path={RoutingURLs.MOVIE.CREATE} component={() => <Create/>}/>

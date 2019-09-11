@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Login.css';
+import UserServices from "../../services/user.services";
 
 class Login extends Component {
 
@@ -24,13 +25,13 @@ class Login extends Component {
         event.preventDefault();
     }
 
-    onSubmit(event) {
+    async onSubmit(event) {
         event.preventDefault();
 
         let {username, password} = this.state;
         let data = {username, password};
-        /*TODO: login*/
-        console.log(data);
+
+        await UserServices.login(data);
     }
 
     render() {
@@ -39,9 +40,11 @@ class Login extends Component {
                 <h1>Login</h1>
                 <form onSubmit={this.onSubmit}>
                     <label htmlFor="usernameLogin">Username</label>
-                    <input name="username" type="text" id="usernameLogin" placeholder="Ivan Ivanov" onChange={this.onChange}/>
+                    <input name="username" type="text" id="usernameLogin" placeholder="Ivan Ivanov"
+                           onChange={this.onChange}/>
                     <label htmlFor="passwordLogin">Password</label>
-                    <input name="password" type="password" id="passwordLogin" placeholder="******" onChange={this.onChange}/>
+                    <input name="password" type="password" id="passwordLogin" placeholder="******"
+                           onChange={this.onChange}/>
                     <input type="submit" value="Login"/>
                 </form>
             </div>

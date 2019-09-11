@@ -1,8 +1,5 @@
 import React, {Component, Fragment} from 'react';
 import './Home.css'
-import GuestNavigation from "../Navigation/GuestNavigation";
-import UserNavigation from "../Navigation/UserNavigation";
-import AdminNavigation from "../Navigation/AdminNavigation";
 import HomeGuest from "./HomeGuest";
 import HomeUser from "./HomeUser";
 import HomeAdmin from "./HomeAdmin";
@@ -15,6 +12,7 @@ class Home extends Component {
 
     render() {
         let {role} = this.props;
+
 
         return (
             <div className="Home">

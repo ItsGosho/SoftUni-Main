@@ -6,15 +6,22 @@ const RequestMethods = {
 };
 
 const RequestHeaders = {
-    AUTHORIZATION: 'Authorization'
+    AUTHORIZATION: 'Authorization',
+    CONTENT_TYPE: 'Content-type',
 };
 
 const AuthenticationHeaderType = {
     BEARER: 'Bearer'
 };
 
-export  {
+const ContentTypes = {
+    JSON: 'application/json',
+    URL: 'application/x-www-form-urlencoded',
+};
+
+export {
     RequestMethods,
     RequestHeaders,
-    AuthenticationHeaderType
+    AuthenticationHeaderType,
+    ContentTypes
 };
