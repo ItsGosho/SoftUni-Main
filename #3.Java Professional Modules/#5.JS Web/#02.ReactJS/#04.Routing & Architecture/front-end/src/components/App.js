@@ -8,6 +8,7 @@ import Register from './Register/Register';
 import Login from './Login/Login';
 import Create from './Movie/Create';
 import Navigation from "./Navigation/Navigation";
+import ReactNotification from "react-notifications-component";
 
 class App extends Component {
 
@@ -16,6 +17,7 @@ class App extends Component {
             <div className="App">
                 <BrowserRouter>
                     <Fragment>
+                        <ReactNotification/>
                         <Navigation role="Guest" username="Joreto"/>
                         <Switch>
                             <Route exact path={RoutingURLs.HOME} component={() => <Home role="Guest"/>}/>

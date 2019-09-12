@@ -56,16 +56,28 @@ module.exports = {
 
                 res.status(200).json(
                     {
-                        message: 'User successfully logged in!',
-                        userId: user._id.toString(),
-                        username: user.username,
-                        isAdmin: user.roles.indexOf('Admin') != -1
+                        success: {
+                            message: 'User successfully logged in!',
+                            data: {
+                                userId: user._id.toString(),
+                                username: user.username,
+                                isAdmin: user.roles.indexOf('Admin') != -1
+                            }
+                        }
                     });
             })
             .catch(error => {
                 if (!error.statusCode) {
                     error.statusCode = 500;
                 }
+
+                res.status(error.statusCode).json(
+                    {
+                        error: {
+                            message: error.message,
+                            statusCode: error.statusCode
+                        }
+                    });
 
                 next(error);
             })
