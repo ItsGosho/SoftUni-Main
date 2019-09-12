@@ -7,7 +7,7 @@ const UserRequestValidators = {
 
         let user = await UserServices.findByUsername(username);
 
-        if (user != null) {
+        if (user == null) {
             return Promise.reject('Username is not present!');
         }
     },
