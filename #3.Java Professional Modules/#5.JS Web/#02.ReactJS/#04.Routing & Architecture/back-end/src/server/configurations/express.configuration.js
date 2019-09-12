@@ -2,9 +2,11 @@ import BodyParser from 'body-parser';
 import Morgan from 'morgan';
 import CookieParser from 'cookie-parser';
 import MiddlewaresConfiguration from './middlewares.configuration';
+
 const Cors = require('cors');
 
 import AuthenticationController from '../web/controllers/authentication.controller';
+import TestController from '../web/controllers/test.controller';
 
 
 export default (app) => {
@@ -21,4 +23,5 @@ export default (app) => {
     app.use(MiddlewaresConfiguration);
 
     app.use(AuthenticationController);
+    app.use(TestController);
 };
