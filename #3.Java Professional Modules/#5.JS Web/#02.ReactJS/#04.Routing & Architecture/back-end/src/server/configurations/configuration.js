@@ -1,8 +1,8 @@
-import DatabaseConstants from '../constants/mongoose.constants';
+import {MongoConnectionString} from "../constants/mongo/mongo.constants";
 
 
 let databaseConfiguration = {
-    connectionString: DatabaseConstants.CONNECTION_STRING
+    connectionString: MongoConnectionString
 };
 
 

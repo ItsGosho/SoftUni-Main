@@ -1,38 +1,38 @@
 import Mongoose from 'mongoose';
-import MongooseConstants from '../../constants/mongoose.constants';
-import LoggingConstants from '../../constants/logging.constants';
 import Format from "sprintf-js";
+import {MongoModelLoggingMessageConstants} from "../../constants/mongo/mongo.logging.constants";
+import {MongoModelsNamesConstants} from "../../constants/mongo/mongo.constants";
+
+const LoggingMessages = MongoModelLoggingMessageConstants.MOVIE;
 
 
 const Schema = Mongoose.Schema;
 const Type = Schema.Types;
-const {Models} = MongooseConstants;
-const LogModel = LoggingConstants.MONGOOSE.MODEL.MOVIE;
 const ParseString = Format.sprintf;
 
 const movieModel = new Schema({
     title: {
-        type: String,
+        type: Type.String,
         required: true
     },
     storyLine: {
-        type: String,
+        type: Type.String,
         required: true
     },
     trailerUrl: {
-        type: String,
+        type: Type.String,
         required: true
     },
     poster: {
-        type: String,
+        type: Type.String,
         required: true
     }
 });
 
 movieModel.post('save', function (movie) {
-    console.log(ParseString(LogModel.SAVE, movie.title));
+    console.log(ParseString(LoggingMessages.SAVE, movie.title));
 });
 
-let MovieModel = Mongoose.model(Models.MOVIE, movieModel);
+let MovieModel = Mongoose.model(MongoModelsNamesConstants.MOVIE, movieModel);
 
 export default MovieModel;

@@ -1,16 +1,17 @@
 import Express from 'express';
 import Colors from 'colors';
-import ServerConstants from './src/server/constants/server.constants';
 import ExpressConfiguration from './src/server/configurations/express.configuration';
 import DatabaseConfiguration from './src/server/configurations/database.configuration';
-import DatabaseConstants from './src/server/constants/mongoose.constants';
+import {MongoConnectionString} from "./src/server/constants/mongo/mongo.constants";
+import {ServerPort} from "./src/server/constants/server/server.constants";
+import {ServerLoggingConstants} from "./src/server/constants/server/server.logging.constants";
 
 
 const App = Express();
 
 ExpressConfiguration(App);
-DatabaseConfiguration({connectionString: DatabaseConstants.CONNECTION_STRING});
+DatabaseConfiguration({connectionString: MongoConnectionString});
 
-App.listen(ServerConstants.PORT, () => {
-    console.log(ServerConstants.SERVER_STARTED);
+App.listen(ServerPort, () => {
+    console.log(ServerLoggingConstants.SERVER_STARTED);
 });

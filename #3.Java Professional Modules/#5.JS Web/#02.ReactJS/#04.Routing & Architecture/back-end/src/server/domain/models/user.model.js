@@ -1,25 +1,27 @@
 import Mongoose from 'mongoose';
-import MongooseConstants from '../../constants/mongoose.constants';
-import LoggingConstants from '../../constants/logging.constants';
 import Format from "sprintf-js";
+import {MongoModelValidationMessageConstants} from "../../constants/mongo/mongo.validation.constants";
+import {MongoModelLoggingMessageConstants} from "../../constants/mongo/mongo.logging.constants";
+import {MongoModelsNamesConstants} from "../../constants/mongo/mongo.constants";
+
+const ValidationMessages = MongoModelValidationMessageConstants.USER;
+const LoggingMessages = MongoModelLoggingMessageConstants.USER;
 
 
 const Schema = Mongoose.Schema;
 const Type = Schema.Types;
-const {Models} = MongooseConstants;
-const LogModel = LoggingConstants.MONGOOSE.MODEL.USER;
 const ParseString = Format.sprintf;
 
 const userModel = new Schema({
     username: {
         type: Type.String,
-        required: [true, 'Username is required!'],
+        required: [true, ValidationMessages.USERNAME_REQUIRED],
         unique: true,
         trim: true,
     },
     email: {
         type: Type.String,
-        required: [true, 'Email is required!'],
+        required: [true, ValidationMessages.EMAIL_REQUIRED],
         unique: true,
         trim: true,
     },
@@ -30,10 +32,10 @@ const userModel = new Schema({
 });
 
 userModel.post('save', function (user) {
-    console.log(ParseString(LogModel.SAVE, user.username));
+    console.log(ParseString(LoggingMessages.SAVE, user.username));
 });
 
 
-let UserModel = Mongoose.model(Models.USER, userModel);
+let UserModel = Mongoose.model(MongoModelsNamesConstants.USER, userModel);
 
 export default UserModel;

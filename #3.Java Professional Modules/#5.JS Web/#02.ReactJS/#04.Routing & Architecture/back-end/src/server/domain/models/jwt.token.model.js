@@ -1,34 +1,36 @@
 import Mongoose from 'mongoose';
-import MongooseConstants from '../../constants/mongoose.constants';
-import LoggingConstants from '../../constants/logging.constants';
 import Format from "sprintf-js";
+import {MongoModelValidationMessageConstants} from "../../constants/mongo/mongo.validation.constants";
+import {MongoModelLoggingMessageConstants} from "../../constants/mongo/mongo.logging.constants";
+import {MongoModelsNamesConstants} from "../../constants/mongo/mongo.constants";
+
+const ValidationMessages = MongoModelValidationMessageConstants.TOKEN;
+const LoggingMessages = MongoModelLoggingMessageConstants.TOKEN;
 
 
 const Schema = Mongoose.Schema;
 const Type = Schema.Types;
-const {Models} = MongooseConstants;
-const LogModel = LoggingConstants.MONGOOSE.MODEL.JWT_TOKEN;
 const ParseString = Format.sprintf;
 
 const jwtTokenModel = new Schema({
     token: {
         type: Type.String,
-        required: [true, 'Token is not present!']
+        required: [true, ValidationMessages.TOKEN_REQUIRED]
     },
     user: {
         type: Type.ObjectID,
-        ref: Models.USER
+        ref: MongoModelsNamesConstants.USER
     }
 });
 
 jwtTokenModel.post('save', function (token) {
-    console.log(ParseString(LogModel.SAVE,token.user));
+    console.log(ParseString(LoggingMessages.SAVE, token.user));
 });
 
 jwtTokenModel.post('deleteMany', function (token) {
-    console.log(ParseString(LogModel.DELETE_MANY,token.deletedCount));
+    console.log(ParseString(LoggingMessages.DELETE_MANY, token.deletedCount));
 });
 
-let JWTTokenModel = Mongoose.model(Models.JWT, jwtTokenModel);
+let JWTTokenModel = Mongoose.model(MongoModelsNamesConstants.JWT, jwtTokenModel);
 
 export default JWTTokenModel;

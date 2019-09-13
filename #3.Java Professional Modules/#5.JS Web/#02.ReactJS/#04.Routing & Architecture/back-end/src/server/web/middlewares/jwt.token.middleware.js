@@ -1,5 +1,5 @@
 import JWTServices from '../../services/jwt.token.services';
-import RoutingUrls from '../../constants/routing.urls';
+import {UserRoutingURLs} from "../../constants/web/routing.urls";
 
 
 export default async (request, response, next) => {
@@ -10,6 +10,6 @@ export default async (request, response, next) => {
         return;
     }
 
-    response.redirect(RoutingUrls.USER.LOGIN);
+    response.redirect(UserRoutingURLs.LOGIN);
 };
 

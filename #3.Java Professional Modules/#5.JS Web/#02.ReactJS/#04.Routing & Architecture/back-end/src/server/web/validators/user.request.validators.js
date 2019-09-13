@@ -1,5 +1,7 @@
 import UserServices from "../../services/user.services";
-import ValidationMessages from "../../constants/validation.messages.constants";
+import {RequestValidationMessages} from "../../constants/web/request.validation.constants";
+
+const ValidationMessages = RequestValidationMessages.USER;
 
 const UserRequestValidators = {
 
@@ -9,8 +11,9 @@ const UserRequestValidators = {
 
             let user = await UserServices.findByUsername(username);
 
+
             if (user == null) {
-                return Promise.reject(ValidationMessages.USER.USERNAME_DOESNT_EXIST);
+                return Promise.reject(ValidationMessages.USERNAME_DOESNT_EXIST);
             }
         }
     },
@@ -21,7 +24,7 @@ const UserRequestValidators = {
             let confirmPassword = data[field2];
 
             if (password !== confirmPassword) {
-                return Promise.reject(ValidationMessages.USER.PASSWORDS_DOESNT_MATCH);
+                return Promise.reject(ValidationMessages.PASSWORDS_DOESNT_MATCH);
             }
         }
     },

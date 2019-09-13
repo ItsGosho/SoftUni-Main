@@ -1,32 +1,31 @@
 import Express from 'express';
-import RoutingURLs from '../../constants/routing.urls';
 import UserServices from '../../services/user.services';
 import JWTServices from '../../services/jwt.token.services';
-import ViewPaths from '../../constants/resource.paths.constants';
 import JWTHelper from '../helpers/jwt.helper';
+import {UserRoutingURLs} from "../../constants/web/routing.urls";
 
 
 const Router = Express.Router();
 
-Router.post(RoutingURLs.USER.LOGIN, async (request, response) => {
+Router.post(UserRoutingURLs.LOGIN, async (request, response) => {
     let {username, password} = request.body;
 
     if (await UserServices.isCredentialsValid(username, password)) {
         let token = await UserServices.proceedToken(username);
 
         await JWTHelper.attachToken(token.token, response);
-        response.redirect(RoutingURLs.BASE.HOME);
+        /*SUCCESSFUL*/
         return;
     }
 
-    response.send('The provided credentials are invalid!');
+    /*FAILED*/
 });
 
-Router.post(RoutingURLs.USER.REGISTER,async (request, response) => {
+Router.post(UserRoutingURLs.REGISTER, async (request, response) => {
     let {username, password, confirmedPassword, firstName, lastName, age, gender} = request.body;
 
     if (password !== confirmedPassword) {
-        response.send('Passwords doesn\'t match');
+        /*FAILED*/
         return;
     }
 
@@ -40,21 +39,21 @@ Router.post(RoutingURLs.USER.REGISTER,async (request, response) => {
     };
 
     await UserServices.register(user);
-    response.redirect(RoutingURLs.BASE.HOME);
+    /*SUCCESSFUL*/
 });
 
-Router.post(RoutingURLs.USER.LOGOUT, async (request, response) => {
+Router.post(UserRoutingURLs.LOGOUT, async (request, response) => {
     let user = await JWTHelper.getCurrentUser(request);
 
     if (user !== null) {
 
         await JWTServices.removeAllByUserId(user.id);
         response.clearCookie('jwt');
-        response.redirect(RoutingURLs.BASE.HOME);
+        /*SUCCESSFUL*/
         return;
     }
 
-    response.send('<h1>You aren\'t logged in!</h1>');
+    /*FAILED*/
 });
 
 

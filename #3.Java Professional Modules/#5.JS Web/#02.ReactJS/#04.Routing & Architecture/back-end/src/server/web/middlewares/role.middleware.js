@@ -1,5 +1,4 @@
 import RoleServices from '../../services/role.services';
-import RoutingUrls from '../../constants/routing.urls';
 
 /*Note that before this middleware is executed a user must be attached to the request somehow*/
 

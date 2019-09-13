@@ -1,10 +1,8 @@
 import JWTRepository from '../repositories/jwt.token.repository';
 import JWT from 'jsonwebtoken';
 import FileSystem from 'fs';
-import ResourceConstants from '../constants/resource.paths.constants';
+import {JWTResourcePaths} from "../constants/path/resource.paths.constants";
 
-
-const JWTPaths = ResourceConstants.JWT;
 
 const JWTTokenServices = {
 
@@ -13,12 +11,12 @@ const JWTTokenServices = {
     },
 
     async generateToken(data) {
-        const secretKey = FileSystem.readFileSync(JWTPaths.JWT_SECRET, 'utf8');
+        const secretKey = FileSystem.readFileSync(JWTResourcePaths.SECRET, 'utf8');
         return JWT.sign(data, secretKey, {expiresIn: '24h'});
     },
 
     async isValid(token) {
-        const secretKey = FileSystem.readFileSync(JWTPaths.JWT_SECRET, 'utf8');
+        const secretKey = FileSystem.readFileSync(JWTResourcePaths.SECRET, 'utf8');
 
         try {
             JWT.verify(token, secretKey);
@@ -29,7 +27,7 @@ const JWTTokenServices = {
     },
 
     async decode(token) {
-        const secretKey = FileSystem.readFileSync(JWTPaths.JWT_SECRET, 'utf8');
+        const secretKey = FileSystem.readFileSync(JWTResourcePaths.SECRET, 'utf8');
 
         return JWT.decode(token, secretKey);
     },

@@ -1,6 +1,3 @@
-import RoutingUrls from '../../constants/routing.urls';
-
-
 export default (request, response, next) => {
     let token = request.cookies.jwt;
 

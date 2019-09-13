@@ -9,7 +9,7 @@ const MOVIE = {
     ALL: '/movies/all'
 };
 
-export default {
-    USER,
-    MOVIE
+export {
+    USER as UserRoutingURLs,
+    MOVIE as MovieRoutingURLs
 };
