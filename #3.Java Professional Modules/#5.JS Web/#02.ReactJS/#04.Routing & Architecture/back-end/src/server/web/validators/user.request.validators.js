@@ -1,5 +1,8 @@
 import UserServices from "../../services/user.services";
-import {UserRequestValidationConstants} from "../../constants/web/request.validation.constants";
+import {
+    UserRequestValidationMessagesConstants,
+    UserRequestValidationRestrictionConstants
+} from "../../constants/web/request.validation.constants";
 
 
 const UserRequestValidators = {
@@ -12,18 +15,34 @@ const UserRequestValidators = {
 
 
             if (user == null) {
-                return Promise.reject(UserRequestValidationConstants.USERNAME_DOESNT_EXIST);
+                return Promise.reject(UserRequestValidationMessagesConstants.USERNAME_DOESNT_EXIST);
             }
         }
     },
 
-    passwordsMustMatch: (field1,field2) => {
+    usernameLength: (field, min, max) => {
+        return async (data) => {
+            let username = data[field];
+            let minLength = UserRequestValidationRestrictionConstants.USERNAME_MIN_LENGTH;
+            let maxLength = UserRequestValidationRestrictionConstants.USERNAME_MAX_LENGTH;
+
+            if (username.length < minLength) {
+                return Promise.reject(UserRequestValidationMessagesConstants.USERNAME_TOO_SHORT);
+            }
+
+            if (username.length > maxLength) {
+                return Promise.reject(UserRequestValidationMessagesConstants.USERNAME_TOO_LONG);
+            }
+        }
+    },
+
+    passwordsMustMatch: (field1, field2) => {
         return async (data) => {
             let password = data[field1];
             let confirmPassword = data[field2];
 
             if (password !== confirmPassword) {
-                return Promise.reject(UserRequestValidationConstants.PASSWORDS_DOESNT_MATCH);
+                return Promise.reject(UserRequestValidationMessagesConstants.PASSWORDS_DOESNT_MATCH);
             }
         }
     },

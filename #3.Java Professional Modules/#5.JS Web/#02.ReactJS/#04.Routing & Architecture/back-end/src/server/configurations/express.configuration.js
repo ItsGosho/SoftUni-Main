@@ -9,7 +9,7 @@ import TestController from '../web/controllers/test.controller';
 
 
 export default (app) => {
-    app.use(Morgan('combined'));
+    app.use(Morgan('dev'));
 
     app.use(BodyParser.urlencoded({extended: true}));
     app.use(BodyParser.json());
