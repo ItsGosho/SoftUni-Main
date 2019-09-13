@@ -17,7 +17,9 @@ Router.all(RoutingURLs.USER.REGISTER, LoggedOut);
 
 Router.all(
     '/test',
-    Body().custom(UserRequestValidators.usernamePresent).bail().custom(UserRequestValidators.passwordsMustMatch).bail()
+    Body()
+        .custom(UserRequestValidators.usernamePresent('username')).bail()
+        .custom(UserRequestValidators.passwordsMustMatch('password','confirmPassword')).bail()
     , AfterResponseMidddleware
 );
 
