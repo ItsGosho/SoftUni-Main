@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import {MongoDatabaseLoggingMessageConstants} from "../constants/mongo/mongo.logging.constants";
+import {DatabaseConfigurationLoggingConstants} from "../constants/mongo/mongo.logging.constants";
 
 
 mongoose.Promise = global.Promise;
@@ -10,7 +10,7 @@ const onOpen = (error) => {
         return;
     }
 
-    console.log(MongoDatabaseLoggingMessageConstants.CONNECTION_SUCCESSFUL);
+    console.log(DatabaseConfigurationLoggingConstants.DATABASE_CONNECTION_SUCCESSFUL);
 };
 
 export default (configuration) => {

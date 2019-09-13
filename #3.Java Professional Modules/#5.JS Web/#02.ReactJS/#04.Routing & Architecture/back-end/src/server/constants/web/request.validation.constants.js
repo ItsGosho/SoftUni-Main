@@ -7,6 +7,10 @@ const REQUEST_VALIDATION_MESSAGES = {
     }
 };
 
+const {
+    USER: UserRequestValidationConstants
+} = REQUEST_VALIDATION_MESSAGES;
+
 export {
-    REQUEST_VALIDATION_MESSAGES as RequestValidationMessages,
+    UserRequestValidationConstants
 }

@@ -14,11 +14,22 @@ const MONGO_MODEL_LOGGING_CONSTANTS = {
     },
 };
 
-const MONGO_DATABASE_LOGGING_CONSTANTS = {
-    CONNECTION_SUCCESSFUL: '[Database] Connection has been established!'.cyan
+const MONGO_CONFIGURATION_LOGGING_CONSTANTS = {
+    DATABASE_CONNECTION_SUCCESSFUL: '[Database] Connection has been successful!'.cyan
 };
 
+
+const {
+    MOVIE: MovieLoggingConstants,
+    TOKEN: TokenLoggingConstants,
+    ROLE: RoleLoggingConstants,
+    USER: UserLoggingConstants
+} = MONGO_MODEL_LOGGING_CONSTANTS;
+
 export {
-    MONGO_MODEL_LOGGING_CONSTANTS as MongoModelLoggingMessageConstants,
-    MONGO_DATABASE_LOGGING_CONSTANTS as MongoDatabaseLoggingMessageConstants,
+    MovieLoggingConstants,
+    TokenLoggingConstants,
+    RoleLoggingConstants,
+    UserLoggingConstants,
+    MONGO_CONFIGURATION_LOGGING_CONSTANTS as DatabaseConfigurationLoggingConstants
 };

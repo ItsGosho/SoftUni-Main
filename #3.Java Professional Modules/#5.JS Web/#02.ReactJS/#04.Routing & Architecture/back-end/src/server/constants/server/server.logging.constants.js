@@ -1,7 +1,7 @@
-import {ServerPort} from "./server.constants";
+import {ServerConfigurationConstants} from "./server.configuration.constants";
 
 const ServerLoggingConstants = {
-     SERVER_STARTED: `[REST] server started on ${ServerPort}`.cyan
+     SERVER_STARTED: `[REST] server started on ${ServerConfigurationConstants.PORT}`.cyan
 
 };
 

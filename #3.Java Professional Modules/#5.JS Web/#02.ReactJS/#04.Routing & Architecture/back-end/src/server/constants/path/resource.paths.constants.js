@@ -1,10 +1,16 @@
 import Path from 'path';
 import AppRoot from 'app-root-path';
 
-const JWT = {
-    SECRET: Path.join(AppRoot.path, '/src/resources/jwt.secret.txt')
+const ResourcePaths = {
+    JWT: {
+        SECRET: Path.join(AppRoot.path, '/src/resources/jwt.secret.txt')
+    }
 };
 
+const {
+    JWT: JWTResourcePaths
+} = ResourcePaths;
+
 export {
-    JWT as JWTResourcePaths
+    JWTResourcePaths
 };

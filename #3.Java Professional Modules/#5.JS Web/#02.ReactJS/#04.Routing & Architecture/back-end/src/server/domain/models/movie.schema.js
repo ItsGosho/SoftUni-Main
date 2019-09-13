@@ -1,10 +1,7 @@
 import Mongoose from 'mongoose';
 import Format from "sprintf-js";
-import {MongoModelLoggingMessageConstants} from "../../constants/mongo/mongo.logging.constants";
-import {MongoModelsNamesConstants} from "../../constants/mongo/mongo.constants";
-
-const LoggingMessages = MongoModelLoggingMessageConstants.MOVIE;
-
+import {MovieLoggingConstants} from "../../constants/mongo/mongo.logging.constants";
+import {ModelNameConstants} from "../../constants/mongo/mongo.models.constants";
 
 const Schema = Mongoose.Schema;
 const Type = Schema.Types;
@@ -30,9 +27,9 @@ const movieModel = new Schema({
 });
 
 movieModel.post('save', function (movie) {
-    console.log(ParseString(LoggingMessages.SAVE, movie.title));
+    console.log(ParseString(MovieLoggingConstants.SAVE, movie.title));
 });
 
-let MovieModel = Mongoose.model(MongoModelsNamesConstants.MOVIE, movieModel);
+let MovieModel = Mongoose.model(ModelNameConstants.MOVIE, movieModel);
 
 export default MovieModel;

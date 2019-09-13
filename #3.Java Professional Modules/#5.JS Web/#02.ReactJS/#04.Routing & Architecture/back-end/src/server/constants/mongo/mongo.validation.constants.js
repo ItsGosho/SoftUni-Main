@@ -9,11 +9,19 @@ const MODEL = {
     ROLE: {
         NAME_REQUIRED: 'Role name is required!'
     },
-    MOVIE: {
-
-    }
+    MOVIE: {}
 };
 
+const {
+    USER: UserValidationConstants,
+    TOKEN: TokenValidationConstants,
+    ROLE: RoleValidationConstants,
+    MOVIE: MovieValidationConstants,
+} = MODEL;
+
 export {
-    MODEL as MongoModelValidationMessageConstants
+    UserValidationConstants,
+    TokenValidationConstants,
+    RoleValidationConstants,
+    MovieValidationConstants,
 }
