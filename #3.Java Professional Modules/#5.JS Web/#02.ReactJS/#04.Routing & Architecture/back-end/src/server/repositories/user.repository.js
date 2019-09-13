@@ -11,6 +11,9 @@ const UserRepository = {
         return UserModel.findOne({username}).exec();
     },
 
+    async findByEmail(email) {
+        return UserModel.findOne({email}).exec();
+    },
 };
 
 export default UserRepository;

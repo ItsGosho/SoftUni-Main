@@ -1,5 +1,5 @@
 import Express from 'express';
-import AfterResponseMidddleware from "../web/middlewares/after.response.midddleware";
+import ValidationResponseMiddleware from "../web/middlewares/validation.response.middleware";
 import JWTTokenValidator from '../web/middlewares/jwt.token.middleware';
 import UserAttacher from '../web/middlewares/user.attacher.middleware';
 import LoggedOut from '../web/middlewares/logged.out.middleware';
@@ -13,16 +13,19 @@ const Router = Express.Router();
 Router.all('*', UserAttacher);
 
 /*Authentication*/
-Router.all(UserRoutingURLs.LOGIN, LoggedOut);
-Router.all(UserRoutingURLs.REGISTER, LoggedOut);
-
-Router.all(
-    '/test',
+Router.all(UserRoutingURLs.LOGIN, LoggedOut,
     Body()
         .custom(UserRequestValidators.usernamePresent('username')).bail()
-        .custom(UserRequestValidators.usernameLength('username',UserRequestValidationRestrictionConstants.USERNAME_MIN_LENGTH,UserRequestValidationRestrictionConstants.USERNAME_MAX_LENGTH)).bail()
-        .custom(UserRequestValidators.passwordsMustMatch('password', 'confirmPassword')).bail()
-    , AfterResponseMidddleware
+        .custom(UserRequestValidators.usernameLength('username', UserRequestValidationRestrictionConstants.USERNAME_MIN_LENGTH, UserRequestValidationRestrictionConstants.USERNAME_MAX_LENGTH)).bail()
+    , ValidationResponseMiddleware
 );
+Router.all(UserRoutingURLs.REGISTER, LoggedOut,
+    Body()
+        .custom(UserRequestValidators.usernameNotPresent('username')).bail()
+        .custom(UserRequestValidators.emailNotPresent('email')).bail()
+        .custom(UserRequestValidators.passwordsMustMatch('password', 'confirmPassword')).bail()
+        .custom(UserRequestValidators.email('email')).bail(),
+    ValidationResponseMiddleware);
+
 
 export default Router;

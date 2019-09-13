@@ -3,6 +3,8 @@ import UserServices from '../../services/user.services';
 import JWTServices from '../../services/jwt.token.services';
 import JWTHelper from '../helpers/jwt.helper';
 import {UserRoutingURLs} from "../../constants/web/routing.urls";
+import RestResponseHeler from "../helpers/rest.response.helper";
+import RoleServices from "../../services/role.services";
 
 
 const Router = Express.Router();
@@ -14,46 +16,48 @@ Router.post(UserRoutingURLs.LOGIN, async (request, response) => {
         let token = await UserServices.proceedToken(username);
 
         await JWTHelper.attachToken(token.token, response);
-        /*SUCCESSFUL*/
+
+        let {id} = UserServices.findByUsername(username);
+        let {name} = RoleServices.findRoleByUserId(id);
+        let data = {
+            username: username,
+            role: name,
+            token: token.token
+        };
+
+        RestResponseHeler.respondSuccessful(response, 'Login successful!', data);
         return;
     }
 
-    /*FAILED*/
+    RestResponseHeler.respondError(response, 'Credentials are invalid!');
 });
 
 Router.post(UserRoutingURLs.REGISTER, async (request, response) => {
-    let {username, password, confirmedPassword, firstName, lastName, age, gender} = request.body;
-
-    if (password !== confirmedPassword) {
-        /*FAILED*/
-        return;
-    }
+    let {username, password, confirmPassword, email} = request.body;
 
     let user = {
         username,
         password,
-        firstName,
-        lastName,
-        age,
-        gender
+        email
     };
 
     await UserServices.register(user);
-    /*SUCCESSFUL*/
+
+    RestResponseHeler.respondSuccessful(response, 'Registration successful!', null);
 });
 
 Router.post(UserRoutingURLs.LOGOUT, async (request, response) => {
-    let user = await JWTHelper.getCurrentUser(request);
+    /*let user = await JWTHelper.getCurrentUser(request);
 
     if (user !== null) {
 
         await JWTServices.removeAllByUserId(user.id);
         response.clearCookie('jwt');
-        /*SUCCESSFUL*/
+        /!*SUCCESSFUL*!/
         return;
     }
 
-    /*FAILED*/
+    /!*FAILED*!/*/
 });
 
 

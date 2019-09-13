@@ -20,17 +20,41 @@ const UserRequestValidators = {
         }
     },
 
+    usernameNotPresent: (field) => {
+        return async (data) => {
+            let username = data[field];
+
+            let user = await UserServices.findByUsername(username);
+
+
+            if (user != null) {
+                return Promise.reject(UserRequestValidationMessagesConstants.USERNAME_ALREADY_EXIST);
+            }
+        }
+    },
+
+    emailNotPresent: (field) => {
+        return async (data) => {
+            let email = data[field];
+
+            let user = await UserServices.findByEmail(email);
+
+
+            if (user != null) {
+                return Promise.reject(UserRequestValidationMessagesConstants.EMAIL_ALREADY_EXIST);
+            }
+        }
+    },
+
     usernameLength: (field, min, max) => {
         return async (data) => {
             let username = data[field];
-            let minLength = UserRequestValidationRestrictionConstants.USERNAME_MIN_LENGTH;
-            let maxLength = UserRequestValidationRestrictionConstants.USERNAME_MAX_LENGTH;
 
-            if (username.length < minLength) {
+            if (username.length < min) {
                 return Promise.reject(UserRequestValidationMessagesConstants.USERNAME_TOO_SHORT);
             }
 
-            if (username.length > maxLength) {
+            if (username.length > max) {
                 return Promise.reject(UserRequestValidationMessagesConstants.USERNAME_TOO_LONG);
             }
         }
@@ -46,6 +70,17 @@ const UserRequestValidators = {
             }
         }
     },
+
+    email: (field) => {
+        return async (data) => {
+            let email = data[field];
+            let emailPattern = new RegExp('(?:[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\\])');
+
+            if (!emailPattern.test(email)) {
+                return Promise.reject(UserRequestValidationMessagesConstants.EMAIL_NOT_VALID);
+            }
+        }
+    }
 };
 
 export default UserRequestValidators;

@@ -13,10 +13,11 @@ const UserServices = {
         let hash = Bcrypt.hashSync(user.password, salt);
 
         user.password = hash;
-        user.role = await RoleServices.getInitialRole();
+        let role = await RoleServices.getInitialRole();
+        user.role = role;
 
         user = await UserRepository.save(user);
-        await RoleServices.addUser(user.role.id, user.id);
+        await RoleServices.addUser(role.id, user.id);
     },
 
     async isCredentialsValid(username, password) {
@@ -49,6 +50,10 @@ const UserServices = {
 
     async findByUsername(username) {
         return UserRepository.findByUsername(username);
+    },
+
+    async findByEmail(email) {
+        return UserRepository.findByEmail(email);
     },
 
 };
