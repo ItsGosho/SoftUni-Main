@@ -34,8 +34,8 @@ class Register extends Component {
         let {username, password, confirmPassword, email} = this.state;
         let data = {username, password, confirmPassword, email};
 
-        let result = await UserServices.register(data);
-        this.setState({isRegistrationFinished: result});
+        let isSuccessful = await UserServices.register(data);
+        this.setState({isRegistrationFinished: isSuccessful});
     }
 
     render() {
@@ -56,7 +56,7 @@ class Register extends Component {
                     <input type="submit" value="Register"/>
                 </form>
 
-                {this.state.isRegistrationFinished ? <Redirect to={RoutingURLs.HOME} push/> : null}
+                {this.state.isRegistrationFinished ? <Redirect to={RoutingURLs.AUTHENTICATION.LOGIN} push/> : null}
             </div>
         );
     }

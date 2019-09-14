@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './Login.css';
 import UserServices from "../../services/user.services";
+import {Redirect} from "react-router-dom";
+import RoutingURLs from "../../constants/routing.url.constants";
 
 class Login extends Component {
 
@@ -8,7 +10,8 @@ class Login extends Component {
         super(props);
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            isLoginFinished: false
         };
 
         this.onChange = this.onChange.bind(this);
@@ -29,7 +32,8 @@ class Login extends Component {
         let {username, password} = this.state;
         let data = {username, password};
 
-        await UserServices.login(data);
+        let isSuccessful = await UserServices.login(data);
+        this.setState({isLoginFinished: isSuccessful});
     }
 
     render() {
@@ -45,8 +49,9 @@ class Login extends Component {
                            onChange={this.onChange}/>
                     <input type="submit" value="Login"/>
                 </form>
-            </div>
 
+                {this.state.isLoginFinished ? <Redirect to={RoutingURLs.HOME} push/> : null}
+            </div>
         );
     }
 }

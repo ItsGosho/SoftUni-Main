@@ -23,10 +23,6 @@ Router.all('*', UserAttacherMiddleware);
 Router.post(UserRoutingURLs.LOGIN,
     [
         LoggedOutMiddleware,
-        Body()
-            .custom(UserRequestValidators.usernamePresent('username')).bail()
-            .custom(UserRequestValidators.usernameLength('username', UserRequestValidationRestrictionConstants.USERNAME_MIN_LENGTH, UserRequestValidationRestrictionConstants.USERNAME_MAX_LENGTH)).bail()
-        , ValidationResponseMiddleware
     ]);
 
 Router.post(UserRoutingURLs.REGISTER,

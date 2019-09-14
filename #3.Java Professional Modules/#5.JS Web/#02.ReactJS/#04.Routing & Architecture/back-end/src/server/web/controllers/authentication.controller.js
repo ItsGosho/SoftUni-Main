@@ -20,15 +20,14 @@ Router.post(UserRoutingURLs.LOGIN, async (request, response) => {
         let {name} = RoleServices.findRoleByUserId(id);
         let data = {
             username: username,
-            role: name,
-            token: token.token
+            role: name
         };
 
         RestResponseHelper.respondSuccessful(response, 'Login successful!', data);
         return;
     }
 
-    RestResponseHelper.respondError(response, 'Credentials are invalid!');
+    RestResponseHelper.respondErrorMessage(response, 'Credentials are invalid!');
 });
 
 Router.post(UserRoutingURLs.REGISTER, async (request, response) => {
