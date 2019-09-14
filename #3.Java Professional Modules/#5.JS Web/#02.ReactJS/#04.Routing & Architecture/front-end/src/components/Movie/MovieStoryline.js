@@ -2,10 +2,6 @@ import React, {Component, Fragment} from 'react';
 
 class MovieStoryline extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         let {movie} = this.props;
 

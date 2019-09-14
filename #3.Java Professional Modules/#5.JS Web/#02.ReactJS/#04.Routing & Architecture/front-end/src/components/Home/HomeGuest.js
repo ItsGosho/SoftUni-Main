@@ -1,11 +1,6 @@
 import React, {Component, Fragment} from 'react';
-import MovieServices from "../../services/movie.services";
 
 class HomeGuest extends Component {
-
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         let movies = this.props.movies;
@@ -16,7 +11,7 @@ class HomeGuest extends Component {
                     return (
                         <li className="movie">
                             <h2>{movie.title}</h2>
-                            <img
+                            <img style={{'width': '100px'}} alt=""
                                 src={movie.poster}/>
                         </li>
                     );

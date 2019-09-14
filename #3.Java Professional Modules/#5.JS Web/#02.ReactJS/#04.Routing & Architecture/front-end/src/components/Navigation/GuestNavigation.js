@@ -4,10 +4,6 @@ import RoutingURLs from "../../constants/routing.url.constants";
 
 class GuestNavigation extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
 
         return (

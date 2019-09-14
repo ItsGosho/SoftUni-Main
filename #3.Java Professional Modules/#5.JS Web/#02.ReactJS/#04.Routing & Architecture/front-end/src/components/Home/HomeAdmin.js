@@ -3,10 +3,6 @@ import MovieTrailer from "../Movie/MovieTrailer";
 
 class HomeAdmin extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         let movies = this.props.movies;
 
@@ -17,7 +13,7 @@ class HomeAdmin extends Component {
                     return (
                         <li className="movie">
                             <h2>{movie.title}</h2>
-                            <img
+                            <img style={{'width': '100px'}} alt=""
                                 src={movie.poster}/>
                             <span>
                                 <button>View Trailer</button>

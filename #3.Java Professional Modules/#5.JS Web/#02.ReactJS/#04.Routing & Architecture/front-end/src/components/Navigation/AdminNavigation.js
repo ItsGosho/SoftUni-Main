@@ -4,10 +4,6 @@ import RoutingURLs from "../../constants/routing.url.constants";
 
 class AdminNavigation extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         let {username} = this.props;
 

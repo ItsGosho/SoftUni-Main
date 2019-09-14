@@ -19,9 +19,7 @@ class Login extends Component {
         let inputName = event.target.name;
         let value = event.target.value;
 
-        this.setState((prevState) => {
-            return this.state[inputName] = value;
-        });
+        this.setState({[inputName]: value});
         event.preventDefault();
     }
 

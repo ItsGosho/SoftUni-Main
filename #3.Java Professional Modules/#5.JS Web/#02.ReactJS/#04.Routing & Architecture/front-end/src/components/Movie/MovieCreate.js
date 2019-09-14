@@ -1,7 +1,7 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import './Create.css';
 
-class Create extends Component {
+class MovieCreate extends Component {
 
     constructor(props) {
         super(props);
@@ -20,9 +20,7 @@ class Create extends Component {
         let inputName = event.target.name;
         let value = event.target.value;
 
-        this.setState((prevState) => {
-            return this.state[inputName] = value;
-        });
+        this.setState({[inputName]: value});
         event.preventDefault();
     }
 
@@ -59,4 +57,4 @@ class Create extends Component {
     }
 }
 
-export default Create;
+export default MovieCreate;

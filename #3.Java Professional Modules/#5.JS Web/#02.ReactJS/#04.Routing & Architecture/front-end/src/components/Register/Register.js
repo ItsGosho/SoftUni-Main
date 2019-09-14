@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Register.css';
+import UserServices from "../../services/user.services";
 
 class Register extends Component {
 
@@ -19,9 +20,7 @@ class Register extends Component {
         let inputName = event.target.name;
         let value = event.target.value;
 
-        this.setState((prevState) => {
-            return this.state[inputName] = value;
-        });
+        this.setState({[inputName]: value});
         event.preventDefault();
     }
 
@@ -30,8 +29,8 @@ class Register extends Component {
 
         let {username, password, email} = this.state;
         let data = {username, password, email};
-        /*TODO: register*/
-        console.log(data);
+
+        UserServices.register(data);
     }
 
     render() {

@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import './Home.css'
 import HomeGuest from "./HomeGuest";
 import HomeUser from "./HomeUser";
@@ -22,7 +22,7 @@ class Home extends Component {
     }
 
     render() {
-        let {role} = this.props;
+        let {roleName} = this.props;
 
         return (
             <div className="Home">
@@ -30,13 +30,13 @@ class Home extends Component {
                     <h1>All movies</h1>
                     <ul className="movies">
                         {(() => {
-                            switch (role) {
-                                case 'Guest':
-                                    return (<HomeGuest movies={this.state.movies}/>);
+                            switch (roleName) {
                                 case 'User':
                                     return (<HomeUser movies={this.state.movies}/>);
                                 case 'Admin':
                                     return (<HomeAdmin movies={this.state.movies}/>);
+                                default:
+                                    return (<HomeGuest movies={this.state.movies}/>);
                             }
                         })()}
                     </ul>

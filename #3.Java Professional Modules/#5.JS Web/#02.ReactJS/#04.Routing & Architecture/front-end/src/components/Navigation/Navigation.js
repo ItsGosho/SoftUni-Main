@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import RoutingURLs from "../../constants/routing.url.constants";
 
@@ -8,12 +8,8 @@ import UserNavigation from "./UserNavigation";
 
 class Navigation extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
-        let {role,username} = this.props;
+        let {roleName,username} = this.props;
 
         return (
             <header>
@@ -22,13 +18,13 @@ class Navigation extends Component {
                     <Link to={RoutingURLs.HOME}>Home</Link>
 
                     {(() => {
-                        switch (role) {
-                            case 'Guest':
-                                return (<GuestNavigation/>);
+                        switch (roleName) {
                             case 'User':
                                 return (<UserNavigation username={username}/>);
                             case 'Admin':
                                 return (<AdminNavigation username={username}/>);
+                            default:
+                                return (<GuestNavigation/>);
                         }
                     })()}
 

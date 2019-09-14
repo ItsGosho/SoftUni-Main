@@ -44,7 +44,7 @@ class HomeUser extends Component {
                     return (
                         <li className="movie" key={index}>
                             <h2>{movie.title}</h2>
-                            <img style={{'width': '100px'}}
+                            <img style={{'width': '100px'}} alt=""
                                  src={movie.poster}/>
                             <span>
                                 <button onClick={() => (this.onViewTrailer(movie))}>View Trailer</button>
