@@ -10,9 +10,6 @@ const RequestHeaders = {
     CONTENT_TYPE: 'Content-type',
 };
 
-const AuthenticationHeaderType = {
-    BEARER: 'Bearer'
-};
 
 const ContentTypes = {
     JSON: 'application/json',
@@ -22,6 +19,5 @@ const ContentTypes = {
 export {
     RequestMethods,
     RequestHeaders,
-    AuthenticationHeaderType,
     ContentTypes
 };

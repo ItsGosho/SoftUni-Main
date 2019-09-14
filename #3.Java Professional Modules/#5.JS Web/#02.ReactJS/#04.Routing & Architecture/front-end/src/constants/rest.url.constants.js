@@ -6,8 +6,8 @@ const RestURLs = {
         REGISTER: SERVER_URL + '/auth/register',
     },
     MOVIE: {
-        CREATE: SERVER_URL + '/feed/movie/create',
-        ALL: SERVER_URL + '/feed/movies'
+        CREATE: SERVER_URL + '/movies/create',
+        ALL: SERVER_URL + '/movies/all'
     }
 };
 

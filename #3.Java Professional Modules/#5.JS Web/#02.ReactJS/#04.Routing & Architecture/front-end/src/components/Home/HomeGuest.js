@@ -1,4 +1,5 @@
 import React, {Component, Fragment} from 'react';
+import MovieServices from "../../services/movie.services";
 
 class HomeGuest extends Component {
 
@@ -7,12 +8,19 @@ class HomeGuest extends Component {
     }
 
     render() {
+        let movies = this.props.movies;
+
         return (
             <Fragment>
-                <li className="movie">
-                    <h2>Titanic (1997)</h2>
-                    <img src="https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX182_CR0,0,182,268_AL_.jpg"/>
-                </li>
+                {movies.map((movie,key) => {
+                    return (
+                        <li className="movie">
+                            <h2>{movie.title}</h2>
+                            <img
+                                src={movie.poster}/>
+                        </li>
+                    );
+                })}
             </Fragment>
         );
     }

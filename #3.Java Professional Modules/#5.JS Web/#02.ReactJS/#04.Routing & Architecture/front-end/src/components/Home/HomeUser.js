@@ -1,22 +1,58 @@
 import React, {Component, Fragment} from 'react';
+import MovieTrailer from "../Movie/MovieTrailer";
+import MovieStoryline from "../Movie/MovieStoryline";
 
 class HomeUser extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            showTrailer: false,
+            showStoryLine: false,
+            selectedTrailerMovie: null,
+            selectedStoryLineMovie: null
+        };
+
+        this.onViewTrailer = this.onViewTrailer.bind(this);
+        this.onViewStoryLine = this.onViewStoryLine.bind(this);
+    }
+
+    onViewTrailer(movie) {
+        !this.state.showTrailer ? this.setState({selectedTrailerMovie: movie}) : this.setState({selectedTrailerMovie: null});
+
+        this.setState({showTrailer: !this.state.showTrailer})
+    }
+
+    onViewStoryLine(movie) {
+        !this.state.showStoryLine ? this.setState({selectedStoryLineMovie: movie}) : this.setState({selectedStoryLineMovie: null});
+
+        this.setState({showStoryLine: !this.state.showStoryLine})
     }
 
     render() {
+        let {movies} = this.props;
+
         return (
             <Fragment>
-                <li className="movie">
-                    <h2>Titanic (1997)</h2>
-                    <img src="https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX182_CR0,0,182,268_AL_.jpg"/>
-                    <span>
-                        <button>View Trailer</button>
-                        <button>View Story Line</button>
-                    </span>
-                </li>
+
+                {this.state.showTrailer ? (<MovieTrailer movie={this.state.selectedTrailerMovie}/>) : null}
+                {this.state.showStoryLine ? (<MovieStoryline movie={this.state.selectedStoryLineMovie}/>) : null}
+
+                {console.log(this.state)}
+
+                {movies.map((movie, index) => {
+                    return (
+                        <li className="movie" key={index}>
+                            <h2>{movie.title}</h2>
+                            <img style={{'width': '100px'}}
+                                 src={movie.poster}/>
+                            <span>
+                                <button onClick={() => (this.onViewTrailer(movie))}>View Trailer</button>
+                                <button onClick={() => (this.onViewStoryLine(movie))}>View Story Line</button>
+                            </span>
+                        </li>
+                    );
+                })}
             </Fragment>
         );
     }

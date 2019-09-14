@@ -49,7 +49,5 @@ Router.post(MovieRoutingURLs.CREATE,
         ValidationResponseMiddleware
     ]);
 
-Router.get(MovieRoutingURLs.ALL, LoggedInMiddleware,);
-
 
 export default Router;

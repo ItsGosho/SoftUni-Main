@@ -4,7 +4,8 @@ import RestURLs from "../constants/rest.url.constants";
 const MovieServices = {
 
     async findAll() {
-        return RequestHelper.requestJson(RestURLs.MOVIE.ALL);
+        let result = await RequestHelper.requestJson(RestURLs.MOVIE.ALL);
+        return result.data;
     },
 
     async create(movie) {

@@ -20,7 +20,7 @@ class App extends Component {
                         <ReactNotification/>
                         <Navigation role="Guest" username="Joreto"/>
                         <Switch>
-                            <Route exact path={RoutingURLs.HOME} component={() => <Home role="Guest"/>}/>
+                            <Route exact path={RoutingURLs.HOME} component={() => <Home role="User"/>}/>
                             <Route exact path={RoutingURLs.AUTHENTICATION.LOGIN} component={() => <Login/>}/>
                             <Route exact path={RoutingURLs.AUTHENTICATION.REGISTER} component={() => <Register/>}/>
                             <Route exact path={RoutingURLs.MOVIE.CREATE} component={() => <Create/>}/>

@@ -3,16 +3,26 @@ import './Home.css'
 import HomeGuest from "./HomeGuest";
 import HomeUser from "./HomeUser";
 import HomeAdmin from "./HomeAdmin";
+import MovieServices from "../../services/movie.services";
 
 class Home extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            movies: []
+        }
+    }
+
+    async componentDidMount() {
+        let movies = await MovieServices.findAll();
+        this.setState((prev) => {
+            return this.state.movies = movies;
+        })
     }
 
     render() {
         let {role} = this.props;
-
 
         return (
             <div className="Home">
@@ -22,11 +32,11 @@ class Home extends Component {
                         {(() => {
                             switch (role) {
                                 case 'Guest':
-                                    return (<HomeGuest/>);
+                                    return (<HomeGuest movies={this.state.movies}/>);
                                 case 'User':
-                                    return (<HomeUser/>);
+                                    return (<HomeUser movies={this.state.movies}/>);
                                 case 'Admin':
-                                    return (<HomeAdmin/>);
+                                    return (<HomeAdmin movies={this.state.movies}/>);
                             }
                         })()}
                     </ul>
