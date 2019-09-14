@@ -9,9 +9,9 @@ class HomeAdmin extends Component {
         return (
             <Fragment>
                 <MovieTrailer/>
-                {movies.map((movie, key) => {
+                {movies.map((movie, index) => {
                     return (
-                        <li className="movie">
+                        <li className="movie" key={index}>
                             <h2>{movie.title}</h2>
                             <img style={{'width': '100px'}} alt=""
                                 src={movie.poster}/>

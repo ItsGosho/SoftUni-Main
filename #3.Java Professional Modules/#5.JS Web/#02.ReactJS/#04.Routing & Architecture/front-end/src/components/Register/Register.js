@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './Register.css';
 import UserServices from "../../services/user.services";
+import {Redirect} from "react-router-dom";
+import RoutingURLs from "../../constants/routing.url.constants";
 
 class Register extends Component {
 
@@ -9,7 +11,9 @@ class Register extends Component {
         this.state = {
             username: '',
             email: '',
-            password: ''
+            password: '',
+            confirmPassword: '',
+            isRegistrationFinished: false
         };
 
         this.onChange = this.onChange.bind(this);
@@ -24,13 +28,14 @@ class Register extends Component {
         event.preventDefault();
     }
 
-    onSubmit(event) {
+    async onSubmit(event) {
         event.preventDefault();
 
-        let {username, password, email} = this.state;
-        let data = {username, password, email};
+        let {username, password, confirmPassword, email} = this.state;
+        let data = {username, password, confirmPassword, email};
 
-        UserServices.register(data);
+        let result = await UserServices.register(data);
+        this.setState({isRegistrationFinished: result});
     }
 
     render() {
@@ -45,10 +50,14 @@ class Register extends Component {
                     <input name="email" type="text" id="email" placeholder="ivan@gmail.com" onChange={this.onChange}/>
                     <label htmlFor="password">Password</label>
                     <input name="password" type="password" id="password" placeholder="******" onChange={this.onChange}/>
+                    <label htmlFor="password">Confirm Password</label>
+                    <input name="confirmPassword" type="password" id="confirmPassword" placeholder="******"
+                           onChange={this.onChange}/>
                     <input type="submit" value="Register"/>
                 </form>
-            </div>
 
+                {this.state.isRegistrationFinished ? <Redirect to={RoutingURLs.HOME} push/> : null}
+            </div>
         );
     }
 }
