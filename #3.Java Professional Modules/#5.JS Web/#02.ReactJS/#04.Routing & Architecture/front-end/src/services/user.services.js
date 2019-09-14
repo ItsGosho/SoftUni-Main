@@ -5,7 +5,6 @@ import NotificationHelper from "../helpers/notification.helper";
 
 const UserServices = {
 
-    /*TODO: refactor it for SOLID principle*/
     async login(data) {
         let result = await RequestHelper.postData(RestURLs.AUTHENTICATION.LOGIN, data);
 

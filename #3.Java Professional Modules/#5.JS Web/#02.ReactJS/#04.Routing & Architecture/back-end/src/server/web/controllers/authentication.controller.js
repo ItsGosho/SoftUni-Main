@@ -1,9 +1,8 @@
 import Express from 'express';
 import UserServices from '../../services/user.services';
-import JWTServices from '../../services/jwt.token.services';
 import JWTHelper from '../helpers/jwt.helper';
 import {UserRoutingURLs} from "../../constants/web/routing.urls";
-import RestResponseHeler from "../helpers/rest.response.helper";
+import RestResponseHelper from "../helpers/rest.response.helper";
 import RoleServices from "../../services/role.services";
 
 
@@ -25,11 +24,11 @@ Router.post(UserRoutingURLs.LOGIN, async (request, response) => {
             token: token.token
         };
 
-        RestResponseHeler.respondSuccessful(response, 'Login successful!', data);
+        RestResponseHelper.respondSuccessful(response, 'Login successful!', data);
         return;
     }
 
-    RestResponseHeler.respondError(response, 'Credentials are invalid!');
+    RestResponseHelper.respondError(response, 'Credentials are invalid!');
 });
 
 Router.post(UserRoutingURLs.REGISTER, async (request, response) => {
@@ -43,7 +42,7 @@ Router.post(UserRoutingURLs.REGISTER, async (request, response) => {
 
     await UserServices.register(user);
 
-    RestResponseHeler.respondSuccessful(response, 'Registration successful!', null);
+    RestResponseHelper.respondSuccessful(response, 'Registration successful!', null);
 });
 
 Router.post(UserRoutingURLs.LOGOUT, async (request, response) => {

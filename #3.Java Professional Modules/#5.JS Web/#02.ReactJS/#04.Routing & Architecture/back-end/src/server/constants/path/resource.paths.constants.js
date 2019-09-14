@@ -7,9 +7,7 @@ const ResourcePaths = {
     }
 };
 
-const {
-    JWT: JWTResourcePaths
-} = ResourcePaths;
+const JWTResourcePaths = ResourcePaths.JWT;
 
 export {
     JWTResourcePaths

@@ -12,12 +12,10 @@ const MODEL = {
     MOVIE: {}
 };
 
-const {
-    USER: UserValidationConstants,
-    TOKEN: TokenValidationConstants,
-    ROLE: RoleValidationConstants,
-    MOVIE: MovieValidationConstants,
-} = MODEL;
+const UserValidationConstants = MODEL.USER;
+const TokenValidationConstants = MODEL.TOKEN;
+const RoleValidationConstants = MODEL.ROLE;
+const MovieValidationConstants = MODEL.MOVIE;
 
 export {
     UserValidationConstants,

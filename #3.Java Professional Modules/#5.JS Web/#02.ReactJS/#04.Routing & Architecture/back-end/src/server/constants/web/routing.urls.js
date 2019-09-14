@@ -10,12 +10,10 @@ const RoutingURLs = {
     }
 };
 
-const {
-    USER: UserRoutingURLs,
-    MOVIE: MovieRoutingURLs,
-} = RoutingURLs;
+const UserRoutingURLs = RoutingURLs.USER;
+const MovieRoutingURLs = RoutingURLs.MOVIE;
 
 export {
     UserRoutingURLs,
     MovieRoutingURLs
-};
+}

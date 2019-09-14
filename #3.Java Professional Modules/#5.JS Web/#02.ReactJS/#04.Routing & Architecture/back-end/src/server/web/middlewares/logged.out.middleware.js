@@ -1,5 +1,6 @@
-export default (request, response, next) => {
-    /*TODO: check with bearer token too*/
+import RestResponseHelper from "../helpers/rest.response.helper";
+
+const LoggedOutMiddleware = (request, response, next) => {
     let token = request.cookies.jwt;
 
     if (token === undefined) {
@@ -7,6 +8,8 @@ export default (request, response, next) => {
         return;
     }
 
-    response.send('<center><h1 style="color:red">You must be logged out!</h1></center>')
+    RestResponseHelper.respondError(response,'You must be logged out!')
 };
+
+export default LoggedOutMiddleware;
 

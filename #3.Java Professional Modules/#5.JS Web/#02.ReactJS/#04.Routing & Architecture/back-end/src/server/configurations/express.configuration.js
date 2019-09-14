@@ -5,7 +5,7 @@ import MiddlewaresConfiguration from './middlewares.configuration';
 import Cors from 'cors';
 
 import AuthenticationController from '../web/controllers/authentication.controller';
-import TestController from '../web/controllers/test.controller';
+import MovieController from '../web/controllers/movie.controller';
 
 
 export default (app) => {
@@ -22,5 +22,5 @@ export default (app) => {
     app.use(MiddlewaresConfiguration);
 
     app.use(AuthenticationController);
-    app.use(TestController);
+    app.use(MovieController);
 };
