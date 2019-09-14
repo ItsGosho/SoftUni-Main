@@ -41,7 +41,7 @@ Router.post(UserRoutingURLs.REGISTER,
 
 Router.post(MovieRoutingURLs.CREATE,
     [LoggedInMiddleware,
-        RoleMiddleware(ROLE.USER),
+        RoleMiddleware(ROLE.ADMIN),
         Check('title').isLength(MovieRequestValidationRestrictionConstants.TITLE_MIN_LENGTH),
         Check('storyLine').isLength(MovieRequestValidationRestrictionConstants.STORYLINE_MIN_LENGTH),
         Check('trailerUrl').isURL().withMessage(MovieRequestValidationMessagesConstants.TRAILER_URL_NOT_VALID),
