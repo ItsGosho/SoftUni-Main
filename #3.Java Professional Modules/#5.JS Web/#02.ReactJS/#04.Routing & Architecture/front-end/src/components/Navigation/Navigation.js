@@ -9,7 +9,7 @@ import UserNavigation from "./UserNavigation";
 class Navigation extends Component {
 
     render() {
-        let {roleName,username} = this.props;
+        let {roleName, username} = this.props;
 
         return (
             <header>

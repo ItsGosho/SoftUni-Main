@@ -13,7 +13,7 @@ const RoleMiddleware = (requiredRole) => {
             return;
         }
 
-        RestResponseHelper.respondError(response,`You must be ${requiredRole} to access this route!`)
+        RestResponseHelper.respondErrorMessage(response,`You must be ${requiredRole} to access this route!`)
     }
 };
 

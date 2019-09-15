@@ -9,7 +9,7 @@ const LoggedInMiddleware = async (request, response, next) => {
         return;
     }
 
-    RestResponseHelper.respondError(response, 'You are not logged in!')
+    RestResponseHelper.respondErrorMessage(response, 'You are not logged in!')
 };
 
 export default LoggedInMiddleware;

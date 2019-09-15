@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import './Create.css';
+import MovieServices from "../../services/movie.services";
+import {Redirect} from "react-router-dom";
+import RoutingURLs from "../../constants/routing.url.constants";
 
 class MovieCreate extends Component {
 
@@ -10,6 +13,7 @@ class MovieCreate extends Component {
             storyLine: '',
             trailerUrl: '',
             poster: '',
+            isCreationFinished: false
         };
 
         this.onChange = this.onChange.bind(this);
@@ -24,13 +28,14 @@ class MovieCreate extends Component {
         event.preventDefault();
     }
 
-    onSubmit(event) {
+    async onSubmit(event) {
         event.preventDefault();
 
-        let {title, storyLine,trailerUrl,poster} = this.state;
-        let data = {title, storyLine,trailerUrl,poster};
-        /*TODO: create*/
-        console.log(data);
+        let {title, storyLine, trailerUrl, poster} = this.state;
+        let data = {title, storyLine, trailerUrl, poster};
+
+        let isSuccessful = await MovieServices.create(data);
+        this.setState({isCreationFinished: isSuccessful});
     }
 
     render() {
@@ -52,6 +57,8 @@ class MovieCreate extends Component {
                            onChange={this.onChange}/>
                     <input type="submit" value="Create"/>
                 </form>
+
+                {this.state.isCreationFinished ? <Redirect to={RoutingURLs.HOME} push/> : null}
             </div>
         );
     }

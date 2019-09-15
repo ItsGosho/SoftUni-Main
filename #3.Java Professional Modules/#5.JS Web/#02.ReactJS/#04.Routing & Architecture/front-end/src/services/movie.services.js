@@ -1,5 +1,7 @@
 import RequestHelper from "../helpers/request.helper";
 import RestURLs from "../constants/rest.url.constants";
+import NotificationHelper from "../helpers/notification.helper";
+import CookieHelper from "../helpers/cookie.helper";
 
 const MovieServices = {
 
@@ -9,8 +11,18 @@ const MovieServices = {
     },
 
     async create(movie) {
-        let mockedToken = 'test';
-        return RequestHelper.postDataAuth(RestURLs.MOVIE.CREATE, movie, mockedToken);
+        let result = await RequestHelper.postData(RestURLs.MOVIE.CREATE,movie);
+        console.log(result);
+        let {error} = result;
+
+        if (error) {
+            NotificationHelper.showErrorNotification(error.msg);
+            return false;
+        }
+
+        let {message} = result;
+        NotificationHelper.showSuccessNotification(message);
+        return true;
     }
 
 };

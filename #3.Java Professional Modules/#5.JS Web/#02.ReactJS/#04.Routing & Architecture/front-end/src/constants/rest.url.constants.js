@@ -4,6 +4,7 @@ const RestURLs = {
     AUTHENTICATION: {
         LOGIN: SERVER_URL + '/auth/login',
         REGISTER: SERVER_URL + '/auth/register',
+        LOGOUT: SERVER_URL + '/auth/logout',
     },
     MOVIE: {
         CREATE: SERVER_URL + '/movies/create',

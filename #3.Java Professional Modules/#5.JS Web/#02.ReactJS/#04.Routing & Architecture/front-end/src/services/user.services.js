@@ -37,6 +37,23 @@ const UserServices = {
         let {message} = result;
         NotificationHelper.showSuccessNotification(message);
         return true;
+    },
+
+    async logout() {
+        let result = await RequestHelper.postData(RestURLs.AUTHENTICATION.LOGOUT);
+        let {error} = result;
+
+        if (error) {
+            NotificationHelper.showErrorNotification(error.msg);
+            return false;
+        }
+
+        CookieHelper.removeCookie('username');
+        CookieHelper.removeCookie('role');
+
+        let {message} = result;
+        NotificationHelper.showSuccessNotification(message);
+        return true;
     }
 };
 

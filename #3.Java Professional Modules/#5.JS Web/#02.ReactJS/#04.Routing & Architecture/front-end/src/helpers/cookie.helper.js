@@ -11,8 +11,19 @@ const CookieHelper = {
         cookies.set(name, value, {
             expires: expirationDate,
         });
-    }
+    },
 
+    getCookie(name) {
+        const cookies = new Cookies();
+
+        return cookies.get(name);
+    },
+
+    removeCookie(name) {
+        const cookies = new Cookies();
+
+        return cookies.remove(name);
+    }
 };
 
 export default CookieHelper;

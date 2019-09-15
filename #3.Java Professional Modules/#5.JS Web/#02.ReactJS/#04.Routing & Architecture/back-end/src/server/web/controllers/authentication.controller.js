@@ -4,6 +4,7 @@ import JWTHelper from '../helpers/jwt.helper';
 import {UserRoutingURLs} from "../../constants/web/routing.urls";
 import RestResponseHelper from "../helpers/rest.response.helper";
 import RoleServices from "../../services/role.services";
+import JWTServices from "../../services/jwt.token.services";
 
 
 const Router = Express.Router();
@@ -16,8 +17,8 @@ Router.post(UserRoutingURLs.LOGIN, async (request, response) => {
 
         await JWTHelper.attachToken(token.token, response);
 
-        let {id} = UserServices.findByUsername(username);
-        let {name} = RoleServices.findRoleByUserId(id);
+        let {id} = await UserServices.findByUsername(username);
+        let {name} = await RoleServices.findRoleByUserId(id);
         let data = {
             username: username,
             role: name
@@ -31,7 +32,7 @@ Router.post(UserRoutingURLs.LOGIN, async (request, response) => {
 });
 
 Router.post(UserRoutingURLs.REGISTER, async (request, response) => {
-    let {username, password, confirmPassword, email} = request.body;
+    let {username, password, email} = request.body;
 
     let user = {
         username,
@@ -45,17 +46,14 @@ Router.post(UserRoutingURLs.REGISTER, async (request, response) => {
 });
 
 Router.post(UserRoutingURLs.LOGOUT, async (request, response) => {
-    /*let user = await JWTHelper.getCurrentUser(request);
+    let user = await JWTHelper.getCurrentUser(request);
 
     if (user !== null) {
 
         await JWTServices.removeAllByUserId(user.id);
         response.clearCookie('jwt');
-        /!*SUCCESSFUL*!/
-        return;
+        return RestResponseHelper.respondSuccessful(response, 'Logout successful!', {});
     }
-
-    /!*FAILED*!/*/
 });
 
 

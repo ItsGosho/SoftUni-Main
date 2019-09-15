@@ -8,7 +8,7 @@ const LoggedOutMiddleware = (request, response, next) => {
         return;
     }
 
-    RestResponseHelper.respondError(response,'You must be logged out!')
+    RestResponseHelper.respondErrorMessage(response,'You must be logged out!')
 };
 
 export default LoggedOutMiddleware;

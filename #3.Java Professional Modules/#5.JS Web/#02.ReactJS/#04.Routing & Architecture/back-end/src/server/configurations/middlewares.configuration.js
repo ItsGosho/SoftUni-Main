@@ -45,5 +45,7 @@ Router.post(MovieRoutingURLs.CREATE,
         ValidationResponseMiddleware
     ]);
 
+Router.post(UserRoutingURLs.LOGOUT,LoggedInMiddleware);
+
 
 export default Router;
