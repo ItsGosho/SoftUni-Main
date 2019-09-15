@@ -3,35 +3,23 @@ import './Create.css';
 import MovieServices from "../../services/movie.services";
 import {Redirect} from "react-router-dom";
 import RoutingURLs from "../../constants/routing.url.constants";
+import formHoc from "../hoc/form.hoc";
 
 class MovieCreate extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            title: '',
-            storyLine: '',
-            trailerUrl: '',
-            poster: '',
             isCreationFinished: false
         };
 
-        this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
-    }
-
-    onChange(event) {
-        let inputName = event.target.name;
-        let value = event.target.value;
-
-        this.setState({[inputName]: value});
-        event.preventDefault();
     }
 
     async onSubmit(event) {
         event.preventDefault();
 
-        let {title, storyLine, trailerUrl, poster} = this.state;
+        let {title, storyLine, trailerUrl, poster} = this.props.formData;
         let data = {title, storyLine, trailerUrl, poster};
 
         let isSuccessful = await MovieServices.create(data);
@@ -39,22 +27,24 @@ class MovieCreate extends Component {
     }
 
     render() {
+        let {onChange} = this.props.formMethods;
+
         return (
             <div className="Create">
                 <h1>Create Movie</h1>
                 <form onSubmit={this.onSubmit}>
                     <label htmlFor="title">Title</label>
-                    <input name="title" type="text" id="title" placeholder="Titanic" onChange={this.onChange}/>
+                    <input name="title" type="text" id="title" placeholder="Titanic" onChange={onChange}/>
                     <label htmlFor="storyLine">Story Line</label>
-                    <input name="storyLine" type="text" id="storyLine" placeholder="Text" onChange={this.onChange}/>
+                    <input name="storyLine" type="text" id="storyLine" placeholder="Text" onChange={onChange}/>
                     <label htmlFor="trailerUrl">Trailer Url</label>
                     <input name="trailerUrl" type="text" id="trailerUrl"
                            placeholder="https://www.youtube.com/watch?v=DNyKDI9pn0Q"
-                           onChange={this.onChange}/>
+                           onChange={onChange}/>
                     <label htmlFor="poster">Movie Poster</label>
                     <input type="text" id="poster" name="poster"
                            placeholder="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRzg6o0KjhufKFU1iBNr1zuyi0YDNgCUw4Ky5SNATZDVKaIUkiAA"
-                           onChange={this.onChange}/>
+                           onChange={onChange}/>
                     <input type="submit" value="Create"/>
                 </form>
 
@@ -64,4 +54,4 @@ class MovieCreate extends Component {
     }
 }
 
-export default MovieCreate;
+export default formHoc(MovieCreate);

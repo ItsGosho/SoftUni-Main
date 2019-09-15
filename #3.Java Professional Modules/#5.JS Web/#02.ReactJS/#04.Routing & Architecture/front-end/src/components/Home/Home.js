@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import './Home.css'
 import HomeGuest from "./HomeGuest";
-import HomeUser from "./HomeUser";
-import HomeAdmin from "./HomeAdmin";
+import HomeLoggedIn from "./HomeLoggedIn";
 import MovieServices from "../../services/movie.services";
 
 class Home extends Component {
@@ -32,9 +31,9 @@ class Home extends Component {
                         {(() => {
                             switch (roleName) {
                                 case 'User':
-                                    return (<HomeUser movies={this.state.movies}/>);
+                                    return (<HomeLoggedIn movies={this.state.movies}/>);
                                 case 'Admin':
-                                    return (<HomeAdmin movies={this.state.movies}/>);
+                                    return (<HomeLoggedIn movies={this.state.movies}/>);
                                 default:
                                     return (<HomeGuest movies={this.state.movies}/>);
                             }

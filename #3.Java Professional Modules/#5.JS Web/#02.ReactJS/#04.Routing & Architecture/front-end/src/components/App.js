@@ -11,6 +11,8 @@ import Navigation from "./Navigation/Navigation";
 import ReactNotification from "react-notifications-component";
 import CookieHelper from "../helpers/cookie.helper";
 import Logout from "./Logout/Logout";
+import loggedOut from "./hoc/logged_out.hoc";
+import Role from "./hoc/role.hoc";
 
 class App extends Component {
 
@@ -39,10 +41,10 @@ class App extends Component {
                         <Route component={()=> <Navigation roleName={this.getRole()} username={this.getUsername()}/>}/>
                         <Switch>
                             <Route exact path={RoutingURLs.HOME} component={() => <Home roleName={this.getRole()}/>}/>
-                            <Route exact path={RoutingURLs.AUTHENTICATION.LOGIN} component={() => <Login/>}/>
-                            <Route exact path={RoutingURLs.AUTHENTICATION.REGISTER} component={() => <Register/>}/>
-                            <Route exact path={RoutingURLs.AUTHENTICATION.LOGOUT} component={() => <Logout/>}/>
-                            <Route exact path={RoutingURLs.MOVIE.CREATE} component={() => <MovieCreate/>}/>
+                            <Route exact path={RoutingURLs.AUTHENTICATION.LOGIN} component={loggedOut(Login)}/>
+                            <Route exact path={RoutingURLs.AUTHENTICATION.REGISTER} component={loggedOut(Register)}/>
+                            <Route exact path={RoutingURLs.AUTHENTICATION.LOGOUT} component={Logout}/>
+                            <Route exact path={RoutingURLs.MOVIE.CREATE} component={Role(MovieCreate,'Admin')}/>
                         </Switch>
                     </Fragment>
                 </BrowserRouter>
