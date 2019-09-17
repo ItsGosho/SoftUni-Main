@@ -5,12 +5,12 @@ import RoutingURLs from "../../constants/routing.url.constants";
 import GuestNavigation from "./GuestNavigation";
 import AdminNavigation from "./AdminNavigation";
 import UserNavigation from "./UserNavigation";
+import userContextHoc from "../contexts/user.context.hoc";
 
 class Navigation extends Component {
 
     render() {
-        let {roleName, username} = this.props;
-
+        let {role, username} = this.props.userContext;
         return (
             <header>
                 <a href="#default" className="logo">Interactive IMDB</a>
@@ -18,7 +18,7 @@ class Navigation extends Component {
                     <Link to={RoutingURLs.HOME}>Home</Link>
 
                     {(() => {
-                        switch (roleName) {
+                        switch (role) {
                             case 'User':
                                 return (<UserNavigation username={username}/>);
                             case 'Admin':
@@ -34,4 +34,4 @@ class Navigation extends Component {
     }
 }
 
-export default Navigation;
+export default userContextHoc(Navigation);

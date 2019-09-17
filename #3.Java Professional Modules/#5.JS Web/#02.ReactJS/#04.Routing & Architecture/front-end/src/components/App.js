@@ -13,6 +13,7 @@ import CookieHelper from "../helpers/cookie.helper";
 import Logout from "./Logout/Logout";
 import loggedOut from "./hoc/logged_out.hoc";
 import Role from "./hoc/role.hoc";
+import {UserProvider} from "./contexts/user.context";
 
 class App extends Component {
 
@@ -35,19 +36,21 @@ class App extends Component {
 
         return (
             <div className="App">
-                <BrowserRouter>
-                    <Fragment>
-                        <ReactNotification/>
-                        <Route component={()=> <Navigation roleName={this.getRole()} username={this.getUsername()}/>}/>
-                        <Switch>
-                            <Route exact path={RoutingURLs.HOME} component={() => <Home roleName={this.getRole()}/>}/>
-                            <Route exact path={RoutingURLs.AUTHENTICATION.LOGIN} component={loggedOut(Login)}/>
-                            <Route exact path={RoutingURLs.AUTHENTICATION.REGISTER} component={loggedOut(Register)}/>
-                            <Route exact path={RoutingURLs.AUTHENTICATION.LOGOUT} component={Logout}/>
-                            <Route exact path={RoutingURLs.MOVIE.CREATE} component={Role(MovieCreate,'Admin')}/>
-                        </Switch>
-                    </Fragment>
-                </BrowserRouter>
+                <UserProvider>
+                    <BrowserRouter>
+                        <Fragment>
+                            <ReactNotification/>
+                            <Route component={() => <Navigation/>}/>
+                            <Switch>
+                                <Route exact path={RoutingURLs.HOME} component={() => <Home roleName={this.getRole()}/>}/>
+                                <Route exact path={RoutingURLs.AUTHENTICATION.LOGIN} component={loggedOut(Login)}/>
+                                <Route exact path={RoutingURLs.AUTHENTICATION.REGISTER} component={loggedOut(Register)}/>
+                                <Route exact path={RoutingURLs.AUTHENTICATION.LOGOUT} component={Logout}/>
+                                <Route exact path={RoutingURLs.MOVIE.CREATE} component={Role(MovieCreate, 'Admin')}/>
+                            </Switch>
+                        </Fragment>
+                    </BrowserRouter>
+                </UserProvider>
             </div>
         );
     }
