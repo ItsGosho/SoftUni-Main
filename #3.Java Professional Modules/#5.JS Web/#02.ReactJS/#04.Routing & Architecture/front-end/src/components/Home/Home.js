@@ -3,6 +3,7 @@ import './Home.css'
 import HomeGuest from "./HomeGuest";
 import HomeLoggedIn from "./HomeLoggedIn";
 import MovieServices from "../../services/movie.services";
+import userContextHoc from "../contexts/user.context.hoc";
 
 class Home extends Component {
 
@@ -21,7 +22,7 @@ class Home extends Component {
     }
 
     render() {
-        let {roleName} = this.props;
+        let {role} = this.props.userContext;
 
         return (
             <div className="Home">
@@ -29,7 +30,7 @@ class Home extends Component {
                     <h1>All movies</h1>
                     <ul className="movies">
                         {(() => {
-                            switch (roleName) {
+                            switch (role) {
                                 case 'User':
                                     return (<HomeLoggedIn movies={this.state.movies}/>);
                                 case 'Admin':
@@ -45,4 +46,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default userContextHoc(Home);

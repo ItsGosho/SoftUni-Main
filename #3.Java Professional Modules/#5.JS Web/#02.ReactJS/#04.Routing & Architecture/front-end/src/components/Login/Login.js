@@ -4,13 +4,15 @@ import UserServices from "../../services/user.services";
 import {Redirect} from "react-router-dom";
 import RoutingURLs from "../../constants/routing.url.constants";
 import formHoc from "../hoc/form.hoc";
+import userContextHoc from "../contexts/user.context.hoc";
 
 class Login extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            isLoginFinished: false
+            isLoginFinished: false,
+            refreshUserContext: this.props.userContext.refreshData
         };
 
         this.onSubmit = this.onSubmit.bind(this);
@@ -24,6 +26,7 @@ class Login extends Component {
 
         let isSuccessful = await UserServices.login(data);
         this.setState({isLoginFinished: isSuccessful});
+        this.state.refreshUserContext();
     }
 
     render() {
@@ -48,4 +51,4 @@ class Login extends Component {
     }
 }
 
-export default formHoc(Login);
+export default userContextHoc(formHoc(Login));

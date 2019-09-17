@@ -11,6 +11,7 @@ class Navigation extends Component {
 
     render() {
         let {role, username} = this.props.userContext;
+
         return (
             <header>
                 <a href="#default" className="logo">Interactive IMDB</a>

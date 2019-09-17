@@ -13,12 +13,13 @@ class UserProvider extends Component {
         this.state = {
             username: '',
             role: '',
+            refreshData: this.refreshData
         };
 
         this.refreshData = this.refreshData.bind(this);
     }
 
-    refreshData() {
+    refreshData = () => {
         this.setState({username: CookieHelper.getCookie('username')});
         this.setState({role: CookieHelper.getCookie('role')});
     };

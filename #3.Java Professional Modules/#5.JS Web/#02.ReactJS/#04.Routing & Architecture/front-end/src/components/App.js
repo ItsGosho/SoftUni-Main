@@ -17,23 +17,7 @@ import {UserProvider} from "./contexts/user.context";
 
 class App extends Component {
 
-    constructor(props) {
-        super(props);
-
-        this.getUsername = this.getUsername.bind(this);
-        this.getRole = this.getRole.bind(this);
-    }
-
-    getUsername() {
-        return CookieHelper.getCookie('username');
-    }
-
-    getRole() {
-        return CookieHelper.getCookie('role');
-    }
-
     render() {
-
         return (
             <div className="App">
                 <UserProvider>
@@ -42,7 +26,7 @@ class App extends Component {
                             <ReactNotification/>
                             <Route component={() => <Navigation/>}/>
                             <Switch>
-                                <Route exact path={RoutingURLs.HOME} component={() => <Home roleName={this.getRole()}/>}/>
+                                <Route exact path={RoutingURLs.HOME} component={() => <Home/>}/>
                                 <Route exact path={RoutingURLs.AUTHENTICATION.LOGIN} component={loggedOut(Login)}/>
                                 <Route exact path={RoutingURLs.AUTHENTICATION.REGISTER} component={loggedOut(Register)}/>
                                 <Route exact path={RoutingURLs.AUTHENTICATION.LOGOUT} component={Logout}/>
