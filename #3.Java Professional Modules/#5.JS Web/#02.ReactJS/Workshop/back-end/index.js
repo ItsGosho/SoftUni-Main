@@ -1,6 +1,5 @@
-import TestImport from './test.import'
-
-console.log(TestImport.kura());
+import Probichka from "./test";
+import {attachControllers} from "@decorators/express";
 
 let env = process.env.NODE_ENV || 'development';
 
@@ -12,6 +11,8 @@ require('./config/database')(settings);
 require('./config/express')(app);
 require('./config/routes')(app);
 require('./config/passport')();
+
+attachControllers(app,[Probichka]);
 
 app.listen(settings.port);
 console.log(`Server listening on port ${settings.port}...`);

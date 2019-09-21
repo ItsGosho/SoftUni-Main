@@ -13,6 +13,9 @@
   "author": "PA",
   "license": "MIT",
   "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "@decorators/di": "^1.0.2",
+    "@decorators/express": "^2.3.0",
     "body-parser": "^1.18.3",
     "cookie-parser": "1.4.3",
     "cors": "2.8.4",
