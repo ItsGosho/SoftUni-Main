@@ -6,7 +6,7 @@ module.exports = {
   development: {
     rootPath: rootPath,
     db: 'mongodb://localhost:27017/BookLibrary',
-    port: 9000
+    port: 5000
   },
   staging: {
   },
