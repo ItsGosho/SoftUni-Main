@@ -7,6 +7,20 @@ import {
 
 const UserRequestValidators = {
 
+    credentialsValid: (usernameField,passwordField) => {
+        return async (data) => {
+            let username = data[usernameField];
+            let password = data[passwordField];
+
+            let result = await UserServices.isCredentialsValid(username,password);
+
+
+            if (!result) {
+                return Promise.reject(UserRequestValidationMessagesConstants.CREDENTIALS_NOT_VALID);
+            }
+        }
+    },
+
     usernamePresent: (field) => {
         return async (data) => {
             let username = data[field];
@@ -65,7 +79,7 @@ const UserRequestValidators = {
             let password = data[field1];
             let confirmPassword = data[field2];
 
-            if (password !== confirmPassword) {
+            if (password.length === 0 || password !== confirmPassword) {
                 return Promise.reject(UserRequestValidationMessagesConstants.PASSWORDS_DOESNT_MATCH);
             }
         }

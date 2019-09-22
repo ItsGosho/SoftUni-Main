@@ -8,7 +8,7 @@ const Schema = Mongoose.Schema;
 const Type = Schema.Types;
 const ParseString = Format.sprintf;
 
-const jwtTokenModel = new Schema({
+const model = new Schema({
     token: {
         type: Type.String,
         required: [true, TokenValidationConstants.TOKEN_REQUIRED]
@@ -19,14 +19,14 @@ const jwtTokenModel = new Schema({
     }
 });
 
-jwtTokenModel.post('save', function (token) {
+model.post('save', function (token) {
     console.log(ParseString(TokenLoggingConstants.SAVE, token.user));
 });
 
-jwtTokenModel.post('deleteMany', function (token) {
+model.post('deleteMany', function (token) {
     console.log(ParseString(TokenLoggingConstants.DELETE_MANY, token.deletedCount));
 });
 
-let JWTTokenModel = Mongoose.model(ModelNameConstants.JWT, jwtTokenModel);
+let JWTTokenModel = Mongoose.model(ModelNameConstants.JWT, model);
 
 export default JWTTokenModel;

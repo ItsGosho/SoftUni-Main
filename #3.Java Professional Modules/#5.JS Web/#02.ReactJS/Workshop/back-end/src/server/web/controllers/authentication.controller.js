@@ -1,34 +1,30 @@
 import Express from 'express';
-import UserServices from '../../services/user.services';
-import JWTHelper from '../helpers/jwt.helper';
 import {UserRoutingURLs} from "../../constants/web/routing.urls";
 import RestResponseHelper from "../helpers/rest.response.helper";
-import RoleServices from "../../services/role.services";
+import UserServices from "../../services/user.services";
+import JWTHelper from "../helpers/jwt.helper";
 import JWTServices from "../../services/jwt.token.services";
+import RoleHelper from "../../helpers/role.helper";
 
 
 const Router = Express.Router();
 
 Router.post(UserRoutingURLs.LOGIN, async (request, response) => {
+
     let {username, password} = request.body;
 
-    if (await UserServices.isCredentialsValid(username, password)) {
-        let token = await UserServices.proceedToken(username);
+    let token = await UserServices.proceedToken(username);
 
-        await JWTHelper.attachToken(token.token, response);
+    await JWTHelper.attachToken(token.token, response);
 
-        let {id} = await UserServices.findByUsername(username);
-        let {name} = await RoleServices.findRoleByUserId(id);
-        let data = {
-            username: username,
-            role: name
-        };
+    let {id, roles} = await UserServices.findByUsername(username);
 
-        RestResponseHelper.respondSuccessful(response, 'Login successful!', data);
-        return;
-    }
+    let data = {
+        username: username,
+        role: RoleHelper.getHighestRoleFrom(roles)
+    };
 
-    RestResponseHelper.respondErrorMessage(response, 'Credentials are invalid!');
+    RestResponseHelper.respondSuccessful(response, 'Login successful!', data);
 });
 
 Router.post(UserRoutingURLs.REGISTER, async (request, response) => {

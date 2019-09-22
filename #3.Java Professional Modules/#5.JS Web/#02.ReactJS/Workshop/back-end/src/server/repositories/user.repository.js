@@ -14,6 +14,10 @@ const UserRepository = {
     async findByEmail(email) {
         return UserModel.findOne({email}).exec();
     },
+
+    async findTotal() {
+        return UserModel.count({}).exec();
+    }
 };
 
 export default UserRepository;

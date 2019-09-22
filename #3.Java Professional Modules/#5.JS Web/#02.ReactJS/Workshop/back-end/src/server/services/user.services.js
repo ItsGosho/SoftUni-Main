@@ -1,23 +1,22 @@
 import UserRepository from '../repositories/user.repository';
-import RoleServices from './role.services';
 import JWTServices from './jwt.token.services';
 import Bcrypt from 'bcrypt-nodejs';
+import RoleHelper from "../helpers/role.helper";
 
 
 const SaltRounds = 10;
 
 const UserServices = {
+
     async register(user) {
 
         let salt = Bcrypt.genSaltSync(SaltRounds);
         let hash = Bcrypt.hashSync(user.password, salt);
 
         user.password = hash;
-        let role = await RoleServices.getInitialRole();
-        user.role = role;
+        user.roles = await RoleHelper.getInitialRoles();
 
         user = await UserRepository.save(user);
-        await RoleServices.addUser(role.id, user.id);
     },
 
     async isCredentialsValid(username, password) {
@@ -32,11 +31,11 @@ const UserServices = {
 
     async proceedToken(username) {
         let user = await UserRepository.findByUsername(username);
-        let role = await RoleServices.findRoleByUserId(user.id);
+        //let role = await RoleServices.findRoleByUserId(user.id);
 
         let tokenData = {
             username: user.username,
-            role: role.name
+            //role: role.name
         };
 
         let token = {
@@ -55,6 +54,10 @@ const UserServices = {
     async findByEmail(email) {
         return UserRepository.findByEmail(email);
     },
+
+    async totalUsers() {
+        return UserRepository.findTotal();
+    }
 
 };
 

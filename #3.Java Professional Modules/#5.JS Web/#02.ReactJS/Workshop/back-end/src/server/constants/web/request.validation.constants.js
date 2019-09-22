@@ -1,5 +1,6 @@
 const REQUEST_VALIDATION_MESSAGES = {
     USER: {
+        CREDENTIALS_NOT_VALID: 'Credentials are invalid!',
         USERNAME_DOESNT_EXIST: 'Username is not present!',
         USERNAME_ALREADY_EXIST: 'Username already exist!',
         EMAIL_ALREADY_EXIST: 'Email already exist!',
@@ -18,23 +19,15 @@ const REQUEST_VALIDATION_RESTRICTIONS = {
     USER: {
         USERNAME_MIN_LENGTH: 3,
         USERNAME_MAX_LENGTH: 50,
-    },
-    MOVIE: {
-        TITLE_MIN_LENGTH: 3,
-        STORYLINE_MIN_LENGTH: 3
     }
 };
 
 const UserRequestValidationMessagesConstants = REQUEST_VALIDATION_MESSAGES.USER;
-const MovieRequestValidationMessagesConstants = REQUEST_VALIDATION_MESSAGES.MOVIE;
 
 const UserRequestValidationRestrictionConstants = REQUEST_VALIDATION_RESTRICTIONS.USER;
-const MovieRequestValidationRestrictionConstants = REQUEST_VALIDATION_RESTRICTIONS.MOVIE;
 
 export {
     UserRequestValidationMessagesConstants,
-    MovieRequestValidationMessagesConstants,
 
     UserRequestValidationRestrictionConstants,
-    MovieRequestValidationRestrictionConstants
 }

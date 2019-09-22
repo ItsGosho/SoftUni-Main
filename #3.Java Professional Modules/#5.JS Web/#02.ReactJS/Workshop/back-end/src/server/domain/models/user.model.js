@@ -8,7 +8,7 @@ const Schema = Mongoose.Schema;
 const Type = Schema.Types;
 const ParseString = Format.sprintf;
 
-const userModel = new Schema({
+const model = new Schema({
     username: {
         type: Type.String,
         required: [true, UserValidationConstants.USERNAME_REQUIRED],
@@ -25,13 +25,18 @@ const userModel = new Schema({
         type: Type.String,
         trim: true
     },
+    roles: [
+        {
+            type: Type.String,
+        }
+    ]
 });
 
-userModel.post('save', function (user) {
+model.post('save', function (user) {
     console.log(ParseString(UserLoggingConstants.SAVE, user.username));
 });
 
 
-let UserModel = Mongoose.model(ModelNameConstants.USER, userModel);
+let UserModel = Mongoose.model(ModelNameConstants.USER, model);
 
 export default UserModel;
