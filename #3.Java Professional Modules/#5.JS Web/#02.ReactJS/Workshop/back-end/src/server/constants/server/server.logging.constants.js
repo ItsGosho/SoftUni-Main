@@ -1,6 +1,7 @@
+import Properties from "../../configurations/properties";
 
 const ServerLoggingConstants = {
-     SERVER_STARTED: `[REST] Server started on 000000000000000000`.cyan
+     SERVER_STARTED: `[REST] Server started on ${Properties.server.port}`.cyan
 
 };
 

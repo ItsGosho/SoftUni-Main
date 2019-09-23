@@ -1,7 +1,9 @@
-const Properties = {
+import Commander from 'commander';
+
+const props = {
     dev: {
         database: {
-           url: 'mongodb://localhost:27017/BookLibrary'
+            url: 'mongodb://localhost:27017/BookLibrary'
         },
         cors: {
             origins: [
@@ -13,5 +15,9 @@ const Properties = {
         }
     }
 };
+
+Commander.option('--environment <type>', 'Current environment to use!');
+let env = Commander.parse(process.argv).environment || 'dev';
+let Properties = props[env];
 
 export default Properties;
