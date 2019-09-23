@@ -5,5 +5,4 @@ let databaseConfiguration = {
     connectionString: MongoDatabaseConfigurationConstants.CONNECTION_STRING
 };
 
-
 export default databaseConfiguration;
