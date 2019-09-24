@@ -1,5 +1,6 @@
 import JWTServices from '../../services/jwt.token.services';
 import UserServices from '../../services/user.services';
+import Properties from "../../configurations/properties";
 
 
 const JWTHelper = {
@@ -15,7 +16,10 @@ const JWTHelper = {
     },
 
     async attachToken(token, response) {
-        response.cookie('jwt', token, {maxAge: 86400000, httpOnly: true});
+        response.cookie(Properties.jwt.cookieName, token, {
+            maxAge: Properties.jwt.maxAge,
+            httpOnly: Properties.jwt.httpOnly
+        });
     },
 
 };

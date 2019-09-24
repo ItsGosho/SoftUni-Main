@@ -19,6 +19,11 @@ const props = {
         },
         server: {
             port: 9881
+        },
+        jwt: {
+            cookieName: 'jwt',
+            maxAge: 86400000, //24h
+            httpOnly: true
         }
     }
 };
