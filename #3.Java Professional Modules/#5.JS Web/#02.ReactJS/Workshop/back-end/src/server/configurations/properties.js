@@ -8,7 +8,14 @@ const props = {
         cors: {
             origins: [
                 'http://localhost:8000'
-            ]
+            ],
+            credentials: true
+        },
+        bodyParser: {
+            extended: true
+        },
+        morgan: {
+            environment: 'dev'
         },
         server: {
             port: 9881
