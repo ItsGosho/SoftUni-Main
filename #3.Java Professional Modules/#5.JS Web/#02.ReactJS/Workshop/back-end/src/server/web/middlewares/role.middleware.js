@@ -3,7 +3,8 @@ import JWTServices from "../../services/jwt.token.services";
 import RoleHelper from "../../helpers/role.helper";
 import RestResponseMessages from "../../constants/web/rest.message.constants";
 
-/*Check if the user in the request has given role*/
+/*Note that before this middleware is executed a user must be attached to the request somehow*/
+
 const RoleMiddleware = (requiredRole) => {
     return async (request, response, next) => {
         let user = request.user;
