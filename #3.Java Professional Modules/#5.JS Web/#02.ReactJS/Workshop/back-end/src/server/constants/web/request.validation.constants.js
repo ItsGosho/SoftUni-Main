@@ -22,12 +22,12 @@ const RequestValidationRestrictions = {
     }
 };
 
-const UserRequestValidationMessagesConstants = RequestValidationMessages.USER;
+const UserRequestValidationMessages = RequestValidationMessages.USER;
 
-const UserRequestValidationRestrictionConstants = RequestValidationRestrictions.USER;
+const UserRequestValidationRestriction = RequestValidationRestrictions.USER;
 
 export {
-    UserRequestValidationMessagesConstants,
+    UserRequestValidationMessages,
 
-    UserRequestValidationRestrictionConstants,
+    UserRequestValidationRestriction,
 }

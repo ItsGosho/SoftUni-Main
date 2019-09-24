@@ -1,10 +1,8 @@
-const MODEL_NAMES = {
+const ModelNames = {
     BOOK: 'Book',
     ORDER: 'Order',
     USER: 'User',
     JWT: 'JWT'
 };
 
-export {
-    MODEL_NAMES as ModelNameConstants
-}
+export default ModelNames;

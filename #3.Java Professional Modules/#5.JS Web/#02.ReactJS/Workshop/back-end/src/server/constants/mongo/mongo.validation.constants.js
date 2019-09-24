@@ -1,4 +1,4 @@
-const MODEL = {
+const Model = {
     USER: {
         USERNAME_REQUIRED: 'Username is required!',
         EMAIL_REQUIRED: 'Email is required!',
@@ -10,14 +10,14 @@ const MODEL = {
     ORDER: {}
 };
 
-const UserValidationConstants = MODEL.USER;
-const TokenValidationConstants = MODEL.TOKEN;
-const BookValidationConstants = MODEL.BOOK;
-const OrderValidationConstants = MODEL.ORDER;
+const UserModelValidationMessages = Model.USER;
+const TokenModelValidationMessages = Model.TOKEN;
+const BookModelValidationMessages = Model.BOOK;
+const OrderModelValidationMessages = Model.ORDER;
 
 export {
-    UserValidationConstants,
-    TokenValidationConstants,
-    BookValidationConstants,
-    OrderValidationConstants,
+    UserModelValidationMessages,
+    TokenModelValidationMessages,
+    BookModelValidationMessages,
+    OrderModelValidationMessages,
 }

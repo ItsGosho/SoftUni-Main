@@ -1,10 +1,10 @@
 import Properties from "../../configurations/properties";
 
-const ServerLoggingConstants = {
+const ServerLogging = {
      SERVER_STARTED: `[REST] Server started on ${Properties.server.port}`.cyan
 
 };
 
 export {
-    ServerLoggingConstants
+    ServerLogging
 }

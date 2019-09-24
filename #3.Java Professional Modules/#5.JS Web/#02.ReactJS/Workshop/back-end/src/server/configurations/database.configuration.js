@@ -1,6 +1,6 @@
 import Mongoose from 'mongoose';
-import {DatabaseConfigurationLoggingConstants} from "../constants/mongo/mongo.logging.constants";
 import Properties from "./properties";
+import {DatabaseConfigurationLogging} from "../constants/mongo/mongo.logging.constants";
 
 
 //mongoose.Promise = global.Promise;
@@ -11,10 +11,10 @@ export default () => {
     const database = Mongoose.connection;
 
     database.once('open', () => {
-        console.log(DatabaseConfigurationLoggingConstants.DATABASE_CONNECTION_SUCCESSFUL)
+        console.log(DatabaseConfigurationLogging.DATABASE_CONNECTION_SUCCESSFUL)
     });
 
     database.once('error', ()=>{
-        console.log(DatabaseConfigurationLoggingConstants.DATABASE_CONNECTION_FAILED)
+        console.log(DatabaseConfigurationLogging.DATABASE_CONNECTION_FAILED)
     });
 };
