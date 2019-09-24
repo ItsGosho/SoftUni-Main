@@ -1,0 +1,3 @@
+const REST_RESPONSE_MESSAGE_CONSTANTS = {
+
+};

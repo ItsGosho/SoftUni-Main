@@ -1,4 +1,4 @@
-const REQUEST_VALIDATION_MESSAGES = {
+const RequestValidationMessages = {
     USER: {
         CREDENTIALS_NOT_VALID: 'Credentials are invalid!',
         USERNAME_DOESNT_EXIST: 'Username is not present!',
@@ -15,16 +15,16 @@ const REQUEST_VALIDATION_MESSAGES = {
     }
 };
 
-const REQUEST_VALIDATION_RESTRICTIONS = {
+const RequestValidationRestrictions = {
     USER: {
         USERNAME_MIN_LENGTH: 3,
         USERNAME_MAX_LENGTH: 50,
     }
 };
 
-const UserRequestValidationMessagesConstants = REQUEST_VALIDATION_MESSAGES.USER;
+const UserRequestValidationMessagesConstants = RequestValidationMessages.USER;
 
-const UserRequestValidationRestrictionConstants = REQUEST_VALIDATION_RESTRICTIONS.USER;
+const UserRequestValidationRestrictionConstants = RequestValidationRestrictions.USER;
 
 export {
     UserRequestValidationMessagesConstants,

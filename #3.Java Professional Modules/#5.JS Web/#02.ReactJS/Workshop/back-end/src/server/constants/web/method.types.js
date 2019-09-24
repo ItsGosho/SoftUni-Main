@@ -1,10 +1,8 @@
-const REQUEST_METHODS = {
+const RequestMethods = {
     GET: 'GET',
     POST: 'POST',
     PUT: 'PUT',
     DELETE: 'DELETE',
 };
 
-export {
-    REQUEST_METHODS as RequestMethods
-};
+export default RequestMethods;

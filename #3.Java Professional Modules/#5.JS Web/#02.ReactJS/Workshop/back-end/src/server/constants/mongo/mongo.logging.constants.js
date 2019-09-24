@@ -1,4 +1,4 @@
-const MONGO_MODEL_LOGGING_CONSTANTS = {
+const MongoModelLoggingConstants = {
     ORDER: {
         SAVE: '-> '.red + 'Order has been created/updated with title: %s'.cyan
     },
@@ -14,20 +14,20 @@ const MONGO_MODEL_LOGGING_CONSTANTS = {
     },
 };
 
-const MONGO_CONFIGURATION_LOGGING_CONSTANTS = {
+const DatabaseConfigurationLoggingConstants = {
     DATABASE_CONNECTION_SUCCESSFUL: '[Database] Connection has been successful!'.cyan,
     DATABASE_CONNECTION_FAILED: '[Database] Connection has not been established!'.red,
 };
 
-const OrderLoggingConstants = MONGO_MODEL_LOGGING_CONSTANTS.ORDER;
-const TokenLoggingConstants = MONGO_MODEL_LOGGING_CONSTANTS.TOKEN;
-const BookLoggingConstants = MONGO_MODEL_LOGGING_CONSTANTS.BOOK;
-const UserLoggingConstants = MONGO_MODEL_LOGGING_CONSTANTS.USER;
+const OrderLoggingConstants = MongoModelLoggingConstants.ORDER;
+const TokenLoggingConstants = MongoModelLoggingConstants.TOKEN;
+const BookLoggingConstants = MongoModelLoggingConstants.BOOK;
+const UserLoggingConstants = MongoModelLoggingConstants.USER;
 
 export {
     OrderLoggingConstants,
     TokenLoggingConstants,
     BookLoggingConstants,
     UserLoggingConstants,
-    MONGO_CONFIGURATION_LOGGING_CONSTANTS as DatabaseConfigurationLoggingConstants
+    DatabaseConfigurationLoggingConstants
 };

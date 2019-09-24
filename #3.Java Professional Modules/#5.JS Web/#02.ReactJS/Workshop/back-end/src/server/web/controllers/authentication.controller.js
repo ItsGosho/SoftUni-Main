@@ -17,7 +17,7 @@ Router.post(UserRoutingURLs.LOGIN, async (request, response) => {
 
     await JWTHelper.attachToken(token.token, response);
 
-    let {id, roles} = await UserServices.findByUsername(username);
+    let {roles} = await UserServices.findByUsername(username);
 
     let data = {
         username: username,
