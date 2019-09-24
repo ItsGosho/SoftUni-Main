@@ -1,5 +1,6 @@
 import JWTServices from '../../services/jwt.token.services';
 import RestResponseHelper from "../helpers/rest.response.helper";
+import RestResponseMessages from "../../constants/web/rest.message.constants";
 
 const LoggedInMiddleware = async (request, response, next) => {
     let token = request.cookies.jwt;
@@ -9,7 +10,7 @@ const LoggedInMiddleware = async (request, response, next) => {
         return;
     }
 
-    RestResponseHelper.respondErrorMessage(response, 'You are not logged in!')
+    RestResponseHelper.respondErrorMessage(response, RestResponseMessages.NOT_LOGGED_IN)
 };
 
 export default LoggedInMiddleware;

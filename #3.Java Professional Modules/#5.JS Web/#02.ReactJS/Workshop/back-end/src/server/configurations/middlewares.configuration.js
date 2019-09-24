@@ -5,7 +5,7 @@ import UserAttacherMiddleware from "../web/middlewares/user.attacher.middleware"
 import LoggedInMiddleware from "../web/middlewares/logged.in.middleware";
 import ValidationResponseMiddleware from "../web/middlewares/validation.response.middleware";
 import LoggedOutMiddleware from "../web/middlewares/logged.out.middleware";
-import {UserRoutingURLs} from "../constants/web/routing.urls";
+import {UserRoutingURLs} from "../constants/web/routing.urls.constants";
 const Router = Express.Router();
 
 Router.all('*', UserAttacherMiddleware);

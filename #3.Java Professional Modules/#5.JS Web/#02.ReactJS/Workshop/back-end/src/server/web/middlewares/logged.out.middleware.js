@@ -1,4 +1,5 @@
 import RestResponseHelper from "../helpers/rest.response.helper";
+import RestResponseMessages from "../../constants/web/rest.message.constants";
 
 const LoggedOutMiddleware = (request, response, next) => {
     let token = request.cookies.jwt;
@@ -8,7 +9,7 @@ const LoggedOutMiddleware = (request, response, next) => {
         return;
     }
 
-    RestResponseHelper.respondErrorMessage(response,'You must be logged out!')
+    RestResponseHelper.respondErrorMessage(response,RestResponseMessages.LOGGED_OUT)
 };
 
 export default LoggedOutMiddleware;

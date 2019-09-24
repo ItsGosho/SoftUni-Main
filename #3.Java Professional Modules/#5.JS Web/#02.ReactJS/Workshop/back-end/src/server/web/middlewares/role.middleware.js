@@ -1,6 +1,7 @@
 import RestResponseHelper from "../helpers/rest.response.helper";
 import JWTServices from "../../services/jwt.token.services";
 import RoleHelper from "../../helpers/role.helper";
+import RestResponseMessages from "../../constants/web/rest.message.constants";
 
 /*Note that before this middleware is executed a user must be attached to the request somehow*/
 
@@ -14,7 +15,7 @@ const RoleMiddleware = (requiredRole) => {
             return;
         }
 
-        RestResponseHelper.respondErrorMessage(response, `You must be ${requiredRole} to access this route!`)
+        RestResponseHelper.respondErrorMessage(response, RestResponseMessages.REQUIRED_ROLE.replace('${role}', requiredRole))
     }
 };
 

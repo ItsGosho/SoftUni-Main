@@ -1,13 +1,15 @@
+import StatusCodes from "../../constants/web/status.code.constants";
+
 const RestResponseHelper = {
 
     respondError(response, error) {
-        response.status(200).json({error});
+        response.status(StatusCodes.OK).json({error});
     },
     respondErrorMessage(response, message) {
-        response.status(200).json({error:{msg: message}});
+        response.status(StatusCodes.BAD_REQUEST).json({error: {msg: message}});
     },
     respondSuccessful(response, message, data) {
-        response.status(400).json({message, data});
+        response.status(StatusCodes.BAD_REQUEST).json({message, data});
     }
 
 };

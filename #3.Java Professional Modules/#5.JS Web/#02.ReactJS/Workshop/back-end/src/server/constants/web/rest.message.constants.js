@@ -1,3 +1,10 @@
-const REST_RESPONSE_MESSAGE_CONSTANTS = {
-
+const RestResponseMessages = {
+    LOGIN_SUCCESSFUL: 'Login successful!',
+    REGISTRATION_SUCCESSFUL: 'Registration successful!',
+    LOGOUT_SUCCESSFUL: 'Logout successful!',
+    NOT_LOGGED_IN: 'You are not logged in!',
+    LOGGED_OUT: 'You must be logged out!',
+    REQUIRED_ROLE: 'You must be ${role}!',
 };
+
+export default RestResponseMessages;
