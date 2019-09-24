@@ -17,6 +17,7 @@ const props = {
 };
 
 Commander.option('--environment <type>', 'Current environment to use!');
+
 let env = Commander.parse(process.argv).environment || 'dev';
 let Properties = props[env];
 

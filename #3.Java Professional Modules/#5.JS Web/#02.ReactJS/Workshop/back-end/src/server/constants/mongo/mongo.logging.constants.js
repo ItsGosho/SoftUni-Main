@@ -15,7 +15,8 @@ const MONGO_MODEL_LOGGING_CONSTANTS = {
 };
 
 const MONGO_CONFIGURATION_LOGGING_CONSTANTS = {
-    DATABASE_CONNECTION_SUCCESSFUL: '[Database] Connection has been successful!'.cyan
+    DATABASE_CONNECTION_SUCCESSFUL: '[Database] Connection has been successful!'.cyan,
+    DATABASE_CONNECTION_FAILED: '[Database] Connection has not been established!'.red,
 };
 
 const OrderLoggingConstants = MONGO_MODEL_LOGGING_CONSTANTS.ORDER;

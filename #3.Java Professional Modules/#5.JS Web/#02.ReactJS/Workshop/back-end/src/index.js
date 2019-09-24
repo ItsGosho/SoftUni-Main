@@ -8,7 +8,7 @@ import Properties from "./server/configurations/properties";
 let app = Express();
 
 ExpressConfiguration(app);
-DatabaseConfiguration({connectionString: Properties.database.url});
+DatabaseConfiguration();
 
 app.listen(Properties.server.port, () => {
     console.log(ServerLoggingConstants.SERVER_STARTED);
