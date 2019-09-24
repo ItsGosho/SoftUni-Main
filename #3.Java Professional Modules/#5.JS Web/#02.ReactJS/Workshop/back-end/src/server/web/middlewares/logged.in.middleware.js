@@ -2,6 +2,7 @@ import JWTServices from '../../services/jwt.token.services';
 import RestResponseHelper from "../helpers/rest.response.helper";
 import RestResponseMessages from "../../constants/web/rest.message.constants";
 
+//Check if user is logged in ,by jwt token if its valid
 const LoggedInMiddleware = async (request, response, next) => {
     let token = request.cookies.jwt;
 
