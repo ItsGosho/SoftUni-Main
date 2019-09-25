@@ -12,6 +12,7 @@ const Model = {
         AUTHOR_REQUIRED: 'Author is required!',
         PRICE_REQUIRED: 'Price is required!',
         IMAGE_REQUIRED: 'Image is required!',
+        CREATOR_REQUIRED: 'Creator is required!'
     },
     ORDER: {
         CREATOR_REQUIRED: 'Creator is required!',
