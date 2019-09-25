@@ -1,24 +1,23 @@
-import UserModel from '../domain/models/user.model';
-import TokenModel from "../domain/models/jwt.token.model";
+import BookModel from "../domain/models/book.model";
 
 
 const BookRepository = {
 
     async save(data) {
-        return new TokenModel(data).save();
+        return new BookModel(data).save();
     },
 
     async deleteById(id) {
 
-        return TokenModel.deleteOne({'_id': id}).exec();
+        return BookModel.deleteOne({'_id': id}).exec();
     },
 
     async findById(id) {
-        return TokenModel.findById(id).exec();
+        return BookModel.findById(id).exec();
     },
 
     async findTotal() {
-        return TokenModel.count({}).exec();
+        return BookModel.count({}).exec();
     },
 
     /*-----*/

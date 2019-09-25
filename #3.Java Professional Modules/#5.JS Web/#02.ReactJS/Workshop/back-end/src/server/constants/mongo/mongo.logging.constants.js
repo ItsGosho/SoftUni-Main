@@ -1,16 +1,16 @@
 const MongoModelLogging = {
-    ORDER: {
-        SAVE: '-> '.red + 'Order has been created/updated with title: %s'.cyan
-    },
     TOKEN: {
         SAVE: '-> '.red + 'Token has been created/updated for user with id: %s'.cyan,
         DELETE_MANY: '-> '.red + '%s tokens have been deleted!'.cyan
     },
+    USER: {
+        SAVE: '-> '.red + 'User has been created/update with username: %s'.cyan
+    },
     BOOK: {
         SAVE: '-> '.red + 'Book has been create/updated with title: %s'.cyan
     },
-    USER: {
-        SAVE: '-> '.red + 'User has been created/update with username: %s'.cyan
+    ORDER: {
+        SAVE: '-> '.red + 'Order has been created/updated!'.cyan
     },
 };
 

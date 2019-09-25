@@ -48,4 +48,6 @@ model.post('save', function (book) {
     console.log(ParseString(BookModelLogging.SAVE, book.title));
 });
 
-export default Mongoose.model(ModelNames.BOOK, model);
+let BookModel = Mongoose.model(ModelNames.BOOK, model);
+
+export default BookModel;

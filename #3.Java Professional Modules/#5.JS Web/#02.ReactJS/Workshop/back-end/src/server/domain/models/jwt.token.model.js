@@ -27,4 +27,6 @@ model.post('deleteMany', function (token) {
     console.log(ParseString(TokenModelLogging.DELETE_MANY, token.deletedCount));
 });
 
-export default Mongoose.model(ModelNames.JWT, model);
+let TokenModel = Mongoose.model(ModelNames.JWT, model);
+
+export default TokenModel;

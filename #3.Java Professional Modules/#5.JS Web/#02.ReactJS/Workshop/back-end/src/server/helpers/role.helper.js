@@ -1,24 +1,24 @@
-import ROLES from "../domain/models/enums/role.enums";
+import Roles from "../domain/models/enums/role.enums";
 import UserServices from "../services/user.services";
 
 const RoleHelper = {
 
     getHighestRole() {
-        let roles = Object.keys(ROLES);
+        let roles = Object.keys(Roles);
         let key = roles[roles.length - 1];
 
-        return ROLES[key];
+        return Roles[key];
     },
 
     getAllRoles() {
-       return Object.keys(ROLES);
+       return Object.keys(Roles);
     },
 
     getHighestRoleFrom(roles) {
         let currentHighestRole = '';
 
-        Object.keys(ROLES).forEach((key,index)=>{
-              let value = ROLES[key];
+        Object.keys(Roles).forEach((key, index)=>{
+              let value = Roles[key];
 
               if(roles.includes(value)){
                   currentHighestRole = value;
@@ -29,10 +29,10 @@ const RoleHelper = {
     },
 
     getLowestRole() {
-        let roles = Object.keys(ROLES);
+        let roles = Object.keys(Roles);
         let key = roles[0];
 
-        return ROLES[key];
+        return Roles[key];
     },
 
     async getInitialRoles() {

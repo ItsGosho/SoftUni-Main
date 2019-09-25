@@ -1,24 +1,23 @@
 import UserModel from '../domain/models/user.model';
-import TokenModel from "../domain/models/jwt.token.model";
 
 
 const UserRepository = {
 
     async save(data) {
-        return new TokenModel(data).save();
+        return new UserModel(data).save();
     },
 
     async deleteById(id) {
 
-        return TokenModel.deleteOne({'_id': id}).exec();
+        return UserModel.deleteOne({'_id': id}).exec();
     },
 
     async findById(id) {
-        return TokenModel.findById(id).exec();
+        return UserModel.findById(id).exec();
     },
 
     async findTotal() {
-        return TokenModel.count({}).exec();
+        return UserModel.count({}).exec();
     },
 
     /*-----*/

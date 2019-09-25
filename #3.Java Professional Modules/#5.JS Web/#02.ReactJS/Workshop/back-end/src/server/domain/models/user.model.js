@@ -36,4 +36,7 @@ model.post('save', function (user) {
     console.log(ParseString(UserModelLogging.SAVE, user.username));
 });
 
-export default Mongoose.model(ModelNames.USER, model);
+
+let UserModel = Mongoose.model(ModelNames.USER, model);
+
+export default UserModel;

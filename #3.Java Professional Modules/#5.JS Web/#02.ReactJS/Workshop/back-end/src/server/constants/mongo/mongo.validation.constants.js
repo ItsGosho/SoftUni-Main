@@ -13,7 +13,12 @@ const Model = {
         PRICE_REQUIRED: 'Price is required!',
         IMAGE_REQUIRED: 'Image is required!',
     },
-    ORDER: {}
+    ORDER: {
+        CREATOR_REQUIRED: 'Creator is required!',
+        DATE_REQUIRED: 'Date is required!',
+        STATUS_REQUIRED: 'Status is required!',
+        STATUS_INVALID: 'Status is invalid, valid values include [Pending, Approved, Delivered].',
+    }
 };
 
 const UserModelValidationMessages = Model.USER;
