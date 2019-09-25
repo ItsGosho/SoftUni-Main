@@ -20,7 +20,7 @@ const RoutingURLs = {
     },
     ORDER: {
         CREATE: '/orders/create',
-        ALL: '/orders/all',
+        MY: '/orders/my',
         PENDING: '/orders/pending',
         APPROVE: '/orders/approve/:id',
     }
