@@ -40,10 +40,6 @@ const model = new Schema({
             type: Type.String
         }
     ],
-    creator: {
-        type: Type.ObjectId,
-        required: [true, BookModelValidationMessages.CREATOR_REQUIRED]
-    },
     reviews: []
 
 });
