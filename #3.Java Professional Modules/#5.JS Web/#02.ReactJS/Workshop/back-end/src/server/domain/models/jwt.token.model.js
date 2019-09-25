@@ -27,6 +27,4 @@ model.post('deleteMany', function (token) {
     console.log(ParseString(TokenModelLogging.DELETE_MANY, token.deletedCount));
 });
 
-let JWTTokenModel = Mongoose.model(ModelNames.JWT, model);
-
-export default JWTTokenModel;
+export default Mongoose.model(ModelNames.JWT, model);

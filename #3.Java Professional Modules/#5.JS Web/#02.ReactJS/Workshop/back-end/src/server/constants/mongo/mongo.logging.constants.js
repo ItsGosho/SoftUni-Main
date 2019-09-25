@@ -7,7 +7,7 @@ const MongoModelLogging = {
         DELETE_MANY: '-> '.red + '%s tokens have been deleted!'.cyan
     },
     BOOK: {
-        SAVE: '-> '.red + 'Book has been create/updated with name: %s'.cyan
+        SAVE: '-> '.red + 'Book has been create/updated with title: %s'.cyan
     },
     USER: {
         SAVE: '-> '.red + 'User has been created/update with username: %s'.cyan

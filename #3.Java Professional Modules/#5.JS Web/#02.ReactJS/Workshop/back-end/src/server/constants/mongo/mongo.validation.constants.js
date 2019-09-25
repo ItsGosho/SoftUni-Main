@@ -6,7 +6,13 @@ const Model = {
     TOKEN: {
         TOKEN_REQUIRED: 'Token is required!'
     },
-    BOOK: {},
+    BOOK: {
+        TITLE_REQUIRED: 'Title is required!',
+        TITLE_UNIQUE: 'Title must be unique!',
+        AUTHOR_REQUIRED: 'Author is required!',
+        PRICE_REQUIRED: 'Price is required!',
+        IMAGE_REQUIRED: 'Image is required!',
+    },
     ORDER: {}
 };
 

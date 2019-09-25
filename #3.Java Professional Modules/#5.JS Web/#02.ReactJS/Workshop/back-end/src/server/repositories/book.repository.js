@@ -2,7 +2,7 @@ import UserModel from '../domain/models/user.model';
 import TokenModel from "../domain/models/jwt.token.model";
 
 
-const UserRepository = {
+const BookRepository = {
 
     async save(data) {
         return new TokenModel(data).save();
@@ -22,14 +22,6 @@ const UserRepository = {
     },
 
     /*-----*/
-
-    async findByUsername(username) {
-        return UserModel.findOne({username}).exec();
-    },
-
-    async findByEmail(email) {
-        return UserModel.findOne({email}).exec();
-    },
 };
 
-export default UserRepository;
+export default BookRepository;
