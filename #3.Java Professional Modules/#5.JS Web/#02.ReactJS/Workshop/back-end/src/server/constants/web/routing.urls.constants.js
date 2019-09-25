@@ -12,13 +12,28 @@ const RoutingURLs = {
         LIKE: '/book/like/:id',
         UNLIKE: '/book/unlike/:id',
         DELETE: '/book/delete/:id',
+    },
+    STATISTICS: {
+        TOTAL_USERS: '/statistics/total/users',
+        TOTAL_BOOKS: '/statistics/total/books',
+        TOTAL_ORDERS: '/statistics/total/orders',
+    },
+    ORDER: {
+        CREATE: '/orders/create',
+        ALL: '/orders/all',
+        PENDING: '/orders/pending',
+        APPROVE: '/orders/approve/:id',
     }
 };
 
 const UserRoutingURLs = RoutingURLs.USER;
 const BookRoutingURLs = RoutingURLs.BOOK;
+const OrderRoutingURLs = RoutingURLs.ORDER;
+const StatisticsRoutingURLs = RoutingURLs.STATISTICS;
 
 export {
     UserRoutingURLs,
-    BookRoutingURLs
+    BookRoutingURLs,
+    OrderRoutingURLs,
+    StatisticsRoutingURLs
 }

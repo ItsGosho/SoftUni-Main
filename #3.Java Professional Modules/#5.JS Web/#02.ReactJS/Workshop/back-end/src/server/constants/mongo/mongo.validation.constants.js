@@ -18,6 +18,7 @@ const Model = {
         DATE_REQUIRED: 'Date is required!',
         STATUS_REQUIRED: 'Status is required!',
         STATUS_INVALID: 'Status is invalid, valid values include [Pending, Approved, Delivered].',
+        BOOKS_REQUIRED: 'Books is required!'
     }
 };
 

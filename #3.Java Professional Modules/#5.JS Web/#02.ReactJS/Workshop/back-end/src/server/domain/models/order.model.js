@@ -14,7 +14,12 @@ const model = new Schema({
         type: Type.ObjectId,
         required: OrderModelValidationMessages.CREATOR_REQUIRED
     },
-    products: [],
+    books: [
+        {
+            type: Type.ObjectId,
+            required: OrderModelValidationMessages.BOOKS_REQUIRED
+        }
+    ],
     date: {
         type: Type.Date,
         required: OrderModelValidationMessages.DATE_REQUIRED,
