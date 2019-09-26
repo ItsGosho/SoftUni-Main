@@ -60,7 +60,7 @@ const BookRequestValidators = {
         return async (data) => {
             let field = data[priceField];
 
-            if (typeof field !== 'number') {
+            if (isNaN(field)) {
                 return Promise.reject(ParseString(UniversalRequestValidationMessages.PROPERTY_NOT_NUMBER, field));
             }
 
@@ -78,7 +78,8 @@ const BookRequestValidators = {
                 return Promise.reject(ParseString(UniversalRequestValidationMessages.PROPERTY_NOT_STRING, field));
             }
 
-            if (!field.startsWith(BookRequestValidationRestriction.IMAGE_STARTING_1) || !field.startsWith(BookRequestValidationRestriction.IMAGE_STARTING_2)) {
+            if (field.startsWith(BookRequestValidationRestriction.IMAGE_STARTING_1) === false &&
+                field.startsWith(BookRequestValidationRestriction.IMAGE_STARTING_2) === false) {
                 return Promise.reject(BookRequestValidationMessages.IMAGE_NOT_STARTING_WITH);
             }
         }

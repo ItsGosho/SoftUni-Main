@@ -32,3 +32,5 @@ Router.get(StatisticsRoutingURLs.TOTAL_ORDERS, (request,response) => {
     *  4.Return their count
     * */
 });
+
+export default Router;

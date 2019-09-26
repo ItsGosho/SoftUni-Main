@@ -45,3 +45,5 @@ Router.post(OrderRoutingURLs.APPROVE,(request,response)=>{
     *  6.Respond-вам successful с "Orders has been approved!"
     * */
 });
+
+export default Router;

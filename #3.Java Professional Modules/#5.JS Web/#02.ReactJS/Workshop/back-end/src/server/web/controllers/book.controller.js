@@ -72,7 +72,7 @@ Router.post(BookRoutingURLs.LIKE, (request, response) => {
     * */
 });
 
-Router.post(BookRoutingURLs.LIKE, (request, response) => {
+Router.post(BookRoutingURLs.UNLIKE, (request, response) => {
     /*
     * TODO:
     *  1.Дали user-a е логнат
@@ -93,3 +93,5 @@ Router.post(BookRoutingURLs.DELETE, (request, response) => {
     *  5.Respond-вам successful с "Book removed!"
     * */
 });
+
+export default Router;
