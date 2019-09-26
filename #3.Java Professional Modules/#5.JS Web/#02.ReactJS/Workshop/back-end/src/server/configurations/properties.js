@@ -18,7 +18,7 @@ const props = {
             environment: 'dev'
         },
         server: {
-            port: 9881
+            port: 9999
         },
         jwt: {
             cookieName: 'jwt',
