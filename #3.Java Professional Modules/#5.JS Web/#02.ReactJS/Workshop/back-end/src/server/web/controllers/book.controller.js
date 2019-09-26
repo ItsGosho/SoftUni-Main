@@ -3,7 +3,7 @@ import {BookRoutingURLs} from "../../constants/web/routing.urls.constants";
 
 const Router = Express.Router();
 
-Router.post(BookRoutingURLs.CREATE,(request,response)=>{
+Router.post(BookRoutingURLs.CREATE, (request, response) => {
     /*
     * TODO: !AUTHOR & GENRES няма валидация
     *  1.Дали user-a е логнат
@@ -15,9 +15,13 @@ Router.post(BookRoutingURLs.CREATE,(request,response)=>{
     *  7.Взимам Request Body-то (request.body)
     *  8.Respond-вам successful с "Book has been created!" и вече запазената книга
     * */
+
+    const {title, description, price, image, author, genres} = request.body;
+
+    console.log();
 });
 
-Router.post(BookRoutingURLs.EDIT,(request,response)=>{
+Router.post(BookRoutingURLs.EDIT, (request, response) => {
     /*
     * TODO: !AUTHOR & GENRES няма валидация
     *  1.Дали user-a е логнат
@@ -32,7 +36,7 @@ Router.post(BookRoutingURLs.EDIT,(request,response)=>{
     * */
 });
 
-Router.get(BookRoutingURLs.ALL,(request,response)=>{
+Router.get(BookRoutingURLs.ALL, (request, response) => {
     /*
     * TODO:
     *  1.Дали user-a е логнат
@@ -41,7 +45,7 @@ Router.get(BookRoutingURLs.ALL,(request,response)=>{
     * */
 });
 
-Router.post(BookRoutingURLs.REVIEW,(request,response)=>{
+Router.post(BookRoutingURLs.REVIEW, (request, response) => {
     /*
     * TODO:
     *  1.Дали user-a е логнат
@@ -57,7 +61,7 @@ Router.post(BookRoutingURLs.REVIEW,(request,response)=>{
     * */
 });
 
-Router.post(BookRoutingURLs.LIKE,(request,response)=>{
+Router.post(BookRoutingURLs.LIKE, (request, response) => {
     /*
     * TODO:
     *  1.Дали user-a е логнат
@@ -68,7 +72,7 @@ Router.post(BookRoutingURLs.LIKE,(request,response)=>{
     * */
 });
 
-Router.post(BookRoutingURLs.LIKE,(request,response)=>{
+Router.post(BookRoutingURLs.LIKE, (request, response) => {
     /*
     * TODO:
     *  1.Дали user-a е логнат
@@ -79,7 +83,7 @@ Router.post(BookRoutingURLs.LIKE,(request,response)=>{
     * */
 });
 
-Router.post(BookRoutingURLs.DELETE,(request,response)=>{
+Router.post(BookRoutingURLs.DELETE, (request, response) => {
     /*
     * TODO:
     *  1.Дали user-a е логнат
