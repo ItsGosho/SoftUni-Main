@@ -48,7 +48,7 @@ const BookRequestValidators = {
                 return Promise.reject(ParseString(UniversalRequestValidationMessages.PROPERTY_NOT_STRING, field));
             }
 
-            let book = BookServices.findByTitle(field);
+            let book = await BookServices.findByTitle(field);
 
             if (book !== null) {
                 return Promise.reject(BookRequestValidationMessages.TITLE_EXISTS);

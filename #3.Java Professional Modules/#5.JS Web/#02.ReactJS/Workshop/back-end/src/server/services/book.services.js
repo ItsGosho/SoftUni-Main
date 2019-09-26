@@ -1,8 +1,13 @@
+import BookRepository from "../repositories/book.repository";
+
 const BookServices = {
 
+    async save(book) {
+        return BookRepository.save(book);
+    },
 
-    findByTitle() {
-        /*TODO:*/
+    async findByTitle(title) {
+        return BookRepository.findByTitle(title);
     }
 };
 

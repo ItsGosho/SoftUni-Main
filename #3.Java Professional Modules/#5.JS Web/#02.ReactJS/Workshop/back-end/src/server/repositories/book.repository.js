@@ -21,6 +21,10 @@ const BookRepository = {
     },
 
     /*-----*/
+
+    async findByTitle(title) {
+        return BookModel.findOne({'title':title}).exec();
+    }
 };
 
 export default BookRepository;

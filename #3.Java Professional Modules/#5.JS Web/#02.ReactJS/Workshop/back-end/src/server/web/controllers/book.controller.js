@@ -1,9 +1,12 @@
 import Express from "express";
 import {BookRoutingURLs} from "../../constants/web/routing.urls.constants";
+import BookServices from "../../services/book.services";
+import RestResponseHelper from "../helpers/rest.response.helper";
+import RestResponseMessages from "../../constants/web/rest.message.constants";
 
 const Router = Express.Router();
 
-Router.post(BookRoutingURLs.CREATE, (request, response) => {
+Router.post(BookRoutingURLs.CREATE,async (request, response) => {
     /*
     * TODO: !AUTHOR & GENRES няма валидация
     *  1.Дали user-a е логнат
@@ -16,9 +19,22 @@ Router.post(BookRoutingURLs.CREATE, (request, response) => {
     *  8.Respond-вам successful с "Book has been created!" и вече запазената книга
     * */
 
-    const {title, description, price, image, author, genres} = request.body;
+    let {title, description, price, image, author, genres} = request.body;
 
-    console.log();
+    genres = genres.split(/[, ]+/);
+
+    let book = {
+        title,
+        description,
+        price,
+        image,
+        author,
+        genres
+    };
+
+    await BookServices.save(book);
+    
+    RestResponseHelper.respondSuccessful(response,RestResponseMessages.BOOK_CREATED_SUCCESSFULLY)
 });
 
 Router.post(BookRoutingURLs.EDIT, (request, response) => {

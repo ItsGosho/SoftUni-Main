@@ -5,6 +5,8 @@ const RestResponseMessages = {
     NOT_LOGGED_IN: 'You are not logged in!',
     LOGGED_OUT: 'You must be logged out!',
     REQUIRED_ROLE: 'You must be ${role}!',
+
+    BOOK_CREATED_SUCCESSFULLY: 'Book created!'
 };
 
 export default RestResponseMessages;
