@@ -6,7 +6,8 @@ const RestResponseMessages = {
     LOGGED_OUT: 'You must be logged out!',
     REQUIRED_ROLE: 'You must be ${role}!',
 
-    BOOK_CREATED_SUCCESSFULLY: 'Book created!'
+    BOOK_CREATED_SUCCESSFULLY: 'Book created!',
+    BOOK_EDITED_SUCCESSFULLY: 'Book edited!'
 };
 
 export default RestResponseMessages;

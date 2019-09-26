@@ -47,5 +47,17 @@ Router.post(BookRoutingURLs.CREATE,
     ValidationResponseMiddleware
 );
 
+Router.post(BookRoutingURLs.EDIT,
+    LoggedInMiddleware,
+    RoleMiddleware(Roles.ADMIN),
+    Body()
+        .custom(BookRequestValidators.titleNotPresent('title')).bail()
+        .custom(BookRequestValidators.titleLengthValid('title')).bail()
+        .custom(BookRequestValidators.descriptionLengthValid('description')).bail()
+        .custom(BookRequestValidators.priceValid('price')).bail()
+        .custom(BookRequestValidators.imageValid('image')).bail(),
+    ValidationResponseMiddleware
+);
+
 
 export default Router;

@@ -6,7 +6,7 @@ import RestResponseMessages from "../../constants/web/rest.message.constants";
 
 const Router = Express.Router();
 
-Router.post(BookRoutingURLs.CREATE,async (request, response) => {
+Router.post(BookRoutingURLs.CREATE, async (request, response) => {
     let {title, description, price, image, author, genres} = request.body;
 
     genres = genres.split(/[, ]+/);
@@ -22,22 +22,27 @@ Router.post(BookRoutingURLs.CREATE,async (request, response) => {
 
     await BookServices.save(book);
 
-    RestResponseHelper.respondSuccessful(response,RestResponseMessages.BOOK_CREATED_SUCCESSFULLY)
+    RestResponseHelper.respondSuccessful(response, RestResponseMessages.BOOK_CREATED_SUCCESSFULLY)
 });
 
-Router.post(BookRoutingURLs.EDIT, (request, response) => {
-    /*
-    * TODO: !AUTHOR & GENRES няма валидация
-    *  1.Дали user-a е логнат
-    *  2.Дали user-a е [ADMIN]
-    *  3.Дали има книга с това ID
-    *  4.Дали на book-a TITLE-a e String,Length > 2 ,Doesnt Exist
-    *  5.Дали на book-a DESCRIPTION-a е String,Between 10 & 200
-    *  6.Дали на book-a PRICE-a е Number,Value > 0
-    *  7.Дали на book-a IMAGE-a е String,Starts with http:// || https://
-    *  8.Взимам Request Body-то (request.body)
-    *  9.Respond-вам successful с "Book has been edit!" и вече запазената книга
-    * */
+Router.post(BookRoutingURLs.EDIT, async (request, response) => {
+    let {title, description, price, image, author, genres} = request.body;
+    let bookId = request.params.id;
+
+    genres = genres.split(/[, ]+/);
+
+    let book = {
+        title,
+        description,
+        price,
+        image,
+        author,
+        genres
+    };
+
+    await BookServices.edit(bookId, book);
+
+    RestResponseHelper.respondSuccessful(response, RestResponseMessages.BOOK_EDITED_SUCCESSFULLY)
 });
 
 Router.get(BookRoutingURLs.ALL, (request, response) => {
