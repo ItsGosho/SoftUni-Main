@@ -39,6 +39,7 @@ Router.post(BookRoutingURLs.CREATE,
     LoggedInMiddleware,
     RoleMiddleware(Roles.ADMIN),
     Body()
+        .custom(BookRequestValidators.titleNotPresent('title')).bail()
         .custom(BookRequestValidators.titleLengthValid('title')).bail()
         .custom(BookRequestValidators.descriptionLengthValid('description')).bail()
         .custom(BookRequestValidators.priceValid('price')).bail()

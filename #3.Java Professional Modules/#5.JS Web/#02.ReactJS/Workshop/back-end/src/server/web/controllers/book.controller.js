@@ -7,18 +7,6 @@ import RestResponseMessages from "../../constants/web/rest.message.constants";
 const Router = Express.Router();
 
 Router.post(BookRoutingURLs.CREATE,async (request, response) => {
-    /*
-    * TODO: !AUTHOR & GENRES няма валидация
-    *  1.Дали user-a е логнат
-    *  2.Дали user-a е [ADMIN]
-    *  3.Дали на book-a TITLE-a e String,Length > 2 ,Doesnt Exist
-    *  4.Дали на book-a DESCRIPTION-a е String,Between 10 & 200
-    *  5.Дали на book-a PRICE-a е Number,Value > 0
-    *  6.Дали на book-a IMAGE-a е String,Starts with http:// || https://
-    *  7.Взимам Request Body-то (request.body)
-    *  8.Respond-вам successful с "Book has been created!" и вече запазената книга
-    * */
-
     let {title, description, price, image, author, genres} = request.body;
 
     genres = genres.split(/[, ]+/);
@@ -33,7 +21,7 @@ Router.post(BookRoutingURLs.CREATE,async (request, response) => {
     };
 
     await BookServices.save(book);
-    
+
     RestResponseHelper.respondSuccessful(response,RestResponseMessages.BOOK_CREATED_SUCCESSFULLY)
 });
 
