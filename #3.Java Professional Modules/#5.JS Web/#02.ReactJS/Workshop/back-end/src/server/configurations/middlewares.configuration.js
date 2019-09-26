@@ -8,6 +8,7 @@ import LoggedOutMiddleware from "../web/middlewares/logged.out.middleware";
 import {BookRoutingURLs, UserRoutingURLs} from "../constants/web/routing.urls.constants";
 import RoleMiddleware from "../web/middlewares/role.middleware";
 import Roles from "../domain/models/enums/role.enums";
+import BookRequestValidators from "../web/validators/book.request.validators";
 
 const Router = Express.Router();
 
@@ -38,7 +39,11 @@ Router.post(BookRoutingURLs.CREATE,
     LoggedInMiddleware,
     RoleMiddleware(Roles.ADMIN),
     Body()
-        .par
+        .custom(BookRequestValidators.titleLengthValid('title')).bail()
+        .custom(BookRequestValidators.descriptionLengthValid('description')).bail()
+        .custom(BookRequestValidators.priceValid('price')).bail()
+        .custom(BookRequestValidators.imageValid('image')).bail(),
+    ValidationResponseMiddleware
 );
 
 
