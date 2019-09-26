@@ -12,7 +12,7 @@ const Router = Express.Router();
 
 Router.post(UserRoutingURLs.LOGIN, async (request, response) => {
 
-    let {username, password} = request.body;
+    let {username} = request.body;
 
     let token = await UserServices.proceedToken(username);
 

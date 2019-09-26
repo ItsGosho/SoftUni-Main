@@ -11,7 +11,7 @@ const RoleHelper = {
     },
 
     getAllRoles() {
-       return Object.keys(Roles);
+       return Object.values(Roles);
     },
 
     getHighestRoleFrom(roles) {
