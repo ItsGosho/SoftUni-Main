@@ -5,7 +5,12 @@ import UserAttacherMiddleware from "../web/middlewares/user.attacher.middleware"
 import LoggedInMiddleware from "../web/middlewares/logged.in.middleware";
 import ValidationResponseMiddleware from "../web/middlewares/validation.response.middleware";
 import LoggedOutMiddleware from "../web/middlewares/logged.out.middleware";
-import {BookRoutingURLs, OrderRoutingURLs, UserRoutingURLs} from "../constants/web/routing.urls.constants";
+import {
+    BookRoutingURLs,
+    OrderRoutingURLs,
+    StatisticsRoutingURLs,
+    UserRoutingURLs
+} from "../constants/web/routing.urls.constants";
 import RoleMiddleware from "../web/middlewares/role.middleware";
 import Roles from "../domain/models/enums/role.enums";
 import BookRequestValidators from "../web/validators/book.request.validators";
@@ -116,6 +121,25 @@ Router.post(OrderRoutingURLs.APPROVE,
     Param()
         .custom(OrderRequestValidators.orderPresent('id')).bail()
         .custom(OrderRequestValidators.orderNotApproved('id')).bail(),
+    RoleMiddleware(Roles.ADMIN),
+    ValidationResponseMiddleware
+);
+
+Router.get(StatisticsRoutingURLs.TOTAL_USERS,
+    LoggedInMiddleware,
+    RoleMiddleware(Roles.ADMIN),
+    ValidationResponseMiddleware
+);
+
+Router.get(StatisticsRoutingURLs.TOTAL_BOOKS,
+    LoggedInMiddleware,
+    RoleMiddleware(Roles.ADMIN),
+    ValidationResponseMiddleware
+);
+
+
+Router.get(StatisticsRoutingURLs.TOTAL_ORDERS,
+    LoggedInMiddleware,
     RoleMiddleware(Roles.ADMIN),
     ValidationResponseMiddleware
 );
