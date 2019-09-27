@@ -22,6 +22,10 @@ const BookServices = {
         return BookRepository.findByTitle(title);
     },
 
+    async totalBooks() {
+        return BookRepository.findTotal();
+    },
+
     async edit(bookId, book) {
 
         let originalBook = await BookRepository.findById(bookId);

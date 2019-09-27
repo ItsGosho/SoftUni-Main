@@ -1,0 +1,551 @@
+{
+	"info": {
+		"_postman_id": "e4e0849e-101c-4d05-bf04-daa5f15359a5",
+		"name": "Book Library API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9999/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "123@abv.bg",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "confirmPassword",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9999/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Indiana Johnes",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "A very interesting and challanging book!",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "13",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "https://images-na.ssl-images-amazon.com/images/I/51G6xkp5WaL._SX329_BO1,204,203,200_.jpg",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Campbell Black",
+									"type": "text"
+								},
+								{
+									"key": "genres",
+									"value": "Action, Adventure",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9999/books/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"books",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "review",
+									"value": "Really cool book!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9999/books/review/5d8d1cebb5b4ef0a8c2f741b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"books",
+								"review",
+								"5d8d1cebb5b4ef0a8c2f741b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Indiana Johnes I",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "A very interesting and challanging book!",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "13",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "https://images-na.ssl-images-amazon.com/images/I/51G6xkp5WaL._SX329_BO1,204,203,200_.jpg",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Campbell Black",
+									"type": "text"
+								},
+								{
+									"key": "genres",
+									"value": "Action, Adventure,Scary",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9999/books/edit/5d8d1cebb5b4ef0a8c2f741b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"books",
+								"edit",
+								"5d8d1cebb5b4ef0a8c2f741b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/books/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"books",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/books/delete/5d8d9a057a538a2cf04eece8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"books",
+								"delete",
+								"5d8d9a057a538a2cf04eece8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/books/like/5d8d1cebb5b4ef0a8c2f741b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"books",
+								"like",
+								"5d8d1cebb5b4ef0a8c2f741b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unlike",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/books/unlike/5d8d1cebb5b4ef0a8c2f741b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"books",
+								"unlike",
+								"5d8d1cebb5b4ef0a8c2f741b"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "books",
+									"value": "5d8d1cebb5b4ef0a8c2f741b",
+									"type": "text"
+								},
+								{
+									"key": "books",
+									"value": "5d8d9a0a7a538a2cf04eece9",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9999/orders/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"orders",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/orders/my",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"orders",
+								"my"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/orders/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"orders",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/orders/approve/5d8e7af9698935152068d66b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"orders",
+								"approve",
+								"5d8e7af9698935152068d66b"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Statistics",
+			"item": [
+				{
+					"name": "Total Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/statistics/total/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"statistics",
+								"total",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Total Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/statistics/total/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"statistics",
+								"total",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Total Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/statistics/total/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"statistics",
+								"total",
+								"books"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

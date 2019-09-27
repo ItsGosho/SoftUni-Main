@@ -16,7 +16,9 @@ const RestResponseMessages = {
 
     ORDERS_FETCHED_SUCCESSFULLY: 'Orders fetched!',
     ORDERS_CREATED_SUCCESSFULLY: 'Orders created!',
-    ORDER_APPROVED_SUCCESSFULLY: 'Order approved!'
+    ORDER_APPROVED_SUCCESSFULLY: 'Order approved!',
+
+    STATISTICS_FETCHED_SUCCESSFULLY: 'Statistics fetched!'
 };
 
 export default RestResponseMessages;

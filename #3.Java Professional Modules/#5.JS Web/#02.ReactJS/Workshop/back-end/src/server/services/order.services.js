@@ -1,5 +1,6 @@
 import OrderRepository from "../repositories/order.repository";
 import OrderStatus from "../domain/models/enums/order.status.enums";
+import BookRepository from "../repositories/book.repository";
 
 const OrderServices = {
 
@@ -18,6 +19,10 @@ const OrderServices = {
 
     async findById(id) {
         return OrderRepository.findById(id);
+    },
+
+    async totalOrders() {
+        return OrderRepository.findTotal();
     },
 
     async findAllByStatus(status) {
