@@ -101,4 +101,19 @@ Router.post(OrderRoutingURLs.CREATE,
     ValidationResponseMiddleware
 );
 
+Router.post(OrderRoutingURLs.MY,
+    LoggedInMiddleware
+);
+
+Router.post(OrderRoutingURLs.ALL,
+    LoggedInMiddleware,
+    RoleMiddleware(Roles.ADMIN)
+);
+
+Router.post(OrderRoutingURLs.APPROVE,
+    LoggedInMiddleware,
+    RoleMiddleware(Roles.ADMIN)
+);
+
+
 export default Router;
