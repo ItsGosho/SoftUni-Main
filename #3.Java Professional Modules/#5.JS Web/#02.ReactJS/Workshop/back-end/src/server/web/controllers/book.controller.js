@@ -48,10 +48,8 @@ Router.post(BookRoutingURLs.EDIT, async (request, response) => {
 Router.get(BookRoutingURLs.ALL, async (request, response) => {
     /*
     * TODO:
-    *  1.Дали user-a е логнат
-    *  2.Взимам всички книги от базата
-    *  8.Respond-вам successful с "Books has been fetched!" и книгите
-    * */
+    *  1.Дали user-a е логнат?
+    */
 
     let books = await BookServices.findAll();
 
@@ -96,15 +94,11 @@ Router.post(BookRoutingURLs.UNLIKE, (request, response) => {
     * */
 });
 
-Router.post(BookRoutingURLs.DELETE, (request, response) => {
-    /*
-    * TODO:
-    *  1.Дали user-a е логнат
-    *  2.Дали е [ADMIN]
-    *  3.Дали има книга с това ID
-    *  4.Махам книгата
-    *  5.Respond-вам successful с "Book removed!"
-    * */
+Router.post(BookRoutingURLs.DELETE,async (request, response) => {
+    let id = request.params.id;
+
+    await BookServices.deleteById(id);
+    RestResponseHelper.respondSuccessful(response, RestResponseMessages.BOOK_DELETED_SUCCESSFULLY)
 });
 
 export default Router;

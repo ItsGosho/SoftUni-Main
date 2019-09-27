@@ -6,6 +6,14 @@ const BookServices = {
         return BookRepository.save(book);
     },
 
+    async findById(id) {
+        return BookRepository.findById(id);
+    },
+
+    async deleteById(id){
+        return BookRepository.deleteById(id);
+    },
+
     async findAll() {
         return BookRepository.findAll();
     },

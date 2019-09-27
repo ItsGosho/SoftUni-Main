@@ -1,5 +1,5 @@
 import Express from 'express';
-import {body as Body, check as Check} from 'express-validator';
+import {body as Body, check as Check, param as Param} from 'express-validator';
 import UserRequestValidators from "../web/validators/user.request.validators";
 import UserAttacherMiddleware from "../web/middlewares/user.attacher.middleware";
 import LoggedInMiddleware from "../web/middlewares/logged.in.middleware";
@@ -50,6 +50,8 @@ Router.post(BookRoutingURLs.CREATE,
 Router.post(BookRoutingURLs.EDIT,
     LoggedInMiddleware,
     RoleMiddleware(Roles.ADMIN),
+    Param()
+        .custom(BookRequestValidators.bookPresent('id')).bail(),
     Body()
         .custom(BookRequestValidators.titleNotPresent('title')).bail()
         .custom(BookRequestValidators.titleLengthValid('title')).bail()
@@ -59,5 +61,12 @@ Router.post(BookRoutingURLs.EDIT,
     ValidationResponseMiddleware
 );
 
+Router.post(BookRoutingURLs.DELETE,
+    LoggedInMiddleware,
+    RoleMiddleware(Roles.ADMIN),
+    Param()
+        .custom(BookRequestValidators.bookPresent('id')).bail(),
+    ValidationResponseMiddleware
+);
 
 export default Router;

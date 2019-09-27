@@ -12,6 +12,18 @@ const ParseString = Format.sprintf;
 
 const BookRequestValidators = {
 
+    bookPresent: (idField) => {
+        return async (data) => {
+            let field = data[idField];
+
+            let book = await BookServices.findById(field);
+
+            if (book === null) {
+                return Promise.reject(ParseString(BookRequestValidationMessages.BOOK_NOT_FOUND, field));
+            }
+        }
+    },
+
     titleLengthValid: (titleField) => {
         return async (data) => {
             let field = data[titleField];

@@ -14,6 +14,8 @@ const RequestValidationMessages = {
         EMAIL_NOT_VALID: 'Email is not valid!'
     },
     BOOK: {
+        BOOK_NOT_FOUND: 'Book with this id wasn\'t found!',
+
         TITLE_TOO_SHORT: 'Title length at least 2!',
         TITLE_EXISTS: 'Book with this title already exists!',
 
