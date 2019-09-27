@@ -69,4 +69,20 @@ Router.post(BookRoutingURLs.DELETE,
     ValidationResponseMiddleware
 );
 
+Router.post(BookRoutingURLs.LIKE,
+    LoggedInMiddleware,
+    Param()
+        .custom(BookRequestValidators.bookPresent('id')).bail()
+        .custom(BookRequestValidators.notLikedByCurrentUser('id')).bail(),
+    ValidationResponseMiddleware
+);
+
+Router.post(BookRoutingURLs.UNLIKE,
+    LoggedInMiddleware,
+    Param()
+        .custom(BookRequestValidators.bookPresent('id')).bail()
+        .custom(BookRequestValidators.likedByCurrentUser('id')).bail(),
+    ValidationResponseMiddleware
+);
+
 export default Router;

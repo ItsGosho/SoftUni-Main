@@ -24,6 +24,9 @@ const RequestValidationMessages = {
         PRICE_NOT_NEGATIVE: 'Price must be greater than 0!',
 
         IMAGE_NOT_STARTING_WITH: 'Image must start with http:// or https://',
+
+        BOOK_ALREADY_LIKED: 'Book is already liked!',
+        BOOK_NOT_LIKED: 'Book is not liked!',
     }
 };
 

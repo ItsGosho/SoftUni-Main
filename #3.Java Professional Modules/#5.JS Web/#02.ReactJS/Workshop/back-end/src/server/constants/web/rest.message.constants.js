@@ -9,7 +9,9 @@ const RestResponseMessages = {
     BOOK_CREATED_SUCCESSFULLY: 'Book created!',
     BOOK_EDITED_SUCCESSFULLY: 'Book edited!',
     BOOKS_FETCHED_SUCCESSFULLY: 'Books fetched!',
-    BOOK_DELETED_SUCCESSFULLY: 'Book deleted!'
+    BOOK_DELETED_SUCCESSFULLY: 'Book deleted!',
+    BOOK_LIKED_SUCCESSFULLY: 'Book liked!',
+    BOOK_REMOVE_LIKE_SUCCESSFULLY: 'Book like removed!',
 };
 
 export default RestResponseMessages;

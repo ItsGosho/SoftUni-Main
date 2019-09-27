@@ -3,6 +3,7 @@ import {BookRoutingURLs} from "../../constants/web/routing.urls.constants";
 import BookServices from "../../services/book.services";
 import RestResponseHelper from "../helpers/rest.response.helper";
 import RestResponseMessages from "../../constants/web/rest.message.constants";
+import JWTHelper from "../helpers/jwt.helper";
 
 const Router = Express.Router();
 
@@ -72,29 +73,27 @@ Router.post(BookRoutingURLs.REVIEW, (request, response) => {
     * */
 });
 
-Router.post(BookRoutingURLs.LIKE, (request, response) => {
-    /*
-    * TODO:
-    *  1.Дали user-a е логнат
-    *  2.Дали има книга с това ID
-    *  3.Дали вече НЕ я е харесал
-    *  4.И във на book likes просто пъхам username-a му
-    *  5.Respond-вам successful с "Liked successfully!"
-    * */
+Router.post(BookRoutingURLs.LIKE, async (request, response) => {
+    let id = request.params.id;
+    let book = await BookServices.findById(id);
+    let user = await JWTHelper.getCurrentUser(request);
+
+    await BookServices.like(book,user);
+
+    RestResponseHelper.respondSuccessful(response, RestResponseMessages.BOOK_LIKED_SUCCESSFULLY)
 });
 
-Router.post(BookRoutingURLs.UNLIKE, (request, response) => {
-    /*
-    * TODO:
-    *  1.Дали user-a е логнат
-    *  2.Дали има книга с това ID
-    *  3.Дали вече я е харесал
-    *  4.И във на book likes просто махам username-a му
-    *  5.Respond-вам successful с "Like removed!"
-    * */
+Router.post(BookRoutingURLs.UNLIKE,async (request, response) => {
+    let id = request.params.id;
+    let book = await BookServices.findById(id);
+    let user = await JWTHelper.getCurrentUser(request);
+
+    await BookServices.unlike(book,user);
+
+    RestResponseHelper.respondSuccessful(response, RestResponseMessages.BOOK_REMOVE_LIKE_SUCCESSFULLY)
 });
 
-Router.post(BookRoutingURLs.DELETE,async (request, response) => {
+Router.post(BookRoutingURLs.DELETE, async (request, response) => {
     let id = request.params.id;
 
     await BookServices.deleteById(id);

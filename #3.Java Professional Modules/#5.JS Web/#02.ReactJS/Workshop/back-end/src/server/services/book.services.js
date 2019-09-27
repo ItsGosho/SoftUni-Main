@@ -10,7 +10,7 @@ const BookServices = {
         return BookRepository.findById(id);
     },
 
-    async deleteById(id){
+    async deleteById(id) {
         return BookRepository.deleteById(id);
     },
 
@@ -33,8 +33,22 @@ const BookServices = {
         originalBook.author = book.author;
         originalBook.genres = book.genres;
 
-        originalBook.save();
+        await BookRepository.save(originalBook);
     },
+
+    async like(book, user) {
+
+        book.likes.push(user.username);
+
+        await BookRepository.save(book);
+    },
+
+    async unlike(book, user) {
+
+        book.likes = book.likes.filter(x => x !== user.username);
+
+        await BookRepository.save(book);
+    }
 };
 
 export default BookServices;

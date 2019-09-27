@@ -7,6 +7,7 @@ import {
 } from "../../constants/web/request.validation.constants";
 import Format from "sprintf-js";
 import BookServices from "../../services/book.services";
+import JWTHelper from "../helpers/jwt.helper";
 
 const ParseString = Format.sprintf;
 
@@ -19,7 +20,35 @@ const BookRequestValidators = {
             let book = await BookServices.findById(field);
 
             if (book === null) {
-                return Promise.reject(ParseString(BookRequestValidationMessages.BOOK_NOT_FOUND, field));
+                return Promise.reject(BookRequestValidationMessages.BOOK_NOT_FOUND);
+            }
+        }
+    },
+
+    notLikedByCurrentUser: (bookIdField) => {
+        return async (data,request) => {
+            let field = data[bookIdField];
+
+            let user = await JWTHelper.getCurrentUser(request.req);
+            let book = await BookServices.findById(field);
+            let isLiked = book.likes.filter(x => x === user.username).length > 0;
+
+            if (isLiked) {
+                return Promise.reject(BookRequestValidationMessages.BOOK_ALREADY_LIKED);
+            }
+        }
+    },
+
+    likedByCurrentUser: (bookIdField) => {
+        return async (data,request) => {
+            let field = data[bookIdField];
+
+            let user = await JWTHelper.getCurrentUser(request.req);
+            let book = await BookServices.findById(field);
+            let isLiked = book.likes.filter(x => x === user.username).length > 0;
+
+            if (!isLiked) {
+                return Promise.reject(BookRequestValidationMessages.BOOK_NOT_LIKED);
             }
         }
     },
