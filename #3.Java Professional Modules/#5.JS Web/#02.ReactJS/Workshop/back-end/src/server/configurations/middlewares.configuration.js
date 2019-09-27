@@ -9,6 +9,7 @@ import {BookRoutingURLs, OrderRoutingURLs, UserRoutingURLs} from "../constants/w
 import RoleMiddleware from "../web/middlewares/role.middleware";
 import Roles from "../domain/models/enums/role.enums";
 import BookRequestValidators from "../web/validators/book.request.validators";
+import OrderRequestValidators from "../web/validators/order.request.validators";
 
 const Router = Express.Router();
 
@@ -112,7 +113,11 @@ Router.get(OrderRoutingURLs.ALL,
 
 Router.post(OrderRoutingURLs.APPROVE,
     LoggedInMiddleware,
-    RoleMiddleware(Roles.ADMIN)
+    Param()
+        .custom(OrderRequestValidators.orderPresent('id')).bail()
+        .custom(OrderRequestValidators.orderNotApproved('id')).bail(),
+    RoleMiddleware(Roles.ADMIN),
+    ValidationResponseMiddleware
 );
 
 

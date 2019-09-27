@@ -24,25 +24,20 @@ Router.get(OrderRoutingURLs.MY, async (request, response) => {
     RestResponseHelper.respondSuccessful(response, RestResponseMessages.ORDERS_FETCHED_SUCCESSFULLY, orders)
 });
 
-Router.get(OrderRoutingURLs.ALL, (request, response) => {
+Router.get(OrderRoutingURLs.ALL, async (request, response) => {
     let {status} = request.query;
 
-    console.log(status);
+    let orders = await OrderServices.findAllByStatus(status);
 
-    RestResponseHelper.respondSuccessful(response, RestResponseMessages.ORDERS_FETCHED_SUCCESSFULLY, null)
+    RestResponseHelper.respondSuccessful(response, RestResponseMessages.ORDERS_FETCHED_SUCCESSFULLY, orders)
 });
 
-Router.post(OrderRoutingURLs.APPROVE, (request, response) => {
-    /*
-    * TODO:
-    *  1.Дали user-a е логнат
-    *  2.Дали user-a е [ADMIN]
-    *  3.Дали съществува такъв order
-    *  4.Взимам ID-то на order-a (request.params.id)
-    *  5.Сменям му статуса на Approve
-    *  6.Save-aм го
-    *  6.Respond-вам successful с "Orders has been approved!"
-    * */
+Router.post(OrderRoutingURLs.APPROVE, async (request, response) => {
+    let {id} = request.params;
+
+    await OrderServices.approve(id);
+
+    RestResponseHelper.respondSuccessful(response, RestResponseMessages.ORDER_APPROVED_SUCCESSFULLY)
 });
 
 export default Router;

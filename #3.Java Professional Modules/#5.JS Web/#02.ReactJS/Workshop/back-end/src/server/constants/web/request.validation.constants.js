@@ -30,6 +30,11 @@ const RequestValidationMessages = {
 
         BOOK_ALREADY_LIKED: 'Book is already liked!',
         BOOK_NOT_LIKED: 'Book is not liked!',
+    },
+
+    ORDER: {
+        ORDER_NOT_FOUND: 'Order with this id wasn\'t found!',
+        ORDER_ALREADY_APPROVED: 'Order already approved!'
     }
 };
 
@@ -52,6 +57,7 @@ const RequestValidationRestrictions = {
 const UniversalRequestValidationMessages = RequestValidationMessages.UNIVERSAL;
 const UserRequestValidationMessages = RequestValidationMessages.USER;
 const BookRequestValidationMessages = RequestValidationMessages.BOOK;
+const OrderRequestValidationMessages = RequestValidationMessages.ORDER;
 
 const UserRequestValidationRestriction = RequestValidationRestrictions.USER;
 const BookRequestValidationRestriction = RequestValidationRestrictions.BOOK;
@@ -60,6 +66,7 @@ export {
     UniversalRequestValidationMessages,
     UserRequestValidationMessages,
     BookRequestValidationMessages,
+    OrderRequestValidationMessages,
 
     UserRequestValidationRestriction,
     BookRequestValidationRestriction,

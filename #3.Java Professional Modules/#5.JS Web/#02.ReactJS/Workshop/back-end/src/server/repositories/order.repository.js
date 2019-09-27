@@ -22,8 +22,13 @@ const OrderRepository = {
 
     /*-----*/
 
-    async findAllByCreatorId(creatorId){
-         return OrderModel.findOne({'creator': creatorId}).exec();
+    async findAllByCreatorId(creatorId) {
+        return OrderModel.findOne({'creator': creatorId}).exec();
+    },
+
+    async findAllByStatus(status) {
+        let statusCapitalized = status.charAt(0).toUpperCase() + status.slice(1).toLowerCase();
+        return OrderModel.find({'status': statusCapitalized}).exec();
     }
 };
 
