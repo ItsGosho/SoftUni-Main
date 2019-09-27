@@ -25,8 +25,29 @@ const BookRequestValidators = {
         }
     },
 
+    booksExist: (booksIdsFields) => {
+        return async (data) => {
+            let field = data[booksIdsFields];
+
+            let missingId = null;
+            for (let i = 0; i < field.length; i++) {
+                let id = field[i];
+                let book = await BookServices.findById(id);
+
+                if (book === null) {
+                    missingId = id;
+                    break;
+                }
+            }
+
+            if (missingId !== null) {
+                return Promise.reject(ParseString(BookRequestValidationMessages.BOOK_ID_NOT_FOUND,missingId));
+            }
+        }
+    },
+
     notLikedByCurrentUser: (bookIdField) => {
-        return async (data,request) => {
+        return async (data, request) => {
             let field = data[bookIdField];
 
             let user = await JWTHelper.getCurrentUser(request.req);
@@ -40,7 +61,7 @@ const BookRequestValidators = {
     },
 
     likedByCurrentUser: (bookIdField) => {
-        return async (data,request) => {
+        return async (data, request) => {
             let field = data[bookIdField];
 
             let user = await JWTHelper.getCurrentUser(request.req);

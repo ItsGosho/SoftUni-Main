@@ -5,7 +5,7 @@ import UserAttacherMiddleware from "../web/middlewares/user.attacher.middleware"
 import LoggedInMiddleware from "../web/middlewares/logged.in.middleware";
 import ValidationResponseMiddleware from "../web/middlewares/validation.response.middleware";
 import LoggedOutMiddleware from "../web/middlewares/logged.out.middleware";
-import {BookRoutingURLs, UserRoutingURLs} from "../constants/web/routing.urls.constants";
+import {BookRoutingURLs, OrderRoutingURLs, UserRoutingURLs} from "../constants/web/routing.urls.constants";
 import RoleMiddleware from "../web/middlewares/role.middleware";
 import Roles from "../domain/models/enums/role.enums";
 import BookRequestValidators from "../web/validators/book.request.validators";
@@ -91,6 +91,13 @@ Router.post(BookRoutingURLs.UNLIKE,
     Param()
         .custom(BookRequestValidators.bookPresent('id')).bail()
         .custom(BookRequestValidators.likedByCurrentUser('id')).bail(),
+    ValidationResponseMiddleware
+);
+
+Router.post(OrderRoutingURLs.CREATE,
+    LoggedInMiddleware,
+    Body()
+        .custom(BookRequestValidators.booksExist('books')).bail(),
     ValidationResponseMiddleware
 );
 

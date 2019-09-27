@@ -1,19 +1,22 @@
 import Express from "express";
 import {OrderRoutingURLs} from "../../constants/web/routing.urls.constants";
+import JWTHelper from "../helpers/jwt.helper";
+import OrderServices from "../../services/order.services";
+import RestResponseHelper from "../helpers/rest.response.helper";
+import RestResponseMessages from "../../constants/web/rest.message.constants";
 
 const Router = Express.Router();
 
-Router.post(OrderRoutingURLs.CREATE,(request,response)=>{
-    /*
-    * TODO:
-    *  1.Дали user-a е логнат
-    *  2.Взимама от body-то всички ID-та на продуктите като масив
-    *  3.Извиквам сървиса и създавам нов Order с User-a и продуктите
-    *  4.Respond-вам successful с "Order has been created!"
-    * */
+Router.post(OrderRoutingURLs.CREATE, async (request, response) => {
+    const {books} = request.body;
+    const user = await JWTHelper.getCurrentUser(request);
+
+    await OrderServices.createOrder(user,books);
+
+    RestResponseHelper.respondSuccessful(response,RestResponseMessages.ORDERS_CREATED_SUCCESSFULLY)
 });
 
-Router.post(OrderRoutingURLs.MY,(request,response)=>{
+Router.post(OrderRoutingURLs.MY, (request, response) => {
     /*
     * TODO:
     *  1.Дали user-a е логнат
@@ -22,7 +25,7 @@ Router.post(OrderRoutingURLs.MY,(request,response)=>{
     * */
 });
 
-Router.post(OrderRoutingURLs.ALL,(request,response)=>{
+Router.post(OrderRoutingURLs.ALL, (request, response) => {
     /*
     * TODO:
     *  1.Дали user-a е логнат
@@ -33,7 +36,7 @@ Router.post(OrderRoutingURLs.ALL,(request,response)=>{
     * */
 });
 
-Router.post(OrderRoutingURLs.APPROVE,(request,response)=>{
+Router.post(OrderRoutingURLs.APPROVE, (request, response) => {
     /*
     * TODO:
     *  1.Дали user-a е логнат

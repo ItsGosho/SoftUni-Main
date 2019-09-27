@@ -15,6 +15,7 @@ const RequestValidationMessages = {
     },
     BOOK: {
         BOOK_NOT_FOUND: 'Book with this id wasn\'t found!',
+        BOOK_ID_NOT_FOUND: 'Book with [%s] wasn\'t found!',
 
         REVIEW_TOO_SHORT: 'Review length must be at least 4!',
 

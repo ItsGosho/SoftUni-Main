@@ -15,6 +15,9 @@ export default (app) => {
 
     app.use(BodyParser.urlencoded({extended: Properties.bodyParser.extended}));
     app.use(BodyParser.json());
+    app.use(BodyParser.raw());
+    app.use(BodyParser.text());
+
     app.use(CookieParser());
     app.use(Cors({
         origin: Properties.cors.origins[0],

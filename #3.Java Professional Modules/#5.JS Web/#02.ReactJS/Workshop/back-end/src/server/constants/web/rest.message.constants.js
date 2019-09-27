@@ -13,6 +13,9 @@ const RestResponseMessages = {
     BOOK_LIKED_SUCCESSFULLY: 'Book liked!',
     BOOK_REMOVE_LIKE_SUCCESSFULLY: 'Book like removed!',
     BOOK_REVIEWED_SUCCESSFULLY: 'Review published!',
+
+    ORDERS_CREATED_SUCCESSFULLY: 'Orders created!',
+    ORDER_APPROVED_SUCCESSFULLY: 'Order approved!'
 };
 
 export default RestResponseMessages;
