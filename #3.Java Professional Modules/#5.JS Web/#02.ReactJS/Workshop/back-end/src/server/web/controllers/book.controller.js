@@ -47,11 +47,6 @@ Router.post(BookRoutingURLs.EDIT, async (request, response) => {
 });
 
 Router.get(BookRoutingURLs.ALL, async (request, response) => {
-    /*
-    * TODO:
-    *  1.Дали user-a е логнат?
-    */
-
     let books = await BookServices.findAll();
 
     RestResponseHelper.respondSuccessful(response, RestResponseMessages.BOOKS_FETCHED_SUCCESSFULLY, books)

@@ -32,7 +32,6 @@ const model = new Schema({
             message: OrderModelValidationMessages.STATUS_INVALID
         },
         default: OrderStatus.PENDING,
-        required: OrderModelValidationMessages.STATUS_REQUIRED
     }
 });
 
