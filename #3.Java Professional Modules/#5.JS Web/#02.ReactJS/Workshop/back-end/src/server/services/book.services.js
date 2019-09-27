@@ -6,6 +6,10 @@ const BookServices = {
         return BookRepository.save(book);
     },
 
+    async findAll() {
+        return BookRepository.findAll();
+    },
+
     async findByTitle(title) {
         return BookRepository.findByTitle(title);
     },

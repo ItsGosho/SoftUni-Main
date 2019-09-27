@@ -7,7 +7,8 @@ const RestResponseMessages = {
     REQUIRED_ROLE: 'You must be ${role}!',
 
     BOOK_CREATED_SUCCESSFULLY: 'Book created!',
-    BOOK_EDITED_SUCCESSFULLY: 'Book edited!'
+    BOOK_EDITED_SUCCESSFULLY: 'Book edited!',
+    BOOKS_FETCHED_SUCCESSFULLY: 'Books fetched!'
 };
 
 export default RestResponseMessages;

@@ -7,6 +7,10 @@ const BookRepository = {
         return new BookModel(data).save();
     },
 
+    async findAll() {
+        return BookModel.find({}).exec();
+    },
+
     async deleteById(id) {
 
         return BookModel.deleteOne({'_id': id}).exec();
@@ -23,7 +27,7 @@ const BookRepository = {
     /*-----*/
 
     async findByTitle(title) {
-        return BookModel.findOne({'title':title}).exec();
+        return BookModel.findOne({'title': title}).exec();
     }
 };
 

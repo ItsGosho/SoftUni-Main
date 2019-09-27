@@ -45,13 +45,17 @@ Router.post(BookRoutingURLs.EDIT, async (request, response) => {
     RestResponseHelper.respondSuccessful(response, RestResponseMessages.BOOK_EDITED_SUCCESSFULLY)
 });
 
-Router.get(BookRoutingURLs.ALL, (request, response) => {
+Router.get(BookRoutingURLs.ALL, async (request, response) => {
     /*
     * TODO:
     *  1.Дали user-a е логнат
     *  2.Взимам всички книги от базата
     *  8.Respond-вам successful с "Books has been fetched!" и книгите
     * */
+
+    let books = await BookServices.findAll();
+
+    RestResponseHelper.respondSuccessful(response, RestResponseMessages.BOOKS_FETCHED_SUCCESSFULLY, books)
 });
 
 Router.post(BookRoutingURLs.REVIEW, (request, response) => {
