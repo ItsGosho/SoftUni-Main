@@ -101,11 +101,11 @@ Router.post(OrderRoutingURLs.CREATE,
     ValidationResponseMiddleware
 );
 
-Router.post(OrderRoutingURLs.MY,
+Router.get(OrderRoutingURLs.MY,
     LoggedInMiddleware
 );
 
-Router.post(OrderRoutingURLs.ALL,
+Router.get(OrderRoutingURLs.ALL,
     LoggedInMiddleware,
     RoleMiddleware(Roles.ADMIN)
 );

@@ -21,6 +21,10 @@ const OrderRepository = {
     },
 
     /*-----*/
+
+    async findAllByCreatorId(creatorId){
+         return OrderModel.findOne({'creator': creatorId}).exec();
+    }
 };
 
 export default OrderRepository;

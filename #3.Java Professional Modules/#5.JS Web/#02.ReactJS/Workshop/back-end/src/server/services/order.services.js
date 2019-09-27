@@ -9,6 +9,10 @@ const OrderServices = {
         };
 
         await OrderRepository.save(order);
+    },
+
+    async findAllByUserId(userId){
+        return OrderRepository.findAllByCreatorId(userId);
     }
 
 };
