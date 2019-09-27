@@ -67,6 +67,20 @@ const BookRequestValidators = {
         }
     },
 
+    reviewLengthValid: (reviewField) => {
+        return async (data) => {
+            let field = data[reviewField];
+
+            if (typeof field !== 'string') {
+                return Promise.reject(ParseString(UniversalRequestValidationMessages.PROPERTY_NOT_STRING, field));
+            }
+
+            if (field.length < BookRequestValidationRestriction.REVIEW_MIN_LENGTH) {
+                return Promise.reject(BookRequestValidationMessages.REVIEW_TOO_SHORT);
+            }
+        }
+    },
+
     descriptionLengthValid: (descriptionField) => {
         return async (data) => {
             let field = data[descriptionField];

@@ -57,20 +57,22 @@ Router.get(BookRoutingURLs.ALL, async (request, response) => {
     RestResponseHelper.respondSuccessful(response, RestResponseMessages.BOOKS_FETCHED_SUCCESSFULLY, books)
 });
 
-Router.post(BookRoutingURLs.REVIEW, (request, response) => {
-    /*
-    * TODO:
-    *  1.Дали user-a е логнат
-    *  2.Дали има книга с това ID
-    *  3.Дали REVIEW-то е поне 4 символа
-    *  4.Създавам обекта така:
-    *  let reviewObj = {
+Router.post(BookRoutingURLs.REVIEW, async (request, response) => {
+    let {review} = request.body;
+    let id = request.params.id;
+
+    let book = await BookServices.findById(id);
+    let user = await JWTHelper.getCurrentUser(request);
+
+    let reviewObj = {
         review,
-        createdBy: username
-       }
-     * 6.И го пъхам в на book-a reviews масива
-    *  7.Respond-вам successful с "Review has been published!"
-    * */
+        createdBy: user.username
+    };
+
+    book.reviews.push(reviewObj);
+    await BookServices.save(book);
+
+    RestResponseHelper.respondSuccessful(response, RestResponseMessages.BOOK_REVIEWED_SUCCESSFULLY)
 });
 
 Router.post(BookRoutingURLs.LIKE, async (request, response) => {
@@ -78,17 +80,17 @@ Router.post(BookRoutingURLs.LIKE, async (request, response) => {
     let book = await BookServices.findById(id);
     let user = await JWTHelper.getCurrentUser(request);
 
-    await BookServices.like(book,user);
+    await BookServices.like(book, user);
 
     RestResponseHelper.respondSuccessful(response, RestResponseMessages.BOOK_LIKED_SUCCESSFULLY)
 });
 
-Router.post(BookRoutingURLs.UNLIKE,async (request, response) => {
+Router.post(BookRoutingURLs.UNLIKE, async (request, response) => {
     let id = request.params.id;
     let book = await BookServices.findById(id);
     let user = await JWTHelper.getCurrentUser(request);
 
-    await BookServices.unlike(book,user);
+    await BookServices.unlike(book, user);
 
     RestResponseHelper.respondSuccessful(response, RestResponseMessages.BOOK_REMOVE_LIKE_SUCCESSFULLY)
 });

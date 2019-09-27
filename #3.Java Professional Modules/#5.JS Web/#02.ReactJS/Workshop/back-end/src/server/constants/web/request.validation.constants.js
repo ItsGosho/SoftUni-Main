@@ -16,6 +16,8 @@ const RequestValidationMessages = {
     BOOK: {
         BOOK_NOT_FOUND: 'Book with this id wasn\'t found!',
 
+        REVIEW_TOO_SHORT: 'Review length must be at least 4!',
+
         TITLE_TOO_SHORT: 'Title length at least 2!',
         TITLE_EXISTS: 'Book with this title already exists!',
 
@@ -37,6 +39,7 @@ const RequestValidationRestrictions = {
     },
     BOOK: {
         TITLE_MIN_LENGTH: 2,
+        REVIEW_MIN_LENGTH: 4,
         DESCRIPTION_MIN_LENGTH: 10,
         DESCRIPTION_MAX_LENGTH: 200,
         PRICE_MIN: 0,

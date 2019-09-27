@@ -69,6 +69,15 @@ Router.post(BookRoutingURLs.DELETE,
     ValidationResponseMiddleware
 );
 
+Router.post(BookRoutingURLs.REVIEW,
+    LoggedInMiddleware,
+    Param()
+        .custom(BookRequestValidators.bookPresent('id')).bail(),
+    Body()
+        .custom(BookRequestValidators.reviewLengthValid('review')).bail(),
+    ValidationResponseMiddleware
+);
+
 Router.post(BookRoutingURLs.LIKE,
     LoggedInMiddleware,
     Param()

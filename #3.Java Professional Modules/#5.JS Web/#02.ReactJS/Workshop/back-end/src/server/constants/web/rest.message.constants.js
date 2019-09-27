@@ -12,6 +12,7 @@ const RestResponseMessages = {
     BOOK_DELETED_SUCCESSFULLY: 'Book deleted!',
     BOOK_LIKED_SUCCESSFULLY: 'Book liked!',
     BOOK_REMOVE_LIKE_SUCCESSFULLY: 'Book like removed!',
+    BOOK_REVIEWED_SUCCESSFULLY: 'Review published!',
 };
 
 export default RestResponseMessages;
