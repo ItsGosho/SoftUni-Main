@@ -1,12 +1,12 @@
-import React, {Component, Fragment} from "react";
+import React, {Component} from "react";
 
 class Footer extends Component {
 
     render() {
         return (
-            <Fragment>
+            <footer id="footer" className="page-footer mt-4">
                 © Book Library 2019
-            </Fragment>
+            </footer>
         );
     }
 }

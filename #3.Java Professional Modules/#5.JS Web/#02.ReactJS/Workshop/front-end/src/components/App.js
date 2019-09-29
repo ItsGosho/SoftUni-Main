@@ -3,6 +3,8 @@ import './App.css';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import ReactNotification from "react-notifications-component";
 import RoutingURLs from "../constants/routing.url.constants";
+import Footer from "./footer/Footer";
+import Navigation from "./navigation/Navigation";
 
 class App extends Component {
 
@@ -13,7 +15,7 @@ class App extends Component {
               <Fragment>
                 <ReactNotification/>
 
-                <Route component={() => null}/>
+                <Route component={() => <Navigation/>}/>
 
                 <Switch>
                   <Route exact path={RoutingURLs.HOME} component={() => (<h1>Home</h1>)}/>
@@ -33,7 +35,7 @@ class App extends Component {
 
                 </Switch>
 
-                <Route component={() => null}/>
+                <Route component={() => <Footer/>}/>
 
               </Fragment>
             </BrowserRouter>

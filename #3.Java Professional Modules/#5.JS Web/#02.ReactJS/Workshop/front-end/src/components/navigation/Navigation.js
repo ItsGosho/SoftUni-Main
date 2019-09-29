@@ -9,25 +9,25 @@ import GuestNavigation from "./GuestNavigation";
 class Navigation extends Component {
 
     render() {
-        let role = 'User';
+        let role = 'undefinned';
 
         return (
-            <Fragment>
+            <nav className="navbar-menu">
                 <Link to={RoutingURLs.HOME}>Book Store</Link>
                 <Link to={RoutingURLs.HOME} className="active" aria-current="page">Home</Link>
-                <Link to={RoutingURLs.STORE}>Store</Link>
+                <Link to={RoutingURLs.OTHER.STORE}>Store</Link>
 
-                {() => {
+                {(() => {
                     switch (role) {
                         case Roles.USER:
-                            return (<UserNavigation/>);
+                            return <UserNavigation/>;
                         case Roles.ADMIN:
-                            return (<AdminNavigation/>);
+                            return <AdminNavigation/>;
                         default:
-                            return (<GuestNavigation/>);
+                            return <GuestNavigation/>;
                     }
-                }};
-            </Fragment>
+                })()};
+            </nav>
         );
     }
 }
