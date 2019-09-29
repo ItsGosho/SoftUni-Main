@@ -14,6 +14,7 @@ const RoutingURLs = {
 
     BOOK: {
         CREATE: '/books/create',
+        DETAILS: '/books/details/:id',
     },
 
     AUTHENTICATION: {
