@@ -9,7 +9,6 @@ import GuestNavigation from "./GuestNavigation";
 class Navigation extends Component {
 
     render() {
-
         let role = 'User';
 
         return (
@@ -27,7 +26,7 @@ class Navigation extends Component {
                         default:
                             return (<GuestNavigation/>);
                     }
-                }}
+                }};
             </Fragment>
         );
     }
