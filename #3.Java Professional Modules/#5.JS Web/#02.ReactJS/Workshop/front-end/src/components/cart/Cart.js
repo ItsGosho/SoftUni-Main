@@ -12,10 +12,10 @@ class Cart extends Component {
                 <table id="cart" className="table table-hover table-condensed">
                     <thead>
                     <tr>
-                        <th style="width: 50px;">Product</th>
-                        <th style="width: 10px;">Price</th>
-                        <th className="text-center" style="width: 22px;">Subtotal</th>
-                        <th style="width: 10px;"></th>
+                        <th style={{'width':'50px'}}>Product</th>
+                        <th style={{'width':'10px'}}>Price</th>
+                        <th className="text-center" style={{'width':'22px'}}>Subtotal</th>
+                        <th style={{'width':'10px'}}/>
                     </tr>
                     </thead>
                     <tbody>
