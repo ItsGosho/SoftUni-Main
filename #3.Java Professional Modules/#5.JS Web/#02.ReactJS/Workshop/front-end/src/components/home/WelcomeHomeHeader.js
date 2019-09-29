@@ -1,4 +1,6 @@
 import React,{Component} from 'react';
+import {Link} from "react-router-dom";
+import RoutingURLs from "../../constants/routing.url.constants";
 
 class WelcomeHomeHeader extends Component {
 
@@ -6,7 +8,10 @@ class WelcomeHomeHeader extends Component {
         return (
             <div className="welcome">
                 <h1>Welcome to our book store, tanya !</h1>
-                <p><a href="/store">Go To Store</a><a href="/orders">View your orders</a></p>
+                <p>
+                    <Link to={RoutingURLs.OTHER.STORE}>Go To Store</Link>
+                    <Link to={RoutingURLs.ORDER.MY}>View your orders</Link>
+                </p>
             </div>
         );
     }

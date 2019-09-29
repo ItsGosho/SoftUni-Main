@@ -42,6 +42,7 @@ class App extends Component {
                   <Route exact path={RoutingURLs.ORDER.MY} component={() => <MyOrders/>}/>
                   <Route exact path={RoutingURLs.ORDER.PENDING} component={() => <PendingOrders/>}/>
 
+                  <Route component={() => (<h1>Not found</h1>)}/>
                 </Switch>
 
                 <Route component={() => <Footer/>}/>
