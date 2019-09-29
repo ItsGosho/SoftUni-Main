@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-class Change extends Component {
+class PendingOrders extends Component {
 
     render() {
 
@@ -45,4 +45,4 @@ class Change extends Component {
     }
 }
 
-export default Change;
+export default PendingOrders;
