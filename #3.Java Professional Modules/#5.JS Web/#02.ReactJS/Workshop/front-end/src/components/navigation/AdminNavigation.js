@@ -1,13 +1,15 @@
 import React, {Component, Fragment} from 'react';
+import {Link} from "react-router-dom";
+import RoutingURLs from "../../constants/routing.url.constants";
 
 class AdminNavigation extends Component {
 
     render() {
         return (
             <Fragment>
-                <a href="/admin/create" className="active" aria-current="page">Create New Book</a>
-                <a href="/admin/orders/pending">Pending Orders</a>
-                <a href="javascript:void(0)">Logout</a>
+                <Link to={RoutingURLs.CREATE_BOOK} className="active" aria-current="page">Create New Book</Link>
+                <Link to={RoutingURLs.PENDING_ORDERS}>Pending Orders</Link>
+                <Link to={RoutingURLs.LOGOUT}>Logout</Link>
             </Fragment>
         );
     }

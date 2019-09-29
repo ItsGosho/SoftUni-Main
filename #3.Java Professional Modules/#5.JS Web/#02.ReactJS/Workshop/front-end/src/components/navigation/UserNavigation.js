@@ -1,13 +1,15 @@
 import React, {Component, Fragment} from 'react';
+import {Link} from "react-router-dom";
+import RoutingURLs from "../../constants/routing.url.constants";
 
 class UserNavigation extends Component {
 
     render() {
         return (
             <Fragment>
-                <a href="/orders">My Orders</a>
-                <a href="/cart">Cart</a>
-                <a href="javascript:void(0)">Logout</a>
+                <Link to={RoutingURLs.MY_ORDERS}>My Orders</Link>
+                <Link to={RoutingURLs.CART}>Cart</Link>
+                <Link to={RoutingURLs.LOGOUT}>Logout</Link>
             </Fragment>
         );
     }
