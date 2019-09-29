@@ -1,19 +1,22 @@
 import React, {Component} from 'react';
+import Form from "../../hoc/form.hoc";
 
-class Change extends Component {
+class Login extends Component {
 
     render() {
+        let {onFormChange} = this.props;
+
         return (
             <div className="form-wrapper">
                 <h1>Login</h1>
                 <form>
                     <div className="form-group">
                         <label htmlFor="email">E-mail</label>
-                        <input type="text" name="email" id="email" placeholder="Enter e-mail" value=""/>
+                        <input type="text" name="email" id="email" placeholder="Enter e-mail" onChange={onFormChange}/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="password">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Enter password" value=""/>
+                        <input type="password" name="password" id="password" placeholder="Enter password" onChange={onFormChange}/>
                     </div>
                     <input type="submit" value="Login"/>
                 </form>
@@ -22,4 +25,4 @@ class Change extends Component {
     }
 }
 
-export default Change;
+export default Form(Login);
