@@ -7,8 +7,8 @@ class GuestNavigation extends Component {
     render() {
         return (
             <Fragment>
-                <Link to={RoutingURLs.LOGIN} className="active" aria-current="page">Login</Link>
-                <Link to={RoutingURLs.REGISTER}>Register</Link>
+                <Link to={RoutingURLs.AUTHENTICATION.LOGIN} className="active" aria-current="page">Login</Link>
+                <Link to={RoutingURLs.AUTHENTICATION.REGISTER}>Register</Link>
             </Fragment>
         );
     }

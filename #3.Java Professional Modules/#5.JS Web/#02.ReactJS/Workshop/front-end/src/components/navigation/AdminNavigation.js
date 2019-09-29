@@ -7,9 +7,9 @@ class AdminNavigation extends Component {
     render() {
         return (
             <Fragment>
-                <Link to={RoutingURLs.CREATE_BOOK} className="active" aria-current="page">Create New Book</Link>
-                <Link to={RoutingURLs.PENDING_ORDERS}>Pending Orders</Link>
-                <Link to={RoutingURLs.LOGOUT}>Logout</Link>
+                <Link to={RoutingURLs.BOOK.CREATE} className="active" aria-current="page">Create New Book</Link>
+                <Link to={RoutingURLs.ORDERS.PENDING}>Pending Orders</Link>
+                <Link to={RoutingURLs.AUTHENTICATION.LOGOUT}>Logout</Link>
             </Fragment>
         );
     }

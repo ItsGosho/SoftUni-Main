@@ -1,15 +1,26 @@
 const RoutingURLs = {
 
     HOME: '/',
-    STORE: '/store',
-    MY_ORDERS: '/orders/my',
-    CART: '/cart',
-    CREATE_BOOK: '/books/create',
-    PENDING_ORDERS: '/orders/pending',
 
-    LOGIN: '/auth/login',
-    REGISTER: '/auth/register',
-    LOGOUT: '/auth/logout',
+    OTHER: {
+        STORE: '/store',
+        CART: '/cart',
+    },
+
+    ORDERS: {
+        PENDING: '/orders/pending',
+        MY: '/orders/my',
+    },
+
+    BOOK: {
+        CREATE: '/books/create',
+    },
+
+    AUTHENTICATION: {
+        LOGIN: '/auth/login',
+        REGISTER: '/auth/register',
+        LOGOUT: '/auth/logout',
+    },
 };
 
 export default RoutingURLs;

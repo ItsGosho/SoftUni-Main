@@ -7,9 +7,9 @@ class UserNavigation extends Component {
     render() {
         return (
             <Fragment>
-                <Link to={RoutingURLs.MY_ORDERS}>My Orders</Link>
-                <Link to={RoutingURLs.CART}>Cart</Link>
-                <Link to={RoutingURLs.LOGOUT}>Logout</Link>
+                <Link to={RoutingURLs.ORDERS.MY}>My Orders</Link>
+                <Link to={RoutingURLs.OTHER.CART}>Cart</Link>
+                <Link to={RoutingURLs.AUTHENTICATION.LOGOUT}>Logout</Link>
             </Fragment>
         );
     }
