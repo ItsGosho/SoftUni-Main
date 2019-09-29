@@ -7,7 +7,7 @@ const RoutingURLs = {
         CART: '/cart',
     },
 
-    ORDERS: {
+    ORDER: {
         PENDING: '/orders/pending',
         MY: '/orders/my',
     },
