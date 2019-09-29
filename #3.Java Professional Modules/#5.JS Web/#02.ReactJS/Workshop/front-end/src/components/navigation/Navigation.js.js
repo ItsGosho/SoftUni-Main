@@ -1,10 +1,14 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 
 class Navigation extends Component {
 
     render() {
         return (
-            <h1>Guest Navigation</h1>
+            <Fragment>
+                <a href="/">Book Store</a>
+                <a href="/" className="active" aria-current="page">Home</a>
+                <a href="/store">Store</a>
+            </Fragment>
         );
     }
 }
