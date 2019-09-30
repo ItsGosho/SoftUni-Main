@@ -20,6 +20,7 @@ class Register extends Component {
 
     render() {
         let {onFormChange} = this.props;
+        console.log(this.props);
 
         return (
             <div className="form-wrapper">

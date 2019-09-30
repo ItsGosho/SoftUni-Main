@@ -14,6 +14,7 @@ import Logout from "./authentication/Logout";
 import CreateBook from "./book/CreateBook";
 import MyOrders from "./orders/MyOrders";
 import PendingOrders from "./orders/PendingOrders";
+import NotificationHandler from "./notification/NotificationHandler";
 
 class App extends Component {
 
@@ -23,6 +24,7 @@ class App extends Component {
             <BrowserRouter>
               <Fragment>
                 <ReactNotification/>
+                <NotificationHandler/>
 
                 <Route component={() => <Navigation/>}/>
 

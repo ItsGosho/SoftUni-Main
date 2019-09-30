@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {registerAction} from "../actions/authentication.actions";
 
 let props = (state) => {
-    return {isSuccessful: state}
+    return {redux: state.register}
 };
 
 let dispatcher = (dispatch) => {
