@@ -39,7 +39,8 @@ let registerAction = (username, email, password, confirmPassword) => {
         if (error) {
             NotificationHelper.showErrorNotification(error.msg);
             dispatch({
-                type: Actions.REGISTER_FAILED
+                type: Actions.REGISTER_FAILED,
+                message: error.msg
             });
             return;
         }
@@ -47,7 +48,8 @@ let registerAction = (username, email, password, confirmPassword) => {
         let {message} = result;
         NotificationHelper.showSuccessNotification(message);
         dispatch({
-            type: Actions.REGISTER_SUCCESS
+            type: Actions.REGISTER_SUCCESS,
+            message: error.msg
         });
     }
 };

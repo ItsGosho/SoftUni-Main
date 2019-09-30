@@ -10,7 +10,6 @@ class Register extends Component {
         this.onSubmit = this.onSubmit.bind(this);
     }
 
-
     onSubmit(event) {
         event.preventDefault();
 
@@ -21,7 +20,6 @@ class Register extends Component {
 
     render() {
         let {onFormChange} = this.props;
-        console.log(this.props);
 
         return (
             <div className="form-wrapper">

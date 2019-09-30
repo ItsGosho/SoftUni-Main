@@ -6,6 +6,7 @@ import {createStore, applyMiddleware, combineReducers, compose} from 'redux'
 import thunk from 'redux-thunk'
 import reducers from './redux/reducers'
 import createLogger from 'redux-logger'
+import 'react-notifications-component/dist/theme.css'
 
 const store = createStore(
     combineReducers(reducers),
