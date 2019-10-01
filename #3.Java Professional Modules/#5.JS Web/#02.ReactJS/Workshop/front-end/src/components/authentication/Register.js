@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Form from "../../hoc/form.hoc";
 import RegistrationHoc from "../../redux/hoc/registration.hoc";
+import {Redirect} from "react-router-dom";
+import RoutingURLs from "../../constants/routing.url.constants";
 
 class Register extends Component {
 
@@ -20,6 +22,7 @@ class Register extends Component {
 
     render() {
         let {onFormChange} = this.props;
+        let {isSuccessful} = this.props.redux;
 
         return (
             <div className="form-wrapper">
@@ -46,6 +49,8 @@ class Register extends Component {
                     </div>
                     <input type="submit" value="Register"/>
                 </form>
+
+                {isSuccessful ? <Redirect to={RoutingURLs.AUTHENTICATION.LOGIN} push/> : null}
             </div>
         );
     }

@@ -50,8 +50,7 @@ let registerAction = (username, email, password, confirmPassword) => {
     }
 };
 
-/*
-let logout = () => {
+/*let logout = () => {
     return async (dispatch) => {
         let result = await RequestHelper.postData(RestURLs.AUTHENTICATION.LOGOUT);
         let {error} = result;
