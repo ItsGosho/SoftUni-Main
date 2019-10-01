@@ -39,7 +39,7 @@ class App extends Component {
 
                   <Route exact path={RoutingURLs.AUTHENTICATION.LOGIN} component={guestHoc(Login)}/>
                   <Route exact path={RoutingURLs.AUTHENTICATION.REGISTER} component={() => guestHoc(Register)}/>
-                  <Route exact path={RoutingURLs.AUTHENTICATION.LOGOUT} component={() => guestHoc(Logout)}/>
+                  <Route exact path={RoutingURLs.AUTHENTICATION.LOGOUT} component={() => <Logout/>}/>
 
                   <Route exact path={RoutingURLs.BOOK.CREATE} component={() => roleHoc(CreateBook,Roles.ADMIN)}/>
                   <Route exact path={RoutingURLs.BOOK.DETAILS} component={() => null}/>

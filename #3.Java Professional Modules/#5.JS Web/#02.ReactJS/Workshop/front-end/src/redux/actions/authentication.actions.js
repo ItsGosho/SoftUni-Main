@@ -9,10 +9,11 @@ let loginAction = (username, password) => {
         let result = await RequestHelper.postData(RestURLs.AUTHENTICATION.LOGIN, {username, password});
 
         if (result.error) {
-            return dispatch({
+            dispatch({
                 type: Actions.LOGIN_FAILED,
                 message: result.error.msg
             });
+            return;
         }
 
         CookieHelper.pushCookie('username', result.data.username, 24);
@@ -23,7 +24,31 @@ let loginAction = (username, password) => {
             message: result.message
         });
 
-        dispatch(addAuthenticatedUserAction(result.data.username,result.data.role));
+        dispatch(addAuthenticatedUserAction(result.data.username, result.data.role));
+    }
+};
+
+let logoutAction = () => {
+    return async (dispatch) => {
+        let result = await RequestHelper.postData(RestURLs.AUTHENTICATION.LOGOUT);
+
+        if (result.error) {
+            dispatch({
+                type: Actions.LOGOUT_FAILED,
+                message: result.error.msg
+            });
+            return;
+        }
+
+        CookieHelper.removeCookie('username');
+        CookieHelper.removeCookie('role');
+
+        dispatch({
+            type: Actions.LOGOUT_SUCCESS,
+            message: result.message
+        });
+
+        dispatch(removeAuthenticatedUserAction())
     }
 };
 
@@ -92,5 +117,7 @@ export {
     loginAction,
 
     addAuthenticatedUserAction,
-    removeAuthenticatedUserAction
+    removeAuthenticatedUserAction,
+
+    logoutAction
 }
