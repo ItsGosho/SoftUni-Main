@@ -17,6 +17,7 @@ import PendingOrders from "./orders/PendingOrders";
 import guestHoc from "../hoc/guest.hoc";
 import roleHoc from "../hoc/role.hoc";
 import Roles from "../constants/roles.constants";
+import authenticatedHoc from "../hoc/authenticated.hoc";
 
 
 class App extends Component {
@@ -33,8 +34,8 @@ class App extends Component {
                 <Switch>
                   <Route exact path={RoutingURLs.HOME} component={() => <Home/>}/>
 
-                  <Route exact path={RoutingURLs.OTHER.STORE} component={() => <Store/>}/>
-                  <Route exact path={RoutingURLs.OTHER.CART} component={() => <Cart/>}/>
+                  <Route exact path={RoutingURLs.OTHER.STORE} component={() => authenticatedHoc(Store)}/>
+                  <Route exact path={RoutingURLs.OTHER.CART} component={() => authenticatedHoc(Cart)}/>
 
                   <Route exact path={RoutingURLs.AUTHENTICATION.LOGIN} component={guestHoc(Login)}/>
                   <Route exact path={RoutingURLs.AUTHENTICATION.REGISTER} component={() => guestHoc(Register)}/>
@@ -43,8 +44,8 @@ class App extends Component {
                   <Route exact path={RoutingURLs.BOOK.CREATE} component={() => roleHoc(CreateBook,Roles.ADMIN)}/>
                   <Route exact path={RoutingURLs.BOOK.DETAILS} component={() => null}/>
 
-                  <Route exact path={RoutingURLs.ORDER.MY} component={() => <MyOrders/>}/>
-                  <Route exact path={RoutingURLs.ORDER.PENDING} component={() => <PendingOrders/>}/>
+                  <Route exact path={RoutingURLs.ORDER.MY} component={() => authenticatedHoc(MyOrders)}/>
+                  <Route exact path={RoutingURLs.ORDER.PENDING} component={() => roleHoc(PendingOrders,Roles.ADMIN)}/>
 
                   <Route component={() => (<h1>Not found</h1>)}/>
                 </Switch>

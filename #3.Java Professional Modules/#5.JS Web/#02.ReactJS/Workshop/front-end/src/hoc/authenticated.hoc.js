@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import CookieHelper from "../helpers/cookie.helper";
 import NotificationHelper from "../helpers/notification.helper";
 
-let guestHoc = (Comp) => {
+let authenticatedHoc = (Comp) => {
     return class extends Component {
 
         getRole() {
@@ -22,4 +22,4 @@ let guestHoc = (Comp) => {
     }
 };
 
-export default guestHoc;
+export default authenticatedHoc;
