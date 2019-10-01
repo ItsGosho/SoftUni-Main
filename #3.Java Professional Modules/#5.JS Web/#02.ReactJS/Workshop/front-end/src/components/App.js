@@ -14,6 +14,7 @@ import Logout from "./authentication/Logout";
 import CreateBook from "./book/CreateBook";
 import MyOrders from "./orders/MyOrders";
 import PendingOrders from "./orders/PendingOrders";
+import guestHoc from "../hoc/guest.hoc";
 
 
 class App extends Component {
@@ -33,7 +34,7 @@ class App extends Component {
                   <Route exact path={RoutingURLs.OTHER.STORE} component={() => <Store/>}/>
                   <Route exact path={RoutingURLs.OTHER.CART} component={() => <Cart/>}/>
 
-                  <Route exact path={RoutingURLs.AUTHENTICATION.LOGIN} component={() => <Login/>}/>
+                  <Route exact path={RoutingURLs.AUTHENTICATION.LOGIN} component={guestHoc(Login)}/>
                   <Route exact path={RoutingURLs.AUTHENTICATION.REGISTER} component={() => <Register/>}/>
                   <Route exact path={RoutingURLs.AUTHENTICATION.LOGOUT} component={() => <Logout/>}/>
 

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import CookieHelper from "../../helpers/cookie.helper";
+import CookieHelper from "../helpers/cookie.helper";
+import NotificationHelper from "../helpers/notification.helper";
 
 let guestHoc = (Comp) => {
     return class extends Component {
@@ -15,9 +16,8 @@ let guestHoc = (Comp) => {
                 );
             }
 
-            return (
-                <center><h1 style={{'color': 'red'}}>You must be logged out!</h1></center>
-            );
+            NotificationHelper.showErrorNotification('You must be logged out!');
+            return null;
         }
     }
 };
