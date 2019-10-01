@@ -1,7 +1,7 @@
-import {registerReducer} from "./authentication.reducers";
-import {testReducers} from "./test.reducer";
+import registerReducer from "./register.reducer";
+import loginReducer from "./login.reducer";
 
 export default {
   register: registerReducer,
-  test: testReducers,
+  login: loginReducer,
 }

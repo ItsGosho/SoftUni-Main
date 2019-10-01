@@ -5,28 +5,30 @@ import CookieHelper from "../../helpers/cookie.helper";
 import Actions from "../../constants/actions.constants";
 
 
-/*let login = (username, password) => {
+let loginAction = (username, password) => {
     return async (dispatch) => {
         let result = await RequestHelper.postData(RestURLs.AUTHENTICATION.LOGIN, {username, password});
-        let {error} = result;
 
-        if (error) {
-            NotificationHelper.showErrorNotification(error.msg);
-            return;
+        if (result.error) {
+            return dispatch({
+                type: Actions.LOGIN_FAILED,
+                message: result.error.msg
+            });
         }
 
-        let {username, role} = result.data;
+        CookieHelper.pushCookie('username', result.data.username, 24);
+        CookieHelper.pushCookie('role', result.data.role, 24);
 
-        CookieHelper.pushCookie('username', username, 24);
-        CookieHelper.pushCookie('role', role, 24);
-
-        let {message} = result;
-        NotificationHelper.showSuccessNotification(message);
+        return dispatch({
+            type: Actions.LOGIN_SUCCESS,
+            message: result.message
+        });
     }
-};*/
+};
 
 let registerAction = (username, email, password, confirmPassword) => {
     return async (dispatch) => {
+
         let result = await RequestHelper.postData(RestURLs.AUTHENTICATION.REGISTER, {
             username,
             email,
@@ -34,22 +36,16 @@ let registerAction = (username, email, password, confirmPassword) => {
             confirmPassword
         });
 
-        let {error} = result;
-
-        if (error) {
-            NotificationHelper.showErrorNotification(error.msg);
-            dispatch({
+        if (result.error) {
+            return dispatch({
                 type: Actions.REGISTER_FAILED,
-                message: error.msg
+                message: result.error.msg
             });
-            return;
         }
 
-        let {message} = result;
-        NotificationHelper.showSuccessNotification(message);
-        dispatch({
+        return dispatch({
             type: Actions.REGISTER_SUCCESS,
-            message: error.msg
+            message: result.message
         });
     }
 };
@@ -74,5 +70,6 @@ let logout = () => {
 };*/
 
 export {
-    registerAction
+    registerAction,
+    loginAction
 }

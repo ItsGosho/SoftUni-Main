@@ -1,7 +1,23 @@
 import React, {Component} from 'react';
 import Form from "../../hoc/form.hoc";
+import LoginHoc from "../../redux/hoc/login.hoc";
 
 class Login extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.onSubmit = this.onSubmit.bind(this);
+    }
+
+
+    onSubmit(event) {
+        event.preventDefault();
+
+        let {username, password} = this.props.formData;
+
+        this.props.login(username, password);
+    }
 
     render() {
         let {onFormChange} = this.props;
@@ -9,7 +25,7 @@ class Login extends Component {
         return (
             <div className="form-wrapper">
                 <h1>Login</h1>
-                <form>
+                <form onSubmit={this.onSubmit}>
                     <div className="form-group">
                         <label htmlFor="email">E-mail</label>
                         <input type="text" name="email" id="email" placeholder="Enter e-mail" onChange={onFormChange}/>
@@ -25,4 +41,4 @@ class Login extends Component {
     }
 }
 
-export default Form(Login);
+export default LoginHoc(Form(Login));
