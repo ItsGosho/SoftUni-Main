@@ -18,10 +18,12 @@ let loginAction = (username, password) => {
         CookieHelper.pushCookie('username', result.data.username, 24);
         CookieHelper.pushCookie('role', result.data.role, 24);
 
-        return dispatch({
+        dispatch({
             type: Actions.LOGIN_SUCCESS,
             message: result.message
         });
+
+        dispatch(addAuthenticatedUserAction(result.data.username,result.data.role));
     }
 };
 
@@ -42,7 +44,7 @@ let registerAction = (username, email, password, confirmPassword) => {
             });
         }
 
-        return dispatch({
+        dispatch({
             type: Actions.REGISTER_SUCCESS,
             message: result.message
         });
@@ -51,7 +53,7 @@ let registerAction = (username, email, password, confirmPassword) => {
 
 let addAuthenticatedUserAction = (username, role) => {
     return async (dispatch) => {
-        return dispatch({
+        dispatch({
             type: Actions.ADD_AUTHENTICATED_USER,
             username,
             role
@@ -61,7 +63,7 @@ let addAuthenticatedUserAction = (username, role) => {
 
 let removeAuthenticatedUserAction = () => {
     return async (dispatch) => {
-        return dispatch({
+        dispatch({
             type: Actions.REMOVE_AUTHENTICATED_USER,
         });
     };

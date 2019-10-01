@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {loginAction, registerAction} from "../actions/authentication.actions";
+import {loginAction} from "../actions/authentication.actions";
 
 let props = (state) => {
     return {redux: state.login}

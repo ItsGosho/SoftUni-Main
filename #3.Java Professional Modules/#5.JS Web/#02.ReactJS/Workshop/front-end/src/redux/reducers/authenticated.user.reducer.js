@@ -1,6 +1,15 @@
 import Actions from "../../constants/actions.constants";
+import CookieHelper from "../../helpers/cookie.helper";
 
-let authenticatedUserInitialState = {role: '', username: ''};
+/*let authenticatedUserInitialState = {
+    username: CookieHelper.getCookie('username'),
+    role: CookieHelper.getCookie('role')
+};*/
+
+let authenticatedUserInitialState = {
+    username: '',
+    role: ''
+};
 
 let authenticatedUserReducer = (state = authenticatedUserInitialState, action) => {
     let {role, username} = action;

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CookieHelper from "../../helpers/cookie.helper";
+import CookieHelper from "../helpers/cookie.helper";
 import NotificationHelper from "../helpers/notification.helper";
 
 let roleHoc = (Comp, role) => {

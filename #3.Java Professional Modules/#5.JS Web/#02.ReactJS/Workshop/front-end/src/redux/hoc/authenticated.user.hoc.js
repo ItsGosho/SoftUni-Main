@@ -2,8 +2,6 @@ import React from 'react';
 import {connect} from "react-redux";
 import {
     addAuthenticatedUserAction,
-    loginAction,
-    registerAction,
     removeAuthenticatedUserAction
 } from "../actions/authentication.actions";
 
