@@ -1,6 +1,5 @@
 import RequestHelper from "../../helpers/request.helper";
 import RestURLs from "../../constants/rest.url.constants";
-import NotificationHelper from "../../helpers/notification.helper";
 import CookieHelper from "../../helpers/cookie.helper";
 import Actions from "../../constants/actions.constants";
 
@@ -50,6 +49,24 @@ let registerAction = (username, email, password, confirmPassword) => {
     }
 };
 
+let addAuthenticatedUserAction = (username, role) => {
+    return async (dispatch) => {
+        return dispatch({
+            type: Actions.ADD_AUTHENTICATED_USER,
+            username,
+            role
+        });
+    };
+};
+
+let removeAuthenticatedUserAction = () => {
+    return async (dispatch) => {
+        return dispatch({
+            type: Actions.REMOVE_AUTHENTICATED_USER,
+        });
+    };
+};
+
 /*let logout = () => {
     return async (dispatch) => {
         let result = await RequestHelper.postData(RestURLs.AUTHENTICATION.LOGOUT);
@@ -70,5 +87,8 @@ let registerAction = (username, email, password, confirmPassword) => {
 
 export {
     registerAction,
-    loginAction
+    loginAction,
+
+    addAuthenticatedUserAction,
+    removeAuthenticatedUserAction
 }
