@@ -15,6 +15,8 @@ import CreateBook from "./book/CreateBook";
 import MyOrders from "./orders/MyOrders";
 import PendingOrders from "./orders/PendingOrders";
 import guestHoc from "../hoc/guest.hoc";
+import roleHoc from "../hoc/role.hoc";
+import Roles from "../constants/roles.constants";
 
 
 class App extends Component {
@@ -35,10 +37,10 @@ class App extends Component {
                   <Route exact path={RoutingURLs.OTHER.CART} component={() => <Cart/>}/>
 
                   <Route exact path={RoutingURLs.AUTHENTICATION.LOGIN} component={guestHoc(Login)}/>
-                  <Route exact path={RoutingURLs.AUTHENTICATION.REGISTER} component={() => <Register/>}/>
-                  <Route exact path={RoutingURLs.AUTHENTICATION.LOGOUT} component={() => <Logout/>}/>
+                  <Route exact path={RoutingURLs.AUTHENTICATION.REGISTER} component={() => guestHoc(Register)}/>
+                  <Route exact path={RoutingURLs.AUTHENTICATION.LOGOUT} component={() => guestHoc(Logout)}/>
 
-                  <Route exact path={RoutingURLs.BOOK.CREATE} component={() => <CreateBook/>}/>
+                  <Route exact path={RoutingURLs.BOOK.CREATE} component={() => roleHoc(CreateBook,Roles.ADMIN)}/>
                   <Route exact path={RoutingURLs.BOOK.DETAILS} component={() => null}/>
 
                   <Route exact path={RoutingURLs.ORDER.MY} component={() => <MyOrders/>}/>
