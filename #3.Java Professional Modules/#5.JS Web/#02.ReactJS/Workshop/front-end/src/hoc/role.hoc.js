@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import CookieHelper from "../../helpers/cookie.helper";
+import NotificationHelper from "../helpers/notification.helper";
 
 let roleHoc = (Comp, role) => {
     return class extends Component {
@@ -15,9 +16,8 @@ let roleHoc = (Comp, role) => {
                 );
             }
 
-            return (
-                <center><h1 style={{'color': 'red'}}>You are not authorized!</h1></center>
-            );
+            NotificationHelper.showErrorNotification(`Only ${role} can access this!`);
+            return null;
         }
     }
 };
