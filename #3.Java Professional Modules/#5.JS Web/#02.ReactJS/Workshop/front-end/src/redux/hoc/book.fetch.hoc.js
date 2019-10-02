@@ -4,7 +4,7 @@ import {registerAction} from "../actions/authentication.actions";
 import {fetchAllBooksAction} from "../actions/book.actions";
 
 let props = (state) => {
-    return {redux: state.book}
+    return {redux: state.bookFetch}
 };
 
 let dispatcher = (dispatch) => {
@@ -13,8 +13,8 @@ let dispatcher = (dispatch) => {
     }
 };
 
-let bookReduxHoc = (Comp) => {
+let bookFetchReduxHoc = (Comp) => {
     return connect(props, dispatcher)((props) => (<Comp {...props}/>));
 };
 
-export default bookReduxHoc;
+export default bookFetchReduxHoc;

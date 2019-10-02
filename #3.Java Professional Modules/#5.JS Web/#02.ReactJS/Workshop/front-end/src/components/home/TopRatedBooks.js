@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import RoutingURLs from "../../constants/routing.url.constants";
-import bookReduxHoc from "../../redux/hoc/book.hoc";
+import bookFetchReduxHoc from "../../redux/hoc/book.fetch.hoc";
 
 class TopRatedBooks extends Component {
 
@@ -44,4 +44,4 @@ class TopRatedBooks extends Component {
     }
 }
 
-export default bookReduxHoc(TopRatedBooks);
+export default bookFetchReduxHoc(TopRatedBooks);

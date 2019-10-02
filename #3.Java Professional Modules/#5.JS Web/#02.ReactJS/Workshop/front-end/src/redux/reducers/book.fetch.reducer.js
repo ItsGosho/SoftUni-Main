@@ -4,7 +4,7 @@ let initialState = {
     books: []
 };
 
-let booksReducer = (state = initialState, action) => {
+let bookFetchReducer = (state = initialState, action) => {
     let {books} = action;
 
     switch (action.type) {
@@ -15,4 +15,4 @@ let booksReducer = (state = initialState, action) => {
     }
 };
 
-export default booksReducer;
+export default bookFetchReducer;
