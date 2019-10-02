@@ -1,13 +1,13 @@
 import Actions from "../../constants/actions.constants";
 import CookieHelper from "../../helpers/cookie.helper";
 
-let authenticatedUserInitialState = {
+let initialState = {
     username: CookieHelper.getCookie('username'),
     role: CookieHelper.getCookie('role'),
     isAuthenticated: CookieHelper.getCookie('role') !== undefined
 };
 
-let authenticatedUserReducer = (state = authenticatedUserInitialState, action) => {
+let authenticatedUserReducer = (state = initialState, action) => {
     let {role, username} = action;
 
     switch (action.type) {

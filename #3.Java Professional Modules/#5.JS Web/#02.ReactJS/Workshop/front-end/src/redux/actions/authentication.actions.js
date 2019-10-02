@@ -53,14 +53,6 @@ let logoutAction = () => {
     }
 };
 
-let loginResetStateAction = () => {
-    return async (dispatch) => {
-        dispatch({
-            type: Actions.LOGIN_RESET_STATE,
-        });
-    }
-};
-
 let registerAction = (username, email, password, confirmPassword) => {
     return async (dispatch) => {
 
@@ -101,6 +93,30 @@ let removeAuthenticatedUserAction = () => {
             type: Actions.REMOVE_AUTHENTICATED_USER,
         });
     };
+};
+
+let loginResetStateAction = () => {
+    return async (dispatch) => {
+        dispatch({
+            type: Actions.LOGIN_RESET_STATE,
+        });
+    }
+};
+
+let registerResetStateAction = () => {
+    return async (dispatch) => {
+        dispatch({
+            type: Actions.REGISTER_RESET_STATE,
+        });
+    }
+};
+
+let logoutResetStateAction = () => {
+    return async (dispatch) => {
+        dispatch({
+            type: Actions.LOGOUT_RESET_STATE,
+        });
+    }
 };
 
 export {

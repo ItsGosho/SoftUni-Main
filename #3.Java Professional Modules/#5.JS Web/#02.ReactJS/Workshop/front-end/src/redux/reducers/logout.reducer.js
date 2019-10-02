@@ -7,6 +7,8 @@ let logoutReducer = (state = initialState, action) => {
     let {message} = action;
 
     switch (action.type) {
+        case Actions.LOGOUT_RESET_STATE:
+            return initialState;
         case Actions.LOGOUT_SUCCESS:
             NotificationHelper.showSuccessNotification(message);
             return Object.assign({}, state, {isSuccessful: true, message: message});
