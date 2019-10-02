@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Form from "../../hoc/form.hoc";
+import bookCreateReduxHoc from "../../redux/book/hocs/book.create.hoc";
 
 class CreateBook extends Component {
 
@@ -11,8 +12,9 @@ class CreateBook extends Component {
 
 
     onCreateBook() {
-         let {title,genres,description,image,author,price} = this.props.formData;
+        let {title, genres, description, image, author, price} = this.props.formData;
 
+        this.props.createBook(title, genres, description, image, author, price);
     }
 
     render() {
@@ -60,4 +62,4 @@ class CreateBook extends Component {
     }
 }
 
-export default Form(CreateBook);
+export default bookCreateReduxHoc(Form(CreateBook));

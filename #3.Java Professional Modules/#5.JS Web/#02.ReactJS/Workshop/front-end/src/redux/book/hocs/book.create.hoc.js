@@ -9,7 +9,7 @@ let props = (state) => {
 
 let dispatcher = (dispatch) => {
     return {
-        create: (title, genres, description, image, author, price) => dispatch(createBookAction(title, genres, description, image, author, price))
+        createBook: (title, genres, description, image, author, price) => dispatch(createBookAction(title, genres, description, image, author, price))
     }
 };
 
