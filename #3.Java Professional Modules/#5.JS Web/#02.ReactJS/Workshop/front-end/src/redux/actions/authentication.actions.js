@@ -48,7 +48,16 @@ let logoutAction = () => {
             message: result.message
         });
 
-        dispatch(removeAuthenticatedUserAction())
+        dispatch(removeAuthenticatedUserAction());
+        dispatch(loginResetStateAction());
+    }
+};
+
+let loginResetStateAction = () => {
+    return async (dispatch) => {
+        dispatch({
+            type: Actions.LOGIN_RESET_STATE,
+        });
     }
 };
 
@@ -93,24 +102,6 @@ let removeAuthenticatedUserAction = () => {
         });
     };
 };
-
-/*let logout = () => {
-    return async (dispatch) => {
-        let result = await RequestHelper.postData(RestURLs.AUTHENTICATION.LOGOUT);
-        let {error} = result;
-
-        if (error) {
-            NotificationHelper.showErrorNotification(error.msg);
-            return;
-        }
-
-        CookieHelper.removeCookie('username');
-        CookieHelper.removeCookie('role');
-
-        let {message} = result;
-        NotificationHelper.showSuccessNotification(message);
-    }
-};*/
 
 export {
     registerAction,

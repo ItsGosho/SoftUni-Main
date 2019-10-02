@@ -18,6 +18,7 @@ import guestHoc from "../hoc/guest.hoc";
 import roleHoc from "../hoc/role.hoc";
 import Roles from "../constants/roles.constants";
 import authenticatedHoc from "../hoc/authenticated.hoc";
+import authenticatedUserHoc from "../redux/hoc/authenticated.user.hoc";
 
 
 class App extends Component {
@@ -34,7 +35,7 @@ class App extends Component {
                 <Switch>
                   <Route exact path={RoutingURLs.HOME} component={() => <Home/>}/>
 
-                  <Route exact path={RoutingURLs.OTHER.STORE} component={() => authenticatedHoc(Store)}/>
+                  <Route exact path={RoutingURLs.OTHER.STORE} component={() => authenticatedHoc(Cart)}/>
                   <Route exact path={RoutingURLs.OTHER.CART} component={() => authenticatedHoc(Cart)}/>
 
                   <Route exact path={RoutingURLs.AUTHENTICATION.LOGIN} component={guestHoc(Login)}/>

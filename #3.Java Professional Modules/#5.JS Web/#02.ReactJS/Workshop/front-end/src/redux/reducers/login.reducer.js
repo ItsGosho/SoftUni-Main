@@ -7,6 +7,8 @@ let loginReducer = (state = authenticationInitialState, action) => {
     let {message} = action;
 
     switch (action.type) {
+        case Actions.LOGIN_RESET_STATE:
+            return authenticationInitialState;
         case Actions.LOGIN_SUCCESS:
             NotificationHelper.showSuccessNotification(message);
             return Object.assign({}, state, {isSuccessful: true, message: message});

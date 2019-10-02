@@ -24,7 +24,7 @@ class Login extends Component {
     render() {
         let {onFormChange} = this.props;
         let {isSuccessful} = this.props.redux;
-
+        
         return (
             <div className="form-wrapper">
                 <h1>Login</h1>
