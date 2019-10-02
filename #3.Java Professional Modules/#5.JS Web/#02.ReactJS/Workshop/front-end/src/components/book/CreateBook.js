@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Form from "../../hoc/form.hoc";
 import bookCreateReduxHoc from "../../redux/book/hocs/book.create.hoc";
+import {Redirect} from "react-router-dom";
+import RoutingURLs from "../../constants/routing.url.constants";
 
 class CreateBook extends Component {
 
@@ -19,6 +21,7 @@ class CreateBook extends Component {
 
     render() {
         let {onFormChange} = this.props;
+        let {isSuccessful} = this.props.redux;
 
         return (
             <div className="form-wrapper">
@@ -57,6 +60,8 @@ class CreateBook extends Component {
                     </div>
                     <input type="button" value="Create" onClick={this.onCreateBook}/>
                 </form>
+
+                {isSuccessful ? <Redirect to={RoutingURLs.HOME} push/> : null}
             </div>
         );
     }
