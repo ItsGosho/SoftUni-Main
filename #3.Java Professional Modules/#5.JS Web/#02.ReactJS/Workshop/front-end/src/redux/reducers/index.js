@@ -1,8 +1,8 @@
-import registerReducer from "./register.reducer";
-import loginReducer from "./login.reducer";
-import authenticatedUserReducer from "./authenticated.user.reducer";
-import logoutReducer from "./logout.reducer";
-import bookFetchReducer from "./book.fetch.reducer";
+import registerReducer from "./authentcation/register.reducer";
+import loginReducer from "./authentcation/login.reducer";
+import authenticatedUserReducer from "./authentcation/authenticated.user.reducer";
+import logoutReducer from "./authentcation/logout.reducer";
+import bookFetchReducer from "./book/book.fetch.reducer";
 
 export default {
   register: registerReducer,

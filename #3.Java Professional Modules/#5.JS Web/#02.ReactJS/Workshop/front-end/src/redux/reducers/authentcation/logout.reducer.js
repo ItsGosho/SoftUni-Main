@@ -1,5 +1,5 @@
-import Actions from "../../constants/actions.constants";
-import NotificationHelper from "../../helpers/notification.helper";
+import Actions from "../../../constants/actions.constants";
+import NotificationHelper from "../../../helpers/notification.helper";
 
 let initialState = {isSuccessful: false, message: ''};
 

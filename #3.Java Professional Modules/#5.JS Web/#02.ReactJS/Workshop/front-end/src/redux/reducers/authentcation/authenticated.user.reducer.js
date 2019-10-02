@@ -1,5 +1,5 @@
-import Actions from "../../constants/actions.constants";
-import CookieHelper from "../../helpers/cookie.helper";
+import Actions from "../../../constants/actions.constants";
+import CookieHelper from "../../../helpers/cookie.helper";
 
 let initialState = {
     username: CookieHelper.getCookie('username'),

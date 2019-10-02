@@ -1,18 +1,18 @@
-import Actions from "../../constants/actions.constants";
-import NotificationHelper from "../../helpers/notification.helper";
+import Actions from "../../../constants/actions.constants";
+import NotificationHelper from "../../../helpers/notification.helper";
 
 let initialState = {isSuccessful: false, message: ''};
 
-let loginReducer = (state = initialState, action) => {
+let registerReducer = (state = initialState, action) => {
     let {message} = action;
 
     switch (action.type) {
-        case Actions.LOGIN_RESET_STATE:
+        case Actions.REGISTER_RESET_STATE:
             return initialState;
-        case Actions.LOGIN_SUCCESS:
+        case Actions.REGISTER_SUCCESS:
             NotificationHelper.showSuccessNotification(message);
             return Object.assign({}, state, {isSuccessful: true, message: message});
-        case Actions.LOGIN_FAILED:
+        case Actions.REGISTER_FAILED:
             NotificationHelper.showErrorNotification(message);
             return Object.assign({}, state, {isSuccessful: false, message: message});
         default:
@@ -20,4 +20,4 @@ let loginReducer = (state = initialState, action) => {
     }
 };
 
-export default loginReducer;
+export default registerReducer;

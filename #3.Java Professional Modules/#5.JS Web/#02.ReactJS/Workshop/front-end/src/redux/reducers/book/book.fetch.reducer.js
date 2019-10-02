@@ -1,4 +1,4 @@
-import Actions from "../../constants/actions.constants";
+import Actions from "../../../constants/actions.constants";
 
 let initialState = {
     books: []
