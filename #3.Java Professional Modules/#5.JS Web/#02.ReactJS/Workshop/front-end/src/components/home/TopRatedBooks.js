@@ -3,6 +3,10 @@ import RoutingURLs from "../../constants/routing.url.constants";
 
 class TopRatedBooks extends Component {
 
+    componentDidMount() {
+        /*Fetch top rated*/
+    }
+
     render() {
         let topRated = [];
 
@@ -12,7 +16,7 @@ class TopRatedBooks extends Component {
 
                     {topRated.map((movie, index) => {
                         let {id, title, description, image} = movie;
-                        let detailsUrl = RoutingURLs.BOOK.DETAILS.replace(':id',id);
+                        let detailsUrl = RoutingURLs.BOOK.DETAILS.replace(':id', id);
 
                         return (
                             <div className="card col-4" key={index}>
@@ -23,7 +27,8 @@ class TopRatedBooks extends Component {
                                 </div>
                                 <div className="card-footer">
                                     <small className="text-muted"/>
-                                    <a type="button" className="btn btn-primary float-right btn-sm" href={detailsUrl}>Details</a>
+                                    <a type="button" className="btn btn-primary float-right btn-sm"
+                                       href={detailsUrl}>Details</a>
                                     <button type="button" className="btn btn-warning float-right btn-sm">Order</button>
                                 </div>
                             </div>

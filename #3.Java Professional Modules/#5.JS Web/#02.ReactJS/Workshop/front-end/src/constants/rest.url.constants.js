@@ -6,6 +6,10 @@ const RestURLs = {
         REGISTER: SERVER_URL + '/auth/signup',
         LOGOUT: SERVER_URL + '/auth/logout',
     },
+
+    BOOK: {
+        ALL: SERVER_URL + '/books/all'
+    }
 };
 
 export default RestURLs;
