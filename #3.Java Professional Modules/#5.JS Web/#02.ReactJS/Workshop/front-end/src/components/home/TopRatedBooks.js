@@ -1,14 +1,17 @@
 import React, {Component} from 'react';
 import RoutingURLs from "../../constants/routing.url.constants";
+import bookReduxHoc from "../../redux/hoc/book.hoc";
 
 class TopRatedBooks extends Component {
 
     componentDidMount() {
-        /*Fetch top rated*/
+        this.props.fetchAll();
     }
 
     render() {
-        let topRated = [];
+        /*TODO: Show the first 3 with most likes*/
+        /*TODO: Show order if the user is authenticated*/
+        let topRated = this.props.redux.books;
 
         return (
             <div className="row">
@@ -41,4 +44,4 @@ class TopRatedBooks extends Component {
     }
 }
 
-export default TopRatedBooks;
+export default bookReduxHoc(TopRatedBooks);

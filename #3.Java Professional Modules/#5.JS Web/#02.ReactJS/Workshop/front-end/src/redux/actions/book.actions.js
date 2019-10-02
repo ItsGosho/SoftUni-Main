@@ -6,11 +6,12 @@ import Actions from "../../constants/actions.constants";
 
 let fetchAllBooksAction = () => {
     return async (dispatch) => {
-        let result = await RequestHelper.postData(RestURLs.BOOK.ALL);
+        let result = await RequestHelper.requestJson(RestURLs.BOOK.ALL);
 
+        console.log(result);
         dispatch({
             type: Actions.BOOK_FETCH_ALL,
-            data: result.data
+            books: result.data
         });
     }
 };
