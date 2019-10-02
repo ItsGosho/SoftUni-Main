@@ -6,7 +6,7 @@ let initialState = {
     message: ''
 };
 
-let bookFetchReducer = (state = initialState, action) => {
+let bookCreateReducer = (state = initialState, action) => {
     let {message} = action;
 
     switch (action.type) {
@@ -21,4 +21,4 @@ let bookFetchReducer = (state = initialState, action) => {
     }
 };
 
-export default bookFetchReducer;
+export default bookCreateReducer;
