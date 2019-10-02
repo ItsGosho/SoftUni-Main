@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import logoutReduxHoc from "../../redux/hoc/logout.hoc";
+import logoutReduxHoc from "../../redux/authentication/hocs/logout.hoc";
 import {Redirect} from "react-router-dom";
 import RoutingURLs from "../../constants/routing.url.constants";
 import CookieHelper from "../../helpers/cookie.helper";

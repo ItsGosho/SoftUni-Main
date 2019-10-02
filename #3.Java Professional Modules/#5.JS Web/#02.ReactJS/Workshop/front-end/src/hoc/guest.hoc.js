@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import CookieHelper from "../helpers/cookie.helper";
 import NotificationHelper from "../helpers/notification.helper";
-import authenticatedUserHoc from "../redux/hoc/authenticated.user.hoc";
+import authenticatedUserHoc from "../redux/authentication/hocs/authenticated.user.hoc";
 
 let guestHoc = (Comp) => {
     return class extends Component {

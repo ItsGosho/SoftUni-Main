@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Form from "../../hoc/form.hoc";
-import LoginReduxHoc from "../../redux/hoc/login.hoc";
+import LoginReduxHoc from "../../redux/authentication/hocs/login.hoc";
 import {Redirect} from "react-router-dom";
 import RoutingURLs from "../../constants/routing.url.constants";
 

@@ -4,7 +4,7 @@ import App from './components/App';
 import {Provider} from 'react-redux'
 import {createStore, applyMiddleware, combineReducers, compose} from 'redux'
 import thunk from 'redux-thunk'
-import reducers from './redux/reducers'
+import reducers from './redux'
 import createLogger from 'redux-logger'
 import 'react-notifications-component/dist/theme.css'
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {registerAction} from "../actions/authentication.actions";
+import {registerAction} from "../../authentication/actions/authentication.actions";
 import {fetchAllBooksAction} from "../actions/book.actions";
 
 let props = (state) => {

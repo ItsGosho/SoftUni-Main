@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import RoutingURLs from "../../constants/routing.url.constants";
-import bookFetchReduxHoc from "../../redux/hoc/book.fetch.hoc";
+import bookFetchReduxHoc from "../../redux/book/hocs/book.fetch.hoc";
 
 class TopRatedBooks extends Component {
 

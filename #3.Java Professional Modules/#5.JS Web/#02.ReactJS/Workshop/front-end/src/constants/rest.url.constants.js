@@ -8,7 +8,8 @@ const RestURLs = {
     },
 
     BOOK: {
-        ALL: SERVER_URL + '/books/all'
+        ALL: SERVER_URL + '/books/all',
+        CREATE: SERVER_URL + '/books/create'
     }
 };
 
