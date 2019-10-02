@@ -5,6 +5,7 @@ class Store extends Component {
 
     render() {
         let books = [];
+        console.log(123);
 
         return (
             <div className="container">

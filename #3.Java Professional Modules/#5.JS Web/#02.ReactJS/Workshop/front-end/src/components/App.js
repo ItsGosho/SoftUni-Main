@@ -33,20 +33,20 @@ class App extends Component {
                 <Route component={() => <Navigation/>}/>
 
                 <Switch>
-                  <Route exact path={RoutingURLs.HOME} component={() => <Home/>}/>
+                  <Route exact path={RoutingURLs.HOME} component={Home}/>
 
-                  <Route exact path={RoutingURLs.OTHER.STORE} component={() => authenticatedReduxHoc(Store)}/>
-                  <Route exact path={RoutingURLs.OTHER.CART} component={() => authenticatedReduxHoc(Cart)}/>
+                  <Route exact path={RoutingURLs.OTHER.STORE} component={authenticatedReduxHoc(Store)}/>
+                  <Route exact path={RoutingURLs.OTHER.CART} component={authenticatedReduxHoc(Cart)}/>
 
                   <Route exact path={RoutingURLs.AUTHENTICATION.LOGIN} component={guestReduxHoc(Login)}/>
                   <Route exact path={RoutingURLs.AUTHENTICATION.REGISTER} component={guestReduxHoc(Register)}/>
-                  <Route exact path={RoutingURLs.AUTHENTICATION.LOGOUT} component={() => <Logout/>}/>
+                  <Route exact path={RoutingURLs.AUTHENTICATION.LOGOUT} component={Logout}/>
 
-                  <Route exact path={RoutingURLs.BOOK.CREATE} component={() => roleReduxHoc(CreateBook,Roles.ADMIN)}/>
-                  <Route exact path={RoutingURLs.BOOK.DETAILS} component={() => null}/>
+                  <Route exact path={RoutingURLs.BOOK.CREATE} component={roleReduxHoc(CreateBook,Roles.ADMIN)}/>
+                  <Route exact path={RoutingURLs.BOOK.DETAILS} component={null}/>
 
-                  <Route exact path={RoutingURLs.ORDER.MY} component={() => authenticatedReduxHoc(MyOrders)}/>
-                  <Route exact path={RoutingURLs.ORDER.PENDING} component={() => roleReduxHoc(PendingOrders,Roles.ADMIN)}/>
+                  <Route exact path={RoutingURLs.ORDER.MY} component={authenticatedReduxHoc(MyOrders)}/>
+                  <Route exact path={RoutingURLs.ORDER.PENDING} component={roleReduxHoc(PendingOrders,Roles.ADMIN)}/>
 
                   <Route component={() => {
                     NotificationHelper.showErrorNotification('Page not found!');

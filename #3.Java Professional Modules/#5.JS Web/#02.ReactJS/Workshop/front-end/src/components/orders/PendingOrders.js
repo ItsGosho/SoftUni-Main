@@ -5,9 +5,9 @@ class PendingOrders extends Component {
     render() {
 
         return (
-            <div className="container" style="padding-top: 25px;">
+            <div className="container" style={{'paddingTop': '25px'}}>
                 <h1 className="text-center">Pending Orders</h1>
-                <div className="row" style="padding-top: 25px;">
+                <div className="row" style={{'paddingTop': '25px'}}>
                     <div className="col-md-12" id="customer-orders">
                         <div className="box">
                             <div className="table-responsive">
