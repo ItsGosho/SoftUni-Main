@@ -12,8 +12,8 @@ let dispatcher = (dispatch) => {
     }
 };
 
-let RegistrationHoc = (Comp) => {
+let RegistrationReduxHoc = (Comp) => {
     return connect(props, dispatcher)((props) => (<Comp {...props}/>));
 };
 
-export default RegistrationHoc;
+export default RegistrationReduxHoc;

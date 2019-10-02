@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Form from "../../hoc/form.hoc";
-import RegistrationHoc from "../../redux/hoc/registration.hoc";
+import RegistrationReduxHoc from "../../redux/hoc/registration.hoc";
 import {Redirect} from "react-router-dom";
 import RoutingURLs from "../../constants/routing.url.constants";
 
@@ -56,4 +56,4 @@ class Register extends Component {
     }
 }
 
-export default RegistrationHoc(Form(Register));
+export default RegistrationReduxHoc(Form(Register));

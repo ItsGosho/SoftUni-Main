@@ -5,7 +5,6 @@ import RestResponseMessages from "../../constants/web/rest.message.constants";
 const LoggedInMiddleware = async (request, response, next) => {
     let token = request.cookies.jwt;
 
-    console.log(request.cookies);
     if (token !== undefined && await JWTServices.isValid(token)) {
         next();
         return;

@@ -5,7 +5,7 @@ import Roles from "../../constants/roles.constants";
 import UserNavigation from "./UserNavigation";
 import AdminNavigation from "./AdminNavigation";
 import GuestNavigation from "./GuestNavigation";
-import authenticatedUserHoc from "../../redux/hoc/authenticated.user.hoc";
+import authenticatedUserReduxHoc from "../../redux/hoc/authenticated.user.hoc";
 
 class Navigation extends Component {
 
@@ -33,4 +33,4 @@ class Navigation extends Component {
     }
 }
 
-export default authenticatedUserHoc(Navigation);
+export default authenticatedUserReduxHoc(Navigation);

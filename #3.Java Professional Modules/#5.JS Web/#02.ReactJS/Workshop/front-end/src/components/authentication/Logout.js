@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import logoutHoc from "../../redux/hoc/logout.hoc";
+import logoutReduxHoc from "../../redux/hoc/logout.hoc";
 import {Redirect} from "react-router-dom";
 import RoutingURLs from "../../constants/routing.url.constants";
 import CookieHelper from "../../helpers/cookie.helper";
@@ -20,4 +20,4 @@ class Logout extends Component {
     }
 }
 
-export default logoutHoc(Logout);
+export default logoutReduxHoc(Logout);

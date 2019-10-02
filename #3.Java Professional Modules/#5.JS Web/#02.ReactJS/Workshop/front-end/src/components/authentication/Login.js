@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Form from "../../hoc/form.hoc";
-import LoginHoc from "../../redux/hoc/login.hoc";
+import LoginReduxHoc from "../../redux/hoc/login.hoc";
 import {Redirect} from "react-router-dom";
 import RoutingURLs from "../../constants/routing.url.constants";
 
@@ -48,4 +48,4 @@ class Login extends Component {
     }
 }
 
-export default LoginHoc(Form(Login));
+export default LoginReduxHoc(Form(Login));

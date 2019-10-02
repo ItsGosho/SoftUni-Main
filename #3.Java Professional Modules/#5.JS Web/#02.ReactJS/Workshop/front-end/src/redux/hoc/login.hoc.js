@@ -12,8 +12,8 @@ let dispatcher = (dispatch) => {
     }
 };
 
-let LoginHoc = (Comp) => {
+let LoginReduxHoc = (Comp) => {
     return connect(props, dispatcher)((props) => (<Comp {...props}/>));
 };
 
-export default LoginHoc;
+export default LoginReduxHoc;

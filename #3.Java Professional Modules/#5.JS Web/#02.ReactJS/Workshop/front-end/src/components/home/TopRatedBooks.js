@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import WelcomeHomeHeader from "./WelcomeHomeHeader";
 import RoutingURLs from "../../constants/routing.url.constants";
 
 class TopRatedBooks extends Component {

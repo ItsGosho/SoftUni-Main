@@ -12,8 +12,8 @@ let dispatcher = (dispatch) => {
     }
 };
 
-let logoutHoc = (Comp) => {
+let logoutReduxHoc = (Comp) => {
     return connect(props, dispatcher)((props) => (<Comp {...props}/>));
 };
 
-export default logoutHoc;
+export default logoutReduxHoc;

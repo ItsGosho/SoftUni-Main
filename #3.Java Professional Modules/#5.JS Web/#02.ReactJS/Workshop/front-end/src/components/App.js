@@ -14,10 +14,11 @@ import Logout from "./authentication/Logout";
 import CreateBook from "./book/CreateBook";
 import MyOrders from "./orders/MyOrders";
 import PendingOrders from "./orders/PendingOrders";
-import guestHoc from "../hoc/guest.hoc";
-import roleHoc from "../hoc/role.hoc";
+import guestReduxHoc from "../hoc/guest.hoc";
+import roleReduxHoc from "../hoc/role.hoc";
 import Roles from "../constants/roles.constants";
-import authenticatedHoc from "../hoc/authenticated.hoc";
+import authenticatedReduxHoc from "../hoc/authenticated.hoc";
+import NotificationHelper from "../helpers/notification.helper";
 
 
 class App extends Component {
@@ -34,20 +35,23 @@ class App extends Component {
                 <Switch>
                   <Route exact path={RoutingURLs.HOME} component={() => <Home/>}/>
 
-                  <Route exact path={RoutingURLs.OTHER.STORE} component={() => authenticatedHoc(Store)}/>
-                  <Route exact path={RoutingURLs.OTHER.CART} component={() => authenticatedHoc(Cart)}/>
+                  <Route exact path={RoutingURLs.OTHER.STORE} component={() => authenticatedReduxHoc(Store)}/>
+                  <Route exact path={RoutingURLs.OTHER.CART} component={() => authenticatedReduxHoc(Cart)}/>
 
-                  <Route exact path={RoutingURLs.AUTHENTICATION.LOGIN} component={guestHoc(Login)}/>
-                  <Route exact path={RoutingURLs.AUTHENTICATION.REGISTER} component={guestHoc(Register)}/>
+                  <Route exact path={RoutingURLs.AUTHENTICATION.LOGIN} component={guestReduxHoc(Login)}/>
+                  <Route exact path={RoutingURLs.AUTHENTICATION.REGISTER} component={guestReduxHoc(Register)}/>
                   <Route exact path={RoutingURLs.AUTHENTICATION.LOGOUT} component={() => <Logout/>}/>
 
-                  <Route exact path={RoutingURLs.BOOK.CREATE} component={() => roleHoc(CreateBook,Roles.ADMIN)}/>
+                  <Route exact path={RoutingURLs.BOOK.CREATE} component={() => roleReduxHoc(CreateBook,Roles.ADMIN)}/>
                   <Route exact path={RoutingURLs.BOOK.DETAILS} component={() => null}/>
 
-                  <Route exact path={RoutingURLs.ORDER.MY} component={() => authenticatedHoc(MyOrders)}/>
-                  <Route exact path={RoutingURLs.ORDER.PENDING} component={() => roleHoc(PendingOrders,Roles.ADMIN)}/>
+                  <Route exact path={RoutingURLs.ORDER.MY} component={() => authenticatedReduxHoc(MyOrders)}/>
+                  <Route exact path={RoutingURLs.ORDER.PENDING} component={() => roleReduxHoc(PendingOrders,Roles.ADMIN)}/>
 
-                  <Route component={() => (<h1>Not found</h1>)}/>
+                  <Route component={() => {
+                    NotificationHelper.showErrorNotification('Page not found!');
+                    return null;
+                  }}/>
                 </Switch>
 
                 <Route component={() => <Footer/>}/>
