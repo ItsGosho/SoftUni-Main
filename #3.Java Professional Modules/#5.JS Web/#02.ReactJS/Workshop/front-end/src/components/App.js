@@ -30,17 +30,17 @@ class App extends Component {
               <Fragment>
                 <ReactNotification/>
 
-                <Route component={() => <Navigation/>}/>
+                <Route component={()=>(<Navigation/>)}/>
 
                 <Switch>
-                  <Route exact path={RoutingURLs.HOME} component={Home}/>
+                  <Route exact path={RoutingURLs.HOME} component={()=>(<Home/>)}/>
 
                   <Route exact path={RoutingURLs.OTHER.STORE} component={authenticatedReduxHoc(Store)}/>
                   <Route exact path={RoutingURLs.OTHER.CART} component={authenticatedReduxHoc(Cart)}/>
 
                   <Route exact path={RoutingURLs.AUTHENTICATION.LOGIN} component={guestReduxHoc(Login)}/>
                   <Route exact path={RoutingURLs.AUTHENTICATION.REGISTER} component={guestReduxHoc(Register)}/>
-                  <Route exact path={RoutingURLs.AUTHENTICATION.LOGOUT} component={Logout}/>
+                  <Route exact path={RoutingURLs.AUTHENTICATION.LOGOUT} component={()=>(<Logout/>)}/>
 
                   <Route exact path={RoutingURLs.BOOK.CREATE} component={roleReduxHoc(CreateBook,Roles.ADMIN)}/>
                   <Route exact path={RoutingURLs.BOOK.DETAILS} component={null}/>
@@ -54,7 +54,7 @@ class App extends Component {
                   }}/>
                 </Switch>
 
-                <Route component={() => <Footer/>}/>
+                <Route component={()=>(<Footer/>)}/>
 
               </Fragment>
             </BrowserRouter>

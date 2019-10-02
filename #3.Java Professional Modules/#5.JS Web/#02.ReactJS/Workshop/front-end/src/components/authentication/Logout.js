@@ -7,9 +7,11 @@ import CookieHelper from "../../helpers/cookie.helper";
 class Logout extends Component {
 
     render() {
+
         if (CookieHelper.getCookie('role') !== undefined) {
             this.props.logout();
         }
+
         let {isSuccessful} = this.props.redux;
 
         return (
