@@ -6,7 +6,7 @@ const RequestHelper = {
         return fetch(url).then(this.transformDataToJson);
     },
 
-    async postData(url, data) {
+    async postData(url, data = {}) {
         return await fetch(url, {
             method: RequestMethods.POST,
             credentials: 'include',
