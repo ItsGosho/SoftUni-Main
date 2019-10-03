@@ -9,9 +9,8 @@ class TopRatedBooks extends Component {
     }
 
     render() {
-        /*TODO: Show the first 3 with most likes*/
-        /*TODO: Show order if the user is authenticated*/
-        let topRated = this.props.redux.books;
+        let books = [...this.props.redux.books];
+        let topRated = books.sort((x1, x2)=> x2.likes.length - x1.likes.length).splice(0,3);
 
         return (
             <div className="row">
