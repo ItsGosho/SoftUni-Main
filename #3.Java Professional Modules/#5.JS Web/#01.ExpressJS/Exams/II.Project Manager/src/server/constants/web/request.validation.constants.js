@@ -8,6 +8,14 @@ const RequestValidationMessages = {
         USERNAME_TOO_LONG: 'Username must be max 50 characters long!',
         PASSWORDS_DOESNT_MATCH: 'Passwords doesn\'t match!',
         EMAIL_NOT_VALID: 'Email is not valid!'
+    },
+
+    TEAM: {
+        NAME_ALREADY_EXIST: 'Name already exist!'
+    },
+
+    PROJECT: {
+        NAME_ALREADY_EXIST: 'Name already exist!'
     }
 };
 
@@ -19,11 +27,15 @@ const RequestValidationRestrictions = {
 };
 
 const UserRequestValidationMessages = RequestValidationMessages.USER;
+const ProjectRequestValidationMessages = RequestValidationMessages.PROJECT;
+const TeamRequestValidationMessages = RequestValidationMessages.TEAM;
 
 const UserRequestValidationRestriction = RequestValidationRestrictions.USER;
 
 export {
     UserRequestValidationMessages,
+    ProjectRequestValidationMessages,
+    TeamRequestValidationMessages,
 
     UserRequestValidationRestriction,
 }

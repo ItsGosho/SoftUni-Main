@@ -5,6 +5,9 @@ import Session from 'express-session'
 import CookieParser from 'cookie-parser'
 import MiddlewaresConfiguration from './middlewares.configuration'
 import AuthenticationController from '../web/controllers/authentication.controller'
+import UserController from '../web/controllers/user.controller'
+import ProjectController from '../web/controllers/project.controller'
+import TeamController from '../web/controllers/team.controller'
 import HomeController from '../web/controllers/base.controller'
 import Properties from './properties'
 import HandleBars from 'express-handlebars'
@@ -27,6 +30,9 @@ export default (app) => {
 
   app.use(AuthenticationController)
   app.use(HomeController)
+  app.use(UserController)
+  app.use(ProjectController)
+  app.use(TeamController)
 
   app.use('/public', require('express').static(FolderResourcePaths.PUBLIC_VIEWS_FOLDER))
 
