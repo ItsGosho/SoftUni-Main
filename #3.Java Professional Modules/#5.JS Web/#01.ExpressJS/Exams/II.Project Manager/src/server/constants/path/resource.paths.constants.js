@@ -21,6 +21,22 @@ const ResourcePaths = {
       LOGIN: 'layouts/authentication/login',
       REGISTER: 'layouts/authentication/register',
     },
+
+    PROJECT: {
+      CREATE: 'layouts/project/project-create',
+      ALL_ADMIN: 'layouts/project/projects-admin',
+      ALL_USER: 'layouts/project/projects-user',
+    },
+
+    TEAM: {
+      CREATE: 'layouts/team/team-create',
+      ALL_ADMIN: 'layouts/team/teams-admin',
+      ALL_USER: 'layouts/team/teams-user',
+    },
+
+    USER: {
+      PROFILE: 'layouts/user/profile'
+    }
   }
 }
 
