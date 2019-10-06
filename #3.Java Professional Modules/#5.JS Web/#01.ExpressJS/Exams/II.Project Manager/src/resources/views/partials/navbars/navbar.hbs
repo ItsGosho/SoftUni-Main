@@ -1,0 +1,9 @@
+{{#if user}}
+    {{#areEqual user.role "User"}}
+        {{> navbars/user-navbar}}
+    {{else}} {{#areEqual user.role "Admin"}}
+        {{> navbars/admin-navbar}}
+    {{/areEqual}}{{/areEqual}}
+{{else}}
+    {{> navbars/guest-navbar}}
+{{/if}}
