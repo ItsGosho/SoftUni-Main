@@ -43,6 +43,6 @@ Router.post(UserRoutingURLs.REGISTER,
     ValidationResponseMiddleware
 );
 
-Router.get(UserRoutingURLs.LOGOUT, LoggedInMiddleware);
+Router.post(UserRoutingURLs.LOGOUT, LoggedInMiddleware);
 
 export default Router;

@@ -50,7 +50,7 @@ Router.post(UserRoutingURLs.REGISTER, async (request, response) => {
     NotificationHelper.prepareInfo(request,'Successful registration!')
 });
 
-Router.get(UserRoutingURLs.LOGOUT, async (request, response) => {
+Router.post(UserRoutingURLs.LOGOUT, async (request, response) => {
     let user = await JWTHelper.getCurrentUser(request);
 
     if (user !== null) {
