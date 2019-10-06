@@ -1,6 +1,8 @@
 const ModelNames = {
     USER: 'User',
-    JWT: 'JWT'
+    JWT: 'JWT',
+    TEAM: 'Team',
+    PROJECT: 'Project',
 };
 
 export default ModelNames;

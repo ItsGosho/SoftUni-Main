@@ -15,15 +15,26 @@ const model = new Schema({
         unique: true,
         trim: true,
     },
-    email: {
-        type: Type.String,
-        required: [true, UserModelValidationMessages.EMAIL_REQUIRED],
-        unique: true,
-        trim: true,
-    },
     password: {
         type: Type.String,
+        required: [true,UserModelValidationMessages.PASSWORD_REQUIRED],
         trim: true
+    },
+    firstName: {
+        type: Type.String,
+        required: [true,UserModelValidationMessages.FIRST_NAME_REQUIRED],
+        trim: true
+    },
+    lastName: {
+        type: Type.String,
+        required: [true,UserModelValidationMessages.LAST_NAME_REQUIRED],
+        trim: true
+    },
+    /*TODO: collection of teams*/
+    profilePicture: {
+        type: Type.String,
+        trim: true,
+        default: 'https://www.w3schools.com/howto/img_avatar.png'
     },
     roles: [
         {
