@@ -6,8 +6,10 @@ import TeamServices from '../../services/team.services'
 const TeamRequestValidators = {
 
   nameNotPresent: (field) => {
+    let nameField = field
+
     return async (data) => {
-      let name = data[field]
+      let name = data[nameField]
 
       let result = await TeamServices.findByName(name)
 

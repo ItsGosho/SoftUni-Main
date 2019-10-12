@@ -1,4 +1,5 @@
 import NotificationType from '../constants/other/notification.types.constants'
+import RoleHelper from './role.helper'
 
 let handlebarsNotificationHelper = function () {
   let showForMS = 5000
@@ -56,14 +57,19 @@ let handlebarsNotificationHelper = function () {
 ` : null
 }
 
-let areEqualHandlebarsHelper = (string1, string2, options) => {
-  if (string1 === string2) {
+/*A user must be attached to the request!*/
+let hasRoleHandlebarsHelper = function (requiredRole, options) {
+  let kura = this;
+  let {user} = options.data.root;
+  let role = RoleHelper.getHighestRoleFrom(user.roles)
+
+  if (roles !== undefined && role.toLowerCase() === requiredRole.toLowerCase()) {
     return options.fn(this)
   }
-  return options.inverse(this)
+  return options.inverse(user)
 }
 
 export {
   handlebarsNotificationHelper,
-  areEqualHandlebarsHelper
+  hasRoleHandlebarsHelper
 }

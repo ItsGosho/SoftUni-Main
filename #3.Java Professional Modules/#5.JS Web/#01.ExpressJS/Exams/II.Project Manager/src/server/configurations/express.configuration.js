@@ -12,7 +12,7 @@ import HomeController from '../web/controllers/base.controller'
 import Properties from './properties'
 import HandleBars from 'express-handlebars'
 import { FolderResourcePaths } from '../constants/path/resource.paths.constants'
-import { areEqualHandlebarsHelper, handlebarsNotificationHelper } from '../helpers/handlebars.helpers'
+import { hasRoleHandlebarsHelper, handlebarsNotificationHelper } from '../helpers/handlebars.helpers'
 
 export default (app) => {
   app.use(Morgan(Properties.morgan.environment))
@@ -26,7 +26,7 @@ export default (app) => {
   app.use(Session({ secret: 'JoretoSecret' }))
   app.use(Flash())
 
-  app.use(MiddlewaresConfiguration)
+  app.use(MiddlewaresConfiguration(app))
 
   app.use(AuthenticationController)
   app.use(HomeController)
@@ -43,7 +43,7 @@ export default (app) => {
     extname: '.hbs',
     helpers: {
       notification: handlebarsNotificationHelper,
-      areEqual: areEqualHandlebarsHelper,
+      hasRole: hasRoleHandlebarsHelper,
     },
     layoutsDir: `${FolderResourcePaths.VIEW_FOLDER}\\layouts`,
     partialsDir: `${FolderResourcePaths.VIEW_FOLDER}\\partials`,

@@ -8,8 +8,10 @@ import ProjectServices from '../../services/project.services'
 const ProjectRequestValidators = {
 
   nameNotPresent: (field) => {
+    let nameField = field;
+
     return async (data) => {
-      let name = data[field]
+      let name = data[nameField]
 
       let result = await ProjectServices.findByName(name)
 

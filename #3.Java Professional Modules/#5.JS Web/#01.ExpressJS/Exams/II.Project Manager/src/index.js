@@ -10,6 +10,7 @@ let app = Express();
 ExpressConfiguration(app);
 DatabaseConfiguration();
 
+
 app.listen(Properties.server.port, () => {
     console.log(ServerLogging.SERVER_STARTED);
 });

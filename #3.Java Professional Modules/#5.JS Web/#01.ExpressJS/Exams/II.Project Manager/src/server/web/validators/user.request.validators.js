@@ -3,7 +3,10 @@ import { UserRequestValidationMessages } from '../../constants/web/request.valid
 
 const UserRequestValidators = {
 
-  credentialsValid: (usernameField, passwordField) => {
+  credentialsValid: (field1, field2) => {
+    let usernameField = field1
+    let passwordField = field2
+
     return async (data) => {
       let username = data[usernameField]
       let password = data[passwordField]
@@ -17,8 +20,10 @@ const UserRequestValidators = {
   },
 
   usernamePresent: (field) => {
+    let usernameField = field
+
     return async (data) => {
-      let username = data[field]
+      let username = data[usernameField]
 
       let user = await UserServices.findByUsername(username)
 
@@ -29,8 +34,10 @@ const UserRequestValidators = {
   },
 
   usernameNotPresent: (field) => {
+    let usernameField = field
+
     return async (data) => {
-      let username = data[field]
+      let username = data[usernameField]
 
       let user = await UserServices.findByUsername(username)
 
@@ -41,9 +48,12 @@ const UserRequestValidators = {
   },
 
   passwordsMustMatch: (field1, field2) => {
+    let passwordField = field1
+    let confirmPasswordField = field2
+
     return async (data) => {
-      let password = data[field1]
-      let confirmPassword = data[field2]
+      let password = data[passwordField]
+      let confirmPassword = data[confirmPasswordField]
 
       if (password.length === 0 || password !== confirmPassword) {
         return Promise.reject(UserRequestValidationMessages.PASSWORDS_DOESNT_MATCH)

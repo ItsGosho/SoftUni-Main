@@ -3,7 +3,7 @@ import Commander from 'commander';
 const props = {
     dev: {
         database: {
-            url: 'mongodb://localhost:27017/TEST'
+            url: 'mongodb://localhost:27017/ProjectManager'
         },
         bodyParser: {
             extended: true

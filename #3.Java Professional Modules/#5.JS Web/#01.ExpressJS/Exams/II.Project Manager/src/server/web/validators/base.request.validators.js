@@ -1,14 +1,16 @@
-
 const BaseRequestValidators = {
 
   notEmpty: (field) => {
-    return async (data) => {
-      let field = data[field]
+    let fieldCopy = field
 
-      if (field.trim().length === 0) {
-        return Promise.reject(`${field} cant be empty!`)
+    return async (data) => {
+      let field = data[fieldCopy]
+
+      if (field !== undefined && field.trim().length === 0) {
+        return Promise.reject(`${fieldCopy} cant be empty!`)
       }
     }
+
   },
 
 }

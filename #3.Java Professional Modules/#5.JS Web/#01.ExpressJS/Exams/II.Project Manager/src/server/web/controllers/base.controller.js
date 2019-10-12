@@ -6,7 +6,7 @@ const Router = Express.Router()
 
 Router.get(RoutingURLs.HOME, async (request, response) => {
 
-  response.render(ViewsResourcePaths.OTHER.HOME, {})
+  response.render(ViewsResourcePaths.OTHER.HOME, { user: request.user })
 })
 
 export default Router

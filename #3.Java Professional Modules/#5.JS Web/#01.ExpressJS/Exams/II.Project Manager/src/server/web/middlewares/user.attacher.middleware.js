@@ -1,8 +1,13 @@
 import JWTHelper from '../helpers/jwt.helper'
 
-const UserAttacherMiddleware = async (request, response, next) => {
-  request.user = await JWTHelper.getCurrentUser(request)
-  next()
+const UserAttacherMiddleware = (app) => {
+  return async (request, response, next) => {
+    let user = await JWTHelper.getCurrentUser(request)
+
+    request.user = user
+    app.locals.user = user
+    next()
+  }
 }
 
 export default UserAttacherMiddleware

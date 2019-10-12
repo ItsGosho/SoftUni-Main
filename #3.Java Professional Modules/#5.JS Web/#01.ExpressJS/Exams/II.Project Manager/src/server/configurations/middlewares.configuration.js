@@ -16,76 +16,79 @@ import BaseRequestValidators from '../web/validators/base.request.validators'
 import TeamRequestValidators from '../web/validators/team.request.validators'
 import ProjectRequestValidators from '../web/validators/project.request.validators'
 
-const Router = Express.Router();
+let MiddlewaresConfiguration = (app) => {
+    const Router = Express.Router();
 
-Router.all('*', UserAttacherMiddleware);
+    Router.all('*', UserAttacherMiddleware(app));
 
 
-/*Authentication*/
+    /*Authentication*/
 
-Router.get(UserRoutingURLs.LOGIN,
-  LoggedOutMiddleware
-);
+    Router.get(UserRoutingURLs.LOGIN,
+      LoggedOutMiddleware
+    );
 
-Router.post(UserRoutingURLs.LOGIN,
-    LoggedOutMiddleware,
-    Body()
+    Router.post(UserRoutingURLs.LOGIN,
+      LoggedOutMiddleware,
+      Body()
         .custom(UserRequestValidators.credentialsValid('username', 'password')).bail(),
-    ValidationResponseMiddleware
-);
+      ValidationResponseMiddleware
+    );
 
-Router.get(UserRoutingURLs.REGISTER,
-  LoggedOutMiddleware
-);
+    Router.get(UserRoutingURLs.REGISTER,
+      LoggedOutMiddleware
+    );
 
-Router.post(UserRoutingURLs.REGISTER,
-    LoggedOutMiddleware,
-    Body()
+    Router.post(UserRoutingURLs.REGISTER,
+      LoggedOutMiddleware,
+      Body()
         .custom(BaseRequestValidators.notEmpty('username')).bail()
         .custom(BaseRequestValidators.notEmpty('password')).bail()
-        .custom(BaseRequestValidators.notEmpty('confirmPassword')).bail()
-        .custom(UserRequestValidators.usernameNotPresent('username')).bail()
-        .custom(UserRequestValidators.passwordsMustMatch('password', 'confirmPassword')).bail(),
-    ValidationResponseMiddleware
-);
+        .custom(BaseRequestValidators.notEmpty('firstName')).bail()
+        .custom(BaseRequestValidators.notEmpty('lastName')).bail()
+        .custom(UserRequestValidators.usernameNotPresent('username')).bail(),
+      ValidationResponseMiddleware
+    );
 
-Router.post(UserRoutingURLs.LOGOUT, LoggedInMiddleware);
+    Router.post(UserRoutingURLs.LOGOUT, LoggedInMiddleware);
 
-/*--- TEAM ---*/
+    /*--- TEAM ---*/
 
-Router.get(TeamRoutingURLs.CREATE,
-  LoggedInMiddleware,
-  RoleMiddleware(Roles.ADMIN)
-);
+    Router.get(TeamRoutingURLs.CREATE,
+      LoggedInMiddleware,
+      RoleMiddleware(Roles.ADMIN)
+    );
 
-Router.post(TeamRoutingURLs.CREATE,
-  LoggedInMiddleware,
-  Body()
-    .custom(TeamRequestValidators.nameNotPresent('name')).bail(),
-  RoleMiddleware(Roles.ADMIN)
-);
+    Router.post(TeamRoutingURLs.CREATE,
+      LoggedInMiddleware,
+      Body()
+        .custom(TeamRequestValidators.nameNotPresent('name')).bail(),
+      RoleMiddleware(Roles.ADMIN)
+    );
 
-Router.get(TeamRoutingURLs.ALL,
-  LoggedInMiddleware
-);
+    Router.get(TeamRoutingURLs.ALL,
+      LoggedInMiddleware
+    );
 
-/*--- PROJECT ---*/
+    /*--- PROJECT ---*/
 
-Router.get(ProjectRoutingURLs.CREATE,
-  LoggedInMiddleware,
-  RoleMiddleware(Roles.ADMIN)
-);
+    Router.get(ProjectRoutingURLs.CREATE,
+      LoggedInMiddleware,
+      RoleMiddleware(Roles.ADMIN)
+    );
 
-Router.post(ProjectRoutingURLs.CREATE,
-  LoggedInMiddleware,
-  Body()
-    .custom(ProjectRequestValidators.nameNotPresent('name')).bail(),
-  RoleMiddleware(Roles.ADMIN)
-);
+    Router.post(ProjectRoutingURLs.CREATE,
+      LoggedInMiddleware,
+      Body()
+        .custom(ProjectRequestValidators.nameNotPresent('name')).bail(),
+      RoleMiddleware(Roles.ADMIN)
+    );
 
-Router.get(ProjectRoutingURLs.ALL,
-  LoggedInMiddleware
-);
+    Router.get(ProjectRoutingURLs.ALL,
+      LoggedInMiddleware
+    );
 
+    return Router;
+}
 
-export default Router;
+export default MiddlewaresConfiguration;

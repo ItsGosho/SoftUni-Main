@@ -9,7 +9,7 @@ const Router = Express.Router()
 
 Router.get(ProjectRoutingURLs.CREATE, async (request, response) => {
 
-  response.render(ViewsResourcePaths.PROJECT.CREATE, {})
+  response.render(ViewsResourcePaths.PROJECT.CREATE)
 })
 
 Router.post(ProjectRoutingURLs.CREATE, async (request, response) => {
