@@ -25,6 +25,10 @@ const ProjectRepository = {
     async findByName(name) {
         return ProjectModel.findOne({name}).exec();
     },
+
+    async findAllWithoutTeam(){
+        return ProjectModel.find({team: null}).exec();
+    }
 };
 
 export default ProjectRepository;

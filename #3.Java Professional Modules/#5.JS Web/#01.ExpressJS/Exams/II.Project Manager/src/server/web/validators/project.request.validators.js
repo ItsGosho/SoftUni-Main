@@ -21,6 +21,20 @@ const ProjectRequestValidators = {
     }
   },
 
+  projectNotAssigned: (project, team) => {
+    let projectField = project
+    let teamField = team
+
+    return async (data) => {
+      let id = data[projectField]
+      project = await ProjectServices.findById(id);
+
+      if (project.team !== undefined) {
+        return Promise.reject('Project already have team!')
+      }
+    }
+  },
+
 }
 
 export default ProjectRequestValidators

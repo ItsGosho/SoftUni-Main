@@ -10,11 +10,13 @@ const RoutingURLs = {
 
   PROJECT: {
     CREATE: '/project/create',
+    ASSIGN: '/project/assign',
     ALL: '/projects/all',
   },
 
   TEAM: {
     CREATE: '/team/create',
+    ASSIGN: '/team/assign',
     ALL: '/teams/all',
   }
 }

@@ -1,34 +1,37 @@
-import UserModel from '../domain/models/user.model';
-
+import UserModel from '../domain/models/user.model'
 
 const UserRepository = {
 
-    async save(data) {
-        return new UserModel(data).save();
-    },
+  async save (data) {
+    return new UserModel(data).save()
+  },
 
-    async deleteById(id) {
+  async deleteById (id) {
 
-        return UserModel.deleteOne({'_id': id}).exec();
-    },
+    return UserModel.deleteOne({ '_id': id }).exec()
+  },
 
-    async findById(id) {
-        return UserModel.findById(id).exec();
-    },
+  async findById (id) {
+    return UserModel.findById(id).exec()
+  },
 
-    async findTotal() {
-        return UserModel.count({}).exec();
-    },
+  async findTotal () {
+    return UserModel.count({}).exec()
+  },
 
-    /*-----*/
+  async findAll () {
+    return UserModel.find({}).exec()
+  },
 
-    async findByUsername(username) {
-        return UserModel.findOne({username}).exec();
-    },
+  /*-----*/
 
-    async findByEmail(email) {
-        return UserModel.findOne({email}).exec();
-    },
-};
+  async findByUsername (username) {
+    return UserModel.findOne({ username }).exec()
+  },
 
-export default UserRepository;
+  async findByEmail (email) {
+    return UserModel.findOne({ email }).exec()
+  },
+}
+
+export default UserRepository

@@ -57,16 +57,19 @@ let handlebarsNotificationHelper = function () {
 ` : null
 }
 
-/*A user must be attached to the request!*/
+/*A user must be attached to the app.locals!*/
 let hasRoleHandlebarsHelper = function (requiredRole, options) {
-  let kura = this;
-  let {user} = options.data.root;
-  let role = RoleHelper.getHighestRoleFrom(user.roles)
 
-  if (roles !== undefined && role.toLowerCase() === requiredRole.toLowerCase()) {
+  if (this.user === null) {
+    return options.inverse(this)
+  }
+
+  let role = RoleHelper.getHighestRoleFrom(this.user.roles)
+
+  if (role.toLowerCase() === requiredRole.toLowerCase()) {
     return options.fn(this)
   }
-  return options.inverse(user)
+  return options.inverse(this)
 }
 
 export {

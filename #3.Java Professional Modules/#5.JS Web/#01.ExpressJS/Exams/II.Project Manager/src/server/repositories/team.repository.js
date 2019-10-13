@@ -20,6 +20,10 @@ const TeamRepository = {
         return TeamModel.count({}).exec();
     },
 
+    async findAll(){
+        return TeamModel.find({}).exec();
+    },
+
     /*-----*/
 
     async findByName(name) {

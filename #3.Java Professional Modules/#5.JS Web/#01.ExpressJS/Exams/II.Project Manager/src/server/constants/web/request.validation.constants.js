@@ -11,7 +11,8 @@ const RequestValidationMessages = {
     },
 
     TEAM: {
-        NAME_ALREADY_EXIST: 'Name already exist!'
+        NAME_ALREADY_EXIST: 'Name already exist!',
+        USER_ALREADY_EXIST: 'User already assigned!'
     },
 
     PROJECT: {
