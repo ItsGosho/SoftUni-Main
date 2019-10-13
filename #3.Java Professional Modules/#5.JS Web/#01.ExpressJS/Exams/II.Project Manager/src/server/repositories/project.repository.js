@@ -28,6 +28,10 @@ const ProjectRepository = {
 
     async findAllWithoutTeam(){
         return ProjectModel.find({team: null}).exec();
+    },
+
+    async findAllByTeam(team){
+        return ProjectModel.find({team: team}).exec();
     }
 };
 

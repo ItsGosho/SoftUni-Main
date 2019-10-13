@@ -1,17 +1,28 @@
 <h1>My Profile</h1>
 <div class="profile-box">
-    <img src="https://themes.gohugo.io//theme/hugo-geo//img/profile.png">
+    <img src="{{user.profilePicture}}">
     <div class="profile">
         <div class="info">
             <h3>My Teams</h3>
-            <form>
-                <p>Developers</p>
-                <input type="submit" value="Leave Team">
-            </form>
+
+            {{#each teams}}
+                <form method="post" action="/team/leave/{{_id}}">
+                    <p>{{name}}</p>
+                    <input type="submit" value="Leave Team">
+                </form>
+            {{else}}
+                <p>You have no teams!</p>
+            {{/each}}
         </div>
         <div class="more-info">
             <h3>My Projects</h3>
-            <p>You have no projects!</p>
+
+            {{#each projects}}
+                <p>{{name}}</p>
+            {{else}}
+                <p>You have no projects!</p>
+            {{/each}}
+
         </div>
     </div>
 </div>
