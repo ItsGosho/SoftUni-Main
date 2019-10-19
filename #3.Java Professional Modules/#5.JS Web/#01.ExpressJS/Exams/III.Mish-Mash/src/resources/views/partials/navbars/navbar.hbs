@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-mishmash">
+    <a class="navbar-brand nav-link-white" href="/">Mish Mash</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    {{#hasRole "User"}}
+        {{> navbars/user-navbar}}
+    {{else}}
+        {{#hasRole "Admin"}}
+            {{> navbars/admin-navbar}}
+        {{else}}
+            {{> navbars/guest-navbar}}
+        {{/hasRole}}
+    {{/hasRole}}
+</nav>
+
